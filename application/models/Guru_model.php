@@ -28,4 +28,8 @@ class Guru_model extends CI_Model {
 			'label' => 'Tanggal Lahir' ,
 			'rules' => 'required']] ;
 	}
+
+	public function getAll() {
+		return $this->db->get($this->_table)->result() ;
+	}
 }
