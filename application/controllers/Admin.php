@@ -1,5 +1,13 @@
 <?php
  class Admin extends CI_Controller{
+
+	public function __construct()
+  {
+      parent::__construct();
+      $this->load->helper(array('form', 'url'));
+	  $this->load->model("guru_model");
+  }
+	
     public function index(){
         $data['judul']="Wellcome To Administrator";
         $this->load->view('template_admin/header',$data);
