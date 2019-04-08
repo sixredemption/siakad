@@ -77,6 +77,7 @@
         $this->load->view('template_admin/footer');
     }
     public function addsiswa(){
+		$data['judul']="Halaman Tambah Siswa" ;
         $this->load->view('template_admin/header');
         $this->load->view('admin/addsiswa');
         $this->load->view('template_admin/sidebar');
