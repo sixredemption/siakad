@@ -74,21 +74,3 @@
 </body>
 </section>
 </div>
-        <!-- <div class="panel-body">
-            <table id="mytable" class="table table-striped table-bordered table-hover table-full-width dataTable" cellspacing="0" width="100%">
-                <thead>
-                    <tr>
-                        <th>NIG</th>
-                        <th>Nama</th>
-                        <th>Tanggal Lahir</th>
-                        <th>Kota Asal</th>
-                        <th>Jenis Kelamin</th>
-                        <th>Alamat</th>
-                        <th> Mengajar </th>
-                        <th>No Telefon</th>
-                    </tr>
-                </thead>
-            </table>
-            <button type="button" class="btn btn-primary">Edit</button> -->
-        
-

@@ -11,6 +11,7 @@
         <div class="panel-heading">
             <i class="fa fa-external-link-square"></i> Biodata
         </div>  
+
         <div class="container">
 		<div class="row mt-3">
 			<div class="col-md-6">
@@ -18,27 +19,31 @@
                 <div class="card-header">
                     <h1>Form Edit Guru</h1>
                 </div>
+        
                 <div class="card-body">
                 <div class="form-group-input-group">
 			<label for="nis">NIP :</label>
 			<input type="text" class="form-control" id="nis">
 		</div>
-		<div class="form-group">
+		
+        <div class="form-group">
 			<label for="nama">Nama :</label>
 			<input type="text" class="form-control" id="nama">
             </div>
+        
             <div class="form-group">
             <label for="Kelas">Jenis Kelamin</label>
         <select class="form-control">
             <option value="">Laki-Laki</option>
             <option value="">Perempuan</option> 
         </select>
-    </div>
+        </div>
         	  
         <div class="form-group">
 			<label for="kotaasal"> Alamat:</label>
 			<input type="text" class="form-control" id="kotaasal">
 		</div>
+        
         <div class="form-group">
             <label for="Kelas">Mengajar:</label>
         <select class="form-control">
@@ -56,8 +61,9 @@
             <option value="">Seni Budaya</option>
             <option value="">Prakarya</option>  
         </select>
-    </div>
-    <div class="form-group">
+        </div>
+    
+        <div class="form-group">
 			<label for="nohp"> Nomer Hp:</label>
 			<input type="number" class="form-control" id="kotaasal">
 		</div>	 
@@ -65,11 +71,12 @@
 			<label for="nama">Foto</label>
 			<input type="file" class="form-control" id="nama">
             </div> 
-    <button type="submit" class="btn btn-primary">Simpan</button>
-    <button type="reset" class="btn btn-danger">Reset</button>
+    
+        <button type="submit" class="btn btn-primary">Simpan</button>
+        <button type="reset" class="btn btn-danger">Reset</button>
         </div>
-                </div>
-			</div>
+        </div>	
+    	</div>
 </fieldset>
 </form>
 </body>
