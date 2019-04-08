@@ -6,6 +6,7 @@
       parent::__construct();
       $this->load->helper(array('form', 'url'));
 	  $this->load->model("guru_model");
+	  $this->load->model("pegawai_model") ;
   }
 	
     public function index(){
