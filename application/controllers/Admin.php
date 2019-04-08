@@ -70,6 +70,7 @@
         $this->load->view('template_admin/footer');
     }
     public function addguru(){
+		$data['judul']="Halaman Tambah Guru" ;
         $this->load->view('template_admin/header');
         $this->load->view('admin/addguru');
         $this->load->view('template_admin/sidebar');
@@ -78,6 +79,13 @@
     public function addsiswa(){
         $this->load->view('template_admin/header');
         $this->load->view('admin/addsiswa');
+        $this->load->view('template_admin/sidebar');
+        $this->load->view('template_admin/footer');
+	}
+	public function addpegawai(){
+		$data['judul']="Halaman Tambah Pegawai" ;
+        $this->load->view('template_admin/header');
+        $this->load->view('admin/addguru');
         $this->load->view('template_admin/sidebar');
         $this->load->view('template_admin/footer');
     }
