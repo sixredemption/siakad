@@ -10,6 +10,8 @@
   }
 	
     public function index(){
+		$data['guru']=$this->guru_model->getAll();
+		$data['pegawai']=$this->pegawai_model->getAll() ;
         $data['judul']="Wellcome To Administrator";
         $this->load->view('template_admin/header',$data);
         $this->load->view('admin/dashboard');
