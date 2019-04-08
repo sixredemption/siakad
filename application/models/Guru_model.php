@@ -15,6 +15,17 @@ class Guru_model extends CI_Model {
 	public $status_user ; 
 
 	public function rules () {
-		
+		return [
+			['field' => 'nig' ,
+			'label' => 'NIG' ,
+			'rules' => 'required'] ,
+
+			['field' => 'nama' ,
+			'label' => 'Nama' ,
+			'rules' => 'required'] ,
+
+			['field' => 'tgl_lahir' ,
+			'label' => 'Tanggal Lahir' ,
+			'rules' => 'required']] ;
 	}
 }
