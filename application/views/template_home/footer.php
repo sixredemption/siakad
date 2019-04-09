@@ -50,7 +50,7 @@
             </div>
             <div class="row">
                 <!-- Start  contact -->
-                <div class="col-md-12 col-sm-6 col-xs-12">
+                <div class="col-md-8 col-md-offset-2 col-sm-6 col-xs-12">
                     <div class="form contact-form">
                         <div id="sendmessage">Your message has been sent. Thank you!</div>
                         <div id="errormessage"></div>
@@ -139,7 +139,7 @@
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="copyright text-center">
                         <p>
-                           2010 - <?= date('Y'); ?> &copy; Copyright <strong>SMAN 4 MACIPO</strong>. All Rights Reserved
+                            2010 - <?= date('Y'); ?> &copy; Copyright <strong>SMAN 4 MACIPO</strong>. All Rights Reserved
                         </p>
                     </div>
                     <div class="credits">

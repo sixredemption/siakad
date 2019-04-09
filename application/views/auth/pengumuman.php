@@ -19,16 +19,19 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <?php
-                foreach ($user as $key) : ?>
+
+            <?php
+            foreach ($user as $key) { ?>
+                <tr>
+                    <td><?= $key->id;  ?></td>
                     <td><?= $key->judul;  ?></td>
-                    <td></td>
-                    <td></td>
-                <?php
-            endforeach;
-            ?>
-            </tr>
+                    <td><?= $key->tanggal;  ?></td>
+                    <td><?= $key->keterangan;  ?></td>
+                </tr>
+            <?php
+        }
+        ?>
+
         </tbody>
     </table>
 </body>
