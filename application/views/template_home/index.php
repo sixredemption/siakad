@@ -53,7 +53,7 @@
                                     </a>
                                     <h4>Lahan Parkir</h4>
                                     <p>
-                                       Lahan parkir yang luas untuk pejalan kaki,sepeda,sepeda motor & mobil
+                                        Lahan parkir yang luas untuk pejalan kaki,sepeda,sepeda motor & mobil
                                     </p>
                                 </div>
                             </div>
@@ -269,23 +269,6 @@
     </div>
     <!-- End Team Area -->
 
-    <!-- Start reviews Area -->
-    <div class="reviews-area hidden-xs">
-        <div class="work-us">
-            <div class="work-left-text">
-                <a href="#">
-                    <img src="<?= base_url('assets_home/') ?>img/about/2.jpg" alt="">
-                </a>
-            </div>
-            <div class="work-right-text text-center">
-                <h2>working with us</h2>
-                <h5>Web Design, Ready Home, Construction and Co-operate Outstanding Buildings.</h5>
-                <a href="#contact" class="ready-btn">Contact us</a>
-            </div>
-        </div>
-    </div>
-    <!-- End reviews Area -->
-
     <!-- Start portfolio Area -->
     <div id="portfolio" class="portfolio-area area-padding fix">
         <div class="container">
@@ -407,58 +390,6 @@
     </div>
     <!-- awesome-portfolio end -->
 
-    <!-- Start Testimonials -->
-    <div class="testimonials-area">
-        <div class="testi-inner area-padding">
-            <div class="testi-overly"></div>
-            <div class="container ">
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <!-- Start testimonials Start -->
-                        <div class="testimonial-content text-center">
-                            <a class="quate" href="#"><i class="fa fa-quote-right"></i></a>
-                            <!-- start testimonial carousel -->
-                            <div class="testimonial-carousel">
-                                <div class="single-testi">
-                                    <div class="testi-text">
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar luctus est eget
-                                            congue.<br>consectetur adipiscing elit. Sed pulvinar luctus est eget congue.
-                                        </p>
-                                        <h6>Boby</h6>
-                                    </div>
-                                </div>
-                                <!-- End single item -->
-                                <div class="single-testi">
-                                    <div class="testi-text">
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar luctus est eget
-                                            congue.<br>consectetur adipiscing elit. Sed pulvinar luctus est eget congue.
-                                        </p>
-                                        <h6>Jhon</h6>
-                                    </div>
-                                </div>
-                                <!-- End single item -->
-                                <div class="single-testi">
-                                    <div class="testi-text">
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar luctus est eget
-                                            congue.<br>consectetur adipiscing elit. Sed pulvinar luctus est eget congue.
-                                        </p>
-                                        <h6>Fleming</h6>
-                                    </div>
-                                </div>
-                                <!-- End single item -->
-                            </div>
-                        </div>
-                        <!-- End testimonials end -->
-                    </div>
-                    <!-- End Right Feature -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Testimonials -->
     <!-- Start Blog Area -->
     <div id="blog" class="blog-area">
         <div class="blog-inner area-padding">
@@ -471,32 +402,33 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="row">
+                    <?php
+
+                    ?>
                     <!-- Start Left Blog -->
                     <div class="col-md-4 col-sm-4 col-xs-12">
                         <div class="single-blog">
-                            <div class="single-blog-img">
-                                <a href="blog.html">
-                                    <img src="<?= base_url('assets_home/') ?>img/blog/1.jpg" alt="">
-                                </a>
-                            </div>
                             <div class="blog-meta">
                                 <span class="comments-type">
-                                    <i class="fa fa-comment-o"></i>
-                                    <a href="#">13 comments</a>
+                                    <i class="fa fa-user"></i>
+                                    <a href="#">Admin</a>
                                 </span>
                                 <span class="date-type">
-                                    <i class="fa fa-calendar"></i>2016-03-05 / 09:10:16
+                                    <i class="fa fa-calendar"></i>19-04-2019<?php
+                                                                            ?>
                                 </span>
                             </div>
                             <div class="blog-text">
                                 <h4>
-                                    <a href="blog.html">Assumenda repud eum veniam</a>
+                                    <a href="blog.html">Bayar<?php
+                                                                ?></a>
                                 </h4>
                                 <p>
-                                    Lorem ipsum dolor sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi
-                                    magnam quibusdam.sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi
-                                    magnam quibusdam.
+                                    bayar la
+                                    <?php
+                                    ?>
                                 </p>
                             </div>
                             <span>
@@ -505,92 +437,15 @@
                         </div>
                         <!-- Start single blog -->
                     </div>
+                    <?php
+                    //}
+                    ?>
                     <!-- End Left Blog-->
-                    <!-- Start Left Blog -->
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <div class="single-blog">
-                            <div class="single-blog-img">
-                                <a href="blog.html">
-                                    <img src="<?= base_url('assets_home/') ?>img/blog/2.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="blog-meta">
-                                <span class="comments-type">
-                                    <i class="fa fa-comment-o"></i>
-                                    <a href="#">130 comments</a>
-                                </span>
-                                <span class="date-type">
-                                    <i class="fa fa-calendar"></i>2016-03-05 / 09:10:16
-                                </span>
-                            </div>
-                            <div class="blog-text">
-                                <h4>
-                                    <a href="blog.html">Explicabo magnam quibusdam.</a>
-                                </h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi
-                                    magnam quibusdam.sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi
-                                    magnam quibusdam.
-                                </p>
-                            </div>
-                            <span>
-                                <a href="blog.html" class="ready-btn">Read more</a>
-                            </span>
-                        </div>
-                        <!-- Start single blog -->
-                    </div>
-                    <!-- End Left Blog-->
-                    <!-- Start Right Blog-->
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <div class="single-blog">
-                            <div class="single-blog-img">
-                                <a href="blog.html">
-                                    <img src="<?= base_url('assets_home/') ?>img/blog/3.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="blog-meta">
-                                <span class="comments-type">
-                                    <i class="fa fa-comment-o"></i>
-                                    <a href="#">10 comments</a>
-                                </span>
-                                <span class="date-type">
-                                    <i class="fa fa-calendar"></i>2016-03-05 / 09:10:16
-                                </span>
-                            </div>
-                            <div class="blog-text">
-                                <h4>
-                                    <a href="blog.html">Lorem ipsum dolor sit amet</a>
-                                </h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi
-                                    magnam quibusdam.sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi
-                                    magnam quibusdam.
-                                </p>
-                            </div>
-                            <span>
-                                <a href="blog.html" class="ready-btn">Read more</a>
-                            </span>
-                        </div>
-                    </div>
                     <!-- End Right Blog-->
                 </div>
             </div>
         </div>
     </div>
     <!-- End Blog -->
-    <!-- Start Suscrive Area -->
-    <div class="suscribe-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs=12">
-                    <div class="suscribe-text text-center">
-                        <h3>Welcome to our eBusiness company</h3>
-                        <a class="sus-btn" href="#">Get A quate</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Suscrive Area -->
 
     <!-- Start Footer bottom Area -->
