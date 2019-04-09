@@ -21,39 +21,51 @@
 			<div class="col-lg-12">
 				<h1 class="page-header">Daftar Siswa</h1>
             <div class="panel-button-tab-left">
-        	<button class="btn btn-"> </button>
+				
+        	<button class="btn btn-primary fa fa-user-plus"  >Tambah Data</button>
             </div>
 				<table class="table table-striped">
 				<thead>
 					<tr>
-					<th>Nis</th>
-                    <th>Nama</th>
-                    <th>Tanggal Lahir</th>
-                    <th>Kota Asal</th>
-                    <th>Gender</th>
-                    <th>Alamat</th>
-                    <th>Jurusan</th>
-                    <th>Kelas</th>
-                    <th>No Telepon</th>
-                    <th>Status</th>
-                    <th>Action</th>
+						<th><font face ="Calibri"> NIS </font></th>
+						<th><font face ="Calibri"> PASSWORD </font></th>
+						<th><font face ="Calibri"> NAMA </font></th>
+						<th><font face ="Calibri"> TANGGAL LAHIR </font></th>
+						<th><font face ="Calibri"> GENDER </font></th>
+						<th><font face ="Calibri"> JURUSAN </font></th>
+						<th><font face ="Calibri"> KELAS </font></th>
+						<th><font face ="Calibri"> KOTA ASAL </font></th>
+						<th><font face ="Calibri"> ALAMAT </font></th>
+						<th><font face ="Calibri"> NO TELP </font></th>
+						<th><font face ="Calibri"> FOTO </font></th>
+						<th><font face ="Calibri"> MENU </font></th>
                     </tr>
-  			<tbody>
-			  <th scope='row'>17271721721</th>
-					 <td>KAnjeng</td>
-					 <td>1998-12-12</td>
-					 <td>Zimbawe</td>
-					 <td>Laki-Laki</td>
-					 <td>Jl.Zimbawe 5</td>
-					 <td>Ipa</td>
-					 <td>Ipa2</td>
-					 <td>084818121</td>
-					 <td>Siswa</td>
-					 <td>
-					 <button class="btn btn-success fa fa-edit"></button>
-					 <button class="btn btn-danger fa fa-trash"></button>
-					 </td>
-			</tbody>
+					<tbody>
+								<?php 
+								foreach($siswa  as $murid):
+								?>
+						<tr>
+							<td><p><?=  $murid->nis?></p></td>
+							<td><p><?=  $murid->password?></p></td>
+							<td><p><?=  $murid->nama?></p></td>
+							<td><p><?=  $murid->tgl_lahir?></p></td>
+							<td><p><?=  $murid->gender?></p></td>
+							<td><p><?=  $murid->id_jurusan?></p></td>
+							<td><p><?=  $murid->kelas?></p></td>
+							<td><p><?=  $murid->kota_asl?></p></td>
+							<td><p><?=  $murid->alamat?></p></td>
+							<td><p><?=  $murid->no_telp?></p></td>
+							<td>
+							<img src="<?php echo base_url('foto/siswa/'.$murid->foto) ?>" width="64" />
+							</td>
+							
+							<td>
+							<?php echo anchor('C_siswa/edit/'.$murid->id,'Edit'); ?>
+                              <?php echo anchor('C_siswa/delete/'.$murid->id,'Hapus'); ?>
+							</td>
+						</tr>
+						<?php endforeach; ?>
+					</tbody>	
 	        </table>
 			</div>
 		</div>
