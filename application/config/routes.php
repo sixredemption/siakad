@@ -50,5 +50,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'home';
+/* WAJIB BACA !!!
+$route['namaroute'] = 'NAMAFOLDER/NAMACONTROLLER/NAMAMETHOD
+*/
+$route['hehe'] = 'auth/auth/asw';
+
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
