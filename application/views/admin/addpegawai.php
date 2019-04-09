@@ -13,4 +13,20 @@
             <div class="card">
                 <div class="card-header">
                     <h1>Form Tambah Pegawai</h1>
-                </div>
+				</div>
+
+		<div class="card-body">
+        <div class="form-group-input-group">
+			<label for="nip"> NIP :</label>
+			<input type="text" class="form-control" id="nip">
+		</div>
+
+		<div class="form-group">
+			<label for="nama"> Nama :</label>
+			<input type="text" class="form-control" id="nama">
+		</div>
+
+		<div class="form-group">
+			<label for="password"> Password:</label>
+			<input type="text" class="form-control" id="password">
+		</div>
