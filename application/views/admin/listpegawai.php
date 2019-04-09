@@ -8,8 +8,8 @@
 			</ol>
             <form role="search">
 			<div class="form-group" method="get" action="">
-	        <label>NIS:</label> 
-			<input type="text" name="nis"/>
+	        <label> NIP :</label> 
+			<input type="text" name="nip"/>
 	            <button class="btn btn-info fa fa-search" type="submit" name="cari" value="cari Siswa" ></button>
             </div>
 		</div>
@@ -29,14 +29,14 @@
                     <th>Nama</th>
 					<th>Password</th>
 					<th>Gender</th>
-                    <th>Action</th>
+                    <th>Status User</th>
                     </tr>
   			<tbody>
 			  <th scope='row'>17271721721</th>
 					 <td>Kanjeng Dimas</td>
 					 <td>bibibibi</td>
 					 <td>Laki-Laki</td>
-					 <td>
+					 <td>Admin</td>
 					 <button class="btn btn-success fa fa-edit"></button>
 					 <button class="btn btn-danger fa fa-trash"></button>
 					 </td>
