@@ -69,6 +69,21 @@
 			<label for="password"> Password:</label>
 			<input type="text" class="form-control" id="password">
 	</div>
+
+	<div class="form-group">
+			<label for="id_pelajaran"> Mengajar:</label>
+			<input type="number" class="form-control" id="id_pelajaran">
+	</div>
+
+	<div class="form-group">
+            <label for="status_user">Status User:</label>
+            <select class="form-control" name="status_user">
+        	<option value="" disabled selected>Pilih User</option>
+			<option value="1">Siswa</option>
+			<option value="2">Guru</option>
+			<option value="3">Pegawai</option>
+		</select>
+			</div>
 	
     <button type="submit" class="btn btn-success">Perbarui</button>
     <button type="reset" class="btn btn-danger">Reset</button>
