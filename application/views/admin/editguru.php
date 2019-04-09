@@ -64,13 +64,6 @@
 			<label for="nohp"> Nomer Hp:</label>
 			<input type="number" class="form-control" id="kota_asl">
 		</div>
-
-    <div class="form-group">
-      <label for="gender">Jenig Kelamin:</label>
-      <input type="radio" name="gender" value="lakilaki">Laki-Laki
-      <input type="radio" name="gender" value="perempuan">Perempuann
-      </select>
-	</div>
 	
     <button type="submit" class="btn btn-success">Perbarui</button>
     <button type="reset" class="btn btn-danger">Reset</button>
