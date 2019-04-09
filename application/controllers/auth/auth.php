@@ -3,8 +3,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Auth extends CI_Controller
 {
+	public $table = 'pengumuman';
+	public function __construct()
+	{
+		parent::__construct();
+	}
+
 	public function index()
 	{
-		echo "<h1 style='size:20px;color:red;text-align:center;'>LOGIN PLEASE<h1>";
-    }
+		$data['user']	=	$this->db->query('SELECT * FROM pengumuman');
+		$this->load->view('auth/pengumuman', $data);
+	}
 }
