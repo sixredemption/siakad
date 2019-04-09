@@ -16,20 +16,20 @@
                 </div>
                 <div class="card-body">
                 <div class="form-group-input-group">
-			<label for="nis">NIP :</label>
-			<input type="text" class="form-control" id="nis">
+			<label for="nig">NIG :</label>
+			<input type="text" class="form-control" id="nig">
 		</div>
 		<div class="form-group">
 			<label for="nama">Nama :</label>
 			<input type="text" class="form-control" id="nama">
             </div>
             <div class="form-group">
-			<label for="tanggallahir">Tanggal lahir:</label>
-			<input type="date" class="form-control" id="tanggallahir">
+			<label for="tgl_lahir">Tanggal lahir:</label>
+			<input type="date" class="form-control" id="tgl_lahir">
 		</div>
         <div class="form-group">
-			<label for="kotaasal"> Kota Asal:</label>
-			<input type="text" class="form-control" id="kotaasal">
+			<label for="kota_asl"> Kota Asal:</label>
+			<input type="text" class="form-control" id="kota_asl">
 		</div>	  
         <div class="form-group">
             <label for="alamat">Alamat anda:</label>
@@ -55,10 +55,10 @@
     </div>
     <div class="form-group">
 			<label for="nohp"> Nomer Hp:</label>
-			<input type="number" class="form-control" id="kotaasal">
+			<input type="number" class="form-control" id="kota_asl">
 		</div>	  
     <div class="form-group">
-      <label for="jk">Jenis Kelamin:</label>
+      <label for="jk">Jenig Kelamin:</label>
       <input type="radio" name="gender" value="lakilaki">Laki-Laki
       <input type="radio" name="gender" value="perempuan">Perempuann
       </select>
@@ -75,8 +75,8 @@
 
 <!-- <form>
 <div class="form-group-input-group">
-			<label for="nis">NIP :</label>
-			<input type="text" class="form-control" id="nis">
+			<label for="nig">NIP :</label>
+			<input type="text" class="form-control" id="nig">
 		</div>
 		<div class="form-group">
 			<label for="nama">Nama :</label>
@@ -87,8 +87,8 @@
 			<input type="date" class="form-control" id="tanggallahir">
 		</div>
         <div class="form-group">
-			<label for="kotaasal"> Kota Asal:</label>
-			<input type="text" class="form-control" id="kotaasal">
+			<label for="kota_asl"> Kota Asal:</label>
+			<input type="text" class="form-control" id="kota_asl">
 		</div>	  
         <div class="form-group">
             <label for="alamat">Alamat anda:</label>
@@ -114,10 +114,10 @@
     </div>
     <div class="form-group">
 			<label for="nohp"> Nomer Hp:</label>
-			<input type="number" class="form-control" id="kotaasal">
+			<input type="number" class="form-control" id="kota_asl">
 		</div>	  
     <div class="form-group">
-      <label for="jk">Jenis Kelamin:</label>
+      <label for="jk">Jenig Kelamin:</label>
       <input type="radio" name="gender" value="lakilaki">Laki-Laki
       <input type="radio" name="gender" value="perempuan">Perempuann
       </select>
