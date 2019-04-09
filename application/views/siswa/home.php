@@ -14,7 +14,7 @@
 				<br><h2 align="center">Biodata Siswa</h2>
 					<thead>
 					<tr align="center">
-		<img src="<?php echo base_url() ?>foto/CHA_0318.jpg" alt="foto" width="150">
+		<img src="<?php echo base_url() ?>assets_siswa/CHA_0318.jpg" alt="foto" width="150">
     <br> 
 		<br>
 		<a href='<?php echo base_url("siswa/ubah"); ?>'>Ubah Data</a><br><br> 
