@@ -22,6 +22,7 @@ class Home extends CI_Controller
 	public function index()
 	{
 		$this->load->view('template_home/header');
+		$this->load->view('template_home/navbar');
 		$this->load->view('template_home/index');
 		$this->load->view('template_home/footer');
 	}
