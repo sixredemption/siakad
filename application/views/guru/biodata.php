@@ -14,6 +14,7 @@
          <form action="#" style="width: 1000px"class="posisi";>
          <fieldset class="h">
          <table style="width: 980px;">
+         <thead>
          <tr>
             <td rowspan="15" width="250px">
             <img src="<?php echo base_url() ?>3.jpg" width="300px" height="300px"/>
@@ -67,8 +68,9 @@
             <td>:</td>
             <td>085367469857</td>
         </tr>
+        </thead>
     </table>
-    <button type="button" class="btn btn-primary"><a href="<?= base_url();?>guru/editbiodata">Kembali</a></button>
+    <a <button type="button" class="btn btn-primary" href="<?= base_url();?>guru/editbiodata">Kembali</a></button>
 </fieldset>
 </form>
 </body>
