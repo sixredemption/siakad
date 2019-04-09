@@ -25,7 +25,7 @@ class guru extends CI_Controller {
 		$this->session->set_flashdata('success' , 'Berhasil disimpan') ;
 		}
 
-		$this->load->view("admin/tambahguru") ;
+		$this->load->view("admin/addguru") ;
 	}
 	public function edit($id = null) {
 		if (!isset($id)) redirect ('guru/guru_view') ;
