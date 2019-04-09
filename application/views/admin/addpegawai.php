@@ -47,3 +47,12 @@
 			<option value="3">Pegawai</option>
 		</select>
 			</div>
+
+			<button type="submit" class="btn btn-primary">Simpan</button>
+    <button type="reset" class="btn btn-danger">Reset</button>
+        </div>
+                </div>
+			</div>
+		</div><!--/.row-->
+    </div>
+</div>
