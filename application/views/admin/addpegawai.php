@@ -30,3 +30,10 @@
 			<label for="password"> Password:</label>
 			<input type="text" class="form-control" id="password">
 		</div>
+
+		<div class="form-group">
+      		<label for="gender">Jenis Kelamin:</label>
+      		<input type="radio" name="gender" value="lakilaki">Laki-Laki
+      		<input type="radio" name="gender" value="perempuan">Perempuann
+      		</select>
+    	</div>	
