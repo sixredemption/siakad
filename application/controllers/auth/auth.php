@@ -5,9 +5,6 @@ class Auth extends CI_Controller
 {
 	public function index()
 	{
-		echo "asw";
-    }
-    public function asw(){
-        echo "bapalo :v";
+		echo "<h1 style='size:20px;color:red;text-align:center;'>LOGIN PLEASE<h1>";
     }
 }
