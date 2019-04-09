@@ -298,37 +298,17 @@
             </div>
             <div class="row">
                 <!-- Start Portfolio -page -->
-                <div class="awesome-project-1 fix">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="awesome-menu ">
-                            <ul class="project-menu">
-                                <li>
-                                    <a href="#" class="active" data-filter="*">All</a>
-                                </li>
-                                <li>
-                                    <a href="#" data-filter=".development">Development</a>
-                                </li>
-                                <li>
-                                    <a href="#" data-filter=".design">Design</a>
-                                </li>
-                                <li>
-                                    <a href="#" data-filter=".photo">Photoshop</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
                 <div class="awesome-project-content">
                     <!-- single-awesome-project start -->
                     <div class="col-md-4 col-sm-4 col-xs-12 design development">
                         <div class="single-awesome-project">
                             <div class="awesome-img">
-                                <a href="#"><img src="<?= base_url('assets_home/') ?>img/portfolio/1.jpg" alt="" /></a>
+                                <a href="#"><img src="<?= base_url('assets_home/') ?>img/portfolio/paskibra.jpg" alt="" /></a>
                                 <div class="add-actions text-center">
                                     <div class="project-dec">
-                                        <a class="venobox" data-gall="myGallery" href="<?= base_url('assets_home/') ?>img/portfolio/1.jpg">
-                                            <h4>Business City</h4>
-                                            Web Developmen>
+                                        <a class="venobox" data-gall="myGallery" href="<?= base_url('assets_home/') ?>img/portfolio/paskibra.jpg">
+                                            <h4>Paskibra</h4>
+                                            Ekstrakurikuler Paskibra
                                         </a>
                                     </div>
                                 </div>
@@ -340,12 +320,12 @@
                     <div class="col-md-4 col-sm-4 col-xs-12 photo">
                         <div class="single-awesome-project">
                             <div class="awesome-img">
-                                <a href="#"><img src="<?= base_url('assets_home/') ?>img/portfolio/2.jpg" alt="" /></a>
+                                <a href="#"><img src="<?= base_url('assets_home/') ?>img/portfolio/pramuka.jpg" alt="" /></a>
                                 <div class="add-actions text-center">
                                     <div class="project-dec">
-                                        <a class="venobox" data-gall="myGallery" href="<?= base_url('assets_home/') ?>img/portfolio/2.jpg">
-                                            <h4>Blue Sea</h4>
-                                            <span>Photosho</span>
+                                        <a class="venobox" data-gall="myGallery" href="<?= base_url('assets_home/') ?>img/portfolio/pramuka.jpg">
+                                            <h4>Pramuka</h4>
+                                            <span>Ekstrakurikuler Pramuka</span>
                                         </a>
                                     </div>
                                 </div>
@@ -357,12 +337,12 @@
                     <div class="col-md-4 col-sm-4 col-xs-12 design">
                         <div class="single-awesome-project">
                             <div class="awesome-img">
-                                <a href="#"><img src="<?= base_url('assets_home/') ?>img/portfolio/3.jpg" alt="" /></a>
+                                <a href="#"><img src="<?= base_url('assets_home/') ?>img/portfolio/futsal.jpg" alt="" /></a>
                                 <div class="add-actions text-center">
                                     <div class="project-dec">
-                                        <a class="venobox" data-gall="myGallery" href="<?= base_url('assets_home/') ?>img/portfolio/3.jpg">
-                                            <h4>Beautiful Nature</h4>
-                                            <span>Web Design</span>
+                                        <a class="venobox" data-gall="myGallery" href="<?= base_url('assets_home/') ?>img/portfolio/futsal.jpg">
+                                            <h4>Futsal</h4>
+                                            <span>Ekstrakurikuler Pramuka</span>
                                         </a>
                                     </div>
                                 </div>
@@ -374,12 +354,12 @@
                     <div class="col-md-4 col-sm-4 col-xs-12 photo development">
                         <div class="single-awesome-project">
                             <div class="awesome-img">
-                                <a href="#"><img src="<?= base_url('assets_home/') ?>img/portfolio/4.jpg" alt="" /></a>
+                                <a href="#"><img src="<?= base_url('assets_home/') ?>img/portfolio/basket.jpg" alt="" /></a>
                                 <div class="add-actions text-center">
                                     <div class="project-dec">
-                                        <a class="venobox" data-gall="myGallery" href="<?= base_url('assets_home/') ?>img/portfolio/4.jpg">
-                                            <h4>Creative Team</h4>
-                                            <span>Web design</span>
+                                        <a class="venobox" data-gall="myGallery" href="<?= base_url('assets_home/') ?>img/portfolio/basket.jpg">
+                                            <h4>Basket</h4>
+                                            <span>Ekstrakurikuler Basket</span>
                                         </a>
                                     </div>
                                 </div>
@@ -391,12 +371,12 @@
                     <div class="col-md-4 col-sm-4 col-xs-12 development">
                         <div class="single-awesome-project">
                             <div class="awesome-img">
-                                <a href="#"><img src="<?= base_url('assets_home/') ?>img/portfolio/5.jpg" alt="" /></a>
+                                <a href="#"><img src="<?= base_url('assets_home/') ?>img/portfolio/theater.jpg" alt="" /></a>
                                 <div class="add-actions text-center text-center">
                                     <div class="project-dec">
-                                        <a class="venobox" data-gall="myGallery" href="<?= base_url('assets_home/') ?>img/portfolio/5.jpg">
-                                            <h4>Beautiful Flower</h4>
-                                            <span>Web Development</span>
+                                        <a class="venobox" data-gall="myGallery" href="<?= base_url('assets_home/') ?>img/portfolio/theater.jpg">
+                                            <h4>Theater & Tari</h4>
+                                            <span>Ekstrakurikuler Theater & Tari</span>
                                         </a>
                                     </div>
                                 </div>
@@ -408,12 +388,12 @@
                     <div class="col-md-4 col-sm-4 col-xs-12 design photo">
                         <div class="single-awesome-project">
                             <div class="awesome-img">
-                                <a href="#"><img src="<?= base_url('assets_home/') ?>img/portfolio/6.jpg" alt="" /></a>
+                                <a href="#"><img src="<?= base_url('assets_home/') ?>img/portfolio/pecintaalam.jpg" alt="" /></a>
                                 <div class="add-actions text-center">
                                     <div class="project-dec">
-                                        <a class="venobox" data-gall="myGallery" href="img/portfolio/6.jpg">
-                                            <h4>Night Hill</h4>
-                                            <span>Photoshop</span>
+                                        <a class="venobox" data-gall="myGallery" href="img/portfolio/pecintaalam.jpg">
+                                            <h4>Pecinta Alam</h4>
+                                            <span>Ekstrakurikuler PA</span>
                                         </a>
                                     </div>
                                 </div>
