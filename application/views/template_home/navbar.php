@@ -49,7 +49,7 @@
                                         <a class="page-scroll" href="#contact">Contact</a>
                                     </li>
                                     <li>
-                                        <a class="page-scroll" href="#contact">Login</a>
+                                        <a class="page-scroll" href="<?= base_url('login') ?>">Login</a>
                                     </li>
                                 </ul>
                             </div>
