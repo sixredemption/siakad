@@ -25,7 +25,7 @@ class pegawai extends CI_Controller {
 		$this->session->set_flashdata('success' , 'Berhasil disimpan') ;
 		}
 
-		$this->load->view("admin/tambahpegawai") ;
+		$this->load->view("admin/addpegawai") ;
 	}
 	public function edit($id = null) {
 		if (!isset($id)) redirect ('pegawai/pegawai_view') ;

@@ -13,8 +13,10 @@
 		$data['guru']=$this->guru_model->getAll();
 		$data['pegawai']=$this->pegawai_model->getAll() ;
         $data['judul']="Wellcome To Administrator";
-        $this->load->view('template_admin/header',$data);
-        $this->load->view('admin/dashboard');
+        $this->load->view('template_admin/header');
+		$this->load->view('admin/dashboard');
+		$this->load->view('admin/listguru' , $data);
+		$this->load->view('admin/listpegawai' , $data) ;
         $this->load->view('template_admin/sidebar');
         $this->load->view('template_admin/footer');
     }
@@ -63,9 +65,9 @@
         $this->load->view('template_admin/sidebar');
         $this->load->view('template_admin/footer');
     }
-    public function listadmin(){
+    public function listpegawai(){
         $this->load->view('template_admin/header');
-        $this->load->view('admin/listadmin');
+        $this->load->view('admin/listpegawai');
         $this->load->view('template_admin/sidebar');
         $this->load->view('template_admin/footer');
     }
@@ -86,13 +88,19 @@
 	public function addpegawai(){
 		$data['judul']="Halaman Tambah Pegawai" ;
         $this->load->view('template_admin/header');
-        $this->load->view('admin/addguru');
+        $this->load->view('admin/addpegawai');
         $this->load->view('template_admin/sidebar');
         $this->load->view('template_admin/footer');
     }
     public function editguru(){
         $this->load->view('template_admin/header');
         $this->load->view('admin/editguru');
+        $this->load->view('template_admin/sidebar');
+        $this->load->view('template_admin/footer');
+	}
+	public function editpegawai(){
+        $this->load->view('template_admin/header');
+        $this->load->view('admin/editpegawai');
         $this->load->view('template_admin/sidebar');
         $this->load->view('template_admin/footer');
     }
