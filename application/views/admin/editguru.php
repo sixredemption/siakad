@@ -61,9 +61,14 @@
 	</div> -->
 	
     <div class="form-group">
-			<label for="nohp"> Nomer Hp:</label>
-			<input type="number" class="form-control" id="kota_asl">
+			<label for="no_telp"> Nomer Hp:</label>
+			<input type="number" class="form-control" id="no_telp">
 		</div>
+
+	<div class="form-group">
+			<label for="password"> Password:</label>
+			<input type="text" class="form-control" id="password">
+	</div>
 	
     <button type="submit" class="btn btn-success">Perbarui</button>
     <button type="reset" class="btn btn-danger">Reset</button>
