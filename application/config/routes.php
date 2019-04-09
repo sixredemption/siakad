@@ -53,7 +53,8 @@ $route['default_controller'] = 'home';
 /* WAJIB BACA !!!
 $route['namaroute'] = 'NAMAFOLDER/NAMACONTROLLER/NAMAMETHOD
 */
-$route['hehe'] = 'auth/auth/asw';
+$route['login'] = 'auth/auth';
+$route['auth'] = 'auth/auth';
 
 
 $route['404_override'] = '';
