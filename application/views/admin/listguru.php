@@ -33,9 +33,9 @@
 						<th scope="col">Gender</th>
 						<th scope="col">Alamat</th>
 						<th scope="col">No Telepon</th>
-						<th scope="col">Mengajar</th>
+						<th scope="col">Password</th>
+						<th scope="col">ID Pelajaran</th>
 						<th scope="col">Status</th>
-						<th scope="col">Action</th>
 	                </tr>
 					<tbody>
 					 <tr>
