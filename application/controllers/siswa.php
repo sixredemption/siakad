@@ -37,14 +37,14 @@ class siswa extends CI_Controller{
 	  $this->load->view('siswa/jadwal');
 	  $this->load->view('template_siswa/footer');
 	  }
-	  public function listsiswa(){
-		$data['siswa']=$this->SiswaModel->getAll();
-			  // $dataEdit['siswa']=$this->M_siswa->getById();
+	//   public function listsiswa(){
+	//   $data['siswa']=$this->SiswaModel->getAll();
+	// 		  // $dataEdit['siswa']=$this->M_siswa->getById();
 			  
-			  $this->load->view('template_siswa/header');
-			  $this->load->view('siswa/home', $data);
-			  $this->load->view('template_siswa/sidebar');
-			  $this->load->view('template_siswa/footer'); 
-	 }
+	// 	  $this->load->view('template_siswa/header');
+	// 	  $this->load->view('siswa/home', $data);
+	// 	  $this->load->view('template_siswa/sidebar');
+	// 	  $this->load->view('template_siswa/footer'); 
+	// 	}
 
 }

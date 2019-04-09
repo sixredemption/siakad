@@ -14,14 +14,13 @@
       <aside class="sidebar">
         <menu>
           <ul class="menu-content">
-            <li><a href="<?= base_url();?>home/index"><i class="fa fa-home"></i> Home</a></li>
-            <li><a href="<?= base_url();?>home/nilai"><i class="fa fa-bookmark-o"></i> Nilai Siswa</a></li>
-						<li><a href="<?= base_url();?>home/jadwal"><i class="fa fa-bookmark-o"></i>Jadwal Siswa</a></li>
-            <li><a href="<?= base_url();?>home/pengumuman"><i class="fa fa-bell"></i> Pengumuman</a></li>
-            <li><a href="<?= base_url();?>home/statusspp"><i class="fa fa-money"></i>Status Pembayaran Spp</a></li>
+            <li><a href="<?= base_url();?>siswa/index"><i class="fa fa-home"></i> Home</a></li>
+            <li><a href="<?= base_url();?>siswa/nilai"><i class="fa fa-bookmark-o"></i> Nilai Siswa</a></li>
+						<li><a href="<?= base_url();?>siswa/jadwal"><i class="fa fa-bookmark-o"></i>Jadwal Siswa</a></li>
+            <li><a href="<?= base_url();?>siswa/pengumuman"><i class="fa fa-bell"></i> Pengumuman</a></li>
+            <li><a href="<?= base_url();?>siswa/statusspp"><i class="fa fa-money"></i>Status Pembayaran Spp</a></li>
 						<li><a href="<?= base_url();?>logout/siswa"><i class="fa fa-sign-out"></i> Logout </a></li>
           </ul>
         </menu>
       </aside>
-     
     </div>
