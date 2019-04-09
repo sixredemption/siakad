@@ -33,8 +33,8 @@
                 </thead>
             </table>            
             <div claas="col-sm-1">
-            <button type="button" class="btn btn-danger"><a href="<?= base_url();?>guru/tambahnilai">Simpan</a></button>
-            <button type="button" class="btn btn-primary"><a href="<?= base_url();?>guru/isinilai">Kembali</a></button>
+            <a <button type="button" class="btn btn-danger" href="<?= base_url();?>guru/tambahnilai">Simpan</a></button>
+            <a <button type="button" class="btn btn-primary" href="<?= base_url();?>guru/isinilai">Kembali</a></button>
             </div>
     </section>
 </div>

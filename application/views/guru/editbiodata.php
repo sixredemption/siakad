@@ -72,8 +72,8 @@
 			<input type="file" class="form-control" id="nama">
             </div> 
     
-        <button type="submit" class="btn btn-primary">Simpan</button>
-        <button type="reset" class="btn btn-danger">Reset</button>
+        <a <button type="submit" class="btn btn-primary" href="<?= base_url();?>guru/biodata">Simpan</a></button>
+        <a <button type="reset" class="btn btn-danger" href="<?= base_url();?>guru/biodata">Reset</a></button>
         </div>
         </div>	
     	</div>

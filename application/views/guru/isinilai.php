@@ -24,7 +24,7 @@
                     </tr>
                 </thead>
             </table>
-            <button type="button" class="btn btn-primary"><a href="<?= base_url();?>guru/tambahnilai">Tambah</a></button>
+            <a <button type="button" class="btn btn-primary" href="<?= base_url();?>guru/tambahnilai">Tambah</a></button>
     </section>
 </div>
 
