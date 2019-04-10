@@ -4,49 +4,42 @@
 				<li><a href="#">
 					<em class="fa fa-home"></em>
 				</a></li>
-				<li class="active">List Pegawai</li>
-			</ol>
+				<li class="active">List Guru</li>
+			</ol><br>
+			<div class="col-lg-10">
             <form role="search">
 			<div class="form-group" method="get" action="">
 	        <label> NIP :</label> 
 			<input type="text" name="nip"/>
-	            <button class="btn btn-info fa fa-search" type="submit" name="cari" value="cari Siswa" ></button>
+	            <button class="btn btn-info fa fa-search" type="submit" name="cari" value="cari Guru" ></button>
             </div>
+			</div>
 		</div>
-        <!--/.row-->
+		<!--/.row-->
+		
 		<div class= container>
-		<div class="row">
+        <div class="row">
 			<div class="col-lg-12">
-				<h1 class="page-header">Daftar Pegawai</h1>
-		    <div class="panel-button-tab-left">
-            <button class="btn btn-primary fa fa-user-plus">Tambah Data</button>
-            </div>
+				<h1 class="page-header">Daftar Guru</h1>
+	        <div class="panel-button-tab-left">
+
+            <button class="btn btn-primary fa fa-user-plus" >Tambah Data</button>
+			</div>
 			
 				<table class="table table-striped">
 				<thead>
 					<tr>
-					<th>Nip</th>
-                    <th>Nama</th>
-					<th>Password</th>
-					<th>Gender</th>
-                    <th>Status User</th>
-                    </tr>
-  			<tbody>
-			  <th scope='row'>17271721721</th>
-					 <td>Kanjeng Dimas</td>
-					 <td>bibibibi</td>
-					 <td>Laki-Laki</td>
-					 <td>Admin</td>
-					 <button class="btn btn-success fa fa-edit"></button>
-					 <button class="btn btn-danger fa fa-trash"></button>
-					 </td>
-			  
-			</tbody>
-	        </table>
-			</div>
-			</div>
-		</div>
+						<th><font face ="Calibri">NIP</font></th>
+						<th><font face ="Calibri">Nama</font></th>
+						<th><font face ="Calibri">Password</font></th>
+						<th><font face ="Calibri">Jenis Kelamin</font></th>
+						<th><font face ="Calibri">Status User</font></th>
+					</tr>
+					<tbody>
 
+					<?php
+							foreach($pegawai as $admin) :
+							?>
 	
         
        
