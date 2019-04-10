@@ -53,10 +53,10 @@ $route['default_controller'] = 'home';
 /* WAJIB BACA !!!
 $route['namaroute'] = 'NAMAFOLDER/NAMACONTROLLER/NAMAMETHOD
 */
-$route['login'] = 'auth/auth';
-$route['auth'] = 'auth/auth/login_admin';
-$route['logout'] = 'auth/auth/logout';
+$route['loginadmin'] = 'auth/auth'; // defaultnya siswa
+$route['login'] = 'auth/auth/siswa';
 
+$route['logout'] = 'auth/auth/logout';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
