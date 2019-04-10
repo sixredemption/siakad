@@ -8,7 +8,7 @@ class C_guru extends CI_Controller {
 	{
 		parent::__construct() ;
 		$this->load->model("Guru_model") ;
-		$this->load->model('form_validation') ;
+		$this->load->library('form_validation') ;
 		
 	}
 	public function index() {

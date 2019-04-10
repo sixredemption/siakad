@@ -5,18 +5,14 @@
   {
       parent::__construct();
       $this->load->helper(array('form', 'url'));
-	  $this->load->model("guru_model");
+	  $this->load->model("Guru_model");
 	  $this->load->model("pegawai_model") ;
   }
 	
     public function index(){
-		$data['guru']=$this->guru_model->getAll();
-		$data['pegawai']=$this->pegawai_model->getAll() ;
         $data['judul']="Wellcome To Administrator";
-        $this->load->view('template_admin/header');
+        $this->load->view('template_admin/header' , $data);
 		$this->load->view('admin/dashboard');
-		$this->load->view('admin/listguru' , $data);
-		$this->load->view('admin/listpegawai' , $data) ;
         $this->load->view('template_admin/sidebar');
         $this->load->view('template_admin/footer');
     }
@@ -54,8 +50,9 @@
         $this->load->view('template_admin/footer');
     }
     public function listguru(){
+		$data["guru"] = $this->Guru_model->getAll() ;
         $this->load->view('template_admin/header');
-        $this->load->view('admin/listguru');
+        $this->load->view('admin/listguru' , $data);
         $this->load->view('template_admin/sidebar');
         $this->load->view('template_admin/footer');
     }
