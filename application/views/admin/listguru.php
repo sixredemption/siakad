@@ -6,23 +6,26 @@
 				</a></li>
 				<li class="active">List Guru</li>
 			</ol><br>
-			<form role="search">
+			<div class="col-lg-10">
+            <form role="search">
 			<div class="form-group" method="get" action="">
 	        <label>NIG:</label> 
 			<input type="text" name="nig"/>
-			<button class="btn btn-info fa fa-search" type="submit" name="cari" value="cariguru" ></button>            </div>
+	            <button class="btn btn-info fa fa-search" type="submit" name="cari" value="cari Guru" ></button>
+            </div>
+			</div>
 		</div>
-		</form>
-        <!--/.row-->
+		<!--/.row-->
+		
 		<div class= container>
-
         <div class="row">
 			<div class="col-lg-12">
-			<h1 class="page-header">Daftar Guru</h1>
-		</div>
+				<h1 class="page-header">Daftar Guru</h1>
 	        <div class="panel-button-tab-left">
+
             <button class="btn btn-primary fa fa-user-plus" >Tambah Data</button>
-            </div><br>
+			</div>
+			
 				<table class="table table-striped">
 				<thead>
 					<tr>
