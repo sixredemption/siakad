@@ -10,12 +10,12 @@
                             <div class="col-lg">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h2 text-gray-900 mb-4"><i class="fas fa-graduation-cap"></i> LOGIN GURU</h1>
+                                        <h1 class="h2 text-gray-900 mb-4"><i class="fas fa-user-secret"></i> LOGIN ADMIN</h1>
                                     </div>
                                     <?= $this->session->flashdata('message'); ?>
-                                    <form class="user" method="post" action="<?= base_url('auth'); ?>">
+                                    <form class="user" method="post" action="<?= base_url('auth/auth/login_admin'); ?>">
                                         <div class="form-group">
-                                            <input type="text" class="form-control form-control-user" id="username" placeholder="Nomor Induk Siswa" name="username" value="<?= set_value('username'); ?>">
+                                            <input type="text" class="form-control form-control-user" id="username" placeholder="Username" name="username" value="<?= set_value('username'); ?>">
                                             <?= form_error('username', '<small class="text-danger pl-3">', '</small>'); ?>
                                         </div>
                                         <div class="form-group">
