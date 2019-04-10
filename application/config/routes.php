@@ -54,7 +54,7 @@ $route['default_controller'] = 'home';
 $route['namaroute'] = 'NAMAFOLDER/NAMACONTROLLER/NAMAMETHOD
 */
 $route['login'] = 'auth/auth';
-$route['auth'] = 'auth/auth';
+$route['auth'] = 'auth/auth/login_admin';
 $route['logout'] = 'auth/auth/logout';
 
 
