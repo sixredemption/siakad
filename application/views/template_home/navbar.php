@@ -32,7 +32,7 @@
                                     <li class="active">
                                         <a class="page-scroll" href="<?= base_url() ?>">Home</a>
                                     </li>
-                                    
+
                                     <li>
                                         <a class="page-scroll" href="#services">Tentang Sekolah</a>
                                     </li>
@@ -110,13 +110,9 @@
                                 </div>
                                 <!-- layer 2 -->
                                 <div class="layer-1-2 wow slideInUp" data-wow-duration="2s" data-wow-delay=".1s">
-                                    <h1 class="title2">Perpustakaan terlengkap di Kabupaten</h1>
+                                    <h1 class="title2">Perpustakaan terlengkap di Kabupaten Situ</h1>
                                 </div>
-                                <!-- layer 3 -->
-                                <div class="layer-1-3 hidden-xs wow slideInUp" data-wow-duration="2s" data-wow-delay=".2s">
-                                    <a class="ready-btn right-btn page-scroll" href="#services">See Services</a>
-                                    <a class="ready-btn page-scroll" href="#about">Learn More</a>
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -135,13 +131,9 @@
                                 </div>
                                 <!-- layer 2 -->
                                 <div class="layer-1-2 wow slideInUp" data-wow-duration="2s" data-wow-delay=".1s">
-                                    <h1 class="title2">Sekolah menyediakan fasilitas yang sangat memadai bagi siswa/siswi</h1>
+                                    <h1 class="title2">Sekolah menyediakan fasilitas yang luar biasa</h1>
                                 </div>
-                                <!-- layer 3 -->
-                                <div class="layer-1-3 hidden-xs wow slideInUp" data-wow-duration="2s" data-wow-delay=".2s">
-                                    <a class="ready-btn right-btn page-scroll" href="#services">See Services</a>
-                                    <a class="ready-btn page-scroll" href="#about">Learn More</a>
-                                </div>
+
                             </div>
                         </div>
                     </div>
