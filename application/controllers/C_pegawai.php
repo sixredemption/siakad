@@ -54,14 +54,14 @@ class C_pegawai extends CI_Controller {
         $this->load->view("template_admin/sidebar");
         $this->load->view("template_admin/footer");
 	}
-	
+
 	public function delete ($id=null) {
 		if (!isset($id)) show_404() ;
 
-		if ($this->Guru_model->delete($id)) {
-		$data["guru"]=$this->Guru_model->getAll();
+		if ($this->Pegawai_model->delete($id)) {
+		$data["pegawai"]=$this->Pegawai_model->getAll();
 		$this->load->view("template_admin/header");
-		$this->load->view("admin/listguru", $data);
+		$this->load->view("admin/listpegawai", $data);
 		$this->load->view("template_admin/sidebar");
 		$this->load->view("template_admin/footer");	
 		}
