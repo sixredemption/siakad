@@ -14,7 +14,9 @@
                 <div class="card-header">
                     <h1>Form Tambah Guru</h1>
                 </div>
-        <div class="card-body">
+    <div class="card-body">
+
+<form action = "<?php echo base_url(). 'C_guru/add' ; ?>" method = "post" enctype = "multipart/form-data">
         <div class="form-group-input-group">
 			<label for="nig">NIG :</label>
 			<input type="text" class="form-control" id="nig">
@@ -92,8 +94,10 @@
 			</div>
 
 
-    <button type="submit" class="btn btn-primary">Simpan</button>
-    <button type="reset" class="btn btn-danger">Reset</button>
+    	<button type="submit" class="btn btn-primary">Simpan</button>
+		<button type="reset" class="btn btn-danger">Reset</button>
+	</form>
+</div>
         </div>
                 </div>
 			</div>
