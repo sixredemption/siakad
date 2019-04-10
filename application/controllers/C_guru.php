@@ -34,4 +34,16 @@ class C_guru extends CI_Controller {
         $this->load->view("template_admin/sidebar");
         $this->load->view("template_admin/footer");
 	}
+
+	public function edit($id=null) {
+		if (!isset($id)) redirect ('c_guru') ;
+
+		$var = $this->M_guru;
+        $validation = $this->form_validation;
+        $validation->set_rules($var->rules());
+
+        if ($validation->run()) {
+            $var->update();
+        }
+	}
 }
