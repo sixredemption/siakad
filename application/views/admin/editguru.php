@@ -90,7 +90,7 @@
             <label for="status_user">Status User:</label>
             <select class="form-control" name="status_user">
         	<option value="" disabled selected>Pilih User</option>
-			<option value="1">guru</option>
+			<option value="1">Siswa</option>
 			<option value="2">Guru</option>
 			<option value="3">Pegawai</option>
 		</select>
@@ -101,8 +101,10 @@
 
 </form>
 </div>
-			</div>
+				</div>
 			</div>
 		</div>
 	</div>
+</div>
+
   
