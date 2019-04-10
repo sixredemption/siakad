@@ -3,11 +3,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Auth extends CI_Controller
 {
-	private $_guru = "guru";
+	private $_guru 	=	"guru";
+	private $_admin	=	"admin";
+	private $_siswa	=	"siswa";
+
 	public function __construct()
 	{
 		parent::__construct();
 		$this->load->model('login_model');
+		$this->load->library('form_validation');
 	}
 
 	public function index()
@@ -23,7 +27,7 @@ class Auth extends CI_Controller
 		$username	=	$this->input->post('username');
 		$password	=	$this->input->post('password');
 
-		$cek		= $this->login_model->cek_login($username, $password);
+		$cek		= $this->login_model->cek_login($this->_guru, $username, $password);
 		if ($cek) {
 
 			// DATANYA ADA
@@ -34,15 +38,9 @@ class Auth extends CI_Controller
 				//$this->session->set_userdata('username', $row->username);
 				redirect(base_url("admin"));
 			}
-			// $data = array(
-			// 	'nig' => $username,
-			// 	'nama' => 
-			// redirect(base_url("admin"));
 		} else {
-			echo "user pass salah";
+			$this->index();
 		}
-		var_dump($cek);
-		die;
 	}
 
 	public function logout()
