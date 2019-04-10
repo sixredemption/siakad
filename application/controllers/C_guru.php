@@ -44,6 +44,13 @@ class C_guru extends CI_Controller {
 
         if ($validation->run()) {
             $var->update();
-        }
+		}
+		
+		$data["guru"] = $var->getById($id);
+        if (!$data["guru"]) show_404();
+        $this->load->view("template_admin/header");
+        $this->load->view("admin/editguru", $data);
+        $this->load->view("template_admin/sidebar");
+        $this->load->view("template_admin/footer");
 	}
 }
