@@ -36,5 +36,22 @@ class C_pegawai extends CI_Controller {
 
 	}
 
-	
+	public function edit($id=null) {
+		if (!isset($id)) redirect ('c_pegawai') ;
+
+		$var = $this->Pegawai_model;
+        $validation = $this->form_validation;
+        $validation->set_rules($var->rules());
+
+        if ($validation->run()) {
+            $var->update();
+		}
+		
+		$data["pegawai"] = $var->getById($id);
+        if (!$data["pegawai"]) show_404();
+        $this->load->view("template_admin/header");
+        $this->load->view("admin/editpegawai", $data);
+        $this->load->view("template_admin/sidebar");
+        $this->load->view("template_admin/footer");
+	}
 }
