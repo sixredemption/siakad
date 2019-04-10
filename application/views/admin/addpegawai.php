@@ -14,8 +14,10 @@
                 <div class="card-header">
                     <h1>Form Tambah Pegawai</h1>
 				</div>
-
 		<div class="card-body">
+
+<form action = "<?php echo base_url(). 'C_Pegawai/add' ; ?>" method = "post" enctype = "multipart/form-data">
+
         <div class="form-group-input-group">
 			<label for="nip"> NIP :</label>
 			<input type="text" class="form-control" id="nip">
@@ -49,8 +51,10 @@
 			</div>
 
 			<button type="submit" class="btn btn-primary">Simpan</button>
-    <button type="reset" class="btn btn-danger">Reset</button>
-        </div>
+			<button type="reset" class="btn btn-danger">Reset</button>
+</form>
+		</div>
+        	</div>
                 </div>
 			</div>
 		</div><!--/.row-->
