@@ -1,7 +1,6 @@
 <?php
 class Admin extends CI_Controller
 {
-
     function __construct()
     {
         parent::__construct();
@@ -13,7 +12,6 @@ class Admin extends CI_Controller
             redirect(base_url('login'));
         }
     }
-
     public function index()
     {
         $data['judul'] = "Wellcome To Administrator";
@@ -36,7 +34,6 @@ class Admin extends CI_Controller
         $this->load->view('template_admin/sidebar');
         $this->load->view('template_admin/footer');
     }
-
     public function daftarsiswaspp()
     {
         $this->load->view('template_admin/header');
@@ -44,7 +41,6 @@ class Admin extends CI_Controller
         $this->load->view('template_admin/sidebar');
         $this->load->view('template_admin/footer');
     }
-
     public function nilaisiswaips()
     {
         $this->load->view('template_admin/header');
@@ -52,7 +48,6 @@ class Admin extends CI_Controller
         $this->load->view('template_admin/sidebar');
         $this->load->view('template_admin/footer');
     }
-
     public function statusspp()
     {
         $this->load->view('template_admin/header');
