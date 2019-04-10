@@ -55,6 +55,7 @@ $route['namaroute'] = 'NAMAFOLDER/NAMACONTROLLER/NAMAMETHOD
 */
 $route['login'] = 'auth/auth';
 $route['auth'] = 'auth/auth';
+$route['logout'] = 'auth/auth/logout';
 
 
 $route['404_override'] = '';
