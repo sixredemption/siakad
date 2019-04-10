@@ -7,9 +7,20 @@
 				<li class="active">List Guru</li>
 			</ol>
 		</div>
+	<div class="container">
+		<div class="row mt-3">
+			<div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h1>Edit Guru</h1>
+                </div>
+<div class="card-body">
 
-<form>
-<div class="form-group-input-group">
+<form action="<?php echo base_url("C_guru/edit/$guru->id")?>" method="post" enctype="multipart/form-data" >
+        
+        <input type="hidden" name="id" value="<?php echo $guru->id?>" />	
+
+		<div class="form-group-input-group">
 			<label for="nig">NIG :</label>
 			<input type="text" class="form-control" id="nig">
 		</div>
@@ -79,7 +90,7 @@
             <label for="status_user">Status User:</label>
             <select class="form-control" name="status_user">
         	<option value="" disabled selected>Pilih User</option>
-			<option value="1">Siswa</option>
+			<option value="1">guru</option>
 			<option value="2">Guru</option>
 			<option value="3">Pegawai</option>
 		</select>
@@ -88,6 +99,10 @@
     <button type="submit" class="btn btn-success">Perbarui</button>
     <button type="reset" class="btn btn-danger">Reset</button>
 
-  </div>
 </form>
+</div>
+			</div>
+			</div>
+		</div>
+	</div>
   
