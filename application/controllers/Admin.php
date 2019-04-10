@@ -63,6 +63,7 @@
         $this->load->view('template_admin/footer');
     }
     public function listpegawai(){
+		$data["pegawai"] = $this->Pegawai_model->getAll() ;
         $this->load->view('template_admin/header');
         $this->load->view('admin/listpegawai');
         $this->load->view('template_admin/sidebar');
