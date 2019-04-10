@@ -7,12 +7,12 @@ class C_guru extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct() ;
-		$this->load->model("M_guru") ;
+		$this->load->model("Guru_model") ;
 		$this->load->model('form_validation') ;
 		
 	}
 	public function index() {
-		$data["guru"] = $this->M_guru->getAll() ;
+		$data["guru"] = $this->Guru_model->getAll() ;
 		$this->load->view("template_admin/header");
         $this->load->view("admin/listguru", $data);
         $this->load->view("template_admin/sidebar");
@@ -20,7 +20,7 @@ class C_guru extends CI_Controller {
 	}
 
 	public function add() {
-		$tambah = $this->M_guru ;
+		$tambah = $this->Guru_model ;
 		$validation = $this->form_validation ;
 		$validation->set_rules($tambah->rules()) ;
 
@@ -28,7 +28,7 @@ class C_guru extends CI_Controller {
 			$tambah->save() ;
 		}
 
-		$data["guru"] = $this->M_guru->getAll() ;
+		$data["guru"] = $this->Guru_model->getAll() ;
 		$this->load->view("template_admin/header");
         $this->load->view("admin/listguru", $data);
         $this->load->view("template_admin/sidebar");
@@ -38,7 +38,7 @@ class C_guru extends CI_Controller {
 	public function edit($id=null) {
 		if (!isset($id)) redirect ('c_guru') ;
 
-		$var = $this->M_guru;
+		$var = $this->Guru_model;
         $validation = $this->form_validation;
         $validation->set_rules($var->rules());
 
@@ -57,8 +57,8 @@ class C_guru extends CI_Controller {
 	public function delete ($id=null) {
 		if (!isset($id)) show_404() ;
 
-		if ($this->M_guru->delete($id)) {
-		$data["guru"]=$this->M_guru->getAll();
+		if ($this->Guru_model->delete($id)) {
+		$data["guru"]=$this->Guru_model->getAll();
 		$this->load->view("template_admin/header");
 		$this->load->view("admin/listguru", $data);
 		$this->load->view("template_admin/sidebar");
