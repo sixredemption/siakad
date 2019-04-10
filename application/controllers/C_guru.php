@@ -53,4 +53,16 @@ class C_guru extends CI_Controller {
         $this->load->view("template_admin/sidebar");
         $this->load->view("template_admin/footer");
 	}
+
+	public function delete ($id=null) {
+		if (!isset($id)) show_404() ;
+
+		if ($this->M_guru->delete($id)) {
+		$data["guru"]=$this->M_guru->getAll();
+		$this->load->view("template_admin/header");
+		$this->load->view("admin/listguru", $data);
+		$this->load->view("template_admin/sidebar");
+		$this->load->view("template_admin/footer");	
+		}
+	}
 }
