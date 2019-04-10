@@ -31,10 +31,12 @@ class Pegawai_model extends CI_Model {
 
 	public function save() {
 		$post = $this->input->post() ;
+		var_dump($post);
 		$this->nip = $post["nip"] ;
 		$this->nama = $post["nama"] ;
 		$this->password = $post["password"] ;
 		$this->gender = $post["gender"] ;
+		$this->status_user = $post["status_user"] ;
 		$this->db->insert($this->_table , $this) ;
 	}
 	public function update() {
@@ -43,6 +45,7 @@ class Pegawai_model extends CI_Model {
 		$this->nama = $post["nama"] ;
 		$this->password = $post["password"] ;
 		$this->gender = $post["gender"] ;
+		$this->status_user = $post["status_user"] ;
 		$this->db->insert($this->_table , $this , array('id' => $post['id'])) ;
 	}
 	public function delete ($id) {

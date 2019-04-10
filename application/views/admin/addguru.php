@@ -17,36 +17,37 @@
     <div class="card-body">
 
 <form action = "<?php echo base_url(). 'C_guru/add' ; ?>" method = "post" enctype = "multipart/form-data">
+
         <div class="form-group-input-group">
 			<label for="nig">NIG :</label>
-			<input type="text" class="form-control" id="nig">
+			<input type="text" class="form-control" name="nig">
 		</div>
 
 		<div class="form-group">
 			<label for="nama">Nama :</label>
-			<input type="text" class="form-control" id="nama">
+			<input type="text" class="form-control" name="nama">
 		</div>
 			
         <div class="form-group">
 			<label for="tgl_lahir">Tanggal lahir:</label>
-			<input type="date" class="form-control" id="tgl_lahir">
+			<input type="date" class="form-control" name="tgl_lahir">
 		</div>
 
         <div class="form-group">
 			<label for="kota_asl"> Kota Asal:</label>
-			<input type="text" class="form-control" id="kota_asl">
+			<input type="text" class="form-control" name="kota_asl">
 		</div>
 
 		<div class="form-group">
       		<label for="gender">Jenis Kelamin:</label>
-      		<input type="radio" name="gender" value="lakilaki">Laki-Laki
-      		<input type="radio" name="gender" value="perempuan">Perempuann
+      		<input type="radio" name="gender" value="L">Laki-Laki
+      		<input type="radio" name="gender" value="P">Perempuann
       		</select>
     	</div>	 
 
         <div class="form-group">
             <label for="alamat">Alamat anda:</label>
-            <textarea type="text" class="form-control" id="alamat"></textarea>
+            <textarea type="text" class="form-control" name="alamat"></textarea>
 		</div>
 		
         <!-- <div class="form-group">
@@ -62,7 +63,7 @@
             <option value="">Fisika</option>
             <option value="">Ekonomi</option>
             <option value="">Matematika</option>
-            <option value="">Pendidikan Kewarganegaraan</option>
+            <option value="">Pendnameikan Kewarganegaraan</option>
             <option value="">Seni Budaya</option>
             <option value="">Prakarya</option>  
         </select>
@@ -70,17 +71,17 @@
 	
     	<div class="form-group">
 			<label for="no_telp"> Nomor Telepon :</label>
-			<input type="number" class="form-control" id="no_telp">
+			<input type="number" class="form-control" name="no_telp">
 		</div>
 
 		<div class="form-group">
 			<label for="password"> Password:</label>
-			<input type="text" class="form-control" id="password">
+			<input type="text" class="form-control" name="password">
 		</div>
 
 		<div class="form-group">
 			<label for="id_pelajaran"> Mengajar:</label>
-			<input type="number" class="form-control" id="id_pelajaran">
+			<input type="number" class="form-control" name="id_pelajaran">
 		</div>
 
 		<div class="form-group">
@@ -103,7 +104,7 @@
 			</div>
 		</div><!--/.row-->
     </div>
-</div>
+
 
 
 <!-- <form>

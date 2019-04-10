@@ -39,6 +39,7 @@ class Guru_model extends CI_Model {
 
 	public function save() {
 		$post = $this->input->post() ;
+		// var_dump($post);
 		$this->nig = $post["nig"] ;
 		$this->nama = $post["nama"] ;
 		$this->tgl_lahir = $post["tgl_lahir"] ;
@@ -49,12 +50,13 @@ class Guru_model extends CI_Model {
 		$this->password = $post["password"] ;
 		$this->id_pelajaran = $post["id_pelajaran"] ;
 		$this->status_user = $post["status_user"] ;
+		
 		$this->db->insert($this->_table , $this) ;
 	}
 
 	public function update() {
 		$post = $this->input->post() ;
-		$this->id = $post["id"] ;
+		// var_dump($post);
 		$this->nig = $post["nig"] ;
 		$this->nama = $post["nama"] ;
 		$this->tgl_lahir = $post["tgl_lahir"] ;

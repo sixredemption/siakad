@@ -20,7 +20,7 @@
 		<div class= container>
         <div class="row">
 			<div class="col-lg-12">
-				<h1 class="page-header">Daftar Guru</h1>
+				<h1 class="page-header">Daftar Pegawai</h1>
 	        <div class="panel-button-tab-left">
 
             <button class="btn btn-primary fa fa-user-plus" >Tambah Data</button>
@@ -53,7 +53,13 @@
 					</tr>
 							<?php endforeach; ?>
 					</tbody>
+				</thead>
 				</table>
+			</div>
+		</div>
+		</div>
+</div>
+
 	
         
        
