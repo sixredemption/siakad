@@ -29,29 +29,40 @@
 				<table class="table table-striped">
 				<thead>
 					<tr>
-						<th scope="col">Nig</th>
-						<th scope="col">Nama</th>
-						<th scope="col">Tanggal Lahir</th>
-						<th scope="col">Kota Asal</th>
-						<th scope="col">Gender</th>
-						<th scope="col">Alamat</th>
-						<th scope="col">No Telepon</th>
-						<th scope="col">Password</th>
-						<th scope="col">ID Pelajaran</th>
-						<th scope="col">Status</th>
+						<th><font face ="Calibri">NIG</font></th>
+						<th><font face ="Calibri">Nama</font></th>
+						<th><font face ="Calibri">Tanggal Lahir</font></th>
+						<th><font face ="Calibri">Kota Asal</font></th>
+						<th><font face ="Calibri">Jenis Kelamin</font></th>
+						<th><font face ="Calibri">Alamat</font></th>
+						<th><font face ="Calibri">No Telepon</font></th>
+						<th><font face ="Calibri">Password</font></th>
+						<th><font face ="Calibri">Id Pelajaran</font></th>
+						<th><font face ="Calibri">Status User</font></th>
 	                </tr>
 					<tbody>
-					 <tr>
-					 <th scope='row'>17271721721</th>
-					 <td>Siboy</td>
-					 <td>1998-12-12</td>
-					 <td>Zimbawe</td>
-					 <td>Laki-Laki</td>
-					 <td>Jl.Zimbawe 5</td>
-					 <td>0848128121</td>
-					 <td>Matematika</td>
-					 <td>Guru</td>
+
+							<?php
+							foreach($guru as $dosen) :
+							?>
+					<tr>
+						<td><p><?= $dosen->nig?></p></td>
+						<td><p><?= $dosen->nama?></p></td>
+						<td><p><?= $dosen->tgl_lahir?></p></td>
+						<td><p><?= $dosen->kota_asl?></p></td>
+						<td><p><?= $dosen->gender?></p></td>
+						<td><p><?= $dosen->alamat?></p></td>
+						<td><p><?= $dosen->no_telp?></p></td>
+						<td><p><?= $dosen->password?></p></td>
+						<td><p><?= $dosen->id_pelajaran?></p></td>
+						<td><p><?= $dosen->status_user?></p></td>
+
 					 <td>
+					 	<?php echo anchor('C_guru/edit/'.$dosen->id,'Edit'); ?>
+						<?php echo anchor('C_guru/delete/'.$dosen->id,'Hapus'); ?> 
+					 </td>
+					</tr>
+					<?php endforeach; ?>
 					 <button class="btn btn-success fa fa-edit"></button>
 					 <button class="btn btn-danger fa fa-trash"></button>
 					 </td>
