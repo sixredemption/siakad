@@ -26,18 +26,16 @@ class Auth extends CI_Controller
 		$this->load->view('auth/login_siswa');
 		$this->load->view('auth/footer');
 	}
+
 	public function login_admin()
 	{
 		$username	=	$this->input->post('username');
 		$password	=	$this->input->post('password');
-		$cek		= $this->login_model->cek_login($this->_admin, $username, $password);
+		$where 		=	"username";
+		$cek		= $this->login_model->cek_login($this->_admin, $where, $username, $password);
 		if ($cek) {
-			// DATANYA ADA
 			foreach ($cek as $row) {
 				$this->session->set_userdata('username', $row->username);
-				//$this->session->set_userdata('nig', $row->nig);
-				//$this->session->set_userdata('nama_lengkap', $row->nama_lengkap);
-				//$this->session->set_userdata('username', $row->username);
 				redirect(base_url("admin"));
 			}
 		} else {
@@ -49,14 +47,16 @@ class Auth extends CI_Controller
 	{
 		$nisn	=	$this->input->post('nisn');
 		$password	=	$this->input->post('password');
-		$cek		= $this->login_model->cek_login($this->_siswa, $nisn, $password);
+		$where 		=	"nisn";
+
+		$cek		= $this->login_model->cek_login($this->_siswa, $where, $nisn, $password);
 		if ($cek) {
 			// DATANYA ADA
 			foreach ($cek as $row) {
+				$this->session->set_userdata('nisn', $row->nisn);
+				$this->session->set_userdata('nama_siswa', $row->nama_siswa);
+				$this->session->set_userdata('jenis_kelamin', $row->jenis_kelamin);
 				$this->session->set_userdata('username', $row->username);
-				//$this->session->set_userdata('nig', $row->nig);
-				//$this->session->set_userdata('nama_lengkap', $row->nama_lengkap);
-				//$this->session->set_userdata('username', $row->username);
 				redirect(base_url("siswa"));
 			}
 		} else {
@@ -66,6 +66,6 @@ class Auth extends CI_Controller
 	public function logout()
 	{
 		$this->session->sess_destroy();
-		redirect(base_url("login"));
+		redirect(base_url());
 	}
 }
