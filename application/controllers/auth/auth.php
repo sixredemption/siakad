@@ -25,6 +25,7 @@ class Auth extends CI_Controller
 
 		$cek		= $this->login_model->cek_login($username, $password);
 		if ($cek) {
+
 			// DATANYA ADA
 			foreach ($cek as $row) {
 				$this->session->set_userdata('nig', $row->nig);
@@ -38,6 +39,8 @@ class Auth extends CI_Controller
 		} else {
 			echo "user pass salah";
 		}
+		var_dump($cek);
+		die;
 	}
 
 	public function logout()
