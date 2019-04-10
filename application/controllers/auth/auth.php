@@ -16,9 +16,23 @@ class Auth extends CI_Controller
 
 	public function index()
 	{
-		$data['judul']	=	'Login Siswa | Guru';
+		$data['judul']	=	'Login Siswa';
 		$this->load->view('auth/header', $data);
-		$this->load->view('auth/login');
+		$this->load->view('auth/login_siswa');
+		$this->load->view('auth/footer');
+	}
+	public function admin()
+	{
+		$data['judul']	=	'Login Admin';
+		$this->load->view('auth/header', $data);
+		$this->load->view('auth/login_admin');
+		$this->load->view('auth/footer');
+	}
+	public function guru()
+	{
+		$data['judul']	=	'Login Guru';
+		$this->load->view('auth/header', $data);
+		$this->load->view('auth/login_guru');
 		$this->load->view('auth/footer');
 	}
 
