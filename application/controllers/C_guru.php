@@ -18,4 +18,20 @@ class C_guru extends CI_Controller {
         $this->load->view("template_admin/sidebar");
         $this->load->view("template_admin/footer");
 	}
+
+	public function add() {
+		$tambah = $this->M_guru ;
+		$validation = $this->form_validation ;
+		$validation->set_rules($tambah->rules()) ;
+
+		if ($validation->run()) {
+			$tambah->save() ;
+		}
+
+		$data["guru"] = $this->M_guru->getAll() ;
+		$this->load->view("template_admin/header");
+        $this->load->view("admin/listsiswa", $data);
+        $this->load->view("template_admin/sidebar");
+        $this->load->view("template_admin/footer");
+	}
 }
