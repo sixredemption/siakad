@@ -4,8 +4,11 @@
 			<img src="<?= base_url('assets_admin/photos') ?>/dimas.jpg" class="img-responsive" alt="">
 		</div>
 		<div class="profile-usertitle">
-			<div class="profile-usertitle-name">NIG <?= $this->session->userdata("nig"); ?></div>
+			<div class="profile-usertitle-name">NIG <? php 
+													?></div>
 			<div class="profile-usertitle-status"><span class="indicator label-success"></span><?= $this->session->userdata("username"); ?></div>
+			<div class="profile-usertitle-status"><span class="indicator label-success"></span><?php  
+																								?></div>
 		</div>
 		<div class="clear"></div>
 	</div>
@@ -37,7 +40,7 @@
 					</a></li>
 			</ul>
 		</li>
-		<li><a href="login.html"><em class="fa fa-power-off">&nbsp;</em> Logout</a></li>
+		<li><a href="<?= base_url('logout'); ?>"><em class="fa fa-power-off">&nbsp;</em> Logout</a></li>
 	</ul>
 </div>
 <!--/.sidebar-->
