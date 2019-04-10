@@ -10,7 +10,7 @@ class Login_model extends CI_Model
         $us = $this->db->escape_str($u);
         $ps = $this->db->escape_str($p);
         $query = $this->db->select('*')
-            ->from('guru')
+            ->from('admin')
             ->where('username', $us)
             ->where('password', $ps)
             ->limit(1)
