@@ -415,8 +415,8 @@
                                         <a href="#">Admin</a>
                                     </span>
                                     <span class="date-type">
-                                        <i class="fa fa-calendar"></i><?= $row->tanggal;
-                                                                        ?>
+                                        <i class="fa fa-calendar"></i><?= date('l', strtotime($row->tanggal)); ?> <?= date('d-m-Y', strtotime($row->tanggal));
+                                                                                                                    ?>
                                     </span>
                                 </div>
                                 <div class="blog-text">
