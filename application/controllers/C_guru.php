@@ -14,7 +14,7 @@ class C_guru extends CI_Controller {
 	public function index() {
 		$data["guru"] = $this->M_guru->getAll() ;
 		$this->load->view("template_admin/header");
-        $this->load->view("admin/listsiswa", $data);
+        $this->load->view("admin/listguru", $data);
         $this->load->view("template_admin/sidebar");
         $this->load->view("template_admin/footer");
 	}
@@ -30,7 +30,7 @@ class C_guru extends CI_Controller {
 
 		$data["guru"] = $this->M_guru->getAll() ;
 		$this->load->view("template_admin/header");
-        $this->load->view("admin/listsiswa", $data);
+        $this->load->view("admin/listguru", $data);
         $this->load->view("template_admin/sidebar");
         $this->load->view("template_admin/footer");
 	}
