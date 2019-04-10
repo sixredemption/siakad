@@ -4,7 +4,6 @@ class Login_model extends CI_Model
 {
     function cek_login($tabel, $user, $pass)
     {
-        // return $this->db->get_where($tabel, $where);
         $u = htmlspecialchars($user);
         $p = md5($pass);
         $query = $this->db
