@@ -8,11 +8,9 @@ class Admin extends CI_Controller
         // if ($this->session->userdata('status') != "login") {
         //     redirect(base_url('login'));
         // }
-        $this->load->model('admin_model');
+        $this->load->model('login_model');
         if (empty($this->session->userdata('username')) and empty($this->session->userdata('password'))) {
             redirect(base_url('login'));
-        } else {
-            $namalengkap = $this->session->userdata('username');
         }
     }
 

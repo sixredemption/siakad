@@ -28,8 +28,10 @@ class Auth extends CI_Controller
 
 			// DATANYA ADA
 			foreach ($cek as $row) {
-				$this->session->set_userdata('nig', $row->nig);
 				$this->session->set_userdata('username', $row->username);
+				//$this->session->set_userdata('nig', $row->nig);
+				//$this->session->set_userdata('nama_lengkap', $row->nama_lengkap);
+				//$this->session->set_userdata('username', $row->username);
 				redirect(base_url("admin"));
 			}
 			// $data = array(
