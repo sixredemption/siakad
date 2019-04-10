@@ -17,7 +17,7 @@
                                         <h1 class="h2 text-gray-900 mb-4"><i class="fas fa-users"></i> SIAKAD LOGIN </h1>
                                     </div>
                                     <?= $this->session->flashdata('message'); ?>
-                                    <form class="user" method="post" action="<?= base_url('auth/auth/login_admin'); ?>">
+                                    <form class="user" method="post" action="<?= base_url('auth'); ?>">
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control-user" id="username" placeholder="Username" name="username" value="<?= set_value('username'); ?>">
                                             <?= form_error('username', '<small class="text-danger pl-3">', '</small>'); ?>
@@ -33,7 +33,7 @@
                                         </button>
                                     </form>
                                     <div class="text-center mt-3">
-                                        <a class="small" href="<?= base_url('register') ?>">Login Guru ?</a> or
+                                        <a class="small" href="<?= base_url() ?>">Login Guru ?</a> or
                                         <a class="small" href="<?= base_url(); ?>">Back Home</a>
                                     </div>
                                 </div>
