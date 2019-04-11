@@ -6,7 +6,14 @@
 				</a></li>
 				<li class="active">Dashboard</li>
 			</ol>
-		</div><!--/.row-->
+        </div>
+
+        <?php if ($this->session->flashdata('success')): ?>
+				<div class="alert alert-success" role="alert">
+					<?php echo $this->session->flashdata('success'); ?>
+				</div>
+        <?php endif; ?>
+
     <div class="container">
 		<div class="row mt-3">
 			<div class="col-md-6">
@@ -79,7 +86,7 @@
 
         <div class="form-group">
             <label for="password">password:</label>
-            <input type="text" class="form-control" name="password" value="<?php echo $siswa->password ?>" >
+            <input type="password" class="form-control" name="password" value="<?php echo $siswa->password ?>" >
         </div>
 
         <div class="form-group">
@@ -96,6 +103,7 @@
             <label for="foto">Photo</label>
             <input class="form-control-file" type="file" name="foto" />
             <input class="form-control-file" type="hidden" name="old_image" value="<?php echo $siswa->foto ?>" />
+            <img src="<?php echo base_url('foto/siswa/'.$siswa ->foto) ?>" width="64" />
         </div>
 
 <button type="submit" class="btn btn-primary"  >Simpan</button>
