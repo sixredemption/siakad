@@ -159,7 +159,7 @@
                             </div>
                             <div class="team-content text-center">
                                 <h4>Jhon Mickel</h4>
-                                <p>Seo</p>
+                                <p>Juara 1 Karate Nasional</p>
                             </div>
                         </div>
                     </div>
@@ -192,7 +192,7 @@
                             </div>
                             <div class="team-content text-center">
                                 <h4>Andrew Arnold</h4>
-                                <p>Web Developer</p>
+                                <p>Juara 2 Cyber Competition Nasional</p>
                             </div>
                         </div>
                     </div>
@@ -225,7 +225,7 @@
                             </div>
                             <div class="team-content text-center">
                                 <h4>Lellien Linda</h4>
-                                <p>Web Design</p>
+                                <p>Juara 1 Badminton 'Solo Cup' Provinsi</p>
                             </div>
                         </div>
                     </div>
@@ -258,7 +258,7 @@
                             </div>
                             <div class="team-content text-center">
                                 <h4>Jhon Powel</h4>
-                                <p>Seo Expert</p>
+                                <p>Juara 2 OSN Nasional</p>
                             </div>
                         </div>
                     </div>
@@ -405,41 +405,38 @@
 
                 <div class="row">
                     <?php
-
-                    ?>
-                    <!-- Start Left Blog -->
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <div class="single-blog">
-                            <div class="blog-meta">
-                                <span class="comments-type">
-                                    <i class="fa fa-user"></i>
-                                    <a href="#">Admin</a>
-                                </span>
-                                <span class="date-type">
-                                    <i class="fa fa-calendar"></i>19-04-2019<?php
-                                                                            ?>
+                    foreach ($pengumuman as $row) { ?>
+                        <!-- Start Left Blog -->
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <div class="single-blog">
+                                <div class="blog-meta">
+                                    <span class="comments-type">
+                                        <i class="fa fa-user"></i>
+                                        <a href="#">Admin</a>
+                                    </span>
+                                    <span class="date-type">
+                                        <i class="fa fa-calendar"></i><?= date('l', strtotime($row->tanggal)); ?> / <?= date('d-m-Y', strtotime($row->tanggal));
+                                                                                                                    ?>
+                                    </span>
+                                </div>
+                                <div class="blog-text">
+                                    <h4>
+                                        <a href="blog.html"><?= $row->judul; ?></a>
+                                    </h4>
+                                    <p>
+                                        <?= $row->keterangan; ?>
+                                    </p>
+                                </div>
+                                <span>
+                                    <a href="<?= base_url('pengumuman'); ?>/<?= $row->id; ?>" class="ready-btn">Read more</a>
+                                    <hr>
                                 </span>
                             </div>
-                            <div class="blog-text">
-                                <h4>
-                                    <a href="blog.html">Bayar<?php
-                                                                ?></a>
-                                </h4>
-                                <p>
-                                    bayar la
-                                    <?php
-                                    ?>
-                                </p>
-                            </div>
-                            <span>
-                                <a href="blog.html" class="ready-btn">Read more</a>
-                            </span>
+                            <!-- Start single blog -->
                         </div>
-                        <!-- Start single blog -->
-                    </div>
                     <?php
-                    //}
-                    ?>
+                }
+                ?>
                     <!-- End Left Blog-->
                     <!-- End Right Blog-->
                 </div>

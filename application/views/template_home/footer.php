@@ -60,7 +60,7 @@
                                 <div class="validation"></div>
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control" name="email" id="email" placeholder="sania19@gmail.com" data-rule="email" data-msg="Please enter a valid email" />
+                                <input type="email" class="form-control" name="email" id="email" placeholder="email@gmail.com" data-rule="email" data-msg="Please enter a valid email" />
                                 <div class="validation"></div>
                             </div>
                             <div class="form-group">
