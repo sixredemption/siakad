@@ -30,6 +30,7 @@ class C_siswa extends CI_Controller
 
         if ($validation->run()) {
             $tambah->save();
+            $this->session->set_flashdata('success', 'Berhasil disimpan');
         }
         
         $data["siswa"]=$this->M_siswa->getAll();
@@ -52,6 +53,7 @@ class C_siswa extends CI_Controller
 
         if ($validation->run()) {
             $var->update();
+            $this->session->set_flashdata('success', 'Berhasil disimpan');
         }
 
         // $data["siswa"]=$this->M_siswa->getAll();
