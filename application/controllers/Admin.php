@@ -4,7 +4,9 @@ class Admin extends CI_Controller
 {
     function __construct()
     {
-		parent::__construct();
+        parent::__construct();
+        $this->load->helper(array('form', 'url'));
+        $this->load->model("M_siswa");
         $this->load->helper(array('form', 'url'));
 	    $this->load->model("Guru_model");
 	    $this->load->model("Pegawai_model") ;
@@ -66,8 +68,9 @@ class Admin extends CI_Controller
     }
     public function listsiswa()
     {
+        $data['siswa']=$this->M_siswa->getAll();
         $this->load->view('template_admin/header');
-        $this->load->view('admin/listsiswa');
+        $this->load->view('admin/listsiswa', $data);
         $this->load->view('template_admin/sidebar');
         $this->load->view('template_admin/footer');
     }
