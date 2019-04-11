@@ -54,9 +54,9 @@ $route['default_controller'] = 'home';
 $route['namaroute'] = 'NAMAFOLDER/NAMACONTROLLER/NAMAMETHOD */
 
 // URL ACCESS LOGIN ======================================================
-$route['login'] = 'auth/auth/siswa'; // ACCESS URL LOGIN SISWA AS DEFAULT
-$route['loginguru'] = 'auth/auth/guru'; // ACCESS URL LOGIN GURU
-$route['loginadmin'] = 'auth/auth/admin'; // ACCESS URL LOGIN ADMIN
+$route['login']         = 'auth/auth/siswa'; // ACCESS URL LOGIN SISWA AS DEFAULT
+$route['loginguru']     = 'auth/auth/guru'; // ACCESS URL LOGIN GURU
+$route['loginadmin']    = 'auth/auth/admin'; // ACCESS URL LOGIN ADMIN
 // =======================================================================
 
 // URL LOGOUT
