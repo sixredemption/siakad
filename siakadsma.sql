@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 11, 2019 at 10:28 AM
+-- Generation Time: Apr 11, 2019 at 12:31 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -314,7 +314,7 @@ INSERT INTO `tahun_ajaran` (`id`, `tahun`, `id_semester`) VALUES
 -- Indexes for table `guru`
 --
 ALTER TABLE `guru`
-  ADD PRIMARY KEY (`nig`),
+  ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `id` (`id`),
   ADD KEY `id_pelajaran` (`id_pelajaran`),
   ADD KEY `status_user` (`status_user`);
