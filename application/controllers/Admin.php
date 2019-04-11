@@ -1,49 +1,57 @@
 <?php
- class Admin extends CI_Controller{
 
-	public function __construct()
-  {
-      parent::__construct();
-      $this->load->helper(array('form', 'url'));
-	  $this->load->model("Guru_model");
-	  $this->load->model("Pegawai_model") ;
-  }
-	
-    public function index(){
-        $data['judul']="Wellcome To Administrator";
-        $this->load->view('template_admin/header' , $data);
-		$this->load->view('admin/dashboard');
+class Admin extends CI_Controller
+{
+    function __construct()
+    {
+		parent::__construct();
+        $this->load->helper(array('form', 'url'));
+	    $this->load->model("Guru_model");
+	    $this->load->model("Pegawai_model") ;
+		
+        $this->load->model('login_model');
+        if (empty($this->session->userdata('nama')) and empty($this->session->userdata('password'))) {
+            redirect(base_url('loginadmin'));
+        }
+    }
+    public function index()
+    {
+        $data['judul'] = "Wellcome To Administrator";
+        $this->load->view('template_admin/header', $data);
+        $this->load->view('admin/dashboard');
         $this->load->view('template_admin/sidebar');
         $this->load->view('template_admin/footer');
     }
-    public function pengumuman(){
+    public function pengumuman()
+    {
         $this->load->view('template_admin/header');
         $this->load->view('admin/pengumuman');
         $this->load->view('template_admin/sidebar');
         $this->load->view('template_admin/footer');
     }
-    public function nilaisiswaipa(){
+    public function nilaisiswaipa()
+    {
         $this->load->view('template_admin/header');
         $this->load->view('admin/nilaisiswaipa');
         $this->load->view('template_admin/sidebar');
         $this->load->view('template_admin/footer');
     }
-
-    public function daftarsiswaspp(){
+    public function daftarsiswaspp()
+    {
         $this->load->view('template_admin/header');
         $this->load->view('admin/daftarsiswaspp');
         $this->load->view('template_admin/sidebar');
         $this->load->view('template_admin/footer');
     }
-
-    public function nilaisiswaips(){
+    public function nilaisiswaips()
+    {
         $this->load->view('template_admin/header');
         $this->load->view('admin/nilaisiswaips');
         $this->load->view('template_admin/sidebar');
         $this->load->view('template_admin/footer');
     }
-    
-    public function statusspp(){
+    public function statusspp()
+    {
         $this->load->view('template_admin/header');
         $this->load->view('admin/statusspp');
         $this->load->view('template_admin/sidebar');
@@ -56,7 +64,8 @@
         $this->load->view('template_admin/sidebar');
         $this->load->view('template_admin/footer');
     }
-    public function listsiswa(){
+    public function listsiswa()
+    {
         $this->load->view('template_admin/header');
         $this->load->view('admin/listsiswa');
         $this->load->view('template_admin/sidebar');
@@ -90,7 +99,8 @@
         $this->load->view('template_admin/sidebar');
         $this->load->view('template_admin/footer');
     }
-    public function editguru(){
+    public function editguru()
+    {
         $this->load->view('template_admin/header');
         $this->load->view('admin/editguru');
         $this->load->view('template_admin/sidebar');
@@ -102,10 +112,11 @@
         $this->load->view('template_admin/sidebar');
         $this->load->view('template_admin/footer');
     }
-    public function uploadjadwal(){
+    public function uploadjadwal()
+    {
         $this->load->view('template_admin/header');
         $this->load->view('admin/jadwal');
         $this->load->view('template_admin/sidebar');
         $this->load->view('template_admin/footer');
     }
- }
+}
