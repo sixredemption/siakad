@@ -42,7 +42,7 @@ class C_guru extends CI_Controller
 
     public function edit($id=null)
     {
-        // var_dump($id);
+         var_dump($id);
         if (!isset($id)) redirect('c_guru');
 
         
