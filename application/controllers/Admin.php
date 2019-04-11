@@ -42,8 +42,9 @@
     }
     
     public function statusspp(){
+        $data['spp']=$this->M_spp->getAll();
         $this->load->view('template_admin/header');
-        $this->load->view('admin/statusspp');
+        $this->load->view('admin/listspp', $data);
         $this->load->view('template_admin/sidebar');
         $this->load->view('template_admin/footer');
     }
