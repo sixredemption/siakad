@@ -89,8 +89,7 @@
                                 </div>
                                 <!-- layer 3 -->
                                 <div class="layer-1-3 hidden-xs wow slideInUp" data-wow-duration="2s" data-wow-delay=".2s">
-                                    <a class="ready-btn right-btn page-scroll" href="#services">See Services</a>
-                                    <a class="ready-btn page-scroll" href="#about">Learn More</a>
+                                    <a class="ready-btn page-scroll" href="#services">Jelajah</a>
                                 </div>
                             </div>
                         </div>

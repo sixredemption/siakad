@@ -415,7 +415,7 @@
                                         <a href="#">Admin</a>
                                     </span>
                                     <span class="date-type">
-                                        <i class="fa fa-calendar"></i><?= date('l', strtotime($row->tanggal)); ?> <?= date('d-m-Y', strtotime($row->tanggal));
+                                        <i class="fa fa-calendar"></i><?= date('l', strtotime($row->tanggal)); ?> / <?= date('d-m-Y', strtotime($row->tanggal));
                                                                                                                     ?>
                                     </span>
                                 </div>
@@ -428,7 +428,7 @@
                                     </p>
                                 </div>
                                 <span>
-                                    <a href="blog.html" class="ready-btn">Read more</a>
+                                    <a href="<?= base_url('pengumuman'); ?>/<?= $row->id; ?>" class="ready-btn">Read more</a>
                                     <hr>
                                 </span>
                             </div>
