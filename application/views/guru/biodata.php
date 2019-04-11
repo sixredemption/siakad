@@ -1,5 +1,5 @@
 <div class="container">
-    <section class="content">
+ <section class="content">
     <div class="jumbotron text-center"> 
       <h3> Biodata Guru </h3>
       </section> 
