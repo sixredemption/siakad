@@ -14,9 +14,9 @@
 				<br><h2 align="center">Biodata Siswa</h2>
 					<thead>
 					<tr align="center">
-		<img src="<?php echo base_url() ?>assets_siswa/CHA_0318.jpg" alt="foto" width="150" style="display: block; margin: auto;>
-    <br> 
-		<br>		
+		<img src="<?php echo base_url() ?>assets_siswa/CHA_0318.jpg" alt="foto" width="100" style="display: block; margin: auto;>
+    <br/> 
+		<br/>		
 
 			
     <div class="panel-body">
