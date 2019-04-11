@@ -1,25 +1,12 @@
 <?php
-//  class Admin extends CI_Controller{
-
-//     public function __construct()
-//   {
-//       parent::__construct();
-//       $this->load->helper(array('form', 'url'));
-//       $this->load->model("M_siswa");
-//   }  
 class Admin extends CI_Controller
 {
     function __construct()
     {
         parent::__construct();
-        // if ($this->session->userdata('status') != "login") {
-        //     redirect(base_url('login'));
-        // }
-        $this->load->helper(array('form', 'url'));
-        $this->load->model("M_siswa");
         $this->load->model('login_model');
-        if (empty($this->session->userdata('username')) and empty($this->session->userdata('password'))) {
-            redirect(base_url('login'));
+        if (empty($this->session->userdata('nama')) and empty($this->session->userdata('password'))) {
+            redirect(base_url('loginadmin'));
         }
     }
     public function index()
@@ -61,7 +48,7 @@ class Admin extends CI_Controller
     public function statusspp()
     {
         $this->load->view('template_admin/header');
-        $this->load->view('admin/listspp');
+        $this->load->view('admin/statusspp');
         $this->load->view('template_admin/sidebar');
         $this->load->view('template_admin/footer');
     }
@@ -72,10 +59,10 @@ class Admin extends CI_Controller
         $this->load->view('template_admin/sidebar');
         $this->load->view('template_admin/footer');
     }
-    public function listsiswa(){
-        $data['siswa']=$this->M_siswa->getAll();
+    public function listsiswa()
+    {
         $this->load->view('template_admin/header');
-        $this->load->view('admin/listsiswa',$data);
+        $this->load->view('admin/listsiswa');
         $this->load->view('template_admin/sidebar');
         $this->load->view('template_admin/footer');
     }
