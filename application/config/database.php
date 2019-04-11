@@ -75,9 +75,9 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
+	'hostname' => '178.128.108.197',
+	'username' => 'polinema',
+	'password' => '123456',
 	'database' => 'siakadsma',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
