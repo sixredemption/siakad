@@ -159,7 +159,7 @@
                             </div>
                             <div class="team-content text-center">
                                 <h4>Jhon Mickel</h4>
-                                <p>Seo</p>
+                                <p>Juara 1 Karate Nasional</p>
                             </div>
                         </div>
                     </div>
@@ -192,7 +192,7 @@
                             </div>
                             <div class="team-content text-center">
                                 <h4>Andrew Arnold</h4>
-                                <p>Web Developer</p>
+                                <p>Juara 2 Cyber Competition Nasional</p>
                             </div>
                         </div>
                     </div>
@@ -225,7 +225,7 @@
                             </div>
                             <div class="team-content text-center">
                                 <h4>Lellien Linda</h4>
-                                <p>Web Design</p>
+                                <p>Juara 1 Badminton 'Solo Cup' Provinsi</p>
                             </div>
                         </div>
                     </div>
@@ -258,7 +258,7 @@
                             </div>
                             <div class="team-content text-center">
                                 <h4>Jhon Powel</h4>
-                                <p>Seo Expert</p>
+                                <p>Juara 2 OSN Nasional</p>
                             </div>
                         </div>
                     </div>
