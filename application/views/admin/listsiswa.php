@@ -15,20 +15,23 @@
             </div>
 			</div>
 		</div>
-        <!--/.row-->
+    
 		<div class= container>
         <div class="row">
 			<div class="col-lg-12">
 				<h1 class="page-header">Daftar Siswa</h1>
             <div class="panel-button-tab-left">
 				
-        	<button class="btn btn-primary fa fa-user-plus"  >Tambah Data</button>
+        		<form method="post" action="namafile.html">
+				<button type="submit">Link 1</button>
+				</form>
             </div>
 				<table class="table table-striped">
 				<thead>
 					<tr>
+						<th><font face ="Calibri"> NO </font></th>
 						<th><font face ="Calibri"> NIS </font></th>
-						<th><font face ="Calibri"> PASSWORD </font></th>
+						<!-- <th><font face ="Calibri"> PASSWORD </font></th> -->
 						<th><font face ="Calibri"> NAMA </font></th>
 						<th><font face ="Calibri"> TANGGAL LAHIR </font></th>
 						<th><font face ="Calibri"> GENDER </font></th>
@@ -41,12 +44,14 @@
 						<th><font face ="Calibri"> MENU </font></th>
                     </tr>
 					<tbody>
+								<?php  $nomor =1; ?>
 								<?php 
 								foreach($siswa  as $murid):
 								?>
 						<tr>
+							<td><?php echo $nomor; ?></td>
 							<td><p><?=  $murid->nis?></p></td>
-							<td><p><?=  $murid->password?></p></td>
+							
 							<td><p><?=  $murid->nama?></p></td>
 							<td><p><?=  $murid->tgl_lahir?></p></td>
 							<td><p><?=  $murid->gender?></p></td>
@@ -64,6 +69,7 @@
                               <?php echo anchor('C_siswa/delete/'.$murid->id,'Hapus'); ?>
 							</td>
 						</tr>
+						<?php $nomor++; ?>
 						<?php endforeach; ?>
 					</tbody>	
 	        </table>
