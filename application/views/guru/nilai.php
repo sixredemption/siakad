@@ -12,20 +12,17 @@
                     <i class="fa fa-external-link-square"></i>
                     Upload Nilai
                 </div>
+        
                 <div class="col col-md-4">
                     <input class="search" type="text" placeholder="Cari..." required>	
                     <input class="button" type="button" value="Cari">
                 </div>
             </div>	
         </div>
+        
         <div class="panel-body">
         <h2>Pilih nilai kelas yang akan diupload<h2>
         
-        <!-- <form action="">
-          Select a file: <input type="file" name="myFile"><br><br>
-            </form>
-            <button type="button" class="btn btn-primary">Posting</button>
-            <button type="button" class="btn btn-danger">Reset</button> -->
             <div class="form-group">
                 <label class="col-sm-2 control-label" for="form-field-1">       
                 <select>
@@ -35,7 +32,7 @@
                 </select>
                 </label>
 
-                <div class="form-group">
+            <div class="form-group">
                 <label class="col-sm-2 control-label" for="form-field-1">       
                 <select>
                 <option nama="Mapel" value="ipa"><a href="<?= base_url();?>ipa/guru">Kelas 10</a></option>
@@ -44,7 +41,7 @@
                 </select>
                 </label>
 
-                <div class="form-group">
+            <div class="form-group">
                 <label class="col-sm-2 control-label" for="form-field-1">       
                 <select>
                 <option nama="Mapel" value="ipa"><a href="<?= base_url();?>ipa/guru">1</a></option>
