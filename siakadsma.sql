@@ -3,7 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 11, 2019 at 10:28 AM
+
+-- Generation Time: Apr 11, 2019 at 01:41 PM
+
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -25,6 +27,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+
 -- Table structure for table `guru`
 --
 
@@ -311,6 +314,7 @@ INSERT INTO `tahun_ajaran` (`id`, `tahun`, `id_semester`) VALUES
 --
 
 --
+
 -- Indexes for table `guru`
 --
 ALTER TABLE `guru`
@@ -468,6 +472,7 @@ ALTER TABLE `tahun_ajaran`
 --
 
 --
+
 -- Constraints for table `guru`
 --
 ALTER TABLE `guru`
@@ -493,6 +498,10 @@ ALTER TABLE `pelajaran`
 --
 ALTER TABLE `siswa`
   ADD CONSTRAINT `siswa_ibfk_1` FOREIGN KEY (`id_jurusan`) REFERENCES `jurusan` (`id_jurusan`),
+=======
+-- Constraints for table `siswa`
+--
+ALTER TABLE `siswa`
   ADD CONSTRAINT `siswa_ibfk_2` FOREIGN KEY (`kelas`) REFERENCES `kelas` (`id_kelas`);
 
 --

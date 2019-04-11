@@ -1,3 +1,4 @@
+
 <?php 
 class guru extends CI_Controller{
 

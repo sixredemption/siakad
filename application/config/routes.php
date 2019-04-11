@@ -54,19 +54,20 @@ $route['default_controller'] = 'home';
 $route['namaroute'] = 'NAMAFOLDER/NAMACONTROLLER/NAMAMETHOD */
 
 // URL ACCESS LOGIN ======================================================
+
 $route['login']         = 'auth/auth/siswa'; // ACCESS URL LOGIN SISWA AS DEFAULT
 $route['loginguru']     = 'auth/auth/guru'; // ACCESS URL LOGIN GURU
 $route['loginadmin']    = 'auth/auth/admin'; // ACCESS URL LOGIN ADMIN
-// =======================================================================
+
 
 // URL LOGOUT
 $route['logout'] = 'auth/auth/logout';
 
 // ========== FORM ACTION LOGIN =======================
+
 $route['authorization'] = 'auth/auth/login_admin';
 $route['authsiswa']     = 'auth/auth/login_siswa';
 $route['authguru']      = 'auth/auth/login_guru';
-//=====================================================
 
 
 $route['404_override'] = '';
