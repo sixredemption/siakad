@@ -1,5 +1,5 @@
 <body class="bg-gradient-primary">
-    <div class="container" style="margin-top:10%;">
+    <div class="container" style="margin-top:6%;">
         <!-- Outer Row -->
         <div class="row justify-content-center">
             <div class="col-lg-6">
@@ -10,10 +10,10 @@
                             <div class="col-lg">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h2 text-gray-900 mb-4"><i class="fas fa-user-university"></i> LOGIN SISWA</h1>
+                                        <h1 class="h2 text-gray-900 mb-4"><i class="fas fa-graduation-cap"></i> LOGIN SISWA</h1>
                                     </div>
                                     <?= $this->session->flashdata('message'); ?>
-                                    <form class="user" method="post" action="<?= base_url('auth/auth/login_siswa'); ?>">
+                                    <form class="user" method="post" action="<?= base_url('authsiswa'); ?>">
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control-user" id="nisn" placeholder="NISN" name="nisn" value="<?= set_value('username'); ?>">
                                             <?= form_error('username', '<small class="text-danger pl-3">', '</small>'); ?>
