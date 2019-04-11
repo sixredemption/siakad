@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 11, 2019 at 12:31 PM
+-- Generation Time: Apr 11, 2019 at 12:40 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -48,7 +48,7 @@ CREATE TABLE `guru` (
 --
 
 INSERT INTO `guru` (`id`, `nig`, `nama`, `tgl_lahir`, `kota_asl`, `gender`, `alamat`, `no_telp`, `password`, `id_pelajaran`, `status_user`, `foto`) VALUES
-(3, '53421', 'Jack', '2019-03-07', 'Jakarta', 'L', 'Jalan Dieng', '081212345654', '53421', 1, 2, '');
+(1, '53421', 'Jack', '2019-03-07', 'Jakarta', 'L', 'Jalan Dieng', '081212345654', '53421', 1, 2, '');
 
 -- --------------------------------------------------------
 
@@ -315,7 +315,6 @@ INSERT INTO `tahun_ajaran` (`id`, `tahun`, `id_semester`) VALUES
 --
 ALTER TABLE `guru`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `id` (`id`),
   ADD KEY `id_pelajaran` (`id_pelajaran`),
   ADD KEY `status_user` (`status_user`);
 
@@ -401,7 +400,7 @@ ALTER TABLE `tahun_ajaran`
 -- AUTO_INCREMENT for table `guru`
 --
 ALTER TABLE `guru`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `jurusan`
@@ -466,12 +465,6 @@ ALTER TABLE `tahun_ajaran`
 --
 -- Constraints for dumped tables
 --
-
---
--- Constraints for table `guru`
---
-ALTER TABLE `guru`
-  ADD CONSTRAINT `guru_ibfk_1` FOREIGN KEY (`id_pelajaran`) REFERENCES `pelajaran` (`id_pelajaran`);
 
 --
 -- Constraints for table `nilai`
