@@ -1,48 +1,52 @@
-<div class="col-sm-8 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
 		<div class="row">
 			<ol class="breadcrumb">
 				<li><a href="#">
 					<em class="fa fa-home"></em>
 				</a></li>
-				<li class="active">List Guru</li>
+				<li class="active">Dashboard</li>
 			</ol>
-		</div>
+		</div><!--/.row-->
+    <div class="container">
+		<div class="row mt-3">
+			<div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h1>Edit Guru</h1>
+                </div>
+<div class="card-body">
 
-		<form>
-		<div class="form-group-input-group">
-			<label for="nip"> NIP :</label>
-			<input type="text" class="form-control" id="nip">
-		</div>
-
-		<div class="form-group">
-			<label for="nama"> Nama :</label>
-			<input type="text" class="form-control" id="nama">
-		</div>
-
-		<div class="form-group">
-			<label for="password"> Password:</label>
-			<input type="text" class="form-control" id="password">
-		</div>
+<form action="<?php echo base_url("C_pegawai/edit/$pegawai->id") ?>" method="post" enctype="multipart/form-data" >
+		
+<input type="hidden" name="id" value="<?php echo $pegawai->id?>" />	
 
 		<div class="form-group">
-      		<label for="gender">Jenis Kelamin:</label>
-      		<input type="radio" name="gender" value="lakilaki">Laki-Laki
-      		<input type="radio" name="gender" value="perempuan">Perempuann
-      		</select>
-		</div>	
+			<label for="nip">NIP :</label>
+			<input type="text" class="form-control" name="nip" value="<?php echo $pegawai->nip ?>">
+		</div>
+        
+		<div class="form-group">
+			<label for="nama">Nama :</label>
+			<input type="text" class="form-control" name="nama" value="<?php echo $pegawai->nama ?>">
+		</div>
 		
 		<div class="form-group">
-            <label for="status_user">Status User:</label>
-            <select class="form-control" name="status_user">
-        	<option value="" disabled selected>Pilih User</option>
-			<option value="1">Siswa</option>
-			<option value="2">Guru</option>
-			<option value="3">Pegawai</option>
-		</select>
+            <label for="password">password:</label>
+            <input type="password" class="form-control" name="password" value = "<?php echo $pegawai->password ?>">
+        </div>
+
+		<div class="form-group">
+        	<label for="jk">Jenis Kelamin:</label>
+        	<input type="radio" name="gender" value="L" <?php if($pegawai->gender == 'L'){ echo 'checked'; } ?>>Laki-Laki
+        	<input type="radio" name="gender" value="P" <?php if($pegawai->gender == 'P'){ echo 'checked'; } ?>>Perempuann
+        </div>
+
+            <button type="submit" class="btn btn-primary">Simpan</button>
+            <button type="reset" class="btn btn-danger">Reset</button>
+    </form>
+</div>
+                </div>
 			</div>
-
-		<button type="submit" class="btn btn-success">Perbarui</button>
-    	<button type="reset" class="btn btn-danger">Reset</button>
-
-		  </div>
-		  </form>
+		</div>
+    </div>
+</div>

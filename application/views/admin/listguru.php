@@ -38,7 +38,8 @@
 						<th><font face ="Calibri">No Telepon</font></th>
 						<th><font face ="Calibri">Password</font></th>
 						<th><font face ="Calibri">Id Pelajaran</font></th>
-						<th><font face ="Calibri">Status User</font></th>
+						<th><font face ="Calibri"> FOTO </font></th>
+						<th><font face ="Calibri"> MENU </font></th>
 	                </tr>
 					<tbody>
 
@@ -55,7 +56,9 @@
 						<td><p><?= $dosen->no_telp?></p></td>
 						<td><p><?= $dosen->password?></p></td>
 						<td><p><?= $dosen->id_pelajaran?></p></td>
-						<td><p><?= $dosen->status_user?></p></td>
+						<td>
+						<img src="<?php echo base_url('foto/guru/'.$dosen->foto) ?>" width="64" />
+						</td>
 
 					 <td>
 					 	<?php echo anchor('C_guru/edit/'.$dosen->id,'Edit'); ?>

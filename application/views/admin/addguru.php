@@ -1,109 +1,78 @@
-<div class="col-sm-8 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
 		<div class="row">
 			<ol class="breadcrumb">
 				<li><a href="#">
 					<em class="fa fa-home"></em>
 				</a></li>
-				<li class="active">List Guru</li>
+				<li class="active">Dashboard</li>
 			</ol>
-		</div>
+		</div><!--/.row-->
     <div class="container">
 		<div class="row mt-3">
 			<div class="col-md-6">
             <div class="card">
                 <div class="card-header">
-                    <h1>Form Tambah Guru</h1>
+                    <h1>Tambah Guru</h1>
                 </div>
-    <div class="card-body">
+<div class="card-body">
 
-<form action = "<?php echo base_url(). 'C_guru/add' ; ?>" method = "post" enctype = "multipart/form-data">
-
+<form action="<?php echo base_url(). 'C_guru/add'; ?>" method="post" enctype="multipart/form-data" >
         <div class="form-group-input-group">
 			<label for="nig">NIG :</label>
 			<input type="text" class="form-control" name="nig">
 		</div>
-
+        
 		<div class="form-group">
 			<label for="nama">Nama :</label>
 			<input type="text" class="form-control" name="nama">
-		</div>
-			
+        </div>
+
         <div class="form-group">
-			<label for="tgl_lahir">Tanggal lahir:</label>
+			<label for="tanggallahir">Tanggal lahir:</label>
 			<input type="date" class="form-control" name="tgl_lahir">
 		</div>
 
         <div class="form-group">
-			<label for="kota_asl"> Kota Asal:</label>
+			<label for="kotaasal"> Kota Asal:</label>
 			<input type="text" class="form-control" name="kota_asl">
 		</div>
-
-		<div class="form-group">
-      		<label for="gender">Jenis Kelamin:</label>
-      		<input type="radio" name="gender" value="L">Laki-Laki
-      		<input type="radio" name="gender" value="P">Perempuann
-      		</select>
-    	</div>	 
 
         <div class="form-group">
             <label for="alamat">Alamat anda:</label>
             <textarea type="text" class="form-control" name="alamat"></textarea>
-		</div>
-		
-        <!-- <div class="form-group">
-            <label for="status_user">Mengajar:</label>
-        <select class="form-control">
-            <option value="" disabled selected>Mata Pelajaran</option>
-            <option value="">Bahasa Indonesia</option>
-            <option value="">Bahasa Inggris</option>
-            <option value="">Biologi</option>
-            <option value="">Sejarah</option>
-            <option value="">Kimia</option>
-            <option value="">Geografi</option>
-            <option value="">Fisika</option>
-            <option value="">Ekonomi</option>
-            <option value="">Matematika</option>
-            <option value="">Pendnameikan Kewarganegaraan</option>
-            <option value="">Seni Budaya</option>
-            <option value="">Prakarya</option>  
-        </select>
-	</div> -->
-	
-    	<div class="form-group">
-			<label for="no_telp"> Nomor Telepon :</label>
-			<input type="number" class="form-control" name="no_telp">
-		</div>
+        </div>
 
-		<div class="form-group">
-			<label for="password"> Password:</label>
-			<input type="text" class="form-control" name="password">
-		</div>
+        <div class="form-group">
+                <label for="nohp"> Nomer Hp:</label>
+                <input type="number" class="form-control" name="no_telp">
+            </div>
+
+        <div class="form-group">
+        <label for="jk">Jenis Kelamin:</label>
+        <input type="radio" name="gender" value="L">Laki-Laki
+        <input type="radio" name="gender" value="P">Perempuann
+        </div>
+
+        <div class="form-group">
+            <label for="password">password:</label>
+            <textarea type="text" class="form-control" name="password"></textarea>
+        </div>
 
 		<div class="form-group">
 			<label for="id_pelajaran"> Mengajar:</label>
 			<input type="number" class="form-control" name="id_pelajaran">
 		</div>
 
-		<div class="form-group">
-            <label for="status_user">Status User:</label>
-            <select class="form-control" name="status_user">
-        	<option value="" disabled selected>Pilih User</option>
-			<option value="1">Siswa</option>
-			<option value="2">Guru</option>
-			<option value="3">Pegawai</option>
-		</select>
-			</div>
 
-
-    	<button type="submit" class="btn btn-primary">Simpan</button>
-		<button type="reset" class="btn btn-danger">Reset</button>
-	</form>
+            <button type="submit" class="btn btn-primary">Simpan</button>
+            <button type="reset" class="btn btn-danger">Reset</button>
+    </form>
 </div>
-        </div>
                 </div>
 			</div>
 		</div><!--/.row-->
     </div>
+</div>
 
 
 
