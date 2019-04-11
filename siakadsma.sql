@@ -3,7 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
+<<<<<<< HEAD
 -- Generation Time: Apr 11, 2019 at 10:28 AM
+=======
+-- Generation Time: Apr 11, 2019 at 01:41 PM
+>>>>>>> 47acbbe345ad35c041fd353968e7b7cfd6ff36e3
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -25,6 +29,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
 -- Table structure for table `guru`
 --
 
@@ -72,6 +77,8 @@ INSERT INTO `jurusan` (`id_jurusan`, `nama_jurusan`) VALUES
 -- --------------------------------------------------------
 
 --
+=======
+>>>>>>> 47acbbe345ad35c041fd353968e7b7cfd6ff36e3
 -- Table structure for table `kelas`
 --
 
@@ -311,6 +318,7 @@ INSERT INTO `tahun_ajaran` (`id`, `tahun`, `id_semester`) VALUES
 --
 
 --
+<<<<<<< HEAD
 -- Indexes for table `guru`
 --
 ALTER TABLE `guru`
@@ -326,6 +334,8 @@ ALTER TABLE `jurusan`
   ADD PRIMARY KEY (`id_jurusan`);
 
 --
+=======
+>>>>>>> 47acbbe345ad35c041fd353968e7b7cfd6ff36e3
 -- Indexes for table `kelas`
 --
 ALTER TABLE `kelas`
@@ -398,6 +408,7 @@ ALTER TABLE `tahun_ajaran`
 --
 
 --
+<<<<<<< HEAD
 -- AUTO_INCREMENT for table `guru`
 --
 ALTER TABLE `guru`
@@ -410,6 +421,8 @@ ALTER TABLE `jurusan`
   MODIFY `id_jurusan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+=======
+>>>>>>> 47acbbe345ad35c041fd353968e7b7cfd6ff36e3
 -- AUTO_INCREMENT for table `kelas`
 --
 ALTER TABLE `kelas`
@@ -468,21 +481,28 @@ ALTER TABLE `tahun_ajaran`
 --
 
 --
+<<<<<<< HEAD
 -- Constraints for table `guru`
 --
 ALTER TABLE `guru`
   ADD CONSTRAINT `guru_ibfk_1` FOREIGN KEY (`id_pelajaran`) REFERENCES `pelajaran` (`id_pelajaran`);
 
 --
+=======
+>>>>>>> 47acbbe345ad35c041fd353968e7b7cfd6ff36e3
 -- Constraints for table `nilai`
 --
 ALTER TABLE `nilai`
   ADD CONSTRAINT `nilai_ibfk_4` FOREIGN KEY (`tahun_ajaran`) REFERENCES `tahun_ajaran` (`id`),
+<<<<<<< HEAD
   ADD CONSTRAINT `nilai_ibfk_5` FOREIGN KEY (`jurusan`) REFERENCES `jurusan` (`id_jurusan`),
+=======
+>>>>>>> 47acbbe345ad35c041fd353968e7b7cfd6ff36e3
   ADD CONSTRAINT `nilai_ibfk_8` FOREIGN KEY (`id_pelajaran`) REFERENCES `pelajaran` (`id_pelajaran`),
   ADD CONSTRAINT `nilai_ibfk_9` FOREIGN KEY (`id_kelas`) REFERENCES `kelas` (`id_kelas`);
 
 --
+<<<<<<< HEAD
 -- Constraints for table `pelajaran`
 --
 ALTER TABLE `pelajaran`
@@ -493,6 +513,11 @@ ALTER TABLE `pelajaran`
 --
 ALTER TABLE `siswa`
   ADD CONSTRAINT `siswa_ibfk_1` FOREIGN KEY (`id_jurusan`) REFERENCES `jurusan` (`id_jurusan`),
+=======
+-- Constraints for table `siswa`
+--
+ALTER TABLE `siswa`
+>>>>>>> 47acbbe345ad35c041fd353968e7b7cfd6ff36e3
   ADD CONSTRAINT `siswa_ibfk_2` FOREIGN KEY (`kelas`) REFERENCES `kelas` (`id_kelas`);
 
 --

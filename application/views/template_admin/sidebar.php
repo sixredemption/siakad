@@ -33,7 +33,10 @@
 				<li><a class="" href="<?= base_url('admin/listsiswa') ?>">
 						<span class="fa fa-arrow-right">&nbsp;</span> Tambah Data Siswa
 					</a></li>
+
 				<li><a class="" href="<?= base_url('admin/listadmin') ?>">
+
+				<li><a class="" href="<?= base_url('admin/listpegawai') ?>">
 						<span class="fa fa-arrow-right">&nbsp;</span> Tambah Data Pegawai
 					</a></li>
 			</ul>
@@ -41,4 +44,3 @@
 		<li><a href="<?= base_url('logout'); ?>"><em class="fa fa-power-off">&nbsp;</em> Logout</a></li>
 	</ul>
 </div>
-<!--/.sidebar-->
