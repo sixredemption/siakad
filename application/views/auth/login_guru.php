@@ -10,12 +10,12 @@
                             <div class="col-lg">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h2 text-gray-900 mb-4"><i class="fas fa-graduation-cap"></i> LOGIN SISWA</h1>
+                                        <h1 class="h2 text-gray-900 mb-4"><i class="fas fa-chalkboard-teacher"></i> LOGIN GURU</h1>
                                     </div>
                                     <?= $this->session->flashdata('message'); ?>
-                                    <form class="user" method="post" action="<?= base_url('authsiswa'); ?>">
+                                    <form class="user" method="post" action="<?= base_url('authguru'); ?>">
                                         <div class="form-group">
-                                            <input type="text" class="form-control form-control-user" id="nisn" placeholder="Nomor Induk Siswa Nasional" name="nisn" value="<?= set_value('username'); ?>">
+                                            <input type="text" class="form-control form-control-user" id="nig" placeholder="Nomor Induk Guru" name="nisn" value="<?= set_value('username'); ?>">
                                             <?= form_error('username', '<small class="text-danger pl-3">', '</small>'); ?>
                                         </div>
                                         <div class="form-group">
@@ -28,7 +28,6 @@
                                         <hr>
                                     </form>
                                     <div class="text-center">
-                                        <a class="small" href="<?= base_url('loginguru') ?>" style="text-decoration:none;"><i class="fas fa-user fa-fw"></i> Login Guru</a> | 
                                         <a class="small" href="<?= base_url() ?>" style="text-decoration:none;"><i class="fas fa-home fa-fw"></i> Dashboard</a>
                                     </div>
                                 </div>

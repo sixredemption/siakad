@@ -15,20 +15,20 @@
                                     <?= $this->session->flashdata('message'); ?>
                                     <form class="user" method="post" action="<?= base_url('authorization'); ?>">
                                         <div class="form-group">
-                                            <input type="text" class="form-control form-control-user" id="username" placeholder="Username" name="username" value="<?= set_value('username'); ?>">
+                                            <input type="text" class="form-control form-control-user" id="username" placeholder="Username" name="nama" value="<?= set_value('username'); ?>">
                                             <?= form_error('username', '<small class="text-danger pl-3">', '</small>'); ?>
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user" id="password" placeholder="Password" name="password">
                                             <?= form_error('password', '<small class="text-danger pl-3">', '</small>'); ?>
                                         </div>
-                                        <button type="submit" class="btn btn-primary btn-user btn-block">
+                                        <button type="submit" class="btn btn-success btn-user btn-block">
                                             LOGIN
                                         </button>
+                                        <hr>
                                     </form>
-                                    <hr>
-                                    <div class="text-center mt-3">
-                                        <a class="small" href="<?= base_url(); ?>">Back Home</a>
+                                    <div class="text-center">
+                                        <a class="small" href="<?= base_url() ?>" style="text-decoration:none;"><i class="fas fa-home fa-fw"></i> Dashboard</a>
                                     </div>
                                 </div>
                             </div>
