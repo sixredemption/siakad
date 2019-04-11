@@ -6,7 +6,8 @@
 				</a></li>
 				<li class="active">Dashboard</li>
 			</ol>
-		</div><!--/.row-->
+        </div>
+                
     <div class="container">
 		<div class="row mt-3">
 			<div class="col-md-6">
@@ -14,6 +15,8 @@
                 <div class="card-header">
                     <h1>Tambah Siswa</h1>
                 </div>
+
+                
 <div class="card-body">
 
 <form action="<?php echo base_url(). 'C_siswa/add'; ?>" method="post" enctype="multipart/form-data" >
@@ -23,9 +26,12 @@
 		</div>
         
 		<div class="form-group">
-			<label for="nama">Nama :</label>
-			<input type="text" class="form-control" name="nama">
-        </div>
+								<label for="nama">Nama</label>
+								<input class="form-control <?php echo form_error('nama') ? 'is-invalid':'' ?>" type="text" name="nama" placeholder="Product name" />
+								<div class="invalid-feedback">
+									<?php echo form_error('nama') ?>
+								</div>
+		</div>
 
         <div class="form-group">
 			<label for="tanggallahir">Tanggal lahir:</label>
@@ -74,7 +80,7 @@
 
         <div class="form-group">
             <label for="password">password:</label>
-            <textarea type="text" class="form-control" name="password"></textarea>
+            <textarea type="password" class="form-control" name="password"></textarea>
         </div>
 
          <div class="form-group">
