@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 11, 2019 at 12:43 PM
+-- Generation Time: Apr 11, 2019 at 01:41 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -21,25 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `siakadsma`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `jurusan`
---
-
-CREATE TABLE `jurusan` (
-  `id_jurusan` int(11) NOT NULL,
-  `nama_jurusan` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `jurusan`
---
-
-INSERT INTO `jurusan` (`id_jurusan`, `nama_jurusan`) VALUES
-(1, 'IPA'),
-(2, 'IPS');
 
 -- --------------------------------------------------------
 
@@ -283,12 +264,6 @@ INSERT INTO `tahun_ajaran` (`id`, `tahun`, `id_semester`) VALUES
 --
 
 --
--- Indexes for table `jurusan`
---
-ALTER TABLE `jurusan`
-  ADD PRIMARY KEY (`id_jurusan`);
-
---
 -- Indexes for table `kelas`
 --
 ALTER TABLE `kelas`
@@ -361,12 +336,6 @@ ALTER TABLE `tahun_ajaran`
 --
 
 --
--- AUTO_INCREMENT for table `jurusan`
---
-ALTER TABLE `jurusan`
-  MODIFY `id_jurusan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
 -- AUTO_INCREMENT for table `kelas`
 --
 ALTER TABLE `kelas`
@@ -429,21 +398,13 @@ ALTER TABLE `tahun_ajaran`
 --
 ALTER TABLE `nilai`
   ADD CONSTRAINT `nilai_ibfk_4` FOREIGN KEY (`tahun_ajaran`) REFERENCES `tahun_ajaran` (`id`),
-  ADD CONSTRAINT `nilai_ibfk_5` FOREIGN KEY (`jurusan`) REFERENCES `jurusan` (`id_jurusan`),
   ADD CONSTRAINT `nilai_ibfk_8` FOREIGN KEY (`id_pelajaran`) REFERENCES `pelajaran` (`id_pelajaran`),
   ADD CONSTRAINT `nilai_ibfk_9` FOREIGN KEY (`id_kelas`) REFERENCES `kelas` (`id_kelas`);
-
---
--- Constraints for table `pelajaran`
---
-ALTER TABLE `pelajaran`
-  ADD CONSTRAINT `pelajaran_ibfk_1` FOREIGN KEY (`id _jurusan`) REFERENCES `jurusan` (`id_jurusan`);
 
 --
 -- Constraints for table `siswa`
 --
 ALTER TABLE `siswa`
-  ADD CONSTRAINT `siswa_ibfk_1` FOREIGN KEY (`id_jurusan`) REFERENCES `jurusan` (`id_jurusan`),
   ADD CONSTRAINT `siswa_ibfk_2` FOREIGN KEY (`kelas`) REFERENCES `kelas` (`id_kelas`);
 
 --
