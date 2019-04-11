@@ -49,11 +49,4 @@ public function editbiodata(){
     $this->load->view('guru/editbiodata');
     $this->load->view('template_guru/footer'); 
     }
-
-    public function password(){
-        $this->load->view('template_guru/header' ); 
-        $this->load->view('template_guru/sidebar');
-        $this->load->view('guru/password');
-        $this->load->view('template_guru/footer'); 
-        }
 }
