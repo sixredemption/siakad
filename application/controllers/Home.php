@@ -14,6 +14,7 @@ class Home extends CI_Controller
 		$data['judul'] = 'SMAN 4 MACIPO';
 
 		$this->db->order_by('tanggal', 'DESC');
+		$this->db->limit(6);
 		$data['pengumuman']	=	$this->db->get($this->_tblpengumuman)->result();
 
 		$this->load->view('template_home/header', $data);
