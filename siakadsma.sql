@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 11, 2019 at 12:40 PM
+-- Generation Time: Apr 11, 2019 at 12:43 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -21,34 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `siakadsma`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `guru`
---
-
-CREATE TABLE `guru` (
-  `id` int(11) NOT NULL,
-  `nig` varchar(50) NOT NULL,
-  `nama` varchar(50) NOT NULL,
-  `tgl_lahir` date NOT NULL,
-  `kota_asl` varchar(50) NOT NULL,
-  `gender` enum('L','P') NOT NULL,
-  `alamat` varchar(50) DEFAULT NULL,
-  `no_telp` varchar(15) NOT NULL,
-  `password` varchar(50) NOT NULL,
-  `id_pelajaran` int(11) DEFAULT NULL,
-  `status_user` int(11) DEFAULT NULL,
-  `foto` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `guru`
---
-
-INSERT INTO `guru` (`id`, `nig`, `nama`, `tgl_lahir`, `kota_asl`, `gender`, `alamat`, `no_telp`, `password`, `id_pelajaran`, `status_user`, `foto`) VALUES
-(1, '53421', 'Jack', '2019-03-07', 'Jakarta', 'L', 'Jalan Dieng', '081212345654', '53421', 1, 2, '');
 
 -- --------------------------------------------------------
 
@@ -311,14 +283,6 @@ INSERT INTO `tahun_ajaran` (`id`, `tahun`, `id_semester`) VALUES
 --
 
 --
--- Indexes for table `guru`
---
-ALTER TABLE `guru`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `id_pelajaran` (`id_pelajaran`),
-  ADD KEY `status_user` (`status_user`);
-
---
 -- Indexes for table `jurusan`
 --
 ALTER TABLE `jurusan`
@@ -395,12 +359,6 @@ ALTER TABLE `tahun_ajaran`
 --
 -- AUTO_INCREMENT for dumped tables
 --
-
---
--- AUTO_INCREMENT for table `guru`
---
-ALTER TABLE `guru`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `jurusan`
