@@ -1,8 +1,9 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed') ;
 
 class Guru_model extends CI_Model {
+	
 	private $_table = "guru" ;
-
+	public $id ;
 	public $nig ;
 	public $nama ;
 	public $tgl_lahir ;
@@ -12,7 +13,7 @@ class Guru_model extends CI_Model {
 	public $no_telp ;
 	public $password ;
 	public $id_pelajaran ;
-	public $status_user ; 
+	
 
 	public function rules () {
 		return [
@@ -26,7 +27,8 @@ class Guru_model extends CI_Model {
 
 			['field' => 'tgl_lahir' ,
 			'label' => 'Tanggal Lahir' ,
-			'rules' => 'required']] ;
+			'rules' => 'required']
+			] ;
 	}
 
 	public function getAll() {
@@ -40,6 +42,7 @@ class Guru_model extends CI_Model {
 	public function save() {
 		$post = $this->input->post() ;
 		// var_dump($post);
+		
 		$this->nig = $post["nig"] ;
 		$this->nama = $post["nama"] ;
 		$this->tgl_lahir = $post["tgl_lahir"] ;
@@ -49,7 +52,6 @@ class Guru_model extends CI_Model {
 		$this->no_telp = $post["no_telp"] ;
 		$this->password = $post["password"] ;
 		$this->id_pelajaran = $post["id_pelajaran"] ;
-		$this->status_user = $post["status_user"] ;
 		
 		$this->db->insert($this->_table , $this) ;
 	}
@@ -57,6 +59,7 @@ class Guru_model extends CI_Model {
 	public function update() {
 		$post = $this->input->post() ;
 		// var_dump($post);
+		$this->id = $post["id"] ;
 		$this->nig = $post["nig"] ;
 		$this->nama = $post["nama"] ;
 		$this->tgl_lahir = $post["tgl_lahir"] ;
@@ -66,11 +69,15 @@ class Guru_model extends CI_Model {
 		$this->no_telp = $post["no_telp"] ;
 		$this->password = $post["password"] ;
 		$this->id_pelajaran = $post["id_pelajaran"] ;
-		$this->status_user = $post["status_user"] ;
-		$this->db->update($this->_table , $this , array('id' => $post['id'])) ;
-	}
 
-	public function delete ($id) {
-		return $this->db->delete($this->_table , array("id" => $id)) ;
-	}
+        $this->db->update($this->_table, $this, array("id" => $post["id"]));
+    }	
+
+    public function delete($id)
+    {
+        return $this->db->delete($this->_table, array("id" => $id));
+    }
+
+    
+    
 }
