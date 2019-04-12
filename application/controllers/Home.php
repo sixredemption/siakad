@@ -7,6 +7,7 @@ class Home extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->helper('url_helper');
 	}
 
 	public function index()
@@ -19,15 +20,14 @@ class Home extends CI_Controller
 
 		$this->load->view('template_home/header', $data);
 		$this->load->view('template_home/navbar');
+		$this->load->view('template_home/slider');
 		$this->load->view('template_home/index', $data);
 		$this->load->view('template_home/footer');
 	}
-	public function pengumuman_detail()
+	public function pengumuman($id)
 	{
-		$data['judul']	=	'Detail Pengumuman';
-		$this->load->view('template_home/header', $data);
-		$this->load->view('template_home/navbar');
-		$this->load->view('template_home/pengumuman');
-		$this->load->view('template_home/footer');
+		$this->db->where('id', $id);
+		$data['pengumuman'] = $this->db->get($this->_tblpengumuman)->result();
+		$this->load->view('template_home/pengumuman', $data);
 	}
 }
