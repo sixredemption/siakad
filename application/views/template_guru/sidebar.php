@@ -3,12 +3,12 @@
       <nav class="navbar navbar-default">
         <div class="navbar-header">
         <a class="navbar-brand" href="<?=base_url('admin/index')?>"><span style="color:blue">SMAN 4</span> MACIPO</a>
-        <img src="<?php echo base_url() ?>1.jpg" width="50px">
+        <img src="<?php echo base_url() ?>1.png" width="50px">
         </div>
         
         <ul class="nav navbar-nav navbar-right">
 					<li class="dropdown dropdown-user">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+						<a href="<?= base_url();?>guru/biodata" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
 						<img  src="<?php echo base_url() ?>3.jpg" class="img-circle" width="40px" height="40px>						
             <span class="username username-hide-on-mobile">DEBY D.P </span>
 						<i class="fa fa-angle-down"></i>

@@ -19,12 +19,14 @@
                         <th>No</th>
                         <th>NIG</th>
                         <th>Nama</th>
+                        <th>Mapel</th>
                         <th>Nilai</th>
                     </tr>
                     <tr>
                     <td width="100">1</td>
                     <td width="100">13442</td>
                     <td>Deby</td>
+                    <td>IPA</td>
                         <td width="150">
                         <input type="int" onkeyup="updateNilai("13442")" id="nilai13442" value="80" class="form-control">
                         </td>

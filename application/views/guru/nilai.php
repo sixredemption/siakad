@@ -31,16 +31,16 @@
                 <option nama="Mapel" value="bi"><a href="<?= base_url();?>bi/guru">BI</a></option>
                 </select>
                 </label>
-
+            
             <div class="form-group">
-                <label class="col-sm-2 control-label" for="form-field-1">       
+                <label class="col-sm-3 control-label" for="form-field-1">       
                 <select>
                 <option nama="Mapel" value="ipa"><a href="<?= base_url();?>ipa/guru">Kelas 10</a></option>
                 <option nama="Mapel" value="ips"><a href="<?= base_url();?>ips/guru">Kelas 11</a></option>
                 <option nama="Mapel" value="bi"><a href="<?= base_url();?>bi/guru">Kelas 12</a></option>
                 </select>
                 </label>
-
+        
             <div class="form-group">
                 <label class="col-sm-2 control-label" for="form-field-1">       
                 <select>
