@@ -13,7 +13,6 @@ class Home extends CI_Controller
 	public function index()
 	{
 		$data['judul'] = 'SMAN 4 MACIPO';
-
 		$this->db->order_by('tanggal', 'DESC');
 		$this->db->limit(6);
 		$data['pengumuman']	=	$this->db->get($this->_tblpengumuman)->result();
@@ -25,7 +24,12 @@ class Home extends CI_Controller
 		$this->load->view('template_home/footer');
 	}
 
-	public function pengumuman($id)
+	public function pengumuman()
+	{
+		redirect(base_url());
+	}
+
+	public function pengumuman_detail($id)
 	{
 		$this->db->where('id', $id);
 		$data['pengumuman'] = $this->db->get($this->_tblpengumuman)->result();
