@@ -51,7 +51,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 */
 $route['default_controller'] = 'home';
 /* WAJIB BACA !!!
-$route['namaroute'] = 'NAMAFOLDER/NAMACONTROLLER/NAMAMETHOD */
+$route['namaroute'] = 'NAMACONTROLLER/NAMAMETHOD */
 
 // URL ACCESS LOGIN ======================================================
 $route['login']         =   'auth/siswa'; // ACCESS URL LOGIN SISWA AS DEFAULT
@@ -60,10 +60,11 @@ $route['loginadmin']    =   'auth/admin'; // ACCESS URL LOGIN ADMIN
 // =======================================================================
 
 // URL LOGOUT
-$route['logout']        =   'auth/logout';
+$route['logout']                =   'auth/logout';
+
 // URL PENGUMUMAN  
-$route['pengumuman/(:any)']     =   'home/pengumuman/$1';
-// $route['pengumuman']            =   'home/index';
+$route['pengumuman/(:any)']     =   'home/pengumuman_detail/$1';
+$route['pengumuman']            =   'home/pengumuman';
 
 // ========== FORM ACTION LOGIN =======================
 $route['authorization'] =   'auth/login_admin';
@@ -71,6 +72,6 @@ $route['authsiswa']     =   'auth/login_siswa';
 $route['authguru']      =   'auth/login_guru';
 //=====================================================
 
-
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+//=====================================================
