@@ -22,9 +22,17 @@
                         <th>Mapel</th>
                         <th>Nilai</th>
                     </tr>
+                    <tr>
+                    <tr>
+                    <td width="100">1</td>
+                    <td width="100">13442</td>
+                    <td>Deby</td>
+                    <td>IPA</td>
+                    <td>-</td>
+                    </tr>
                 </thead>
             </table>
-            <button type="button" class="btn btn-primary"><a href="<?= base_url();?>guru/tambahnilai">Tambah</a></button>
+            <a <button type="button" class="btn btn-primary" href="<?= base_url();?>guru/tambahnilai">Tambah</a></button>
     </section>
 </div>
 
