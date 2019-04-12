@@ -49,7 +49,7 @@
                 </select>
                 </label> 
 
-                <a <button type="button" class="btn btn-danger" href="<?= base_url();?>guru/isinilai">Tampilkan</a></button>      
+                <a <button type="button" class="btn btn-primary" href="<?= base_url();?>guru/isinilai">Tampilkan</a></button>      
 </section>
 </div>
                

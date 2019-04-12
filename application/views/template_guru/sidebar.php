@@ -2,7 +2,7 @@
     <div class="wrapper">
       <nav class="navbar navbar-default">
         <div class="navbar-header">
-          <a class="navbar-brand" href="<?= base_url();?>guru/index"> SMA 4 MACIPO</a>
+        <a class="navbar-brand" href="<?=base_url('admin/index')?>"><span style="color:blue">SMAN 4</span> MACIPO</a>
         <img src="<?php echo base_url() ?>1.jpg" width="50px">
         </div>
         

@@ -426,7 +426,6 @@
                                     <p>
 
                                         <?= $row->keterangan; ?>
-
                                         <?= ucwords(substr($row->keterangan, 0, 50)); ?>
 
                                     </p>

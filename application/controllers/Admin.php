@@ -1,19 +1,15 @@
 <?php
 
-
-
 class Admin extends CI_Controller
 {
     function __construct()
     {
-
-        parent::__construct();
-		parent::__construct();
+          parent::__construct();
+        $this->load->helper(array('form', 'url'));
+        $this->load->model("M_siswa");
         $this->load->helper(array('form', 'url'));
 	    $this->load->model("Guru_model");
 	    $this->load->model("Pegawai_model") ;
-		
-
         $this->load->model('login_model');
         if (empty($this->session->userdata('nama')) and empty($this->session->userdata('password'))) {
             redirect(base_url('loginadmin'));
@@ -62,12 +58,8 @@ class Admin extends CI_Controller
         $this->load->view('template_admin/sidebar');
         $this->load->view('template_admin/footer');
     }
-
-    public function listguru()
-    {
     public function listguru(){
 		$data["guru"] = $this->Guru_model->getAll() ;
-
         $this->load->view('template_admin/header');
         $this->load->view('admin/listguru' , $data);
         $this->load->view('template_admin/sidebar');
@@ -75,39 +67,32 @@ class Admin extends CI_Controller
     }
     public function listsiswa()
     {
+
+        $data['siswa']=$this->M_siswa->getAll();
         $this->load->view('template_admin/header');
-        $this->load->view('admin/listsiswa');
+        $this->load->view('admin/listsiswa', $data);
         $this->load->view('template_admin/sidebar');
         $this->load->view('template_admin/footer');
     }
 
-    public function listadmin()
-    {
     public function listpegawai(){
 		$data["pegawai"] = $this->Pegawai_model->getAll() ;
-
         $this->load->view('template_admin/header');
         $this->load->view('admin/listpegawai' , $data);
         $this->load->view('template_admin/sidebar');
         $this->load->view('template_admin/footer');
     }
 
-    public function addguru()
-    {
-    public function addguru(){
+        public function addguru(){
 		$data['judul']="Halaman Tambah Guru" ;
-
         $this->load->view('template_admin/header');
         $this->load->view('admin/addguru');
         $this->load->view('template_admin/sidebar');
         $this->load->view('template_admin/footer');
     }
-
-    public function addsiswa()
-    {
+   
     public function addsiswa(){
 		$data['judul']="Halaman Tambah Siswa" ;
-
         $this->load->view('template_admin/header');
         $this->load->view('admin/addsiswa');
         $this->load->view('template_admin/sidebar');
