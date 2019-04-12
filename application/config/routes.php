@@ -62,7 +62,7 @@ $route['loginadmin']    =   'auth/admin'; // ACCESS URL LOGIN ADMIN
 // URL LOGOUT
 $route['logout']        =   'auth/logout';
 // URL PENGUMUMAN  
-$route['pengumuman']    =   'home/pengumuman_detail';
+$route['pengumuman/(:any)']    =   'home/pengumuman/$1';
 
 // ========== FORM ACTION LOGIN =======================
 $route['authorization'] =   'auth/login_admin';
