@@ -1,5 +1,5 @@
 <div class="container">
-    <section class="content">
+ <section class="content">
     <div class="jumbotron text-center"> 
       <h3> Biodata Guru </h3>
       </section> 
@@ -11,9 +11,8 @@
         <div class="panel-heading">
             <i class="fa fa-external-link-square"></i> Biodata
         </div>        
-         <form action="#" style="width: 1000px"class="posisi";>
-         <fieldset class="h">
-         <table style="width: 980px;">
+        <div class="card-body">
+         <table class="table">
          <tr>
             <td rowspan="15" width="250px">
             <img src="<?php echo base_url() ?>3.jpg" width="300px" height="300px"/>
@@ -68,7 +67,7 @@
             <td>085367469857</td>
         </tr>
     </table>
-    <button type="button" class="btn btn-primary"><a href="<?= base_url();?>guru/editbiodata">Kembali</a></button>
+    <a <button type="button" class="btn btn-primary" href="<?= base_url();?>guru/editbiodata">Edit</a></button>
 </fieldset>
 </form>
 </body>

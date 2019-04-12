@@ -3,7 +3,17 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
+<<<<<<< HEAD
+<<<<<<< HEAD
+-- Generation Time: Apr 11, 2019 at 10:28 AM
+=======
 -- Generation Time: Apr 11, 2019 at 01:41 PM
+>>>>>>> 47acbbe345ad35c041fd353968e7b7cfd6ff36e3
+=======
+
+-- Generation Time: Apr 11, 2019 at 01:41 PM
+
+>>>>>>> 4d53b0cb2cda5172143e7f480bd5561556566a68
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -25,6 +35,63 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4d53b0cb2cda5172143e7f480bd5561556566a68
+-- Table structure for table `guru`
+--
+
+CREATE TABLE `guru` (
+  `id` int(11) NOT NULL,
+  `nig` varchar(50) NOT NULL,
+  `nama` varchar(50) NOT NULL,
+  `tgl_lahir` date NOT NULL,
+  `kota_asl` varchar(50) NOT NULL,
+  `gender` enum('L','P') NOT NULL,
+  `alamat` varchar(50) DEFAULT NULL,
+  `no_telp` varchar(15) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `id_pelajaran` int(11) DEFAULT NULL,
+  `status_user` int(11) DEFAULT NULL,
+  `foto` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `guru`
+--
+
+INSERT INTO `guru` (`id`, `nig`, `nama`, `tgl_lahir`, `kota_asl`, `gender`, `alamat`, `no_telp`, `password`, `id_pelajaran`, `status_user`, `foto`) VALUES
+(3, '53421', 'Jack', '2019-03-07', 'Jakarta', 'L', 'Jalan Dieng', '081212345654', '53421', 1, 2, '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `jurusan`
+--
+
+CREATE TABLE `jurusan` (
+  `id_jurusan` int(11) NOT NULL,
+  `nama_jurusan` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `jurusan`
+--
+
+INSERT INTO `jurusan` (`id_jurusan`, `nama_jurusan`) VALUES
+(1, 'IPA'),
+(2, 'IPS');
+
+-- --------------------------------------------------------
+
+--
+<<<<<<< HEAD
+=======
+>>>>>>> 47acbbe345ad35c041fd353968e7b7cfd6ff36e3
+=======
+>>>>>>> 4d53b0cb2cda5172143e7f480bd5561556566a68
 -- Table structure for table `kelas`
 --
 
@@ -264,6 +331,31 @@ INSERT INTO `tahun_ajaran` (`id`, `tahun`, `id_semester`) VALUES
 --
 
 --
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4d53b0cb2cda5172143e7f480bd5561556566a68
+-- Indexes for table `guru`
+--
+ALTER TABLE `guru`
+  ADD PRIMARY KEY (`nig`),
+  ADD UNIQUE KEY `id` (`id`),
+  ADD KEY `id_pelajaran` (`id_pelajaran`),
+  ADD KEY `status_user` (`status_user`);
+
+--
+-- Indexes for table `jurusan`
+--
+ALTER TABLE `jurusan`
+  ADD PRIMARY KEY (`id_jurusan`);
+
+--
+<<<<<<< HEAD
+=======
+>>>>>>> 47acbbe345ad35c041fd353968e7b7cfd6ff36e3
+=======
+>>>>>>> 4d53b0cb2cda5172143e7f480bd5561556566a68
 -- Indexes for table `kelas`
 --
 ALTER TABLE `kelas`
@@ -336,6 +428,27 @@ ALTER TABLE `tahun_ajaran`
 --
 
 --
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 4d53b0cb2cda5172143e7f480bd5561556566a68
+-- AUTO_INCREMENT for table `guru`
+--
+ALTER TABLE `guru`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `jurusan`
+--
+ALTER TABLE `jurusan`
+  MODIFY `id_jurusan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+<<<<<<< HEAD
+=======
+>>>>>>> 47acbbe345ad35c041fd353968e7b7cfd6ff36e3
+=======
+>>>>>>> 4d53b0cb2cda5172143e7f480bd5561556566a68
 -- AUTO_INCREMENT for table `kelas`
 --
 ALTER TABLE `kelas`
@@ -394,17 +507,60 @@ ALTER TABLE `tahun_ajaran`
 --
 
 --
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4d53b0cb2cda5172143e7f480bd5561556566a68
+-- Constraints for table `guru`
+--
+ALTER TABLE `guru`
+  ADD CONSTRAINT `guru_ibfk_1` FOREIGN KEY (`id_pelajaran`) REFERENCES `pelajaran` (`id_pelajaran`);
+
+--
+<<<<<<< HEAD
+=======
+>>>>>>> 47acbbe345ad35c041fd353968e7b7cfd6ff36e3
+=======
+>>>>>>> 4d53b0cb2cda5172143e7f480bd5561556566a68
 -- Constraints for table `nilai`
 --
 ALTER TABLE `nilai`
   ADD CONSTRAINT `nilai_ibfk_4` FOREIGN KEY (`tahun_ajaran`) REFERENCES `tahun_ajaran` (`id`),
+<<<<<<< HEAD
+<<<<<<< HEAD
+  ADD CONSTRAINT `nilai_ibfk_5` FOREIGN KEY (`jurusan`) REFERENCES `jurusan` (`id_jurusan`),
+=======
+>>>>>>> 47acbbe345ad35c041fd353968e7b7cfd6ff36e3
+=======
+  ADD CONSTRAINT `nilai_ibfk_5` FOREIGN KEY (`jurusan`) REFERENCES `jurusan` (`id_jurusan`),
+>>>>>>> 4d53b0cb2cda5172143e7f480bd5561556566a68
   ADD CONSTRAINT `nilai_ibfk_8` FOREIGN KEY (`id_pelajaran`) REFERENCES `pelajaran` (`id_pelajaran`),
   ADD CONSTRAINT `nilai_ibfk_9` FOREIGN KEY (`id_kelas`) REFERENCES `kelas` (`id_kelas`);
+
+--
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 4d53b0cb2cda5172143e7f480bd5561556566a68
+-- Constraints for table `pelajaran`
+--
+ALTER TABLE `pelajaran`
+  ADD CONSTRAINT `pelajaran_ibfk_1` FOREIGN KEY (`id _jurusan`) REFERENCES `jurusan` (`id_jurusan`);
 
 --
 -- Constraints for table `siswa`
 --
 ALTER TABLE `siswa`
+  ADD CONSTRAINT `siswa_ibfk_1` FOREIGN KEY (`id_jurusan`) REFERENCES `jurusan` (`id_jurusan`),
+=======
+-- Constraints for table `siswa`
+--
+ALTER TABLE `siswa`
+<<<<<<< HEAD
+>>>>>>> 47acbbe345ad35c041fd353968e7b7cfd6ff36e3
+=======
+>>>>>>> 4d53b0cb2cda5172143e7f480bd5561556566a68
   ADD CONSTRAINT `siswa_ibfk_2` FOREIGN KEY (`kelas`) REFERENCES `kelas` (`id_kelas`);
 
 --
