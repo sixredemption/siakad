@@ -428,7 +428,7 @@
                                     </p>
                                 </div>
                                 <span>
-                                    <a href="<?= base_url('pengumuman'); ?>/<?= $row->id; ?>" class="ready-btn">Read more</a>
+                                    <a href="<?= base_url('home/pengumuman_detail'); ?>/<?= $row->id; ?>" class="ready-btn">Read more</a>
                                     <hr>
                                 </span>
                             </div>
