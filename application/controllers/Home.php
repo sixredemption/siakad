@@ -30,9 +30,13 @@ class Home extends CI_Controller
 
 	public function pengumuman_detail($id)
 	{
+		$data['judul']	=	"Halaman Pengumuman";
 		$this->db->where('id', $id);
-		$data['pengumuman'] = $this->db->get($this->_tblpengumuman)->result();
-
+		$data['pengumuman'] =	$this->db->get($this->_tblpengumuman)->result();
+		$this->db->limit(5);
+		$data['thumbnail']	=	$this->db->get('pengumuman')->result();
+		$this->load->View('template_home/header', $data);
 		$this->load->view('template_home/pengumuman', $data);
+		$this->load->view('template_home/footer');
 	}
 }
