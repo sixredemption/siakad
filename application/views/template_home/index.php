@@ -423,10 +423,7 @@
                                         <a href="<?= base_url('pengumuman/' . $row->id . ''); ?>"><?= $row->judul; ?></a>
                                     </h4>
                                     <p>
-
-                                        <?= $row->keterangan; ?>
                                         <?= ucwords(substr($row->keterangan, 0, 50)); ?>
-
                                     </p>
                                 </div>
                                 <span>

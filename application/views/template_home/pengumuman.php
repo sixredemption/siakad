@@ -11,7 +11,7 @@
 <body>
     <?php foreach ($pengumuman as $row) { ?>
         <ul>
-            <li><?php echo $row->id ?></li>
+            <li><?= $row->id ?></li>
             <li><?= $row->judul ?></li>
             <li><?= $row->keterangan ?></li>
         </ul>
