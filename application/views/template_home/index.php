@@ -402,42 +402,48 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="row">
-                    <?php
-                    foreach ($pengumuman as $row) { ?>
+                    <!-- Start Left Blog -->
+                    <div class="row">
                         <!-- Start Left Blog -->
-                        <div class="col-md-4 col-sm-4 col-xs-12">
-                            <div class="single-blog">
-                                <div class="blog-meta">
-                                    <span class="comments-type">
-                                        <i class="fa fa-user"></i>
-                                        Admin
-                                    </span>
-                                    <span class="date-type">
-                                        <i class="fa fa-calendar"></i><?= date('l', strtotime($row->tanggal)); ?> | <?= date('d-m-Y', strtotime($row->tanggal)); ?>
+                        <?php
+                        foreach ($pengumuman as $row) { ?>
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                <div class="single-blog">
+                                    <div class="single-blog-img">
+                                        <a href="<?= base_url('pengumuman/' . $row->id . ''); ?>">
+                                            <img src="<?= base_url('assets_home/img/blog/' . $row->foto . ''); ?>" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="blog-meta">
+                                        <span class="comments-type">
+                                            <i class="fa fa-user"></i>
+                                            <a href="#">Admin</a>
+                                        </span>
+                                        <span class="date-type">
+                                            <i class="fa fa-calendar"></i><?= hari_indo($row->tanggal); ?>
+                                        </span>
+                                    </div>
+                                    <div class="blog-text">
+                                        <h4>
+                                            <a href="<?= base_url('pengumuman/' . $row->id . ''); ?>"><?= $row->judul; ?></a>
+                                        </h4>
+                                        <p>
+                                            <?= ucwords(substr($row->keterangan, 0, 50)); ?>
+                                        </p>
+                                    </div>
+                                    <span>
+                                        <a href="<?= base_url('pengumuman/' . $row->id . ''); ?>" class="ready-btn">Read more</a>
+                                        <hr>
                                     </span>
                                 </div>
-                                <div class="blog-text">
-                                    <h4>
-                                        <a href="<?= base_url('pengumuman/' . $row->id . ''); ?>"><?= $row->judul; ?></a>
-                                    </h4>
-                                    <p>
-                                        <?= ucwords(substr($row->keterangan, 0, 50)); ?>
-                                    </p>
-                                </div>
-                                <span>
-                                    <a href="<?= base_url('pengumuman/' . $row->id . ''); ?>" class="ready-btn">Read More</a>
-                                    <hr>
-                                </span>
                             </div>
-                            <!-- Start single blog -->
-                        </div>
-                    <?php
-                }
-                ?>
-                    <!-- End Left Blog-->
-                    <!-- End Right Blog-->
+                        <?php
+                    }
+                    ?>
+                        <!-- End Left Blog-->
+                        <!-- End Right Blog-->
+                    </div>
                 </div>
             </div>
         </div>
