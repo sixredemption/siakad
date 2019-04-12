@@ -22,4 +22,12 @@ class Home extends CI_Controller
 		$this->load->view('template_home/index', $data);
 		$this->load->view('template_home/footer');
 	}
+	public function pengumuman_detail()
+	{
+		$data['judul']	=	'Detail Pengumuman';
+		$this->load->view('template_home/header', $data);
+		$this->load->view('template_home/navbar');
+		$this->load->view('template_home/pengumuman');
+		$this->load->view('template_home/footer');
+	}
 }
