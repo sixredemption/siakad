@@ -412,23 +412,22 @@
                                 <div class="blog-meta">
                                     <span class="comments-type">
                                         <i class="fa fa-user"></i>
-                                        <a href="#">Admin</a>
+                                        Admin
                                     </span>
                                     <span class="date-type">
-                                        <i class="fa fa-calendar"></i><?= date('l', strtotime($row->tanggal)); ?> / <?= date('d-m-Y', strtotime($row->tanggal));
-                                                                                                                    ?>
+                                        <i class="fa fa-calendar"></i><?= date('l', strtotime($row->tanggal)); ?> | <?= date('d-m-Y', strtotime($row->tanggal)); ?>
                                     </span>
                                 </div>
                                 <div class="blog-text">
                                     <h4>
-                                        <a href="blog.html"><?= $row->judul; ?></a>
+                                        <a href="<?= base_url('pengumuman/' . $row->id . ''); ?>"><?= $row->judul; ?></a>
                                     </h4>
                                     <p>
                                         <?= ucwords(substr($row->keterangan, 0, 50)); ?>
                                     </p>
                                 </div>
                                 <span>
-                                    <a href="<?= base_url('pengumuman' . $row->id . ''); ?>" class="ready-btn">Read more</a>
+                                    <a href="<?= base_url('pengumuman/' . $row->id . ''); ?>" class="ready-btn">Read More</a>
                                     <hr>
                                 </span>
                             </div>
