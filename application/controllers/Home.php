@@ -23,7 +23,6 @@ class Home extends CI_Controller
 		$this->load->view('template_home/index', $data);
 		$this->load->view('template_home/footer');
 	}
-
 	public function pengumuman()
 	{
 		redirect(base_url());

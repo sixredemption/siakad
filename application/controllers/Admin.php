@@ -5,7 +5,6 @@ class Admin extends CI_Controller
     function __construct()
     {
         parent::__construct();
-
         $this->load->model("M_siswa");
         $this->load->model("Guru_model");
         $this->load->model("Pegawai_model");
@@ -68,8 +67,8 @@ class Admin extends CI_Controller
     }
     public function listsiswa()
     {
-
         $data['siswa'] = $this->M_siswa->getAll();
+        $data['sisw a'] = $this->M_siswa->getAll();
         $this->load->view('template_admin/header');
         $this->load->view('admin/listsiswa', $data);
         $this->load->view('template_admin/sidebar');
@@ -97,7 +96,7 @@ class Admin extends CI_Controller
     public function addsiswa()
     {
         $data['judul'] = "Halaman Tambah Siswa";
-        $this->load->view('template_admin/header');
+        $this->load->view('template_admin/header', $data);
         $this->load->view('admin/addsiswa');
         $this->load->view('template_admin/sidebar');
         $this->load->view('template_admin/footer');
@@ -105,7 +104,7 @@ class Admin extends CI_Controller
     public function addpegawai()
     {
         $data['judul'] = "Halaman Tambah Pegawai";
-        $this->load->view('template_admin/header');
+        $this->load->view('template_admin/header', $data);
         $this->load->view('admin/addpegawai');
         $this->load->view('template_admin/sidebar');
         $this->load->view('template_admin/footer');
