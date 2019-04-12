@@ -1,5 +1,5 @@
 <?php 
-class siswa extends CI_Controller{
+class Siswa extends CI_Controller{
 
 	public function index(){
  	$data['judul']='Selamat Datang Siswa';
