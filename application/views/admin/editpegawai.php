@@ -48,6 +48,14 @@
         	<input type="radio" name="gender" value="P" <?php if($pegawai->gender == 'P'){ echo 'checked'; } ?>>Perempuann
         </div>
 
+		<div class="form-group">
+            <label for="foto">Photo</label>
+            <input class="form-control-file" type="file" name="foto" />
+            <input class="form-control-file" type="hidden" name="old_image" value="<?php echo $pegawai->foto ?>" />
+            <img src="<?php echo base_url('foto/pegawai/'.$pegawai ->foto) ?>" width="64" />
+        </div>
+
+
             <button type="submit" class="btn btn-primary">Simpan</button>
             <button type="reset" class="btn btn-danger">Reset</button>
     </form>

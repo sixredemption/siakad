@@ -73,6 +73,13 @@
 			<input type="number" class="form-control" name="id_pelajaran" value="<?php echo $guru->id_pelajaran ?>">
 		</div>
 
+		<div class="form-group">
+            <label for="foto">Photo</label>
+            <input class="form-control-file" type="file" name="foto" />
+            <input class="form-control-file" type="hidden" name="old_image" value="<?php echo $guru->foto ?>" />
+            <img src="<?php echo base_url('foto/guru/'.$guru ->foto) ?>" width="64" />
+        </div>
+
 
             <button type="submit" class="btn btn-primary">Simpan</button>
             <button type="reset" class="btn btn-danger">Reset</button>
