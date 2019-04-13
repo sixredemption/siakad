@@ -70,6 +70,12 @@
         $this->load->view('template_admin/sidebar');
         $this->load->view('template_admin/footer');
     }
+    public function addpegawai(){
+        $this->load->view('template_admin/header');
+        $this->load->view('admin/addpegawai');
+        $this->load->view('template_admin/sidebar');
+        $this->load->view('template_admin/footer');
+    }
     public function editguru(){
         $this->load->view('template_admin/header');
         $this->load->view('admin/editguru');

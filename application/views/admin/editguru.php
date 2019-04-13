@@ -53,7 +53,7 @@
 			<input type="number" class="form-control" id="kotaasal">
 		</div>	  
     <div class="form-group">
-      <label for="jk">Jenis Kelamin:</label>
+      <label  for="jk">Jenis Kelamin:</label>
       <input type="radio" name="gender" value="lakilaki">Laki-Laki
       <input type="radio" name="gender" value="perempuan">Perempuann
       </select>
