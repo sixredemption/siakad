@@ -6,7 +6,14 @@
 				</a></li>
 				<li class="active">Dashboard</li>
 			</ol>
-		</div><!--/.row-->
+		</div>
+
+		<?php if ($this->session->flashdata('success')): ?>
+				<div class="alert alert-success" role="alert">
+					<?php echo $this->session->flashdata('success'); ?>
+				</div>
+        <?php endif; ?>
+
     <div class="container">
 		<div class="row mt-3">
 			<div class="col-md-6">

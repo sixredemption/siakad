@@ -54,14 +54,15 @@
 				<div class="panel panel-primary ">
 					<div class="panel-heading">
 						Pengumuman		
-				<span class="pull-right clickable panel-toggle panel-button-tab-left"><em class="fa fa-toggle-up"></em></span></div>
-					<div class="panel-body timeline-container">
-						<ul class="timeline">
+				<span class="pull-right clickable panel-toggle panel-button-tab-left"><em class="fa fa-toggle-up"></em></span>
+					</div>
+					 <div class="panel-body timeline-container">
+						<!-- <ul class="timeline">
 							<li>
 								<div class="timeline-badge"><em class="glyphicon glyphicon-pushpin"></em></div>
 								<div class="timeline-panel">
 									<div class="timeline-heading">
-										<h4 class="timeline-title">Pengumuman Pembayaran Spp bulan Januari</h4>
+										<h4 class="timeline-title">Pengumuman <?php ?></h4>
 									</div>
 									<div class="timeline-body">
 										<p>Untuk Siswa Kelas 10 11 12 Di harap melunasi Uang Spps</p>
@@ -113,8 +114,39 @@
 									</div>
 								</div>
 							</li>
-						</ul>
+						</ul> -->
+						<table class="table table-striped">
+									<thead>
+										<!-- <tr>
+											<th><font face ="Calibri"> NO </font></th>
+											<th><font face ="Calibri"> NIS </font></th>
+											<th><font face ="Calibri"> PASSWORD </font></th>
+											<th><font face ="Calibri"> NAMA </font></th>
+											<th><font face ="Calibri"> TANGGAL LAHIR </font></th>
+											<th><font face ="Calibri"> GENDER </font></th>
+											<th><font face ="Calibri"> JURUSAN </font></th>
+											<th><font face ="Calibri"> KELAS </font></th>
+											<th><font face ="Calibri"> KOTA ASAL </font></th>
+											<th><font face ="Calibri"> ALAMAT </font></th>
+											<th><font face ="Calibri"> NO TELP </font></th>
+											<th><font face ="Calibri"> FOTO </font></th>
+											<th><font face ="Calibri"> MENU </font></th>
+										</tr> -->
+										<tbody>
+								<?php 
+								foreach($pengumuman  as $umum):
+								?>
+						<tr>
+							<td><p><?=  $umum->tanggal?></p></td>
+                            <td><p><?=  $umum->judul?></p></td>
+
+                            <td><p><?=  $umum->keterangan?></p></td>																				
+						</tr>
+						<?php endforeach; ?>
+					</tbody>	
+								</table>
 					</div>
+								
 				</div>
 			</div><!--/.col-->
 		
