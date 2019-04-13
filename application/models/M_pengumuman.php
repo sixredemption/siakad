@@ -76,8 +76,8 @@ class M_pengumuman extends CI_Model
     $config['file_name']            = $this->judul;
     $config['overwrite']			= true;
     $config['max_size']             = 1024; // 1MB
-    $config['max_width']            = 1024;
-    $config['max_height']           = 768;
+    // $config['max_width']            = 1024;
+    // $config['max_height']           = 768;
 
     $this->load->library('upload', $config);
 
