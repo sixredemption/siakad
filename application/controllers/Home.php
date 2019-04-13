@@ -30,9 +30,13 @@ class Home extends CI_Controller
 
 	public function pengumuman_detail($id)
 	{
+		// $engkripsi = $this->encryption->decrypt($id);
+
 		$data['judul']	=	"Halaman Pengumuman";
 		$this->db->where('id', $id);
 		$data['pengumuman'] =	$this->db->get($this->_tblpengumuman)->result();
+
+		$this->db->order_by('judul', 'ASC');
 		$this->db->limit(5);
 		$data['thumbnail']	=	$this->db->get('pengumuman')->result();
 		$this->load->View('template_home/header', $data);
