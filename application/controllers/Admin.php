@@ -9,7 +9,8 @@ class Admin extends CI_Controller
         $this->load->model("M_siswa");
         $this->load->helper(array('form', 'url'));
 	    $this->load->model("Guru_model");
-	    $this->load->model("Pegawai_model") ;
+        $this->load->model("Pegawai_model") ;
+        $this->load->model("M_pengumuman") ;
 		
         $this->load->model('login_model');
         if (empty($this->session->userdata('nama')) and empty($this->session->userdata('password'))) {
@@ -19,6 +20,7 @@ class Admin extends CI_Controller
     public function index()
     {
         $data['judul'] = "Wellcome To Administrator";
+        $data["pengumuman"] = $this->M_pengumuman->getAll() ;
         $this->load->view('template_admin/header', $data);
         $this->load->view('admin/dashboard');
         $this->load->view('template_admin/sidebar');
@@ -78,6 +80,13 @@ class Admin extends CI_Controller
 		$data["pegawai"] = $this->Pegawai_model->getAll() ;
         $this->load->view('template_admin/header');
         $this->load->view('admin/listpegawai' , $data);
+        $this->load->view('template_admin/sidebar');
+        $this->load->view('template_admin/footer');
+    }
+    public function listpengumuman(){
+		$data["pengumuman"] = $this->M_pengumuman->getAll() ;
+        $this->load->view('template_admin/header');
+        $this->load->view('admin/listpengumuman' , $data);
         $this->load->view('template_admin/sidebar');
         $this->load->view('template_admin/footer');
     }
