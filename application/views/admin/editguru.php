@@ -24,17 +24,7 @@
 			<label for="nig">NIG :</label>
 			<input type="text" class="form-control" name="nig" value="<?php echo $guru->nig ?>">
 		</div>
-<<<<<<< HEAD
-<form>
-<div class="container">
-<div class="form-group-input-group">
-			<label for="nis">NIP :</label>
-			<input type="text" class="form-control" id="nis">
-		</div>
-    
-=======
         
->>>>>>> 5a15ba1fbfb66973b46064ffaaf4008fefa61cd6
 		<div class="form-group">
 			<label for="nama">Nama :</label>
 			<input type="text" class="form-control" name="nama" value="<?php echo $guru->nama ?>">
@@ -56,39 +46,6 @@
         </div>
 
         <div class="form-group">
-<<<<<<< HEAD
-            <label for="Kelas">Mengajar:</label>
-        <select class="form-control">
-            <option value="" disabled selected>Mata Pelajaran</option>
-            <option value="">Bahasa Indonesia</option>
-            <option value="">Bahasa Inggris</option>
-            <option value="">Biologi</option>
-            <option value="">Sejarah</option>
-            <option value="">Kimia</option>
-            <option value="">Geografi</option>
-            <option value="">Fisika</option>
-            <option value="">Ekonomi</option>
-            <option value="">Matematika</option>
-            <option value="">Pendidikan Kewarganegaraan</option>
-            <option value="">Seni Budaya</option>
-            <option value="">Prakarya</option>  
-        </select>
-    </div>
-    <div class="form-group">
-			<label for="nohp"> Nomer Hp:</label>
-			<input type="number" class="form-control" id="kotaasal">
-		</div>	  
-    <div class="form-group">
-      <label  for="jk">Jenis Kelamin:</label>
-      <input type="radio" name="gender" value="lakilaki">Laki-Laki
-      <input type="radio" name="gender" value="perempuan">Perempuann
-      </select>
-    </div>
-    <button type="submit" class="btn btn-success">Perbarui</button>
-    <button type="reset" class="btn btn-danger">Reset</button>
-    </div>
-  </div>
-=======
                 <label for="nohp"> Nomer Hp:</label>
                 <input type="number" class="form-control" name="no_telp" value="<?php echo $guru->no_telp ?>">
             </div>
@@ -121,5 +78,4 @@
 </div>
 
 
->>>>>>> 5a15ba1fbfb66973b46064ffaaf4008fefa61cd6
   

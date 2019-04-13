@@ -82,12 +82,8 @@
             </div>
 			</div>
 		</div>
-<<<<<<< HEAD
-		</form>
-=======
 		<!--/.row-->
 		
->>>>>>> 5a15ba1fbfb66973b46064ffaaf4008fefa61cd6
 		<div class= container>
         <div class="row">
 			<div class="col-lg-12">

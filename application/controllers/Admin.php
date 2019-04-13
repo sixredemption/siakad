@@ -101,25 +101,15 @@ class Admin extends CI_Controller
         $this->load->view('template_admin/sidebar');
         $this->load->view('template_admin/footer');
     }
-<<<<<<< HEAD
     public function addpegawai(){
-        $this->load->view('template_admin/header');
-=======
-    public function addpegawai()
-    {
         $data['judul'] = "Halaman Tambah Pegawai";
-        $this->load->view('template_admin/header', $data);
->>>>>>> 5a15ba1fbfb66973b46064ffaaf4008fefa61cd6
+        $this->load->view('template_admin/header',$data);
         $this->load->view('admin/addpegawai');
         $this->load->view('template_admin/sidebar');
         $this->load->view('template_admin/footer');
     }
-<<<<<<< HEAD
-    public function editguru(){
-=======
     public function editguru()
     {
->>>>>>> 5a15ba1fbfb66973b46064ffaaf4008fefa61cd6
         $this->load->view('template_admin/header');
         $this->load->view('admin/editguru');
         $this->load->view('template_admin/sidebar');
