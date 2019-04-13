@@ -13,6 +13,7 @@ class Login_model extends CI_Model
             ->where($where, $user)
             ->where('password', $pass)
             ->get();
+        //$query  =   $this->db->where($where, $user)->where('password', $pass)->get($tabel);
         if ($query->num_rows() > 0) {
             return $query->result_object();
         } else {
