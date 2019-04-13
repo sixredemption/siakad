@@ -38,6 +38,11 @@
         <input type="radio" name="gender" value="P">Perempuann
         </div>
 
+		<div class="form-group">
+            <label for="foto">Foto</label>
+            <input class="form-control-file" type="file" class="form-control" name="foto">
+        </div>
+
             <button type="submit" class="btn btn-primary">Simpan</button>
             <button type="reset" class="btn btn-danger">Reset</button>
     </form>
