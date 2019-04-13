@@ -57,82 +57,9 @@
 				<span class="pull-right clickable panel-toggle panel-button-tab-left"><em class="fa fa-toggle-up"></em></span>
 					</div>
 					 <div class="panel-body timeline-container">
-						<!-- <ul class="timeline">
-							<li>
-								<div class="timeline-badge"><em class="glyphicon glyphicon-pushpin"></em></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h4 class="timeline-title">Pengumuman <?php ?></h4>
-									</div>
-									<div class="timeline-body">
-										<p>Untuk Siswa Kelas 10 11 12 Di harap melunasi Uang Spps</p>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="timeline-badge primary"><em class="glyphicon glyphicon-link"></em></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h4 class="timeline-title">Jadwal Kelas 10 Ipa</h4>
-									</div>
-									<div class="timeline-body">
-										<p>Untuk Kelas 10 Ipa di anjurkan men-download jadwal pelajaran terbaru.</p>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="timeline-badge primary"><em class="glyphicon glyphicon-link"></em></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h4 class="timeline-title">Jadwal Kelas 10 Ipa</h4>
-									</div>
-									<div class="timeline-body">
-										<p>Untuk Kelas 10 Ipa di anjurkan men-download jadwal pelajaran terbaru.</p>
-									</div>
-								</div>
-							</li>
 						
-							<li>
-								<div class="timeline-badge"><em class="glyphicon glyphicon-camera"></em></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h4 class="timeline-title">Lorem ipsum dolor sit amet</h4>
-									</div>
-									<div class="timeline-body">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at sodales nisl. Donec malesuada orci ornare risus finibus feugiat.</p>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="timeline-badge"><em class="glyphicon glyphicon-paperclip"></em></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h4 class="timeline-title">Lorem ipsum dolor sit amet</h4>
-									</div>
-									<div class="timeline-body">
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-									</div>
-								</div>
-							</li>
-						</ul> -->
 						<table class="table table-striped">
-									<thead>
-										<!-- <tr>
-											<th><font face ="Calibri"> NO </font></th>
-											<th><font face ="Calibri"> NIS </font></th>
-											<th><font face ="Calibri"> PASSWORD </font></th>
-											<th><font face ="Calibri"> NAMA </font></th>
-											<th><font face ="Calibri"> TANGGAL LAHIR </font></th>
-											<th><font face ="Calibri"> GENDER </font></th>
-											<th><font face ="Calibri"> JURUSAN </font></th>
-											<th><font face ="Calibri"> KELAS </font></th>
-											<th><font face ="Calibri"> KOTA ASAL </font></th>
-											<th><font face ="Calibri"> ALAMAT </font></th>
-											<th><font face ="Calibri"> NO TELP </font></th>
-											<th><font face ="Calibri"> FOTO </font></th>
-											<th><font face ="Calibri"> MENU </font></th>
-										</tr> -->
-										<tbody>
+					<tbody>
 								<?php 
 								foreach($pengumuman  as $umum):
 								?>
@@ -140,7 +67,11 @@
 							<td><p><?=  $umum->tanggal?></p></td>
                             <td><p><?=  $umum->judul?></p></td>
 
-                            <td><p><?=  $umum->keterangan?></p></td>																				
+                            <td><p><?=  $umum->keterangan?></p></td>
+							<td>	
+							<?php echo anchor('C_pengumuman/edit/'.$umum->id,'Edit'); ?>
+                            <?php echo anchor('C_pengumuman/delete/'.$umum->id,'Hapus'); ?>
+							</td>																			
 						</tr>
 						<?php endforeach; ?>
 					</tbody>	

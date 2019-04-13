@@ -35,7 +35,7 @@ class C_pengumuman extends CI_Controller
         
         $data["pengumuman"]=$this->M_pengumuman->getAll();
         $this->load->view("template_admin/header");
-        $this->load->view("admin/listpengumuman", $data);
+        $this->load->view("admin/dashboard", $data);
         $this->load->view("template_admin/sidebar");
         $this->load->view("template_admin/footer");
         
@@ -62,8 +62,8 @@ class C_pengumuman extends CI_Controller
         // $this->load->view("template/sidebar");
         // $this->load->view("template/footer");
 
-        $data["siswa"] = $var->getById($id);
-        if (!$data["siswa"]) show_404();
+        $data["pengumuman"] = $var->getById($id);
+        if (!$data["pengumuman"]) show_404();
         $this->load->view("template_admin/header");
         $this->load->view("admin/editpengumuman", $data);
         $this->load->view("template_admin/sidebar");
@@ -75,9 +75,9 @@ class C_pengumuman extends CI_Controller
         if (!isset($id)) show_404();
         
         if ($this->M_pengumuman->delete($id)) {
-        $data["siswa"]=$this->M_pengumuman->getAll();
+        $data["pengumuman"]=$this->M_pengumuman->getAll();
         $this->load->view("template_admin/header");
-        $this->load->view("admin/listpengumuman", $data);
+        $this->load->view("admin/dashboard", $data);
         $this->load->view("template_admin/sidebar");
         $this->load->view("template_admin/footer");
         }
