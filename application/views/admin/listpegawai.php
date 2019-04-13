@@ -27,6 +27,8 @@
 						<th><font face ="Calibri">Nama</font></th>
 						<th><font face ="Calibri">Password</font></th>
 						<th><font face ="Calibri">Jenis Kelamin</font></th>
+						<th><font face ="Calibri">Foto</font></th>
+						<th><font face ="Calibri">Menu</font></th>
 					</tr>
 					<tbody>
 
@@ -38,6 +40,9 @@
 						<td><p><?= $admin->nama?></p></td>
 						<td><p><?= $admin->password?></p></td>
 						<td><p><?= $admin->gender?></p></td>
+						<td>
+							<img src="<?php echo base_url('foto/pegawai/'.$admin->foto) ?>" width="64" />
+							</td>
 						<td>
 					 	<?php echo anchor('C_pegawai/edit/'.$admin->id,'Edit'); ?>
 						<?php echo anchor('C_pegawai/delete/'.$admin->id,'Hapus'); ?> 
