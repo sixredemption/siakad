@@ -1,4 +1,4 @@
-<?php defined('BASEPATH') OR exit('No direct script access allowed');
+<?php defined('BASEPATH') or exit('No direct script access allowed');
 
 class M_siswa extends CI_Model
 {
@@ -19,26 +19,31 @@ class M_siswa extends CI_Model
     public function rules()
     {
         return [
-            ['field' => 'nama',
-            'label' => 'Nama',
-            'rules' => 'required'],
+            [
+                'field' => 'nama',
+                'label' => 'Nama',
+                'rules' => 'required'
+            ],
 
-            ['field' => 'nis',
-            'label' => 'Nis',
-            'rules' => 'required'],
-            
-            ['field' => 'gender',
-            'label' => 'Gender',
-            'rules' => 'required']
+            [
+                'field' => 'nis',
+                'label' => 'Nis',
+                'rules' => 'required'
+            ],
+
+            [
+                'field' => 'gender',
+                'label' => 'Gender',
+                'rules' => 'required'
+            ]
         ];
     }
 
     public function getAll()
     {
         return $this->db->get($this->_table)->result();
-        
     }
-    
+
     public function getById($id)
     {
         return $this->db->get_where($this->_table, ["id" => $id])->row();
@@ -58,8 +63,8 @@ class M_siswa extends CI_Model
         $this->no_telp = $post["no_telp"];
         $this->password = $post["password"];
         $this->foto = $this->_uploadImage();
-        
-        
+
+
         $this->db->insert($this->_table, $this);
     }
 
@@ -84,9 +89,9 @@ class M_siswa extends CI_Model
         } else {
             $this->foto = $post["old_image"];
         }
-        
+
         $this->db->update($this->_table, $this, array("id" => $post["id"]));
-    }	
+    }
 
     public function delete($id)
     {
@@ -96,21 +101,21 @@ class M_siswa extends CI_Model
 
     private function _uploadImage()
     {
-    $config['upload_path']          = './foto/siswa';
-    $config['allowed_types']        = 'gif|jpg|png';
-    $config['file_name']            = $this->nama;
-    $config['overwrite']			= true;
-    $config['max_size']             = 1024; // 1MB
-    // $config['max_width']            = 1024;
-    // $config['max_height']           = 768;
+        $config['upload_path']          = './foto/siswa';
+        $config['allowed_types']        = 'gif|jpg|png';
+        $config['file_name']            = $this->nama;
+        $config['overwrite']            = true;
+        $config['max_size']             = 1024; // 1MB
+        // $config['max_width']            = 1024;
+        // $config['max_height']           = 768;
 
-    $this->load->library('upload', $config);
+        $this->load->library('upload', $config);
 
-    if ($this->upload->do_upload('foto')) {
-        return $this->upload->data("file_name");
-    }
-    
-    return "default.jpg";
+        if ($this->upload->do_upload('foto')) {
+            return $this->upload->data("file_name");
+        }
+
+        return "default.jpg";
     }
 
     private function _deleteImage($id)
@@ -118,9 +123,7 @@ class M_siswa extends CI_Model
         $img = $this->getById($id);
         if ($img->foto != "default.jpg") {
             $filename = explode(".", $img->foto)[0];
-            return array_map('unlink', glob(FCPATH."foto/siswa/$filename.*"));
+            return array_map('unlink', glob(FCPATH . "foto/siswa/$filename.*"));
         }
     }
-    
 }
-

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 11, 2019 at 01:41 PM
+-- Generation Time: Apr 12, 2019 at 03:27 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -96,7 +96,8 @@ CREATE TABLE `pegawai` (
 
 INSERT INTO `pegawai` (`id`, `nip`, `nama`, `password`, `gender`, `status_user`, `foto`) VALUES
 (1, '098765', 'Sukiman', '098765', 'L', 3, ''),
-(2, '576890', 'Sukijah', '576890', 'P', 3, '');
+(2, '576890', 'Sukijah', '576890', 'P', 3, ''),
+(3, '1741720052', 'Dzikri Alif', 'dzikri123', 'L', NULL, '');
 
 -- --------------------------------------------------------
 
@@ -129,6 +130,7 @@ CREATE TABLE `pengumuman` (
   `id` int(11) NOT NULL,
   `judul` varchar(50) NOT NULL,
   `tanggal` date NOT NULL,
+  `foto` varchar(255) NOT NULL,
   `keterangan` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -136,14 +138,13 @@ CREATE TABLE `pengumuman` (
 -- Dumping data for table `pengumuman`
 --
 
-INSERT INTO `pengumuman` (`id`, `judul`, `tanggal`, `keterangan`) VALUES
-(1, 'Kunjungan Gubernur', '2018-12-03', 'Kunjungan gubernur provinsi sini untuk meninjau beberapa proyek berbasis nasional.'),
-(2, 'Penghargaan Sekolah Adiwiyata', '2019-02-04', 'Penghargaan sekolah adiwiyata ke 5, penghargaan ini diberikan langsung oleh Bupati.'),
-(3, 'Sosialisasi Anti Narkoba Polres Niki', '2019-02-11', 'Penyuluhan bahaya narkoba bagi siswa dan siswi oleh Polres Niki yang dipimpin langsung oleh Kapolres'),
-(4, 'Perayaan Hari Guru', '2019-03-04', 'Dokumentasi perayaan hari guru SMAN 4 Macipo dan pelepasan guru yang akan pensiun.'),
-(5, 'Perayaan Hut Sekolah ke-54', '2019-03-18', 'Perayaan hut sekolah SMAN 4 Macipo ke 54 Tahun.'),
-(6, 'DOA Bersama Sebelum UN', '2019-03-25', 'Doa bersama dengan di Masjid Agung Al-Fatih.'),
-(7, 'Pelaksanaan Ujian Nasional', '2019-04-08', 'Pelaksanaan ujian nasional oleh siswa kelas 12.');
+INSERT INTO `pengumuman` (`id`, `judul`, `tanggal`, `foto`, `keterangan`) VALUES
+(1, 'Kunjungan Gubernur', '2018-12-03', 'kunjungan.jpg', 'Kunjungan gubernur provinsi sini untuk meninjau beberapa proyek berbasis nasional.'),
+(2, 'Penghargaan Sekolah Adiwiyata', '2019-02-04', 'adiwiyata.jpg', 'Penghargaan sekolah adiwiyata ke 5, penghargaan ini diberikan langsung oleh Bupati.'),
+(3, 'Sosialisasi Anti Narkoba', '2019-02-11', 'antinarkoba.jpg', 'Penyuluhan bahaya narkoba bagi siswa dan siswi oleh Polres Niki yang dipimpin langsung oleh Kapolres'),
+(6, 'DOA Bersama Sebelum UN', '2019-03-25', 'berdoa.jpg', 'Doa bersama dengan di Masjid Agung Al-Fatih.'),
+(7, 'Pelaksanaan Ujian Nasional', '2019-04-08', 'ujiannasional.jpg', 'Pelaksanaan ujian nasional oleh siswa kelas 12.'),
+(8, 'Hut SMAN 4 MACIPO Ke 54', '2019-01-14', 'hut.jpg', 'Kemeriahan hut SMAN 4 macipo ke 54 di lapangan.');
 
 -- --------------------------------------------------------
 
@@ -190,8 +191,8 @@ CREATE TABLE `siswa` (
 --
 
 INSERT INTO `siswa` (`id`, `nis`, `nama`, `tgl_lahir`, `kota_asl`, `gender`, `kelas`, `id_jurusan`, `alamat`, `no_telp`, `password`, `foto`) VALUES
-(150, '10111', 'Jokowa', '2009-05-03', 'Malang', 'L', 5, 1, 'Jl Suhat', '081252345678', '11111', 'Jokowa.jpg'),
-(133, '11071', 'Dhandy', '2018-04-01', 'Malang', 'L', 2, 1, 'Jl Suhat', '081112345678', '11111', ''),
+(150, '10111', 'Jokowa', '2009-05-03', 'Malang', 'L', 5, 1, 'Jl Suhat', '081252345678', '11111', 'Jokowa.png'),
+(133, '11071', 'Dhandy', '2018-04-01', 'Malang', 'L', 2, 1, 'Jl Suhat', '081112345678', '11111', 'default.jpg'),
 (42, '11111', 'Firman', '2019-04-01', 'Malang', 'L', 1, 1, 'Jl Suhat', '081212345678', '11111', ''),
 (149, '11131', 'Tia', '2018-04-01', 'Malang', 'P', 5, 1, 'Jl Suhat', '081212365678', '11111', ''),
 (139, '11212', 'Anjay', '2020-04-01', 'Malang', 'L', 3, 1, 'Jl Suhat', '081212345678', '11111', ''),
@@ -217,7 +218,8 @@ INSERT INTO `siswa` (`id`, `nis`, `nama`, `tgl_lahir`, `kota_asl`, `gender`, `ke
 (151, '13191', 'Prabowo', '2019-04-01', 'Malang', 'L', 5, 1, 'Jl Suhat', '081312345678', '11111', ''),
 (141, '14112', 'Dimas', '2019-04-12', 'Malang', 'P', 3, 1, 'Jl Suhat', '081232315678', '11111', ''),
 (138, '14311', 'Dila', '2018-01-03', 'Malang', 'L', 3, 1, 'Jl Suhat', '081212345678', '11111', ''),
-(155, '15263', 'Mustafi', '2019-12-31', 'London', 'L', 1, 1, 'jl Cermai', '1123892458910', 'aaaaa', 'Mustafi.jpg'),
+(155, '15263', 'Mustafi', '2019-12-31', 'London', 'L', 1, 1, 'jl Cermai', '1123892458910', 'aaaaa', 'Mustafi.png'),
+(156, '17412731', 'Dzikri', '1299-07-19', 'maldang', 'L', 2, 1, 'jmasda', '1298391823', '1234', 'Dzikri.png'),
 (148, '18191', 'Dena', '2019-01-31', 'Malang', 'P', 5, 1, 'Jl Suhat', '081012345678', '11111', ''),
 (152, '19111', 'Lisa', '2019-04-01', 'Malang', 'L', 1, 1, 'Jl Suhat', '081212345678', '11111', ''),
 (137, '21511', 'Nania', '2019-04-01', 'Malang', 'L', 3, 1, 'Jl Suhat', '081212345678', '11111', ''),
@@ -351,7 +353,7 @@ ALTER TABLE `nilai`
 -- AUTO_INCREMENT for table `pegawai`
 --
 ALTER TABLE `pegawai`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `pelajaran`
@@ -363,7 +365,7 @@ ALTER TABLE `pelajaran`
 -- AUTO_INCREMENT for table `pengumuman`
 --
 ALTER TABLE `pengumuman`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `semester`
@@ -375,7 +377,7 @@ ALTER TABLE `semester`
 -- AUTO_INCREMENT for table `siswa`
 --
 ALTER TABLE `siswa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=156;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=157;
 
 --
 -- AUTO_INCREMENT for table `spp`
