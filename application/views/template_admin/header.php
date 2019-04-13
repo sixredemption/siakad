@@ -20,7 +20,11 @@
 	<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
 		<div class="container-fluid">
 			<div class="navbar-header">
+<<<<<<< HEAD
                 <a class="navbar-brand" href="<?=base_url('admin/index')?>"><span>SMAN 4</span>Macipo</a>
+=======
+                <a class="navbar-brand" href="<?=base_url('admin/index')?>"><span>SMAN 4</span> MACIPO</a>
+>>>>>>> 5a15ba1fbfb66973b46064ffaaf4008fefa61cd6
                 <ul class="nav navbar-top-links navbar-right">
 					<li class="dropdown"><a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
 						<em class="fa fa-envelope"></em><span class="label label-danger">14</span>
