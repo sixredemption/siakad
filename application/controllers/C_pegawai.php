@@ -52,6 +52,7 @@ class C_pegawai extends CI_Controller
 
         if ($validation->run()) {
             $var->update();
+            $this->session->set_flashdata('success', 'Berhasil disimpan');
         }
 
         // $data["pegawai"]=$this->Pegawai_model->getAll();
