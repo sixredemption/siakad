@@ -12,7 +12,7 @@
 			<div class="col-md-6">
             <div class="card">
                 <div class="card-header">
-                    <h1>Edit Guru</h1>
+                    <h1>Edit Pegawai</h1>
                 </div>
 <div class="card-body">
 
