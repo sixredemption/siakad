@@ -12,10 +12,38 @@ class Auth extends CI_Controller
 		parent::__construct();
 		$this->load->model('login_model');
 		$this->load->library('form_validation');
+
+		if (!($this->session->userdata('nama')) && ($this->session->userdata('password'))) {
+			// JIKA TIDAK ADA SESSION ADMIN
+			redirect(base_url('loginadmin'));
+		} elseif (!($this->session->userdata('nig')) && ($this->session->userdata('password'))) {
+			// JIKA TIDAK ADA SESSION GURU
+			redirect(base_url('loginguru'));
+		} elseif (!($this->session->userdata('nisn')) && ($this->session->userdata('password'))) {
+			// JIKA TIDAK ADA SESSION SISWA
+			redirect(base_url('loginsiswa'));
+		} else {
+			$this->index_login();
+		}
 	}
 	public function index()
 	{
 		redirect(base_url('login'));
+	}
+
+	public function index_login() // HALAMAN SETELAH ADA SESSION
+	{
+		// $data['judul']  =   "ass";
+		$data['judul'] = 'SMAN 4 MACIPO';
+		$this->db->order_by('tanggal', 'DESC');
+		$this->db->limit(6);
+		$data['pengumuman']    =    $this->db->get('pengumuman')->result();
+
+		$this->load->view('template_home/header', $data);
+		$this->load->view('template_home/navbar_login');
+		$this->load->view('template_home/slider');
+		$this->load->view('template_home/index', $data);
+		$this->load->view('template_home/footer');
 	}
 
 	public function admin() // VIEW LOGIN ADMIN
@@ -58,7 +86,8 @@ class Auth extends CI_Controller
 				$this->session->set_flashdata('message', 'Berhasil login');
 				foreach ($cek as $row) {
 					$this->session->set_userdata('nama', $row->nama);
-					redirect(base_url("admin")); // localhost/controllerAdmin
+					// redirect(base_url("admin")); // localhost/controllerAdmin
+					redirect(base_url("admin/index_login"));
 				}
 			} else {
 				$this->session->set_flashdata('message', 'username tidak');
