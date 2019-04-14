@@ -1,6 +1,6 @@
 <?php
 
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 class C_pegawai extends CI_Controller
 {
@@ -18,9 +18,9 @@ class C_pegawai extends CI_Controller
         $this->load->view("admin/listpegawai", $data);
         $this->load->view("template_admin/sidebar");
         $this->load->view("template_admin/footer");
-        
-        
     }
+
+
 
     public function add()
     {
@@ -30,22 +30,22 @@ class C_pegawai extends CI_Controller
 
         if ($validation->run()) {
             $tambah->save();
+            // $this->session->set_flashdata('success', 'Berhasil disimpan');
         }
-        
-        $data["pegawai"]=$this->Pegawai_model->getAll();
+
+        $data["pegawai"] = $this->Pegawai_model->getAll();
         $this->load->view("template_admin/header");
         $this->load->view("admin/listpegawai", $data);
         $this->load->view("template_admin/sidebar");
         $this->load->view("template_admin/footer");
-        
     }
 
-    public function edit($id=null)
+    public function edit($id = null)
     {
-         var_dump($id);
-        if (!isset($id)) redirect('c_pegawai');
+        // var_dump($id);
+        if (!isset($id)) redirect('C_pegawai');
 
-        
+
         $var = $this->Pegawai_model;
         $validation = $this->form_validation;
         $validation->set_rules($var->rules());
@@ -69,16 +69,16 @@ class C_pegawai extends CI_Controller
         $this->load->view("template_admin/footer");
     }
 
-    public function delete($id=null)
+    public function delete($id = null)
     {
         if (!isset($id)) show_404();
-        
+
         if ($this->Pegawai_model->delete($id)) {
-        $data["pegawai"]=$this->Pegawai_model->getAll();
-        $this->load->view("template_admin/header");
-        $this->load->view("admin/listpegawai", $data);
-        $this->load->view("template_admin/sidebar");
-        $this->load->view("template_admin/footer");
+            $data["pegawai"] = $this->Pegawai_model->getAll();
+            $this->load->view("template_admin/header");
+            $this->load->view("admin/listpegawai", $data);
+            $this->load->view("template_admin/sidebar");
+            $this->load->view("template_admin/footer");
         }
     }
 }
