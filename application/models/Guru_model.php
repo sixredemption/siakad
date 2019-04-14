@@ -50,7 +50,8 @@ class Guru_model extends CI_Model {
 		$this->gender = $post["gender"] ;
 		$this->alamat = $post["alamat"] ;
 		$this->no_telp = $post["no_telp"] ;
-		$this->password = $post["password"] ;
+		$this->password=md5($post["password"]) ;
+		// $this->password = $post["password"] ;
 		$this->id_pelajaran = $post["id_pelajaran"] ;
 		
 		$this->db->insert($this->_table , $this) ;
@@ -67,7 +68,8 @@ class Guru_model extends CI_Model {
 		$this->gender = $post["gender"] ;
 		$this->alamat = $post["alamat"] ;
 		$this->no_telp = $post["no_telp"] ;
-		$this->password = $post["password"] ;
+		$this->password=md5($post["password"]) ;
+		// $this->password = $post["password"] ;
 		$this->id_pelajaran = $post["id_pelajaran"] ;
 
         $this->db->update($this->_table, $this, array("id" => $post["id"]));

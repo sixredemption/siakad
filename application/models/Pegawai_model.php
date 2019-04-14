@@ -34,7 +34,8 @@ class Pegawai_model extends CI_Model {
 		// var_dump($post);
 		$this->nip = $post["nip"] ;
 		$this->nama = $post["nama"] ;
-		$this->password = $post["password"] ;
+		$this->password=md5($post["password"]) ;
+		// $this->password = $post["password"] ;
 		$this->gender = $post["gender"] ;
 
 		$this->db->insert($this->_table , $this) ;
@@ -46,7 +47,8 @@ class Pegawai_model extends CI_Model {
 		$this->id = $post["id"] ;
 		$this->nip = $post["nip"] ;
 		$this->nama = $post["nama"] ;
-		$this->password = $post["password"] ;
+		$this->password=md5($post["password"]) ;
+		// $this->password = $post["password"] ;
 		$this->gender = $post["gender"] ;
 
         $this->db->update($this->_table, $this, array("id" => $post["id"]));
