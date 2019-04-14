@@ -44,29 +44,28 @@ class Auth extends CI_Controller
 
 	public function login_admin()
 	{
-		$this->form_validation->set_rules('username', 'Username Admin', 'required');
-        $this->form_validation->set_rules('password', 'Password', 'required');
-		
-		
+		$this->form_validation->set_rules('nama', 'Username Admin', 'required');
+		$this->form_validation->set_rules('password', 'Password', 'required');
+
 		if ($this->form_validation->run() == FALSE) {
-            $this->admin();
-        }else {
-            $nama		=	$this->input->post('nama');
+			$this->admin();
+		} else {
+			$nama		=	$this->input->post('nama');
 			$password	=	$this->input->post('password');
 			$where 		=	"nama";
 			$cek		= 	$this->login_model->cek_login($this->_pegawai, $where, $nama, $password);
 			if ($cek) {
+				$this->session->set_flashdata('message', 'Berhasil login');
 				foreach ($cek as $row) {
 					$this->session->set_userdata('nama', $row->nama);
 					redirect(base_url("admin")); // localhost/controllerAdmin
 				}
 			} else {
-				
-				$this->session->set_flashdata('username', 'username tidak');
+				$this->session->set_flashdata('message', 'username tidak');
 				$this->admin();
 			}
 		}
-		
+
 		// if ($cek) {
 		// 	foreach ($cek as $row) {
 		// 		$this->session->set_userdata('nama', $row->nama);
