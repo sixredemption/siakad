@@ -25,7 +25,7 @@
 
 <form action="<?php echo base_url("C_pegawai/edit/$pegawai->id") ?>" method="post" enctype="multipart/form-data" >
 		
-<input type="hidden" name="id" value="<?php echo $pegawai->id?>" />	
+<input type="hidden" name="id" value="<?php echo $pegawai->id?>"/>	
 
 		<div class="form-group">
 			<label for="nip">NIP :</label>

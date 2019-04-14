@@ -26,11 +26,11 @@
 		</div>
         
 		<div class="form-group">
-								<label for="nama">Nama</label>
-								<input class="form-control <?php echo form_error('nama') ? 'is-invalid':'' ?>" type="text" name="nama" placeholder="Product name" />
-								<div class="invalid-feedback">
-									<?php echo form_error('nama') ?>
-								</div>
+			<label for="nama">Nama</label>
+			<input class="form-control <?php echo form_error('nama') ? 'is-invalid':'' ?>" type="text" name="nama" placeholder="Product name" />
+			<div class="invalid-feedback">
+			<?php echo form_error('nama') ?>
+			</div>
 		</div>
 
         <div class="form-group">
