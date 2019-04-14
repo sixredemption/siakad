@@ -6,14 +6,14 @@
 				</a></li>
 				<li class="active">List Siswa</li>
 			</ol><br>
-			<div class="col-lg-10">
+			<!-- <div class="col-lg-10">
             <form role="search">
 			<div class="form-group" method="get" action="">
 	        <label>NIS:</label> 
 			<input type="text" name="nis"/>
 	            <button class="btn btn-info fa fa-search" type="submit" name="cari" value="cari Siswa" ></button>
             </div>
-			</div>
+			</div> -->
 		</div>
     
 		<div class= container>
@@ -22,9 +22,9 @@
 				<h1 class="page-header">Daftar Siswa</h1>
             <div class="panel-button-tab-left">
 				
-        		<form method="post" action="namafile.html">
-				<button type="submit">Link 1</button>
-				</form>
+			<form method="" action="<?php  echo base_url(); ?>​. Admin/addsiswa;">
+       			<button id="submit-buttons" type="submit" ​​​​​>Tambah Data</button>
+			</form>
             </div>
 				<table class="table table-striped">
 				<thead>

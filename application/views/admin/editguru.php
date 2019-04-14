@@ -6,7 +6,14 @@
 				</a></li>
 				<li class="active">Dashboard</li>
 			</ol>
-		</div><!--/.row-->
+		</div>
+
+		<?php if ($this->session->flashdata('success')): ?>
+				<div class="alert alert-success" role="alert">
+					<?php echo $this->session->flashdata('success'); ?>
+				</div>
+        <?php endif; ?>
+
     <div class="container">
 		<div class="row mt-3">
 			<div class="col-md-6">
@@ -65,6 +72,13 @@
 			<label for="id_pelajaran"> Mengajar:</label>
 			<input type="number" class="form-control" name="id_pelajaran" value="<?php echo $guru->id_pelajaran ?>">
 		</div>
+
+		<div class="form-group">
+            <label for="foto">Photo</label>
+            <input class="form-control-file" type="file" name="foto" />
+            <input class="form-control-file" type="hidden" name="old_image" value="<?php echo $guru->foto ?>" />
+            <img src="<?php echo base_url('foto/guru/'.$guru ->foto) ?>" width="64" />
+        </div>
 
 
             <button type="submit" class="btn btn-primary">Simpan</button>

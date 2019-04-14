@@ -60,8 +60,13 @@
 
 		<div class="form-group">
 			<label for="id_pelajaran"> Mengajar:</label>
-			<input type="number" class="form-control" name="id_pelajaran">
+			<input type="text" class="form-control" name="id_pelajaran">
 		</div>
+
+        <div class="form-group">
+            <label for="foto">Foto</label>
+            <input class="form-control-file" type="file" class="form-control" name="foto">
+        </div>
 
 
             <button type="submit" class="btn btn-primary">Simpan</button>
