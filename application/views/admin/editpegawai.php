@@ -6,7 +6,14 @@
 				</a></li>
 				<li class="active">Dashboard</li>
 			</ol>
-		</div><!--/.row-->
+		</div>
+
+		<?php if ($this->session->flashdata('success')): ?>
+				<div class="alert alert-success" role="alert">
+					<?php echo $this->session->flashdata('success'); ?>
+				</div>
+        <?php endif; ?>
+
     <div class="container">
 		<div class="row mt-3">
 			<div class="col-md-6">
@@ -40,6 +47,14 @@
         	<input type="radio" name="gender" value="L" <?php if($pegawai->gender == 'L'){ echo 'checked'; } ?>>Laki-Laki
         	<input type="radio" name="gender" value="P" <?php if($pegawai->gender == 'P'){ echo 'checked'; } ?>>Perempuann
         </div>
+
+		<div class="form-group">
+            <label for="foto">Photo</label>
+            <input class="form-control-file" type="file" name="foto" />
+            <input class="form-control-file" type="hidden" name="old_image" value="<?php echo $pegawai->foto ?>" />
+            <img src="<?php echo base_url('foto/pegawai/'.$pegawai ->foto) ?>" width="64" />
+        </div>
+
 
             <button type="submit" class="btn btn-primary">Simpan</button>
             <button type="reset" class="btn btn-danger">Reset</button>

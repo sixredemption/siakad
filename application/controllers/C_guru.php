@@ -53,6 +53,7 @@ class C_guru extends CI_Controller
 
         if ($validation->run()) {
             $var->update();
+            $this->session->set_flashdata('success', 'Berhasil disimpan');
         }
 
         // $data["guru"]=$this->Guru_model->getAll();
