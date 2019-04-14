@@ -51,7 +51,8 @@ class Guru_model extends CI_Model {
 		$this->gender = $post["gender"] ;
 		$this->alamat = $post["alamat"] ;
 		$this->no_telp = $post["no_telp"] ;
-		$this->password = $post["password"] ;
+		$this->password=md5($post["password"]) ;
+		// $this->password = $post["password"] ;
 		$this->id_pelajaran = $post["id_pelajaran"] ;
 		$this->foto = $this->_uploadImage();
 
@@ -69,7 +70,8 @@ class Guru_model extends CI_Model {
 		$this->gender = $post["gender"] ;
 		$this->alamat = $post["alamat"] ;
 		$this->no_telp = $post["no_telp"] ;
-		$this->password = $post["password"] ;
+		$this->password=md5($post["password"]) ;
+		// $this->password = $post["password"] ;
 		$this->id_pelajaran = $post["id_pelajaran"] ;
 		
 		if (!empty($_FILES["foto"]["name"])) {
