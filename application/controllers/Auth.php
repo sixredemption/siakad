@@ -44,18 +44,37 @@ class Auth extends CI_Controller
 
 	public function login_admin()
 	{
-		$nama		=	$this->input->post('nama');
-		$password	=	$this->input->post('password');
-		$where 		=	"nama";
-		$cek		= 	$this->login_model->cek_login($this->_pegawai, $where, $nama, $password);
-		if ($cek) {
-			foreach ($cek as $row) {
-				$this->session->set_userdata('nama', $row->nama);
-				redirect(base_url("admin")); // localhost/controllerAdmin
+		$this->form_validation->set_rules('username', 'Username Admin', 'required');
+        $this->form_validation->set_rules('password', 'Password', 'required');
+		
+		
+		if ($this->form_validation->run() == FALSE) {
+            $this->admin();
+        }else {
+            $nama		=	$this->input->post('nama');
+			$password	=	$this->input->post('password');
+			$where 		=	"nama";
+			$cek		= 	$this->login_model->cek_login($this->_pegawai, $where, $nama, $password);
+			if ($cek) {
+				foreach ($cek as $row) {
+					$this->session->set_userdata('nama', $row->nama);
+					redirect(base_url("admin")); // localhost/controllerAdmin
+				}
+			} else {
+				
+				$this->session->set_flashdata('username', 'username tidak');
+				$this->admin();
 			}
-		} else {
-			$this->admin();
 		}
+		
+		// if ($cek) {
+		// 	foreach ($cek as $row) {
+		// 		$this->session->set_userdata('nama', $row->nama);
+		// 		redirect(base_url("admin")); // localhost/controllerAdmin
+		// 	}
+		// } else {
+		// 	$this->admin();
+		// }
 	}
 
 	public function login_guru()
