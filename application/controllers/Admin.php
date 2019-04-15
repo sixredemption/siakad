@@ -12,6 +12,8 @@ class Admin extends CI_Controller
         $this->load->model("M_pengumuman") ;
         $this->load->model('login_model');
 
+        
+
         if (empty($this->session->userdata('nama')) and empty($this->session->userdata('password'))) {
             redirect(base_url('loginadmin'));
         }

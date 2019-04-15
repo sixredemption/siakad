@@ -49,7 +49,12 @@
 					</div>
 				</div>
 			</div><!--/.row-->
-		</div>			
+		</div>
+
+		<?php 
+		echo "<pre>";
+			print_r($this->session->userdata());
+		echo "</pre>";?>		
 			<div class="col-md-12">
 				<div class="panel panel-primary ">
 					<div class="panel-heading">
