@@ -1,26 +1,10 @@
-
 <body>
-
-
-<!-- Left Panel -->
-
-<!-- <aside id="left-panel" class="left-panel">
-    <nav class="navbar navbar-expand-sm navbar-default">
-
-        <div class="navbar-header">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fa fa-bars"></i>
-            </button>
-             </div>
-
-        <div id="main-menu" class="main-menu collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li class="active">
-                    <a href="index.html"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
-                </li> -->
-                <aside id="left-panel" class="left-panel">
+    <aside id="left-panel" class="left-panel">
         <nav class="navbar navbar-expand-sm navbar-default">
         <div class="navbar-header">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
         <a class="navbar-brand" href="<?=base_url('admin/index')?>"><span style="color:blue">SMAN 4</span> MACIPO</a>
         </div>
 
@@ -46,12 +30,11 @@
               <a href="https://github.com/sixredemption/siakad"><i class="fa  fa-github fa-2x"></i></a>
             </div>
           </footer>
-</aside><!-- /#left-panel -->
-<header id="header" class="header">
+    </aside>
 
+    <header id="header" class="header">
             <div class="header-menu">
-
-                <div class="col-sm-10">
+                <div class="col-sm-8">
                     <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
                     <div class="header-left">
                         <button class="search-trigger"><i class="fa fa-search"></i></button>
@@ -128,24 +111,17 @@
                     </div>
                 </div>
 
-                <div class="col-sm-2">
-                <ul class="header-rightnav navbar-nav navbar-right">
-					<li class="dropdown dropdown-user">
-						<a href="<?= base_url();?>guru/biodata" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-						<img  src="<?php echo base_url() ?>3.jpg" class="img-circle" width="40px" height="40px>						
-            <span class="username username-hide-on-mobile">DEBY D.P </span>
-						<i class="fa fa-angle-down"></i>
-						</a>
-							<li>
-              <a href="<?= base_url();?>guru/password"><i class="fa fa-gear">Ganti Password</i></a>
-              </li>
-              <li>
-              <a href="<?= base_url();?>template_home/index"><i class="fa fa-power-off">Log Out </i></a> 
-							</li>
-						</ul>
-					</li>
-				</ul>
+                <div class="col-sm-4">
+                    <div class="user-area dropdown float-right">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="img-circle" src="<?php echo base_url() ?>default.jpg" >
+                        </a>
 
+                        <div class="user-menu dropdown-menu">
+                            <a href="<?= base_url();?>guru/password"><i class="fa fa-cog"> Ganti Password </i></a>
+                            <a href="<?= base_url();?>guru/logout"><i class="fa fa-power-off"> Logout </i></a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
