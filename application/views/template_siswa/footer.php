@@ -5,21 +5,21 @@
 </html>
     -->
 
-	<html>
+<html>
 <body>
 
-    <script src="<?= base_url('assets/') ?>vendors/jquery/dist/jquery.min.js"></script>
-    <script src="<?= base_url('assets/') ?>vendors/popper.js/dist/umd/popper.min.js"></script>
-    <script src="<?= base_url('assets/') ?>vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="<?= base_url('assets/') ?>assets/js/main.js"></script>
+    <script src="<?= base_url('assets_siswa/') ?>vendors/jquery/dist/jquery.min.js"></script>
+    <script src="<?= base_url('assets_siswa/') ?>vendors/popper.js/dist/umd/popper.min.js"></script>
+    <script src="<?= base_url('assets_siswa/') ?>vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="<?= base_url('assets_siswa/') ?>assets/js/main.js"></script>
 
 
-    <script src="<?= base_url('assets/') ?>vendors/chart.js/dist/Chart.bundle.min.js"></script>
-    <script src="<?= base_url('assets/') ?>assets/js/dashboard.js"></script>
-    <script src="<?= base_url('assets/') ?>assets/js/widgets.js"></script>
-    <script src="<?= base_url('assets/') ?>vendors/jqvmap/dist/jquery.vmap.min.js"></script>
-    <script src="<?= base_url('assets/') ?>vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
-    <script src="<?= base_url('assets/') ?>vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <script src="<?= base_url('assets_siswa/') ?>vendors/chart.js/dist/Chart.bundle.min.js"></script>
+    <script src="<?= base_url('assets_siswa/') ?>assets/js/dashboard.js"></script>
+    <script src="<?= base_url('assets_siswa/') ?>assets/js/widgets.js"></script>
+    <script src="<?= base_url('assets_siswa/') ?>vendors/jqvmap/dist/jquery.vmap.min.js"></script>
+    <script src="<?= base_url('assets_siswa/') ?>vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+    <script src="<?= base_url('assets_siswa/') ?>vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
     <script>
         (function($) {
             "use strict";

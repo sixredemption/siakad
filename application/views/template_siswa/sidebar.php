@@ -38,16 +38,22 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa fa-bars"></i>
             </button>
-             </div>
+						
+						<!-- <a class="navbar-brand" href="<?=base_url();?>guru/index"><img src="<?php echo base_url() ?>foto/1.png" width="40px"><span style="color:blue">SMAN 4</span> MACIPO</a>
+             -->
+						 </div>
 
         <div id="main-menu" class="main-menu collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active">
+						<h3 class="menu-title">Menu</h3><!-- /.menu-title --> 
+                <!-- <li class="active">
                     <a href="index.html"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
-                </li>
-                <menu>
-          <<li><a href="<?= base_url();?>siswa/index"><i class="fa fa-home"></i> Home</a></li>
-            <li><a href="<?= base_url();?>siswa/nilai"><i class="fa fa-bookmark-o"></i> Nilai Siswa</a></li>
+                </li>-->
+                <menu> 
+						<ul class="menu-title">
+
+            <li><a href="<?= base_url();?>siswa/index"><i class="fa fa-home"></i> Home</a></li>
+            <li><a href="<?= base_url();?>siswa/nilai"><i class="fa fa-plus"></i> Nilai Siswa</a></li>
 						<li><a href="<?= base_url();?>siswa/jadwal"><i class="fa fa-bookmark-o"></i>Jadwal Siswa</a></li>
             <li><a href="<?= base_url();?>siswa/pengumuman"><i class="fa fa-bell"></i> Pengumuman</a></li>
             <li><a href="<?= base_url();?>siswa/statusspp"><i class="fa fa-money"></i>Status Pembayaran Spp</a></li>
@@ -61,26 +67,26 @@
 
             <div class="header-menu">
 
-                <div class="col-sm-7">
-                    <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
-                    
-
-                        
-                        
-                <div class="col-sm-5">
+                <div class="col-sm-8">
+                    <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>  
+                <div class="col-sm-4">
                     <div class="user-area dropdown float-right show">
+												<!-- <div class="col-sm-2">
+												<ul class="header-rightnav navbar-nav navbar-right">
+												<li class ="dropdown dropdown-user">
+												<a href=  
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                             <img  src="<?php echo base_url() ?>3.jpg" class="user-avatar rounded-circle" alt="User Avatar">
                         </a>
 
                         <div class="user-menu dropdown-menu show" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(-88px, 0px, 0px);">
-                        <li>
+                      
               <a href="<?= base_url();?>siswa/password"><i class="fa fa-gear">Ganti Password</i></a>
               </li>
               <li>
               <a href="<?= base_url();?>siswa/index"><i class="fa fa-power-off">Log Out </i></a> 
-							</li>
-                        </div>
+							</li> -->
+                        </div> 
                     </div>
 
                     <div class="language-select dropdown" id="language-select">
