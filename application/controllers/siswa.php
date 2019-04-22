@@ -1,6 +1,8 @@
-<?php
-				class Siswa extends CI_Controller
-				{
+
+<?php 
+class Siswa extends CI_Controller{
+
+
 
 					public function index()
 					{

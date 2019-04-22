@@ -12,13 +12,20 @@ class Home extends CI_Controller
 
 	public function index()
 	{
+
+		
+		
+		$this->load->view('template_home/index');
+		
 		$data['judul'] = 'SMAN 4 MACIPO';
+
 		$this->db->order_by('tanggal', 'DESC');
 		$this->db->limit(6);
 		$data['pengumuman']	=	$this->db->get($this->_tblpengumuman)->result();
 
 		$this->load->view('template_home/header', $data);
 		$this->load->view('template_home/navbar');
+
 		$this->load->view('template_home/slider');
 		$this->load->view('template_home/index', $data);
 		$this->load->view('template_home/footer');
@@ -42,5 +49,6 @@ class Home extends CI_Controller
 		$this->load->View('template_home/header', $data);
 		$this->load->view('template_home/pengumuman', $data);
 		$this->load->view('template_home/footer');
+
 	}
 }
