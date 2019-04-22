@@ -29,17 +29,19 @@
 				<table class="table table-striped">
 				<thead>
 					<tr>
+						<th><font face ="Calibri">No </font></th>
 						<th><font face ="Calibri">Username</font></th>
 						<th><font face ="Calibri">Password</font></th>
 						<th><font face ="Calibri">Foto</font></th>
 						<th><font face ="Calibri">Menu</font></th>
 					</tr>
 					<tbody>
-
+							<?php  $nomor =1; ?>
 							<?php
 							foreach($pegawai as $admin) :
 							?>
 					<tr>
+						<td><?php echo $nomor; ?></td>
 						<td><p><?= $admin->username?></p></td>
 						<td><p><?= $admin->password?></p></td>
 						<td>
@@ -50,6 +52,7 @@
 						<?php echo anchor('C_pegawai/delete/'.$admin->id_admin,'Hapus'); ?> 
 					 </td>
 					</tr>
+							<?php $nomor++; ?>
 							<?php endforeach; ?>
 					</tbody>
 				</thead>
