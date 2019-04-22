@@ -5,23 +5,22 @@ class Admin extends CI_Controller
     function __construct()
     {
         parent::__construct();
-        $this->load->model("M_siswa");
+        $this->load->model("Model_siswa");
         $this->load->helper(array('form', 'url'));
-	    $this->load->model("Guru_model");
-        $this->load->model("Pegawai_model") ;
-        $this->load->model("M_pengumuman") ;
+        $this->load->model("Guru_model");
+        $this->load->model("Pegawai_model");
+        $this->load->model("Model_pengumuman");
         $this->load->model('login_model');
 
-        
-
-        if (empty($this->session->userdata('nama')) and empty($this->session->userdata('password'))) {
+        if (!($this->session->userdata('username'))) {
             redirect(base_url('loginadmin'));
+            // redirect($this->index());
         }
     }
-    public function index()
+    public function index() // HALAMAN SEBELUM ADA SESSION
     {
         $data['judul'] = "Wellcome To Administrator";
-        $data["pengumuman"] = $this->M_pengumuman->getAll() ;
+        $data["pengumuman"] = $this->Model_pengumuman->getAll();
         $this->load->view('template_admin/header', $data);
         $this->load->view('admin/dashboard');
         $this->load->view('template_admin/sidebar');
@@ -72,8 +71,8 @@ class Admin extends CI_Controller
     }
     public function listsiswa()
     {
-        $data['siswa'] = $this->M_siswa->getAll();
-        $data['sisw a'] = $this->M_siswa->getAll();
+        $data['siswa'] = $this->Model_siswa->getAll();
+        $data['sisw a'] = $this->Model_siswa->getAll();
         $this->load->view('template_admin/header');
         $this->load->view('admin/listsiswa', $data);
         $this->load->view('template_admin/sidebar');
@@ -88,10 +87,11 @@ class Admin extends CI_Controller
         $this->load->view('template_admin/sidebar');
         $this->load->view('template_admin/footer');
     }
-    public function listpengumuman(){
-		$data["pengumuman"] = $this->M_pengumuman->getAll() ;
+    public function listpengumuman()
+    {
+        $data["pengumuman"] = $this->Model_pengumuman->getAll();
         $this->load->view('template_admin/header');
-        $this->load->view('admin/listpengumuman' , $data);
+        $this->load->view('admin/listpengumuman', $data);
         $this->load->view('template_admin/sidebar');
         $this->load->view('template_admin/footer');
     }
