@@ -6,14 +6,7 @@ class Login_model extends CI_Model
     {
         $user = htmlspecialchars($user);
         $pass = md5($pass);
-        $pass = $pass;
-        $query = $this->db
-            ->select('*')
-            ->from($tabel)
-            ->where($where, $user)
-            ->where('password', $pass)
-            ->get();
-        //$query  =   $this->db->where($where, $user)->where('password', $pass)->get($tabel);
+        $query  =   $this->db->where($where, $user)->where('password', $pass)->get($tabel);
         if ($query->num_rows() > 0) {
             return $query->result_object();
         } else {
