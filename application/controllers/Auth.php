@@ -98,7 +98,8 @@ class Auth extends CI_Controller
 		} else {
 			$nig_guru	=	$this->input->post('nig_guru');
 			$password	=	$this->input->post('password');
-			$where 		=	"nig_guru";
+			//$cek		=	$this->db->get_where('guru', ['nig_guru' => $nig_guru, 'password' => md5($password)])->row();
+			$where		=	"nig_guru";
 			$cek		= 	$this->login_model->cek_login($this->_guru, $where, $nig_guru, $password);
 			if ($cek) {
 				// DATANYA ADA
@@ -107,6 +108,8 @@ class Auth extends CI_Controller
 					redirect(base_url("guru")); // localhost/controllerSiswa
 				}
 			} else {
+				$this->session->set_flashdata('message', '<div class="alert alert-danger">
+				Nomor Induk Guru / Password salah</div>');
 				$this->guru();
 			}
 		}
