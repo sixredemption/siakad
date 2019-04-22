@@ -31,7 +31,7 @@ class Pegawai_model extends CI_Model {
 	public function save() {
 		$post = $this->input->post() ;
 		// var_dump($post);
-		$this->id_admin = $post["id_admin"] ;
+		// $this->id_admin = $post["id_admin"] ;
 		$this->username = $post["username"] ;
 		$this->password=md5($post["password"]) ;
 		$this->foto = $this->_uploadImage();
