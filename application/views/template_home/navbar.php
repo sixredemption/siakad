@@ -30,7 +30,7 @@
                             <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
                                 <ul class="nav navbar-nav navbar-right">
                                     <?php
-                                    if (!$this->session->userdata('username') || $this->session->userdata('nig_guru') || $this->session->userdata('nisn_siswa')) : ?>
+                                    if (!$this->session->userdata('username') && $this->session->userdata('nig_guru') && $this->session->userdata('nisn_siswa')) : ?>
                                         <li>
                                             <a class="page-scroll" href="<?= base_url()  ?>">Home</a>
                                         </li>
@@ -55,9 +55,9 @@
                                         <li>
                                             <a class="page-scroll" href="<?= base_url('admin')  ?>">[ Profile Admin ]</a>
                                         </li>
-                                    <?php elseif ($this->session->userdata('nig')) : ?>
+                                    <?php elseif ($this->session->userdata('nig_guru')) : ?>
                                         <li>
-                                            <a class="page-scroll" href="<?= base_url('guru') ?>">Profile Guru</a>
+                                            <a class="page-scroll" href="<?= base_url('guru') ?>">[ Halaman Guru ]</a>
                                         </li>
                                     <?php elseif ($this->session->userdata('nisn')) : ?>
                                         <li>
