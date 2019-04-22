@@ -1,12 +1,11 @@
 <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
 	<div class="profile-sidebar">
 		<div class="profile-userpic">
-			<img src="<?= base_url('assets_admin/photos') ?>/dimas.jpg" class="img-responsive" alt="">
+			<img src="<?= base_url('foto') ?>/admin.png" class="img-responsive" alt="">
 		</div>
 		<div class="profile-usertitle">
-			<div class="profile-usertitle-name">NIP <?= $this->session->userdata("nip"); ?></div>
-			<div class="profile-usertitle-status"><span class="indicator label-success"></span><?= $this->session->userdata("nama"); ?></div>
-			<div class="profile-usertitle-status"><span class="indicator label-success"></span><?= $this->session->userdata("gender"); ?></div>
+			<div class="profile-usertitle-name">Username </div>
+			<div class="profile-usertitle-status"><span class="indicator label-success"></span><?= $this->session->userdata("username"); ?></div>
 		</div>
 		<div class="clear"></div>
 	</div>
@@ -19,7 +18,7 @@
 	<ul class="nav menu">
 		<div class="sidebar-heading">
 		</div>
-		<li class="parent"><a href="<?= base_url('admin/index') ?>"><em class="fa fa-dashboard">&nbsp;</em> Dashboard</a></li>
+		<li class="parent"><a href="<?= base_url('admin') ?>"><em class="fa fa-dashboard">&nbsp;</em> Dashboard</a></li>
 		<li><a href="<?= base_url('admin/daftarsiswaspp') ?>"><em class="fa fa-money">&nbsp;</em> Status Pembayaran Spp</a></li>
 		<li><a href="<?= base_url('admin/uploadjadwal') ?>"><em class="fa fa-upload">&nbsp;</em> Upload Jadwal</a></li>
 		<li><a href="<?= base_url('admin/pengumuman') ?>"><em class="fa fa-exclamation">&nbsp;</em>Pengumuman</a></li>
