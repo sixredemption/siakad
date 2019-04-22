@@ -15,8 +15,8 @@
                                     <?= $this->session->flashdata('message'); ?>
                                     <form class="user" method="post" action="<?= base_url('authguru'); ?>">
                                         <div class="form-group">
-                                            <input type="text" class="form-control form-control-user" id="nig" placeholder="Nomor Induk Guru" name="nisn" value="<?= set_value('username'); ?>">
-                                            <?= form_error('username', '<small class="text-danger pl-3">', '</small>'); ?>
+                                            <input type="text" class="form-control form-control-user" id="nig" placeholder="Nomor Induk Guru" name="nig_guru" value="<?= set_value('nig_guru'); ?>">
+                                            <?= form_error('nig_guru', '<small class="text-danger pl-3">', '</small>'); ?>
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user" id="password" placeholder="*******" name="password">
