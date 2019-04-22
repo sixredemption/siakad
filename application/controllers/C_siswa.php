@@ -1,6 +1,6 @@
 <?php
 
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 class C_siswa extends CI_Controller
 {
@@ -18,9 +18,9 @@ class C_siswa extends CI_Controller
         $this->load->view("admin/listsiswa", $data);
         $this->load->view("template_admin/sidebar");
         $this->load->view("template_admin/footer");
-        
-        
     }
+
+
 
     public function add()
     {
@@ -30,23 +30,22 @@ class C_siswa extends CI_Controller
 
         if ($validation->run()) {
             $tambah->save();
-            $this->session->set_flashdata('success', 'Berhasil disimpan');
+            // $this->session->set_flashdata('success', 'Berhasil disimpan');
         }
-        
-        $data["siswa"]=$this->M_siswa->getAll();
+
+        $data["siswa"] = $this->M_siswa->getAll();
         $this->load->view("template_admin/header");
         $this->load->view("admin/listsiswa", $data);
         $this->load->view("template_admin/sidebar");
         $this->load->view("template_admin/footer");
-        
     }
 
-    public function edit($id=null)
+    public function edit($id = null)
     {
         // var_dump($id);
         if (!isset($id)) redirect('c_siswa');
 
-        
+
         $var = $this->M_siswa;
         $validation = $this->form_validation;
         $validation->set_rules($var->rules());
@@ -70,16 +69,16 @@ class C_siswa extends CI_Controller
         $this->load->view("template_admin/footer");
     }
 
-    public function delete($id=null)
+    public function delete($id = null)
     {
         if (!isset($id)) show_404();
-        
+
         if ($this->M_siswa->delete($id)) {
-        $data["siswa"]=$this->M_siswa->getAll();
-        $this->load->view("template_admin/header");
-        $this->load->view("admin/listsiswa", $data);
-        $this->load->view("template_admin/sidebar");
-        $this->load->view("template_admin/footer");
+            $data["siswa"] = $this->M_siswa->getAll();
+            $this->load->view("template_admin/header");
+            $this->load->view("admin/listsiswa", $data);
+            $this->load->view("template_admin/sidebar");
+            $this->load->view("template_admin/footer");
         }
     }
 }
