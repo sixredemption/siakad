@@ -15,8 +15,8 @@
                                     <?= $this->session->flashdata('message'); ?>
                                     <form class="user" method="post" action="<?= base_url('authorization'); ?>">
                                         <div class="form-group">
-                                            <input type="text" class="form-control form-control-user" placeholder="Username" name="nama" value="<?= set_value('nama'); ?>">
-                                            <?= form_error('nama', '<small class="text-danger pl-3">', '</small>'); ?>
+                                            <input type="text" class="form-control form-control-user" placeholder="admin@email.com" name="username" value="<?= set_value('username'); ?>">
+                                            <?= form_error('username', '<small class="text-danger pl-3">', '</small>'); ?>
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user" placeholder="Password" name="password">
