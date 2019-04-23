@@ -2,45 +2,29 @@
 
 class Admin extends CI_Controller
 {
-    private $_tblpengumuman = "pengumuman";
     function __construct()
     {
         parent::__construct();
-        $this->load->model("M_siswa");
+        $this->load->model("Model_siswa");
         $this->load->helper(array('form', 'url'));
         $this->load->model("Guru_model");
         $this->load->model("Pegawai_model");
-        $this->load->model("M_pengumuman");
+        $this->load->model("Model_pengumuman");
         $this->load->model('login_model');
 
-        if (!($this->session->userdata('nama')) && ($this->session->userdata('password'))) {
+        if (!($this->session->userdata('username'))) {
             redirect(base_url('loginadmin'));
-        } else {
-            $this->index_login();
+            // redirect($this->index());
         }
     }
     public function index() // HALAMAN SEBELUM ADA SESSION
     {
         $data['judul'] = "Wellcome To Administrator";
-        $data["pengumuman"] = $this->M_pengumuman->getAll();
+        $data["pengumuman"] = $this->Model_pengumuman->getAll();
         $this->load->view('template_admin/header', $data);
         $this->load->view('admin/dashboard');
         $this->load->view('template_admin/sidebar');
         $this->load->view('template_admin/footer');
-    }
-    public function index_login() // HALAMAN SETELAH ADA SESSION
-    {
-        // $data['judul']  =   "ass";
-        $data['judul'] = 'SMAN 4 MACIPO';
-        $this->db->order_by('tanggal', 'DESC');
-        $this->db->limit(6);
-        $data['pengumuman']    =    $this->db->get($this->_tblpengumuman)->result();
-
-        $this->load->view('template_home/header', $data);
-        $this->load->view('template_home/navbar_login');
-        $this->load->view('template_home/slider');
-        $this->load->view('template_home/index', $data);
-        $this->load->view('template_home/footer');
     }
     public function pengumuman()
     {
@@ -87,8 +71,8 @@ class Admin extends CI_Controller
     }
     public function listsiswa()
     {
-        $data['siswa'] = $this->M_siswa->getAll();
-        $data['sisw a'] = $this->M_siswa->getAll();
+        $data['siswa'] = $this->Model_siswa->getAll();
+        $data['sisw a'] = $this->Model_siswa->getAll();
         $this->load->view('template_admin/header');
         $this->load->view('admin/listsiswa', $data);
         $this->load->view('template_admin/sidebar');
@@ -105,7 +89,7 @@ class Admin extends CI_Controller
     }
     public function listpengumuman()
     {
-        $data["pengumuman"] = $this->M_pengumuman->getAll();
+        $data["pengumuman"] = $this->Model_pengumuman->getAll();
         $this->load->view('template_admin/header');
         $this->load->view('admin/listpengumuman', $data);
         $this->load->view('template_admin/sidebar');
