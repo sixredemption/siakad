@@ -61,7 +61,8 @@ class M_siswa extends CI_Model
         $this->id_jurusan = $post["id_jurusan"];
         $this->alamat = $post["alamat"];
         $this->no_telp = $post["no_telp"];
-        $this->password = $post["password"];
+		// $this->password = $post["password"];
+		$this->password=md5($post["password"]) ;
         $this->foto = $this->_uploadImage();
 
 
@@ -82,7 +83,8 @@ class M_siswa extends CI_Model
         $this->id_jurusan = $post["id_jurusan"];
         $this->alamat = $post["alamat"];
         $this->no_telp = $post["no_telp"];
-        $this->password = $post["password"];
+        // $this->password = $post["password"];
+		$this->password=md5($post["password"]) ;
 
         if (!empty($_FILES["foto"]["name"])) {
             $this->foto = $this->_uploadImage();

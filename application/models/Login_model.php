@@ -6,7 +6,7 @@ class Login_model extends CI_Model
     {
         $user = htmlspecialchars($user);
         $pass = md5($pass);
-        $pass = $pass;
+        // $pass = $pass;
         $query = $this->db
             ->select('*')
             ->from($tabel)

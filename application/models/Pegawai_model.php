@@ -36,7 +36,7 @@ class Pegawai_model extends CI_Model {
 		$this->nip = $post["nip"] ;
 		$this->nama = $post["nama"] ;
 		$this->password=md5($post["password"]) ;
-		// $this->password = $post["password"] ;
+		//$this->password = $post["password"] ;
 		$this->gender = $post["gender"] ;
 		$this->foto = $this->_uploadImage();
 
@@ -50,7 +50,7 @@ class Pegawai_model extends CI_Model {
 		$this->nip = $post["nip"] ;
 		$this->nama = $post["nama"] ;
 		$this->password=md5($post["password"]) ;
-		// $this->password = $post["password"] ;
+		//$this->password = $post["password"] ;
 		$this->gender = $post["gender"] ;
 
 		if (!empty($_FILES["foto"]["name"])) {
