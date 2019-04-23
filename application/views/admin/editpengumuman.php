@@ -31,10 +31,10 @@
                             Tulis Pengumuman
                             <span class="pull-right clickable panel-toggle panel-button-tab-left"><em class="fa fa-toggle-up"></em></span></div>
                                 <div class="panel-body">
-                                    <form action="<?php echo base_url("Pengumuman/edit/$pengumuman->id")?>" method="post" enctype="multipart/form-data">
+                                    <form action="<?php echo base_url("Admin/pengumumanEdit/$pengumuman->id_pengumuman")?>" method="post" enctype="multipart/form-data">
                                             <fieldset>
 
-                                                <input type="hidden" name="id" value="<?php echo $pengumuman->id?>" />
+                                                <input type="hidden" name="id_pengumuman" value="<?php echo $pengumuman->id_pengumuman?>" />
 
                                                 <!-- Name input-->
                                                 <div class="form-group">

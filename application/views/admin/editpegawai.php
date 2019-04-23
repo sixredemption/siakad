@@ -23,7 +23,7 @@
                 </div>
 <div class="card-body">
 
-<form action="<?php echo base_url("Pegawai/edit/$pegawai->id_admin") ?>" method="post" enctype="multipart/form-data" >
+<form action="<?php echo base_url("Admin/pewagaiEdit/$pegawai->id_admin") ?>" method="post" enctype="multipart/form-data" >
 		
 <input type="hidden" name="id_admin" value="<?php echo $pegawai->id_admin?>"/>	
 
