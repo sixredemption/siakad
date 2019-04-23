@@ -21,18 +21,18 @@
 				<table class="table table-striped">
 				<thead>
 					<tr>
-					<th><font face ="Calibri"> NO </font></th>
-					<th><font face ="Calibri"> NIS </font></th>
-					<th><font face ="Calibri"> NAMA </font></th>
-					<th><font face ="Calibri"> TANGGAL LAHIR </font></th>
-					<th><font face ="Calibri"> GENDER </font></th>
-					<th><font face ="Calibri"> JURUSAN </font></th>
-					<th><font face ="Calibri"> KELAS </font></th>
-					<th><font face ="Calibri"> KOTA ASAL </font></th>
-					<th><font face ="Calibri"> ALAMAT </font></th>
-					<th><font face ="Calibri"> NO TELP </font></th>
-					<th><font face ="Calibri"> FOTO </font></th>
-					<th><font face ="Calibri"> MENU </font></th>
+						<th><font face ="Calibri"> NO </font></th>
+						<th><font face ="Calibri"> nisn </font></th>
+						<!-- <th><font face ="Calibri"> PASSWORD </font></th> -->
+						<th><font face ="Calibri"> nama_siswa </font></th>
+						<th><font face ="Calibri"> tanggal_lahir </font></th>
+						<th><font face ="Calibri"> jenis_kelamin </font></th>
+						<th><font face ="Calibri"> id_kelas </font></th>
+						<th><font face ="Calibri"> kota </font></th>
+						<th><font face ="Calibri"> alamat</font></th>
+						<th><font face ="Calibri"> no_telp </font></th>
+						<th><font face ="Calibri"> foto </font></th>
+						<th><font face ="Calibri"> menu </font></th>
                     </tr>
   			<tbody>
 				<?php  $nomor =1; ?>
@@ -41,23 +41,20 @@
 								?>
 						<tr>
 							<td><?php echo $nomor; ?></td>
-							<td><p><?=  $murid->nis?></p></td>
-							<td><p><?=  $murid->nama?></p></td>
-							<td><p><?=  $murid->tgl_lahir?></p></td>
-							<td><p><?=  $murid->gender?></p></td>
-							<td><p><?=  $murid->id_jurusan?></p></td>
-							<td><p><?=  $murid->kelas?></p></td>
-							<td><p><?=  $murid->kota_asl?></p></td>
+							<td><p><?=  $murid->nisn?></p></td>
+							<td><p><?=  $murid->nama_siswa?></p></td>
+							<td><p><?=  $murid->tanggal_lahir?></p></td>
+							<td><p><?=  $murid->jenis_kelamin?></p></td>
+							<td><p><?=  $murid->id_kelas?></p></td>
+							<td><p><?=  $murid->kota?></p></td>
 							<td><p><?=  $murid->alamat?></p></td>
 							<td><p><?=  $murid->no_telp?></p></td>
 							<td>
 							<img src="<?php echo base_url('foto/siswa/'.$murid->foto) ?>" width="64" />
 							</td>
 							<td>
-							<button><?php echo anchor('C_siswa/edit/'.$murid->id,'Edit'); ?></button>
-								
-                            
-							<?php echo anchor('C_siswa/delete/'.$murid->id,'Hapus'); ?>
+							<?php echo anchor('Siswa/edit/'.$murid->id_siswa,'Edit'); ?>
+                              <?php echo anchor('Siswa/delete/'.$murid->id_siswa,'Hapus'); ?>
 							</td>
 						</tr>
 						<?php $nomor++; ?>

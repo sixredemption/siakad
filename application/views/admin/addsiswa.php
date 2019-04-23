@@ -19,28 +19,28 @@
                 
 <div class="card-body">
 
-<form action="<?php echo base_url(). 'C_siswa/add'; ?>" method="post" enctype="multipart/form-data" >
+<form action="<?php echo base_url(). 'Siswa/add'; ?>" method="post" enctype="multipart/form-data" >
         <div class="form-group-input-group">
-			<label for="nis">NIS </label>
+			<label for="nisn">Nisn </label>
 			<input type="text" class="form-control" name="nis" placeholder="Nomor Induk Siswa">
 		</div>
         
 		<div class="form-group">
-			<label for="nama">Nama</label>
-			<input class="form-control <?php echo form_error('nama') ? 'is-invalid':'' ?>" type="text" name="nama" placeholder="Product name" />
+			<label for="nama_siswa">Nama</label>
+			<input class="form-control <?php echo form_error('nama_siswa') ? 'is-invalid':'' ?>" type="text" name="nama_siswa" placeholder="Nama Siswa" />
 			<div class="invalid-feedback">
 			<?php echo form_error('nama') ?>
 			</div>
 		</div>
 
         <div class="form-group">
-			<label for="tanggallahir">Tanggal lahir</label>
-			<input type="date" class="form-control" name="tgl_lahir">
+			<label for="tanggal_lahir">Tanggal lahir</label>
+			<input type="date" class="form-control" name="tanggal_lahir">
 		</div>
 
         <div class="form-group">
-			<label for="kotaasal"> Kota Asal</label>
-			<input type="text" class="form-control" name="kota_asl" placeholder="Kota Asal">
+			<label for="kota"> Kota Asal</label>
+			<input type="text" class="form-control" name="kota" placeholder="Kota Asal">
 		</div>
 
         <div class="form-group">
@@ -63,27 +63,31 @@
                     <option value="9">11-Ips-1</option>
                     <option value="10">11-Ips-2</option>
                     <option value="11">12-Ips-1</option>
-                    <option value="12">12-Ips-2</option>  
+                    <option value="12">12-Ips-2</option>
+                    <option value="13">12-Ips-2</option>
+                    <option value="14">12-Ips-2</option>
+                    <option value="15">12-Ips-2</option>
+                    <option value="16">12-Ips-2</option>  
                 </select>
          </div>
 
-        <div class="form-group">
+        <!-- <div class="form-group">
                 <label for="nohp"> Nomer Hp</label>
                 <input type="number" class="form-control" name="no_telp" placeholder="Product name" placeholder="Nomor Hp">
-            </div>
+            </div> -->
 
         <div class="form-group">
-        <label for="jk">Jenis Kelamin</label>
-        <input type="radio" name="gender" value="L">Laki-Laki
-        <input type="radio" name="gender" value="P">Perempuann
+        <label for="jenis_kelamin">Jenis Kelamin</label>
+        <input type="radio" name="jenis_kelamin" value="Laki-laki">Laki-Laki
+        <input type="radio" name="jenis_kelamin" value="Perempuan">Perempuann
         </div>
 
-        <div class="form-group">
+        <!-- <div class="form-group">
             <label for="password">password</label>
             <input type="password" class="form-control" name="password" placeholder="Password">
-        </div>
+        </div> -->
 
-         <div class="form-group">
+         <!-- <div class="form-group">
             <label for="Kelas">Jurusan</label>
                 <select class="form-control" name="id_jurusan">
                     <option value="" disabled selected>Pilih Jurusan</option>
@@ -91,7 +95,7 @@
                     <option value="2">IPS</option>
 
                 </select>
-         </div>
+         </div> -->
 
         <div class="form-group">
 

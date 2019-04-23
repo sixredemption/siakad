@@ -23,32 +23,30 @@
 				<table class="table table-striped">
 				<thead>
 					<tr>
-						<th><font face ="Calibri">NIP</font></th>
-						<th><font face ="Calibri">Nama</font></th>
+						<th><font face ="Calibri">No </font></th>
+						<th><font face ="Calibri">Username</font></th>
 						<th><font face ="Calibri">Password</font></th>
-						<th><font face ="Calibri">Jenis Kelamin</font></th>
 						<th><font face ="Calibri">Foto</font></th>
 						<th><font face ="Calibri">Menu</font></th>
 					</tr>
 					<tbody>
-
+							<?php  $nomor =1; ?>
 							<?php
 							foreach($pegawai as $admin) :
 							?>
 					<tr>
-						<td><p><?= $admin->nip?></p></td>
-						<td><p><?= $admin->nama?></p></td>
+						<td><?php echo $nomor; ?></td>
+						<td><p><?= $admin->username?></p></td>
 						<td><p><?= $admin->password?></p></td>
-						<td><p><?= $admin->gender?></p></td>
 						<td>
 							<img src="<?php echo base_url('foto/pegawai/'.$admin->foto) ?>" width="64" />
 							</td>
 						<td>
-						<button><?php echo anchor('C_pegawai/delete/'.$admin->id,'Hapus'); ?></button>
-					 	<?php echo anchor('C_pegawai/edit/'.$admin->id,'Edit'); ?>
-						 
+					 	<?php echo anchor('Pegawai/edit/'.$admin->id_admin,'Edit'); ?>
+						<?php echo anchor('Pegawai/delete/'.$admin->id_admin,'Hapus'); ?> 
 					 </td>
 					</tr>
+							<?php $nomor++; ?>
 							<?php endforeach; ?>
 					</tbody>
 				</thead>
