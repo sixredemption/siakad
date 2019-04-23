@@ -24,7 +24,7 @@
                             Tulis Pengumuman
                             <span class="pull-right clickable panel-toggle panel-button-tab-left"><em class="fa fa-toggle-up"></em></span></div>
                                 <div class="panel-body">
-                                    <form action="<?php echo base_url(). 'C_pengumuman/add'; ?>" method="post" enctype="multipart/form-data">
+                                    <form action="<?php echo base_url(). 'Pengumuman/add'; ?>" method="post" enctype="multipart/form-data">
                                             <fieldset>
                                                 <!-- Name input-->
                                                 <div class="form-group">

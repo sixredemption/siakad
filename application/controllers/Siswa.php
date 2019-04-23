@@ -7,13 +7,13 @@ class C_siswa extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model("M_siswa");
+        $this->load->model("Model_siswa");
         $this->load->library('form_validation');
     }
 
     public function index()
     {
-        $data["siswa"] = $this->M_siswa->getAll();
+        $data["siswa"] = $this->Model_siswa->getAll();
         $this->load->view("template_admin/header");
         $this->load->view("admin/listsiswa", $data);
         $this->load->view("template_admin/sidebar");
@@ -24,7 +24,7 @@ class C_siswa extends CI_Controller
 
     public function add()
     {
-        $tambah = $this->M_siswa;
+        $tambah = $this->Model_siswa;
         $validation = $this->form_validation;
         $validation->set_rules($tambah->rules());
 
@@ -33,20 +33,20 @@ class C_siswa extends CI_Controller
             // $this->session->set_flashdata('success', 'Berhasil disimpan');
         }
 
-        $data["siswa"] = $this->M_siswa->getAll();
+        $data["siswa"] = $this->Model_siswa->getAll();
         $this->load->view("template_admin/header");
         $this->load->view("admin/listsiswa", $data);
         $this->load->view("template_admin/sidebar");
         $this->load->view("template_admin/footer");
     }
 
-    public function edit($id = null)
+    public function edit($id_siswa = null)
     {
         // var_dump($id);
-        if (!isset($id)) redirect('c_siswa');
+        if (!isset($id_siswa)) redirect('c_siswa');
 
 
-        $var = $this->M_siswa;
+        $var = $this->Model_siswa;
         $validation = $this->form_validation;
         $validation->set_rules($var->rules());
 
@@ -55,13 +55,13 @@ class C_siswa extends CI_Controller
             $this->session->set_flashdata('success', 'Berhasil disimpan');
         }
 
-        // $data["siswa"]=$this->M_siswa->getAll();
+        // $data["siswa"]=$this->Model_siswa->getAll();
         // $this->load->view("template/header");
         // $this->load->view("admin/listsiswa", $data);
         // $this->load->view("template/sidebar");
         // $this->load->view("template/footer");
 
-        $data["siswa"] = $var->getById($id);
+        $data["siswa"] = $var->getById($id_siswa);
         if (!$data["siswa"]) show_404();
         $this->load->view("template_admin/header");
         $this->load->view("admin/editsiswa", $data);
@@ -69,15 +69,15 @@ class C_siswa extends CI_Controller
         $this->load->view("template_admin/footer");
     }
 
-    public function delete($id = null)
+    public function delete($id_siswa = null)
     {
-        if (!isset($id)) show_404();
+        if (!isset($id_siswa)) show_404();
 
-        if ($this->M_siswa->delete($id)) {
-            $data["siswa"] = $this->M_siswa->getAll();
+        if ($this->Model_siswa->delete($id_siswa)) {
+            $data["siswa"] = $this->Model_siswa->getAll();
             $this->load->view("template_admin/header");
             $this->load->view("admin/listsiswa", $data);
-            $this->load->view("template_admin/sidebar");
+            // $this->load->view("template_admin/sidebar");
             $this->load->view("template_admin/footer");
         }
     }
