@@ -27,6 +27,19 @@ class Admin extends CI_Controller
 
         //CRUD GURU
 
+        //CRUD MAPEL
+        $this->load->model("Model_mapel");
+
+        //CRUD JURUSAN
+        $this->load->model("Model_jurusan");
+
+        //CRUD KELAS
+        $this->load->model("Model_kelas");
+
+        //CRUD TAHUN AJARAN
+        $this->load->model("Model_thnAjar");
+
+
         if (!($this->session->userdata('username'))) {
             redirect(base_url('loginadmin'));
             // redirect($this->index());
@@ -326,7 +339,7 @@ public function dataSiswa()
 
     public function pengumumanAdd()
     {
-        $tambah = $this->M_pengumuman;
+        $tambah = $this->Model_pengumuman;
         $validation = $this->form_validation;
         $validation->set_rules($tambah->rules());
 
@@ -335,7 +348,7 @@ public function dataSiswa()
             $this->session->set_flashdata('success', 'Berhasil disimpan');
         }
         
-        $data["pengumuman"]=$this->M_pengumuman->getAll();
+        $data["pengumuman"]=$this->Model_pengumuman->getAll();
         $this->load->view("template_admin/header");
         $this->load->view("admin/dashboard", $data);
         $this->load->view("template_admin/sidebar");
@@ -346,10 +359,10 @@ public function dataSiswa()
     public function pengumumanEdit($id=null)
     {
         // var_dump($id);
-        if (!isset($id)) redirect('c_siswa');
+        if (!isset($id)) redirect('Admin/dataPengumuman');
 
         
-        $var = $this->M_pengumuman;
+        $var = $this->Model_pengumuman;
         $validation = $this->form_validation;
         $validation->set_rules($var->rules());
 
@@ -376,8 +389,8 @@ public function dataSiswa()
     {
         if (!isset($id)) show_404();
         
-        if ($this->M_pengumuman->delete($id)) {
-        $data["pengumuman"]=$this->M_pengumuman->getAll();
+        if ($this->Model_pengumuman->delete($id)) {
+        $data["pengumuman"]=$this->Model_pengumuman->getAll();
         $this->load->view("template_admin/header");
         $this->load->view("admin/dashboard", $data);
         $this->load->view("template_admin/sidebar");
@@ -388,5 +401,277 @@ public function dataSiswa()
     // ----------------------------BACK END--------------------------------------------------
     // ----------------------------CRUD GURU----------------------------------------------
 
+    // ----------------------------BACK END--------------------------------------------------
+    // ----------------------------CRUD MAPEL----------------------------------------------
+    public function dataMapel()
+    {
+        $data["mapel"] = $this->Model_mapel->getAll();
+        $this->load->view("template_admin/header");
+        $this->load->view("admin/listpengumuman", $data);
+        $this->load->view("template_admin/sidebar");
+        $this->load->view("template_admin/footer");
+        
+        
+    }
 
+    public function mapelAdd()
+    {
+        $tambah = $this->Model_mapel;
+        $validation = $this->form_validation;
+        $validation->set_rules($tambah->rules());
+
+        if ($validation->run()) {
+            $tambah->save();
+            $this->session->set_flashdata('success', 'Berhasil disimpan');
+        }
+        
+        $data["mapel"]=$this->Model_mapel->getAll();
+        $this->load->view("template_admin/header");
+        $this->load->view("admin/dashboard", $data);
+        $this->load->view("template_admin/sidebar");
+        $this->load->view("template_admin/footer");
+        
+    }
+
+    public function mapelEdit($id_mapel=null)
+    {
+        // var_dump($id);
+        if (!isset($id_mapel)) redirect('Admin/dataPengumuman');
+
+        
+        $var = $this->Model_mapel;
+        $validation = $this->form_validation;
+        $validation->set_rules($var->rules());
+
+        if ($validation->run()) {
+            $var->update();
+            $this->session->set_flashdata('success', 'Berhasil disimpan');
+        }
+
+
+        $data["mapel"] = $var->getById($id_mapel);
+        if (!$data["mapel"]) show_404();
+        $this->load->view("template_admin/header");
+        $this->load->view("admin/editpengumuman", $data);
+        $this->load->view("template_admin/sidebar");
+         $this->load->view("template_admin/footer");
+    }
+
+    public function mapelDelete($id_mapel=null)
+    {
+        if (!isset($id_mapel)) show_404();
+        
+        if ($this->Model_mapel->delete($id_mapel)) {
+        $data["mapel"]=$this->Model_mapel->getAll();
+        $this->load->view("template_admin/header");
+        $this->load->view("admin/dashboard", $data);
+        $this->load->view("template_admin/sidebar");
+        $this->load->view("template_admin/footer");
+        }
+    }
+
+    // ----------------------------BACK END--------------------------------------------------
+    // ----------------------------CRUD KELAS----------------------------------------------
+    public function dataKelas()
+    {
+        $data["kelas"] = $this->Model_kelas->getAll();
+        $this->load->view("template_admin/header");
+        $this->load->view("admin/listpengumuman", $data);
+        $this->load->view("template_admin/sidebar");
+        $this->load->view("template_admin/footer");
+        
+        
+    }
+
+    public function kelasAdd()
+    {
+        $tambah = $this->Model_mapel;
+        $validation = $this->form_validation;
+        $validation->set_rules($tambah->rules());
+
+        if ($validation->run()) {
+            $tambah->save();
+            $this->session->set_flashdata('success', 'Berhasil disimpan');
+        }
+        
+        $data["kelas"]=$this->Model_kelas->getAll();
+        $this->load->view("template_admin/header");
+        $this->load->view("admin/dashboard", $data);
+        $this->load->view("template_admin/sidebar");
+        $this->load->view("template_admin/footer");
+        
+    }
+
+    public function kelasEdit($id_kelas=null)
+    {
+        // var_dump($id);
+        if (!isset($id_kelas)) redirect('Admin/dataPengumuman');
+
+        
+        $var = $this->Model_mapel;
+        $validation = $this->form_validation;
+        $validation->set_rules($var->rules());
+
+        if ($validation->run()) {
+            $var->update();
+            $this->session->set_flashdata('success', 'Berhasil disimpan');
+        }
+
+
+        $data["kelas"] = $var->getById($id_kelas);
+        if (!$data["kelas"]) show_404();
+        $this->load->view("template_admin/header");
+        $this->load->view("admin/editpengumuman", $data);
+        $this->load->view("template_admin/sidebar");
+         $this->load->view("template_admin/footer");
+    }
+
+    public function kelasDelete($id_kelas=null)
+    {
+        if (!isset($id_kelas)) show_404();
+        
+        if ($this->Model_mapel->delete($id_kelas)) {
+        $data["mapel"]=$this->Model_mapel->getAll();
+        $this->load->view("template_admin/header");
+        $this->load->view("admin/dashboard", $data);
+        $this->load->view("template_admin/sidebar");
+        $this->load->view("template_admin/footer");
+        }
+    }
+    // ----------------------------BACK END--------------------------------------------------
+    // ----------------------------CRUD JURUSAN----------------------------------------------
+    public function dataJurusan()
+    {
+        $data["jurusan"] = $this->Model_jurusan->getAll();
+        $this->load->view("template_admin/header");
+        $this->load->view("admin/listpengumuman", $data);
+        $this->load->view("template_admin/sidebar");
+        $this->load->view("template_admin/footer");
+        
+        
+    }
+
+    public function jurusanAdd()
+    {
+        $tambah = $this->Model_jurusan;
+        $validation = $this->form_validation;
+        $validation->set_rules($tambah->rules());
+
+        if ($validation->run()) {
+            $tambah->save();
+            $this->session->set_flashdata('success', 'Berhasil disimpan');
+        }
+        
+        $data["jurusan"]=$this->Model_jurusan->getAll();
+        $this->load->view("template_admin/header");
+        $this->load->view("admin/dashboard", $data);
+        $this->load->view("template_admin/sidebar");
+        $this->load->view("template_admin/footer");
+        
+    }
+
+    public function jurusanEdit($id_jurusan=null)
+    {
+        // var_dump($id);
+        if (!isset($id_jurusan)) redirect('Admin/dataPengumuman');
+
+        
+        $var = $this->Model_jurusan;
+        $validation = $this->form_validation;
+        $validation->set_rules($var->rules());
+
+        if ($validation->run()) {
+            $var->update();
+            $this->session->set_flashdata('success', 'Berhasil disimpan');
+        }
+
+
+        $data["jurusan"] = $var->getById($id_jurusan);
+        if (!$data["jurusan"]) show_404();
+        $this->load->view("template_admin/header");
+        $this->load->view("admin/editpengumuman", $data);
+        $this->load->view("template_admin/sidebar");
+         $this->load->view("template_admin/footer");
+    }
+
+    public function jurusanDelete($id_jurusan=null)
+    {
+        if (!isset($id_jurusan)) show_404();
+        
+        if ($this->Model_jurusan->delete($id_jurusan)) {
+        $data["jurusan"]=$this->Model_jurusan->getAll();
+        $this->load->view("template_admin/header");
+        $this->load->view("admin/dashboard", $data);
+        $this->load->view("template_admin/sidebar");
+        $this->load->view("template_admin/footer");
+        }
+    }
+    // ----------------------------BACK END--------------------------------------------------
+    // ----------------------------CRUD TAHUN AJARAN----------------------------------------------
+    public function dataTahun()
+    {
+        $data["tahun_ajaran"] = $this->Model_thnAjar->getAll();
+        $this->load->view("template_admin/header");
+        $this->load->view("admin/listpengumuman", $data);
+        $this->load->view("template_admin/sidebar");
+        $this->load->view("template_admin/footer");
+        
+        
+    }
+
+    public function tahunAdd()
+    {
+        $tambah = $this->Model_thnAjar;
+        $validation = $this->form_validation;
+        $validation->set_rules($tambah->rules());
+
+        if ($validation->run()) {
+            $tambah->save();
+            $this->session->set_flashdata('success', 'Berhasil disimpan');
+        }
+        
+        $data["tahun_ajaran"]=$this->Model_thnAjar->getAll();
+        $this->load->view("template_admin/header");
+        $this->load->view("admin/dashboard", $data);
+        $this->load->view("template_admin/sidebar");
+        $this->load->view("template_admin/footer");
+        
+    }
+
+    public function tahunEdit($id_tahun_ajaran=null)
+    {
+        // var_dump($id);
+        if (!isset($id_tahun_ajaran)) redirect('Admin/dataPengumuman');
+
+        
+        $var = $this->Model_thnAjar;
+        $validation = $this->form_validation;
+        $validation->set_rules($var->rules());
+
+        if ($validation->run()) {
+            $var->update();
+            $this->session->set_flashdata('success', 'Berhasil disimpan');
+        }
+
+
+        $data["tahun_ajaran"] = $var->getById($id_tahun_ajaran);
+        if (!$data["tahun_ajaran"]) show_404();
+        $this->load->view("template_admin/header");
+        $this->load->view("admin/editpengumuman", $data);
+        $this->load->view("template_admin/sidebar");
+         $this->load->view("template_admin/footer");
+    }
+
+    public function tahunDelete($id_tahun_ajaran=null)
+    {
+        if (!isset($id_tahun_ajaran)) show_404();
+        
+        if ($this->Model_jurusan->delete($id_tahun_ajaran)) {
+        $data["tahun_ajaran"]=$this->Model_jurusan->getAll();
+        $this->load->view("template_admin/header");
+        $this->load->view("admin/dashboard", $data);
+        $this->load->view("template_admin/sidebar");
+        $this->load->view("template_admin/footer");
+        }
+    }
 }
