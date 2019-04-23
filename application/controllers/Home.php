@@ -26,13 +26,11 @@ class Home extends CI_Controller
 		$this->load->view('template_home/slider');
 		$this->load->view('template_home/index', $data);
 		$this->load->view('template_home/footer');
-<<<<<<< HEAD
 		{		
 		  $this->load->view('template_home/index');
 		}
 	}	
-=======
-	}
+}
 	public function pengumuman()
 	{
 		redirect(base_url());
@@ -53,5 +51,4 @@ class Home extends CI_Controller
 		$this->load->view('template_home/pengumuman', $data);
 		$this->load->view('template_home/footer');
 	}
->>>>>>> 78310fca7cf7178ca4cb4d87598681aeed8aea41
 }
