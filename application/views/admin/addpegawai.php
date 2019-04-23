@@ -16,7 +16,7 @@
                 </div>
 <div class="card-body">
 
-<form action="<?php echo base_url(). 'C_pegawai/add'; ?>" method="post" enctype="multipart/form-data" >
+<form action="<?php echo base_url(). 'Pegawai/add'; ?>" method="post" enctype="multipart/form-data" >
         <!-- <div class="form-group-input-group">
 			<label for="nip">NIP :</label>
 			<input type="text" class="form-control" name="nip">

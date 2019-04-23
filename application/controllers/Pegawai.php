@@ -36,7 +36,7 @@ class C_pegawai extends CI_Controller
         $data["pegawai"] = $this->Pegawai_model->getAll();
         $this->load->view("template_admin/header");
         $this->load->view("admin/listpegawai", $data);
-        // $this->load->view("template_admin/sidebar");
+        $this->load->view("template_admin/sidebar");
         $this->load->view("template_admin/footer");
     }
 

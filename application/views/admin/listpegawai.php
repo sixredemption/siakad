@@ -48,8 +48,8 @@
 							<img src="<?php echo base_url('foto/pegawai/'.$admin->foto) ?>" width="64" />
 							</td>
 						<td>
-					 	<?php echo anchor('C_pegawai/edit/'.$admin->id_admin,'Edit'); ?>
-						<?php echo anchor('C_pegawai/delete/'.$admin->id_admin,'Hapus'); ?> 
+					 	<?php echo anchor('Pegawai/edit/'.$admin->id_admin,'Edit'); ?>
+						<?php echo anchor('Pegawai/delete/'.$admin->id_admin,'Hapus'); ?> 
 					 </td>
 					</tr>
 							<?php $nomor++; ?>
