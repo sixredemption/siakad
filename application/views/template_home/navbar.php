@@ -29,10 +29,12 @@
                             <!-- Collect the nav links, forms, and other content for toggling -->
                             <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
                                 <ul class="nav navbar-nav navbar-right">
-                                    <li class="active">
-                                        <a class="page-scroll" href="<?= base_url() ?>">Home</a>
-                                    </li>
-
+                                    <?php
+                                    if (!$this->session->userdata('username') || $this->session->userdata('nig_guru') || $this->session->userdata('nisn_siswa')) : ?>
+                                        <li>
+                                            <a class="page-scroll" href="<?= base_url()  ?>">Home</a>
+                                        </li>
+                                    <?php endif; ?>
                                     <li>
                                         <a class="page-scroll" href="#services">Tentang Sekolah</a>
                                     </li>
@@ -48,9 +50,24 @@
                                     <li>
                                         <a class="page-scroll" href="#contact">Contact</a>
                                     </li>
-                                    <li>
-                                        <a class="page-scroll" href="<?= base_url('login') ?>">Login</a>
-                                    </li>
+                                    <?php
+                                    if ($this->session->userdata('username')) : ?>
+                                        <li>
+                                            <a class="page-scroll" href="<?= base_url('admin')  ?>">[ Profile Admin ]</a>
+                                        </li>
+                                    <?php elseif ($this->session->userdata('nig')) : ?>
+                                        <li>
+                                            <a class="page-scroll" href="<?= base_url('guru') ?>">Profile Guru</a>
+                                        </li>
+                                    <?php elseif ($this->session->userdata('nisn')) : ?>
+                                        <li>
+                                            <a class="page-scroll" href="<?= base_url('siswa') ?>">Profile Siswa</a>
+                                        </li>
+                                    <?php else : ?>
+                                        <li>
+                                            <a class="page-scroll" href="<?= base_url('login') ?>">Login</a>
+                                        </li>
+                                    <?php endif; ?>
                                 </ul>
                             </div>
                             <!-- navbar-collapse -->
