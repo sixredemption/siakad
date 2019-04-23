@@ -44,8 +44,9 @@
 							<img src="<?php echo base_url('foto/pegawai/'.$admin->foto) ?>" width="64" />
 							</td>
 						<td>
+						<button><?php echo anchor('C_pegawai/delete/'.$admin->id,'Hapus'); ?></button>
 					 	<?php echo anchor('C_pegawai/edit/'.$admin->id,'Edit'); ?>
-						<?php echo anchor('C_pegawai/delete/'.$admin->id,'Hapus'); ?> 
+						 
 					 </td>
 					</tr>
 							<?php endforeach; ?>

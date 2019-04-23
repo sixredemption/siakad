@@ -54,8 +54,10 @@
 							<img src="<?php echo base_url('foto/siswa/'.$murid->foto) ?>" width="64" />
 							</td>
 							<td>
-							<?php echo anchor('C_siswa/edit/'.$murid->id,'Edit'); ?>
-                              <?php echo anchor('C_siswa/delete/'.$murid->id,'Hapus'); ?>
+							<button><?php echo anchor('C_siswa/edit/'.$murid->id,'Edit'); ?></button>
+								
+                            
+							<?php echo anchor('C_siswa/delete/'.$murid->id,'Hapus'); ?>
 							</td>
 						</tr>
 						<?php $nomor++; ?>
