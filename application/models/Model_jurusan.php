@@ -48,7 +48,7 @@ class Model_jurusan extends CI_Model
 
     public function delete($id_jurusan)
     {
-        $this->_deleteImage($id_jurusan);
+        
         return $this->db->delete($this->_table, array("id_jurusan" => $id_jurusan));
     }
 

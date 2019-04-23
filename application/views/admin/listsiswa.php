@@ -31,7 +31,6 @@
 					<tr>
 						<th><font face ="Calibri"> NO </font></th>
 						<th><font face ="Calibri"> nisn </font></th>
-						<!-- <th><font face ="Calibri"> PASSWORD </font></th> -->
 						<th><font face ="Calibri"> nama_siswa </font></th>
 						<th><font face ="Calibri"> tanggal_lahir </font></th>
 						<th><font face ="Calibri"> jenis_kelamin </font></th>
@@ -69,7 +68,7 @@
 						<?php $nomor++; ?>
 						<?php endforeach; ?>
 					</tbody>	
-	        </table>
+			</table>
 			</div>
 		</div>
 </div>

@@ -48,7 +48,6 @@ class Model_mapel extends CI_Model
 
     public function delete($id_mapel)
     {
-        $this->_deleteImage($id_mapel);
         return $this->db->delete($this->_table, array("id_mapel" => $id_mapel));
     }
 

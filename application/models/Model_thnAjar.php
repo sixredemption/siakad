@@ -48,7 +48,6 @@ class Model_thnAjar extends CI_Model
 
     public function delete($id_tahun_ajaran)
     {
-        $this->_deleteImage($id_tahun_ajaran);
         return $this->db->delete($this->_table, array("id_tahun_ajaran" => $id_tahun_ajaran));
     }
 

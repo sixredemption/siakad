@@ -50,7 +50,7 @@ class Model_kelas extends CI_Model
 
     public function delete($id_kelas)
     {
-        $this->_deleteImage($id_kelas);
+        
         return $this->db->delete($this->_table, array("id_kelas" => $id_kelas));
     }
 
