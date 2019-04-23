@@ -62,8 +62,8 @@
 							</td>
 							
 							<td>
-							<?php echo anchor('Siswa/edit/'.$murid->id_siswa,'Edit'); ?>
-                              <?php echo anchor('Siswa/delete/'.$murid->id_siswa,'Hapus'); ?>
+							<?php echo anchor('Admin/siswaEdit/'.$murid->id_siswa,'Edit'); ?>
+                              <?php echo anchor('Admin/siswaDelete/'.$murid->id_siswa,'Hapus'); ?>
 							</td>
 						</tr>
 						<?php $nomor++; ?>

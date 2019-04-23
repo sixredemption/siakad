@@ -19,7 +19,7 @@
                 
 <div class="card-body">
 
-<form action="<?php echo base_url(). 'Siswa/add'; ?>" method="post" enctype="multipart/form-data" >
+<form action="<?php echo base_url(). 'Admin/siswaAdd'; ?>" method="post" enctype="multipart/form-data" >
         <div class="form-group-input-group">
 			<label for="nisn">Nisn </label>
 			<input type="text" class="form-control" name="nis" placeholder="Nomor Induk Siswa">
