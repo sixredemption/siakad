@@ -21,35 +21,35 @@
 
 <form action="<?php echo base_url(). 'C_siswa/add'; ?>" method="post" enctype="multipart/form-data" >
         <div class="form-group-input-group">
-			<label for="nis">NIS :</label>
-			<input type="text" class="form-control" name="nis">
+			<label for="nis">NIS </label>
+			<input type="text" class="form-control" name="nis" placeholder="Nomor Induk Siswa">
 		</div>
         
 		<div class="form-group">
-								<label for="nama">Nama</label>
-								<input class="form-control <?php echo form_error('nama') ? 'is-invalid':'' ?>" type="text" name="nama" placeholder="Product name" />
-								<div class="invalid-feedback">
-									<?php echo form_error('nama') ?>
-								</div>
+			<label for="nama">Nama</label>
+			<input class="form-control <?php echo form_error('nama') ? 'is-invalid':'' ?>" type="text" name="nama" placeholder="Product name" />
+			<div class="invalid-feedback">
+			<?php echo form_error('nama') ?>
+			</div>
 		</div>
 
         <div class="form-group">
-			<label for="tanggallahir">Tanggal lahir:</label>
+			<label for="tanggallahir">Tanggal lahir</label>
 			<input type="date" class="form-control" name="tgl_lahir">
 		</div>
 
         <div class="form-group">
-			<label for="kotaasal"> Kota Asal:</label>
-			<input type="text" class="form-control" name="kota_asl">
+			<label for="kotaasal"> Kota Asal</label>
+			<input type="text" class="form-control" name="kota_asl" placeholder="Kota Asal">
 		</div>
 
         <div class="form-group">
-            <label for="alamat">Alamat anda:</label>
+            <label for="alamat">Alamat anda</label>
             <textarea type="text" class="form-control" name="alamat"></textarea>
         </div>
 
         <div class="form-group">
-            <label for="Kelas">Kelas:</label>
+            <label for="Kelas">Kelas</label>
                 <select class="form-control" name="kelas">
                     <option value="" disabled selected>pilih kelas</option>
                     <option value="1">10-Ipa-1</option>
@@ -68,23 +68,23 @@
          </div>
 
         <div class="form-group">
-                <label for="nohp"> Nomer Hp:</label>
-                <input type="number" class="form-control" name="no_telp">
+                <label for="nohp"> Nomer Hp</label>
+                <input type="number" class="form-control" name="no_telp" placeholder="Product name" placeholder="Nomor Hp">
             </div>
 
         <div class="form-group">
-        <label for="jk">Jenis Kelamin:</label>
+        <label for="jk">Jenis Kelamin</label>
         <input type="radio" name="gender" value="L">Laki-Laki
         <input type="radio" name="gender" value="P">Perempuann
         </div>
 
         <div class="form-group">
-            <label for="password">password:</label>
-            <textarea type="password" class="form-control" name="password"></textarea>
+            <label for="password">password</label>
+            <input type="password" class="form-control" name="password" placeholder="Password">
         </div>
 
          <div class="form-group">
-            <label for="Kelas">Jurusan:</label>
+            <label for="Kelas">Jurusan</label>
                 <select class="form-control" name="id_jurusan">
                     <option value="" disabled selected>Pilih Jurusan</option>
                     <option value="1">IPA</option>
@@ -96,7 +96,7 @@
         <div class="form-group">
 
         <div class="form-group">
-            <label for="foto">Foto:</label>
+            <label for="foto">Foto</label>
             <input class="form-control-file" type="file" class="form-control" name="foto">
         </div>
 

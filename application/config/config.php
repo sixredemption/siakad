@@ -23,6 +23,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
+
+
 $config['base_url'] = 'http://localhost:100/siakad/';
 
 /*
@@ -323,7 +325,7 @@ $config['cache_query_string'] = FALSE;
 | https://codeigniter.com/user_guide/libraries/encryption.html
 |
 */
-$config['encryption_key'] = 'siakadsma';
+$config['encryption_key'] = 'encryptsiakadsma';
 
 /*
 |--------------------------------------------------------------------------

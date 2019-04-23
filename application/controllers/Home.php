@@ -4,6 +4,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class Home extends CI_Controller
 {
 	private $_tblpengumuman	= "pengumuman";
+
 	public function __construct()
 	{
 		parent::__construct();
@@ -11,6 +12,7 @@ class Home extends CI_Controller
 
 	public function index()
 	{
+
 		
 		
 		$this->load->view('template_home/index');
@@ -23,10 +25,37 @@ class Home extends CI_Controller
 
 		$this->load->view('template_home/header', $data);
 		$this->load->view('template_home/navbar');
+
+		$this->load->view('template_home/slider');
 		$this->load->view('template_home/index', $data);
 		$this->load->view('template_home/footer');
+<<<<<<< HEAD
 		{		
 		  $this->load->view('template_home/index');
 		}
 	}	
+=======
+	}
+	public function pengumuman()
+	{
+		redirect(base_url());
+	}
+
+	public function pengumuman_detail($id)
+	{
+		// $engkripsi = $this->encryption->decrypt($id);
+
+		$data['judul']	=	"Halaman Pengumuman";
+		$this->db->where('id', $id);
+		$data['pengumuman'] =	$this->db->get($this->_tblpengumuman)->result();
+
+		$this->db->order_by('judul', 'ASC');
+		$this->db->limit(5);
+		$data['thumbnail']	=	$this->db->get('pengumuman')->result();
+		$this->load->View('template_home/header', $data);
+		$this->load->view('template_home/pengumuman', $data);
+		$this->load->view('template_home/footer');
+
+	}
+>>>>>>> 78310fca7cf7178ca4cb4d87598681aeed8aea41
 }
