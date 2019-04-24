@@ -31,7 +31,6 @@
 					<tr>
 						<th><font face ="Calibri"> NO </font></th>
 						<th><font face ="Calibri"> nisn </font></th>
-						<!-- <th><font face ="Calibri"> PASSWORD </font></th> -->
 						<th><font face ="Calibri"> nama_siswa </font></th>
 						<th><font face ="Calibri"> tanggal_lahir </font></th>
 						<th><font face ="Calibri"> jenis_kelamin </font></th>
@@ -62,14 +61,14 @@
 							</td>
 							
 							<td>
-							<?php echo anchor('Siswa/edit/'.$murid->id_siswa,'Edit'); ?>
-                              <?php echo anchor('Siswa/delete/'.$murid->id_siswa,'Hapus'); ?>
+							<?php echo anchor('Admin/siswaEdit/'.$murid->id_siswa,'Edit'); ?>
+                              <?php echo anchor('Admin/siswaDelete/'.$murid->id_siswa,'Hapus'); ?>
 							</td>
 						</tr>
 						<?php $nomor++; ?>
 						<?php endforeach; ?>
 					</tbody>	
-	        </table>
+			</table>
 			</div>
 		</div>
 </div>

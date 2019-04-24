@@ -74,8 +74,8 @@
 
                             <td><p><?=  $umum->keterangan?></p></td>
 							<td>	
-							<?php echo anchor('Pengumuman/edit/'.$umum->id,'Edit'); ?>
-                            <?php echo anchor('Pengumuman/delete/'.$umum->id,'Hapus'); ?>
+							<?php echo anchor('Admin/pengumumanEdit/'.$umum->id_pengumuman,'Edit'); ?>
+                            <?php echo anchor('Admin/pengumumanDelete/'.$umum->id_pengumuman,'Hapus'); ?>
 							</td>																			
 						</tr>
 						<?php endforeach; ?>
