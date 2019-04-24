@@ -55,3 +55,32 @@
 							</th>
 						</tr>
 					</tbody>
+
+					<?php
+					foreach ($guru as $dosen) :
+						?>
+						<tr>
+							<td>
+								<p><?= $dosen->nig_guru ?></p>
+							</td>
+							<td>
+								<p><?= $dosen->nama_lengkap ?></p>
+							</td>
+							<td>
+								<p><?= $dosen->tanggal_lahir ?></p>
+							</td>
+							<td>
+								<p><?= $dosen->asal_kota ?></p>
+							</td>
+							<td>
+								<p><?= $dosen->jenis_kelamin ?></p>
+							</td>
+							<td>
+								<p><?= $dosen->alamat ?></p>
+							</td>
+							<td>
+								<p><?= $dosen->no_telp ?></p>
+							</td>
+							<td>
+								<img src="<?php echo base_url('foto/guru/' . $dosen->foto_profile) ?>" width="64" />
+							</td>
