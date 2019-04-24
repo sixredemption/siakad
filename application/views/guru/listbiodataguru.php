@@ -30,6 +30,28 @@
 					<thead>
 						<tr>
 							<th>
-								<font face = "Calibri">NIG</font>
+								<font face = "Calibri" >NIG</font>
 							</th>
-							
+							<th>
+								<font face = "Calibri" >Nama</font>
+							</th>
+							<th>
+							 	<font face = "Calibri" >Tanggal Lahir</font>
+							</th>
+							<th>
+								<font face = "Calibri" >Kota Asal</font>
+							</th>
+							<th>
+								<font face = "Calibri" >Jenis Kelamin</font>
+							</th>
+							<th>
+								<font face = "Calibri" >Alamat</font>
+							</th>
+							<th>
+								<font face = "Calibri" >No Telepon</font>
+							</th>
+							<th>
+								<font face = "Calibri" >FOTO</font>
+							</th>
+						</tr>
+					</tbody>
