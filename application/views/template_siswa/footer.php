@@ -32,5 +32,5 @@
         })(jQuery);
     </script>
 
-	</body>
-	</html>
+</body>
+</html>
