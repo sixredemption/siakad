@@ -49,7 +49,12 @@
 					</div>
 				</div>
 			</div><!--/.row-->
-		</div>			
+		</div>
+
+		<?php 
+		echo "<pre>";
+			print_r($this->session->userdata());
+		echo "</pre>";?>		
 			<div class="col-md-12">
 				<div class="panel panel-primary ">
 					<div class="panel-heading">
@@ -69,8 +74,8 @@
 
                             <td><p><?=  $umum->keterangan?></p></td>
 							<td>	
-							<?php echo anchor('C_pengumuman/edit/'.$umum->id,'Edit'); ?>
-                            <?php echo anchor('C_pengumuman/delete/'.$umum->id,'Hapus'); ?>
+							<?php echo anchor('Pengumuman/edit/'.$umum->id,'Edit'); ?>
+                            <?php echo anchor('Pengumuman/delete/'.$umum->id,'Hapus'); ?>
 							</td>																			
 						</tr>
 						<?php endforeach; ?>

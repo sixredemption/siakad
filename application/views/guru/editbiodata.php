@@ -48,6 +48,44 @@
 					<label for="asal_kota">Kota Asal :</label>
 					<input type="text" class="form-control" name="asal_kota" value="<?php echo $guru->asal_kota ?>">
 				</div>
+
+				<div class="form-group">
+					<label for="alamat">Alamat anda :</label>
+					<input type="text" class="form-control" name="alamat" value="<?php echo $guru->alamat ?>">
+				</div>
+
+				<div class="form-group">
+					<label for="no_telp"> Nomer Hp:</label>
+					<input type="number" class="form-control" name="no_telp" value="<?php echo $guru->no_telp ?>">
+				</div>
+
+				<div class="form-group">
+					<label for="jenis_kelamin">Jenis Kelamin:</label>
+					<input type="radio" name="gender" value="L" <?php if ($guru->gender == 'L') {
+																	echo 'checked';
+																	} ?>>Laki-Laki
+					<input type="radio" name="gender" value="P" <?php if ($guru->gender == 'P') {
+																	echo 'checked';
+																	} ?>>Perempuann
+				</div>
+
+				<div class="form-group">
+					<label for="foto_profil">Photo</label>
+					<input class="form-control-file" type="file" name="foto" />
+					<input class="form-control-file" type="hidden" name="old_image" value="<?php echo $guru->foto_profil ?>" />
+					<img src="<?php echo base_url('foto/guru/' . $guru->foto) ?>" width="64" />
+				</div>
+
+				<button type="submit" class="btn btn-primary" href="<?= base_url();?>guru/biodata">Simpan</a></button>
+				<button type="reset" class="btn btn-danger" href="<?= base_url();?>guru/biodata">Reset</a></button>
+				</form>
+					</div>
+				</div>
+				</div>
+				</div>
+		</div>
+		 
+
         <!-- <div class="card-body">
         <div class="form-group-input-group">
 			<label for="nis">NIP :</label>
@@ -100,8 +138,7 @@
 			<input type="file" class="form-control" id="nama">
             </div>  -->
     
-         <button type="submit" class="btn btn-primary" href="<?= base_url();?>guru/biodata">Simpan</a></button>
-         <button type="reset" class="btn btn-danger" href="<?= base_url();?>guru/biodata">Reset</a></button>
+
         <!-- </div>
         </div>	
     	</div>
