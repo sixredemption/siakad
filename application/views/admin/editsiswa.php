@@ -23,7 +23,7 @@
                 </div>
 <div class="card-body">
 
-<form action="<?php echo base_url("Siswa/edit/$siswa->id_siswa")?>" method="post" enctype="multipart/form-data" >
+<form action="<?php echo base_url("Admin/SiswaEdit/$siswa->id_siswa")?>" method="post" enctype="multipart/form-data" >
         
         <input type="hidden" name="id_siswa" value="<?php echo $siswa->id_siswa?>" />		
 
