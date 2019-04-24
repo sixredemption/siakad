@@ -47,8 +47,8 @@
                             <td><p><?=  $umum->tanggal?></p></td>
                             <td><p><?=  $umum->keterangan?></p></td>													
 							<td>
-							<?php echo anchor('C_siswa/edit/'.$umum->id,'Edit'); ?>
-                              <?php echo anchor('C_siswa/delete/'.$umum->id,'Hapus'); ?>
+							<?php echo anchor('Siswa/edit/'.$umum->id,'Edit'); ?>
+                              <?php echo anchor('Siswa/delete/'.$umum->id,'Hapus'); ?>
 							</td>
 						</tr>
 						<?php $nomor++; ?>
