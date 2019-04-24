@@ -33,6 +33,9 @@
 								<font face = "Calibri" >NIG</font>
 							</th>
 							<th>
+								<font face = "Calibri" >Password</font>
+							</th>
+							<th>
 								<font face = "Calibri" >Nama</font>
 							</th>
 							<th>
@@ -62,6 +65,9 @@
 						<tr>
 							<td>
 								<p><?= $dosen->nig_guru ?></p>
+							</td>
+							<td>
+								<p><?= $dosen->password ?></p>
 							</td>
 							<td>
 								<p><?= $dosen->nama_lengkap ?></p>
