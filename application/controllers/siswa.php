@@ -10,6 +10,13 @@ class Siswa extends CI_Controller{
 						$this->load->view('siswa/home');
 						$this->load->view('template_siswa/footer');
 					}
+			public function biodata()
+					{
+						$this->load->view('template_siswa/header');
+						$this->load->view('template_siswa/sidebar');
+						$this->load->view('siswa/biodata');
+						$this->load->view('template_siswa/footer');
+					}		
 			public function nilai()
 					{
 						$data['judul'] = 'Nilai Siswa';

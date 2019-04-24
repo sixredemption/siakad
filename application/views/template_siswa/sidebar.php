@@ -9,7 +9,7 @@
         <ul class="nav navbar-nav navbar-right">
 					<li class="dropdown dropdown-user">
 						<a href="<?= base_url();?>siswa/home" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-						<img  src="<?php echo base_url() ?>3.jpg" class="img-circle" width="40px" height="40px>						
+						<img  src="<?php echo base_url() ?>3.jpg" class="img-circle" width="40px" height="40px">						
             <span class="username username-hide-on-mobile">DHANDY </span>
 						<i class="fa fa-angle-down"></i>
 						</a>
