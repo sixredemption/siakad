@@ -112,8 +112,8 @@
             </a>
 
             <div class="user-menu dropdown-menu">
-                <a href="<?= base_url();?>guru/password"><i class="fa fa-cog"> Ganti Password </i></a>
-                <a href="<?= base_url();?>guru/logout"><i class="fa fa-power-off"> Logout </i></a>
+				<a class="nav-link" href="<?= base_url();?>siswa/password"><i class="fa fa-cog"></i> Ganti Password</a>
+				<a class="nav-link" href="<?= base_url();?>siswa/logout"><i class="fa fa-power-off"></i> Logout</a>
             </div>
         </div>
     </div>
