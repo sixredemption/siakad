@@ -61,10 +61,10 @@
 
 				<div class="form-group">
 					<label for="jenis_kelamin">Jenis Kelamin:</label>
-					<input type="radio" name="gender" value="L" <?php if ($guru->gender == 'L') {
+					<input type="radio" name="jenis_kelamin" value="L" <?php if ($guru->jenis_kelamin == 'L') {
 																	echo 'checked';
 																	} ?>>Laki-Laki
-					<input type="radio" name="gender" value="P" <?php if ($guru->gender == 'P') {
+					<input type="radio" name="jenis_kelamin" value="P" <?php if ($guru->jenis_kelamin == 'P') {
 																	echo 'checked';
 																	} ?>>Perempuann
 				</div>
