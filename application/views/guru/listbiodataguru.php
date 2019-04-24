@@ -10,9 +10,26 @@
 			<form role="search">
 				<div class="form-group" method="get" action="">
 					<label>NIG:</label>
-					<input type="text" name="nig" />
+					<input type="text" name="nig_guru" />
 					<button class="btn btn-info fa fa-search" type="submit" name="cari" value="cari Guru"></button>
 				</div>
 		</div>
 	</div>
 	<!--/.row-->
+
+	<div class = container>
+		<div class = "row">
+			<div class = "col-lg-12">
+				<h1 class = "page-header">Daftar Guru</h1>
+				<div class = "panel-button-tab-left">
+
+				<button class = "btn btn-primary fa fa-user-plus">...</button>
+				</div>
+
+				<table class = "table table-striped">
+					<thead>
+						<tr>
+							<th>
+								<font face = "Calibri">NIG</font>
+							</th>
+							
