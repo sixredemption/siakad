@@ -18,23 +18,23 @@
 
 <form action="<?php echo base_url(). 'C_guru/add'; ?>" method="post" enctype="multipart/form-data" >
         <div class="form-group-input-group">
-			<label for="nig">NIG :</label>
-			<input type="text" class="form-control" name="nig">
+			<label for="nig_guru">NIG :</label>
+			<input type="text" class="form-control" name="nig_guru">
 		</div>
         
 		<div class="form-group">
-			<label for="nama">Nama :</label>
-			<input type="text" class="form-control" name="nama">
+			<label for="nama_lengkap">Nama :</label>
+			<input type="text" class="form-control" name="nama_lengkap">
         </div>
 
         <div class="form-group">
-			<label for="tanggallahir">Tanggal lahir:</label>
-			<input type="date" class="form-control" name="tgl_lahir">
+			<label for="tanggal_lahir">Tanggal lahir:</label>
+			<input type="date" class="form-control" name="tanggal_lahir">
 		</div>
 
         <div class="form-group">
-			<label for="kotaasal"> Kota Asal:</label>
-			<input type="text" class="form-control" name="kota_asl">
+			<label for="asal_kota"> Kota Asal:</label>
+			<input type="text" class="form-control" name="asal_kota">
 		</div>
 
         <div class="form-group">
@@ -48,12 +48,12 @@
             </div>
 
         <div class="form-group">
-        <label for="jk">Jenis Kelamin:</label>
+        <label for="jenis_kelamin">Jenis Kelamin:</label>
         <input type="radio" name="gender" value="L">Laki-Laki
         <input type="radio" name="gender" value="P">Perempuann
         </div>
 
-        <div class="form-group">
+        <!-- <div class="form-group">
             <label for="password">password:</label>
             <textarea type="text" class="form-control" name="password"></textarea>
         </div>
@@ -61,7 +61,7 @@
 		<div class="form-group">
 			<label for="id_pelajaran"> Mengajar:</label>
 			<input type="text" class="form-control" name="id_pelajaran">
-		</div>
+		</div> -->
 
         <div class="form-group">
             <label for="foto">Foto</label>
@@ -83,8 +83,8 @@
 
 <!-- <form>
 <div class="form-group-input-group">
-			<label for="nig">NIP :</label>
-			<input type="text" class="form-control" id="nig">
+			<label for="nig_guru">NIP :</label>
+			<input type="text" class="form-control" id="nig_guru">
 		</div>
 		<div class="form-group">
 			<label for="nama">Nama :</label>
@@ -125,7 +125,7 @@
 			<input type="number" class="form-control" id="kota_asl">
 		</div>	  
     <div class="form-group">
-      <label for="jk">Jenig Kelamin:</label>
+      <label for="jk">Jenig_guru Kelamin:</label>
       <input type="radio" name="gender" value="lakilaki">Laki-Laki
       <input type="radio" name="gender" value="perempuan">Perempuann
       </select>

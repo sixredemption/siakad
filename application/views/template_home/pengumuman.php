@@ -94,7 +94,8 @@
                                                 </a>
                                             </div>
                                             <div class="pst-content">
-                                                <p><a href="<?= $row->id ?>"><?= $row->judul ?></a></p>
+                                                <p><a href="<?= $row->id ?>"><?= $row->judul ?></a><br>
+                                                </p>
                                             </div>
                                         </div>
                                     <?php   } ?>

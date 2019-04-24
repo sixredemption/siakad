@@ -41,10 +41,10 @@ class C_guru extends CI_Controller
         
     }
 
-    public function edit($id=null)
+    public function edit($id_guru=null)
     {
-         var_dump($id);
-        if (!isset($id)) redirect('c_guru');
+         var_dump($id_guru);
+        if (!isset($id_guru)) redirect('c_guru');
 
         
         $var = $this->Guru_model;
@@ -62,7 +62,7 @@ class C_guru extends CI_Controller
         // $this->load->view("template/sidebar");
         // $this->load->view("template/footer");
 
-        $data["guru"] = $var->getById($id);
+        $data["guru"] = $var->getById($id_guru);
         if (!$data["guru"]) show_404();
         $this->load->view("template_admin/header");
         $this->load->view("admin/editguru", $data);
@@ -70,11 +70,11 @@ class C_guru extends CI_Controller
         $this->load->view("template_admin/footer");
     }
 
-    public function delete($id=null)
+    public function delete($id_guru=null)
     {
-        if (!isset($id)) show_404();
+        if (!isset($id_guru)) show_404();
         
-        if ($this->Guru_model->delete($id)) {
+        if ($this->Guru_model->delete($id_guru)) {
         $data["guru"]=$this->Guru_model->getAll();
         $this->load->view("template_admin/header");
         $this->load->view("admin/listguru", $data);
@@ -83,3 +83,63 @@ class C_guru extends CI_Controller
         }
     }
 }
+
+// class Guru extends CI_Controller
+// {
+//     public function index()
+//     {
+//         $this->load->view('template_guru/header');
+//         $this->load->view('template_guru/sidebar');
+//         $this->load->view('guru/home');
+//         $this->load->view('template_guru/footer');
+//     }
+//     public function biodata()
+//     {
+//         $this->load->view('template_guru/header');
+//         $this->load->view('template_guru/sidebar');
+//         $this->load->view('guru/biodata');
+//         $this->load->view('template_guru/footer');
+//     }
+//     public function isinilai()
+//     {
+//         $this->load->view('template_guru/header');
+//         $this->load->view('template_guru/sidebar');
+//         $this->load->view('guru/isinilai');
+//         $this->load->view('template_guru/footer');
+//     }
+//     public function jadwal()
+//     {
+//         $this->load->view('template_guru/header');
+//         $this->load->view('template_guru/sidebar');
+//         $this->load->view('guru/jadwal');
+//         $this->load->view('template_guru/footer');
+//     }
+//     public function nilai()
+//     {
+//         $this->load->view('template_guru/header');
+//         $this->load->view('template_guru/sidebar');
+//         $this->load->view('guru/nilai');
+//         $this->load->view('template_guru/footer');
+//     }
+//     public function tambahnilai()
+//     {
+//         $this->load->view('template_guru/header');
+//         $this->load->view('template_guru/sidebar');
+//         $this->load->view('guru/tambahnilai');
+//         $this->load->view('template_guru/footer');
+//     }
+//     public function editbiodata()
+//     {
+//         $this->load->view('template_guru/header');
+//         $this->load->view('template_guru/sidebar');
+//         $this->load->view('guru/editbiodata');
+//         $this->load->view('template_guru/footer');
+//     }
+//     public function password()
+//     {
+//         $this->load->view('template_guru/header');
+//         $this->load->view('template_guru/sidebar');
+//         $this->load->view('guru/password');
+//         $this->load->view('template_guru/footer');
+//     }
+// }

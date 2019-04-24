@@ -1,7 +1,7 @@
 <div class="container">
 <section class="content">
 <div class="jumbotron text-center">
-  <h1>Selamat Datang Siswa</h1>
+  <h1 align="center">Selamat Datang Siswa</h1>
 </div>
 <!-- <div class="row">
         <div class="col-sm-4">
