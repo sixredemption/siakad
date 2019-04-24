@@ -6,12 +6,20 @@
                 <i class="fa fa-bars"></i>
             </button>
         <a class="navbar-brand" href="<?=base_url();?>guru/index"><img src="<?php echo base_url() ?>foto/1.png" width="40px"><span style="color:blue">SMAN 4</span> MACIPO</a>
-        
         </div>
+
+        <div style="color:white">
+                                <div class="mx-auto d-block">
+                                    <img class="rounded-circle mx-auto d-block" src="<?php echo base_url() ?>assets_guru/images/avatar/1.jpg"  alt="Card image cap">
+                                    <h5 class="text-sm-center mt-2 mb-1">Sukiman</h5>
+                                    <div class="location text-sm-center"><i class="fa fa-map-marker"></i> Malang, Indonesia</div>
+                                </div>
+                        </div>
+                    </div>
 
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <h3 class="menu-title">Menu</h3><!-- /.menu-title -->    
+                    <h3 class="menu-title">Menu</h3>   
                 <menu>
           <ul class="menu-title">
             <li><a href="<?= base_url();?>guru/index"><i class="fa fa-home"></i> Home</a></li>
