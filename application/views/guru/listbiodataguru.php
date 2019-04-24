@@ -54,7 +54,7 @@
 								<font face = "Calibri" >FOTO</font>
 							</th>
 						</tr>
-					</tbody>
+					<tbody>
 
 					<?php
 					foreach ($guru as $dosen) :
@@ -84,3 +84,23 @@
 							<td>
 								<img src="<?php echo base_url('foto/guru/' . $dosen->foto_profile) ?>" width="64" />
 							</td>
+
+							</td>
+									<?php echo anchor('guru/edit/' . $dosen->id_guru, 'Edit'); ?>
+									<?php echo anchor('guru/delete/' . $dosen->id_guru, 'Hapus'); ?>
+								</td>
+							</tr>
+						<?php endforeach; ?>
+						<button class="btn btn-success fa fa-edit"></button>
+						<button class="btn btn-danger fa fa-trash"></button>
+						</td>
+						</tr>
+
+
+					</tbody>
+					</thead>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
