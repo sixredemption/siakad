@@ -17,7 +17,7 @@
 		  	<li><a href="<?= base_url();?>siswa/index"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= base_url();?>siswa/biodata"><i class="fa fa-user"></i> Biodata siswa</a></li>
             <li><a href="<?= base_url();?>siswa/nilai"><i class="fa fa-plus"></i> Nilai Siswa</a></li>
-			<li><a href="<?= base_url();?>siswa/jadwal"><i class="fa fa-bookmark-o"></i>Jadwal Siswa</a></li>
+			<li><a href="<?= base_url();?>siswa/jadwal"><i class="fa fa-bookmark-o"></i> Jadwal Siswa</a></li>
             <li><a href="<?= base_url();?>siswa/pengumuman"><i class="fa fa-bell"></i> Pengumuman</a></li>
             <li><a href="<?= base_url();?>siswa/statusspp"><i class="fa fa-money"></i>Status Pembayaran Spp</a></li>
           </ul>
@@ -108,7 +108,7 @@
     <div class="col-sm-4">
         <div class="user-area dropdown float-right">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img class="user-avatar rounded-circle" src="<?php echo base_url() ?>3.jpg"  >
+                <img class="user-avatar rounded-circle" src="<?php echo base_url() ?>assets_siswa/CHA_0318.jpg"  >
             </a>
 
             <div class="user-menu dropdown-menu">
