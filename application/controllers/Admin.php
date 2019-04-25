@@ -114,7 +114,7 @@ class Admin extends CI_Controller
 
     public function listpegawai()
     {
-        $data["pegawai"] = $this->Pegawai_model->getAll();
+        $data["admin"] = $this->Pegawai_model->getAll();
         $this->load->view('template_admin/header');
         $this->load->view('admin/listpegawai', $data);
         $this->load->view('template_admin/sidebar');
@@ -296,17 +296,17 @@ public function dataSiswa()
             // $this->session->set_flashdata('success', 'Berhasil disimpan');
         }
 
-        $data["pegawai"] = $this->Pegawai_model->getAll();
+        $data["admin"] = $this->Pegawai_model->getAll();
         $this->load->view("template_admin/header");
         $this->load->view("admin/listpegawai", $data);
         $this->load->view("template_admin/sidebar");
         $this->load->view("template_admin/footer");
     }
 
-    public function pegawaiEdit($id = null)
+    public function pegawaiEdit($id_admin = null)
     {
-        // var_dump($id);
-        if (!isset($id)) redirect('C_pegawai');
+        // var_dump($id_admin);
+        if (!isset($id_admin)) redirect('Admin/dataPegawai');
 
 
         $var = $this->Pegawai_model;
@@ -318,14 +318,8 @@ public function dataSiswa()
             $this->session->set_flashdata('success', 'Berhasil disimpan');
         }
 
-        // $data["pegawai"]=$this->Pegawai_model->getAll();
-        // $this->load->view("template/header");
-        // $this->load->view("admin/listpegawai", $data);
-        // $this->load->view("template/sidebar");
-        // $this->load->view("template/footer");
-
-        $data["pegawai"] = $var->getById($id);
-        if (!$data["pegawai"]) show_404();
+        $data["admin"] = $var->getById($id_admin);
+        if (!$data["admin"]) show_404();
         $this->load->view("template_admin/header");
         $this->load->view("admin/editpegawai", $data);
         $this->load->view("template_admin/sidebar");
@@ -337,7 +331,7 @@ public function dataSiswa()
         if (!isset($id)) show_404();
 
         if ($this->Pegawai_model->delete($id)) {
-            $data["pegawai"] = $this->Pegawai_model->getAll();
+            $data["admin"] = $this->Pegawai_model->getAll();
             $this->load->view("template_admin/header");
             $this->load->view("admin/listpegawai", $data);
             $this->load->view("template_admin/sidebar");
@@ -422,6 +416,77 @@ public function dataSiswa()
     
     // ----------------------------BACK END--------------------------------------------------
     // ----------------------------CRUD GURU----------------------------------------------
+
+    public function dataGuru()
+    {
+        $data["guru"] = $this->Guru_model->getAll();
+        $this->load->view("template_admin/header");
+        $this->load->view("admin/listguru", $data);
+        $this->load->view("template_admin/sidebar");
+        $this->load->view("template_admin/footer");
+    }
+
+
+
+    public function guruAdd()
+    {
+        $tambah = $this->Guru_model;
+        $validation = $this->form_validation;
+        $validation->set_rules($tambah->rules());
+
+        if ($validation->run()) {
+            $tambah->save();
+            // $this->session->set_flashdata('success', 'Berhasil disimpan');
+        }
+
+        $data["guru"] = $this->Guru_model->getAll();
+        $this->load->view("template_admin/header");
+        $this->load->view("admin/listguru", $data);
+        $this->load->view("template_admin/sidebar");
+        $this->load->view("template_admin/footer");
+    }
+
+    public function guruEdit($id_guru = null)
+    {
+        // var_dump($id_guru);
+        if (!isset($id_guru)) redirect('c_siswa');
+
+
+        $var = $this->Guru_model;
+        $validation = $this->form_validation;
+        $validation->set_rules($var->rules());
+
+        if ($validation->run()) {
+            $var->update();
+            $this->session->set_flashdata('success', 'Berhasil disimpan');
+        }
+
+        // $data["siswa"]=$this->Guru_model->getAll();
+        // $this->load->view("template/header");
+        // $this->load->view("admin/listsiswa", $data);
+        // $this->load->view("template/sidebar");
+        // $this->load->view("template/footer");
+
+        $data["guru"] = $var->getById($id_guru);
+        if (!$data["guru"]) show_404();
+        $this->load->view("template_admin/header");
+        $this->load->view("admin/editguru", $data);
+        $this->load->view("template_admin/sidebar");
+        $this->load->view("template_admin/footer");
+    }
+
+    public function guruDelete($id_guru = null)
+    {
+        if (!isset($id_guru)) show_404();
+
+        if ($this->Guru_model->delete($id_guru)) {
+            $data["guru"] = $this->Guru_model->getAll();
+            $this->load->view("template_admin/header");
+            $this->load->view("admin/listguru", $data);
+            $this->load->view("template_admin/sidebar");
+            $this->load->view("template_admin/footer");
+        }
+    }
 
     // ----------------------------BACK END--------------------------------------------------
     // ----------------------------CRUD MAPEL----------------------------------------------
