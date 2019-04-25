@@ -109,6 +109,13 @@ class Auth extends CI_Controller
 				// DATANYA ADA
 				foreach ($cek as $row) {
 					$this->session->set_userdata('nig_guru', $row->nig_guru);
+					$this->session->set_userdata('nama_lengkap', $row->nama_lengkap);
+					$this->session->set_userdata('asal_kota', $row->asal_kota);
+					$this->session->set_userdata('tanggal_lahir', $row->tanggal_lahir);
+					$this->session->set_userdata('jenis_kelamin', $row->jenis_kelamin);
+					$this->session->set_userdata('no_telp', $row->no_telp);
+					$this->session->set_userdata('alamat', $row->alamat);
+					$this->session->set_userdata('foto', $row->foto);
 					redirect(base_url("guru")); // localhost/controllerSiswa
 				}
 			} else {
