@@ -13,7 +13,6 @@ class Siswa extends CI_Controller
 
 		if (!($this->session->userdata('nisn'))) {
 			redirect(base_url('login'));
-			// redirect($this->index());
 		}
 	}
 
