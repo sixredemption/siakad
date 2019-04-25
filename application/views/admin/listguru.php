@@ -5,7 +5,7 @@
 					<em class="fa fa-home"></em>
 				</a></li>
 			<li class="active">List Guru</li>
-		</ol>	
+		</ol>
 	</div>
 
 	<div class=container>
@@ -13,7 +13,7 @@
 			<div class="col-lg-12">
 				<h1 class="page-header">Daftar Guru</h1>
 				<div class="panel-button-tab-left">
-					<form method="post"  action="<?php  echo base_url(). 'admin/addguru'; ?>">
+					<form method="post" action="<?php echo base_url() . 'admin/addguru'; ?>">
 						<button class="btn btn-primary" id="submit-buttons" type="submit" ​​​​​>Tambah Guru</button>
 					</form>
 				</div>
@@ -45,9 +45,9 @@
 							<th>
 								<font face="Calibri">Password</font>
 							</th>
-							<th>
+							<!-- <th>
 								<font face="Calibri">Id Pelajaran</font>
-							</th>
+							</th> -->
 							<th>
 								<font face="Calibri"> FOTO </font>
 							</th>
@@ -62,19 +62,19 @@
 							?>
 							<tr>
 								<td>
-									<p><?= $dosen->nig ?></p>
+									<p><?= $dosen->nig_guru ?></p>
 								</td>
 								<td>
-									<p><?= $dosen->nama ?></p>
+									<p><?= $dosen->nama_lengkap ?></p>
 								</td>
 								<td>
-									<p><?= $dosen->tgl_lahir ?></p>
+									<p><?= $dosen->tanggal_lahir ?></p>
 								</td>
 								<td>
-									<p><?= $dosen->kota_asl ?></p>
+									<p><?= $dosen->asal_kota ?></p>
 								</td>
 								<td>
-									<p><?= $dosen->gender ?></p>
+									<p><?= $dosen->jenis_kelamin ?></p>
 								</td>
 								<td>
 									<p><?= $dosen->alamat ?></p>
@@ -85,16 +85,17 @@
 								<td>
 									<p><?= $dosen->password ?></p>
 								</td>
-								<td>
-									<p><?= $dosen->id_pelajaran ?></p>
-								</td>
+								<!-- <td>
+													<p><?php
+														?></p>
+												</td> -->
 								<td>
 									<img src="<?php echo base_url('foto/guru/' . $dosen->foto) ?>" width="64" />
 								</td>
 
 								<td>
-									<?php echo anchor('guru/edit/' . $dosen->id, 'Edit'); ?>
-									<?php echo anchor('guru/delete/' . $dosen->id, 'Hapus'); ?>
+									<?php echo anchor('guru/edit/' . $dosen->id_guru, 'Edit'); ?>
+									<?php echo anchor('guru/delete/' . $dosen->id_guru, 'Hapus'); ?>
 								</td>
 							</tr>
 						<?php endforeach; ?>

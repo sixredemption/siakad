@@ -21,7 +21,12 @@
 			<div class="col-xs-6 col-md-3 col-lg-3 no-padding">
 				<div class="panel panel-teal panel-widget border-right">
 					<div class="row no-padding"><em class="fa fa-xl fa-graduation-cap color-blue"></em>
-						<div class="large">220</div>
+						<?php
+						$this->db->from('siswa');
+						$this->db->where('id_kelas', 1);
+						$q = $this->db->count_all_results();
+						echo '<div class="large">' . $q . '</div>';
+						?>
 						<div class="text-muted">Siswa Ipa</div>
 					</div>
 				</div>
@@ -29,7 +34,12 @@
 			<div class="col-xs-6 col-md-3 col-lg-3 no-padding">
 				<div class="panel panel-blue panel-widget border-right">
 					<div class="row no-padding"><em class="fa fa-xl fa-graduation-cap color-orange"></em>
-						<div class="large">190</div>
+						<?php
+						$this->db->from('siswa');
+						$this->db->where('id_kelas', 10);
+						$q = $this->db->count_all_results();
+						echo '<div class="large">' . $q . '</div>';
+						?>
 						<div class="text-muted">Siswa Ips</div>
 					</div>
 				</div>
@@ -60,11 +70,9 @@
 			</div>
 			<!--/.row-->
 		</div>
+	</div>
 
-		<?php
-		echo "<pre>";
-		print_r($this->session->userdata());
-		echo "</pre>"; ?>
+	<div class="row">
 		<div class="col-md-12">
 			<div class="panel panel-primary ">
 				<div class="panel-heading">
@@ -86,19 +94,22 @@
 										<p><?= $umum->judul ?></p>
 									</td>
 
-                            <td><p><?=  $umum->keterangan?></p></td>
-							<td>	
-							<?php echo anchor('Admin/pengumumanEdit/'.$umum->id_pengumuman,'Edit'); ?>
-                            <?php echo anchor('Admin/pengumumanDelete/'.$umum->id_pengumuman,'Hapus'); ?>
-							</td>																			
-						</tr>
-						<?php endforeach; ?>
-					</tbody>	
-								</table>
-					</div>
-								
+									<td>
+										<p><?= $umum->keterangan ?></p>
+									</td>
+									<td>
+										<?php echo anchor('Admin/pengumumanEdit/' . $umum->id_pengumuman, 'Edit'); ?>
+										<?php echo anchor('Admin/pengumumanDelete/' . $umum->id_pengumuman, 'Hapus'); ?>
+									</td>
+								</tr>
+							<?php endforeach; ?>
+						</tbody>
+					</table>
 				</div>
 
 			</div>
+
 		</div>
-		<!--/.col-->
+	</div>
+</div>
+<!--/.col-->

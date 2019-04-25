@@ -23,28 +23,28 @@
 					</div>
 					<div class="card-body">
 
-						<form action="<?php echo base_url("guru/edit/$guru->id") ?>" method="post" enctype="multipart/form-data">
+						<form action="<?php echo base_url("guru/edit/$guru->id_guru") ?>" method="post" enctype="multipart/form-data">
 
-							<input type="hidden" name="id" value="<?php echo $guru->id ?>" />
+							<input type="hidden" name="id" value="<?php echo $guru->id_guru ?>" />
 
 							<div class="form-group">
 								<label for="nig">NIG :</label>
-								<input type="text" class="form-control" name="nig" value="<?php echo $guru->nig ?>">
+								<input type="text" class="form-control" name="nig" value="<?php echo $guru->nig_guru ?>">
 							</div>
 
 							<div class="form-group">
 								<label for="nama">Nama :</label>
-								<input type="text" class="form-control" name="nama" value="<?php echo $guru->nama ?>">
+								<input type="text" class="form-control" name="nama" value="<?php echo $guru->nama_lengkap ?>">
 							</div>
 
 							<div class="form-group">
 								<label for="tanggallahir">Tanggal lahir:</label>
-								<input type="date" class="form-control" name="tgl_lahir" value="<?php echo $guru->tgl_lahir ?>">
+								<input type="date" class="form-control" name="tgl_lahir" value="<?php echo $guru->tanggal_lahir ?>">
 							</div>
 
 							<div class="form-group">
 								<label for="kotaasal"> Kota Asal:</label>
-								<input type="text" class="form-control" name="kota_asl" value="<?php echo $guru->kota_asl ?>">
+								<input type="text" class="form-control" name="kota_asl" value="<?php echo $guru->asal_kota ?>">
 							</div>
 
 							<div class="form-group">
@@ -59,12 +59,12 @@
 
 							<div class="form-group">
 								<label for="jk">Jenis Kelamin:</label>
-								<input type="radio" name="gender" value="L" <?php if ($guru->gender == 'L') {
-																				echo 'checked';
-																			} ?>>Laki-Laki
-								<input type="radio" name="gender" value="P" <?php if ($guru->gender == 'P') {
-																				echo 'checked';
-																			} ?>>Perempuann
+								<input type="radio" name="jenis_kelamin" value="L" <?php if ($guru->jenis_kelamin == 'L') {
+																						echo 'checked';
+																					} ?>>Laki-Laki
+								<input type="radio" name="jenis_kelamin" value="P" <?php if ($guru->jenis_kelamin == 'P') {
+																						echo 'checked';
+																					} ?>>Perempuann
 							</div>
 
 							<div class="form-group">
