@@ -61,7 +61,7 @@
                                         </li>
                                     <?php elseif ($this->session->userdata('nisn')) : ?>
                                         <li>
-                                            <a class="page-scroll" href="<?= base_url('siswa') ?>">Profile Siswa</a>
+                                            <a class="page-scroll" href="<?= base_url('siswa') ?>">[ Profile Siswa ]</a>
                                         </li>
                                     <?php else : ?>
                                         <li>
