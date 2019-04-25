@@ -107,7 +107,7 @@ class Admin extends CI_Controller
         $data["kelas"] = $this->Model_kelas->getAll();
         // $data['sisw a'] = $this->Model_siswa->getAll();
         $this->load->view('template_admin/header');
-        $this->load->view('admin/listsiswa', $data, $kls);
+        $this->load->view('admin/listsiswa', $data);
         $this->load->view('template_admin/sidebar');
         $this->load->view('template_admin/footer');
     }
@@ -158,10 +158,9 @@ class Admin extends CI_Controller
         $this->load->view('template_admin/sidebar');
         $this->load->view('template_admin/footer');
     }
-    public function addpegawai()
-    {
+    public function addpegawai(){
         $data['judul'] = "Halaman Tambah Pegawai";
-        $this->load->view('template_admin/header', $data);
+        $this->load->view('template_admin/header',$data);
         $this->load->view('admin/addpegawai');
         $this->load->view('template_admin/sidebar');
         $this->load->view('template_admin/footer');
