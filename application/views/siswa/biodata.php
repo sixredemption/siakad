@@ -15,7 +15,7 @@
          <table class="table">
          <tr>
              <td rowspan="15" width="250px">
-			 <img src="<?php echo base_url() ?>assets_siswa/CHA_0318.jpg" width="200px" height="300px"/>
+			 <img src="<?php echo base_url('foto/siswa/default.jpg')?>" width="200px" height="300px"/>
              </td>
 		</tr>
 
@@ -24,43 +24,43 @@
 		<tr>
             <td><b>NIS</b></td>
             <td>:</td>
-            <td>0973621</td>
+            <td><?= $this->session->userdata("nisn"); ?></td>
         </tr>
 
         <tr>
             <td><b>Nama</b></td>
             <td>:</td>
-            <td>Jonathan Liandi</td>
+            <td><?= $this->session->userdata("nama_siswa"); ?></td>
         </tr>
         
         <tr>
             <td><b>Tempat, Tanggal Lahir</b></td>
             <td>:</td>
-            <td>Saturnus, 20 Januari 1997</td>
+            <td><?= $this->session->userdata("kota"); ?> , <?= $this->session->userdata("tanggal_lahir"); ?></td>
         </tr>
         
         <tr>
             <td><b>Kota Asal</b></td>
             <td>:</td>
-            <td>Kebumen</td>
+            <td><?= $this->session->userdata("kota"); ?></td>
         </tr>
        
         <tr>
             <td><b>Jenis Kelamin</b></td>
             <td>:</td>
-            <td>Laki - Laki</td>
+            <td><?= $this->session->userdata("jenis_kelamin"); ?></td>
         </tr>
         
         <tr>
             <td><b>Alamat</b></td>
             <td>:</td>
-            <td>Jl. Aspal</td>
+            <td><?= $this->session->userdata("alamat"); ?></td>
         </tr>
         
         <tr>
             <td><b>No Telfon</b></td>
             <td>:</td>
-            <td>085367469857</td>
+            <td><?= $this->session->userdata("no_telp"); ?></td>
         </tr>
     </table>
 

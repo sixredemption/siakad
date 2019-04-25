@@ -411,7 +411,7 @@
                             <div class="col-md-4 col-sm-4 col-xs-12">
                                 <div class="single-blog">
                                     <div class="single-blog-img">
-                                        <a href="<?= base_url('pengumuman/' . $row->id . ''); ?>">
+                                        <a href="<?= base_url('pengumuman/' . $row->id_pengumuman . ''); ?>">
                                             <img src="<?= base_url('assets_home/img/blog/' . $row->foto . ''); ?>" alt="">
                                         </a>
                                     </div>
@@ -426,14 +426,14 @@
                                     </div>
                                     <div class="blog-text">
                                         <h4>
-                                            <a href="<?= base_url('pengumuman/' . $row->id . ''); ?>"><?= $row->judul; ?></a>
+                                            <a href="<?= base_url('pengumuman/' . $row->id_pengumuman . ''); ?>"><?= $row->judul; ?></a>
                                         </h4>
                                         <p>
                                             <?= ucwords(substr($row->keterangan, 0, 50)); ?>
                                         </p>
                                     </div>
                                     <span>
-                                        <a href="<?= base_url('pengumuman/' . ($row->id) . ''); ?>" class="ready-btn">Read more</a>
+                                        <a href="<?= base_url('pengumuman/' . ($row->id_pengumuman) . ''); ?>" class="ready-btn">Read more</a>
                                         <hr>
                                     </span>
                                 </div>

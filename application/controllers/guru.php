@@ -3,6 +3,21 @@
 defined('BASEPATH') or exit('No direct script access allowed');
 class Guru extends CI_Controller
 {
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->model("Model_siswa");
+        $this->load->model("Guru_model");
+        $this->load->model("Pegawai_model");
+        $this->load->model("Model_pengumuman");
+        $this->load->model('login_model');
+
+        if (!($this->session->userdata('nig_guru'))) {
+            redirect(base_url('loginguru'));
+            // redirect($this->index());
+        }
+    }
+
     public function index()
     {
         $this->load->view('template_guru/header');
