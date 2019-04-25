@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 24, 2019 at 02:23 PM
+-- Generation Time: Apr 25, 2019 at 05:26 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -40,13 +40,12 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id_admin`, `username`, `password`, `foto`) VALUES
-(1, 'dzikri@siakad.com', 'a6e0f11fcff95151129b78b03adec842', 'default.png'),
-(2, 'khosy@siakad.com', 'bdab105361efd70699e7cdcd84c26132', 'default.png'),
-(3, 'deby@siakad.com', '9bcc02b4703c28a756dbdf1e16b7aa6c', 'default.png'),
-(4, 'falah@siakad.com', '2d0567b23f9bab484baca7e279139c0c', 'default.png'),
-(5, 'dhandy@siakad.com', 'c4a8db4a597a9b03f1ce60fe5d5dcbc4', 'default.png'),
-(6, 'firman@siakad.com', '9dfbbc92d99104d364bf36e07753c461', 'default.png'),
-(7, 'adm@siakad.com', 'fbc38656cbf3588a5dabf20283693cca', 'default.png');
+(1, 'dzikri@siakad.com', 'a6e0f11fcff95151129b78b03adec842', 'default.jpg'),
+(2, 'khosy@siakad.com', 'bdab105361efd70699e7cdcd84c26132', 'default.jpg'),
+(3, 'deby@siakad.com', '9bcc02b4703c28a756dbdf1e16b7aa6c', 'default.jpg'),
+(4, 'falah@siakad.com', '2d0567b23f9bab484baca7e279139c0c', 'default.jpg'),
+(5, 'dhandy@siakad.com', 'c4a8db4a597a9b03f1ce60fe5d5dcbc4', 'default.jpg'),
+(6, 'firman@siakad.com', '9dfbbc92d99104d364bf36e07753c461', 'default.jpg');
 
 -- --------------------------------------------------------
 
@@ -93,29 +92,29 @@ CREATE TABLE `guru` (
   `jenis_kelamin` enum('Laki-laki','Perempuan') NOT NULL,
   `no_telp` varchar(20) NOT NULL,
   `alamat` text NOT NULL,
-  `foto_profile` varchar(50) NOT NULL
+  `foto` varchar(50) NOT NULL DEFAULT 'default.jpg'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `guru`
 --
 
-INSERT INTO `guru` (`id_guru`, `nig_guru`, `password`, `nama_lengkap`, `asal_kota`, `tanggal_lahir`, `jenis_kelamin`, `no_telp`, `alamat`, `foto_profile`) VALUES
-(1, '1741720052', 'ac9d3c581fc1660004e8c2838f77cb23', 'Dzikri Alif Abdillah S,Ag', 'Jombang', '1999-07-19', 'Laki-laki', '081234762703', 'Perumahan Indah C/5', 'default.png'),
-(2, '1741720051', 'f2b21ef4ec5c583e71a595a36fe169c5', 'Yolanda Marissa S,Pg', 'Tuban', '1999-09-20', 'Perempuan', '08124389220', 'Perumahan Cindramata B/11', 'default.png'),
-(3, '1741720053', '9ff7b68a010aeb99d9c909b581cdbdac', 'Sasmita Citra S,Pd', 'Surabaya', '1999-02-11', 'Perempuan', '08122521321', 'Perumahan Permata Permai D/11', 'default.png'),
-(4, '1741720054', 'a87d4d4978f44d7bf297f1541cc87a5c', 'Yoga Herlambang S,Tm', 'Pamekasan', '1997-04-21', 'Laki-laki', '0812435331', 'Perumahan Garuda B/4', 'default.png'),
-(5, '1741720055', '08c86177eb70554ef91ad75e302d7e47', 'Ninda Puspita Sari S,Pd', 'Probolinggo', '1995-01-19', 'Perempuan', '0816635216', 'Perumahan Aksara Permai G/10', 'default.png'),
-(6, '1741720056', '46f83ae627b911b9421c9afbde45d4a0', 'Laras Pandhita S,Pd', 'Malang', '1998-10-15', 'Perempuan', '08124895564', 'Perumahan Green Jason D/2', 'default.png'),
-(7, '1741720057', '306430fbe473d57e11a5ec85b3569b47', 'Ahmad Heriyawan S,Ag', 'Malang', '1998-09-08', 'Laki-laki', '0812451312', 'Perumahan Permata Permai C/16', 'default.png'),
-(8, '1741720058', 'b0209bec36c07adedd4d7051650d1aad', 'Putra Bagus Permana S,Og', 'Bojonegoro', '1998-11-09', 'Laki-laki', '0811352342', 'Perumahan Cindramata B/4', 'default.png'),
-(9, '1741720059', '761e69f6052a8e2ae9cdb81aeff976ab', 'Ghea Nandita Fitri S,Pd', 'Surabaya', '1997-06-02', 'Perempuan', '08124315358', 'Perumahan Garuda F/20', 'default.png'),
-(10, '1741720060', '9f23fc6306f21171a5dc874b93aa6212', 'Bagus Sandhika S,Pd', 'Surabaya', '1995-04-11', 'Laki-laki', '0816123122', 'Perumahan Aksara Permai B/20', 'default.png'),
-(11, '1741720070', 'e21ed367c60ecd5a55fad75fcfbcf3c0', 'Monika Gandha Rahayu S,Pd', 'Probolinggo', '1998-09-20', 'Perempuan', '08114851231', 'Perumahan Garuda C/11', 'default.png'),
-(12, '1741720080', '8bfe2ec31ca43e138e53a413ff49b109', 'Tito Sarapea S,Og', 'Malang', '1997-01-19', 'Laki-laki', '0812466312', 'Perumahan Garuda Jaya D/11', 'default.png'),
-(13, '1741720090', '247100a29b5d580b6739de0c3e28e755', 'Mahesa Yoga Andika S,Og', 'Jember', '1997-06-19', 'Laki-laki', '08113542123', 'Perumahan Majapahit B/4', 'default.png'),
-(14, '1741720100', 'd08bec01bcc3ad6a2115879f64cd3ae4', 'Niken Dewi Sasmita S,Pd', 'Jember', '1998-07-21', 'Perempuan', '08124992142', 'Perumahan Garuda Jaya F/20', 'default.png'),
-(15, '1741720110', '0f3490b994c5550049d1a876eef5ca47', 'Renaldo Kurniawan S,Ag', 'Sidoarjo', '1997-04-28', 'Laki-laki', '08123311233', 'Perumahan Cindra Perkasa C/22', 'default.png');
+INSERT INTO `guru` (`id_guru`, `nig_guru`, `password`, `nama_lengkap`, `asal_kota`, `tanggal_lahir`, `jenis_kelamin`, `no_telp`, `alamat`, `foto`) VALUES
+(1, '1741720052', 'ac9d3c581fc1660004e8c2838f77cb23', 'Dzikri Alif Abdillah S,Ag', 'Jombang', '1999-07-19', 'Laki-laki', '081234762703', 'Perumahan Indah C/5', 'default.jpg'),
+(2, '1741720051', 'f2b21ef4ec5c583e71a595a36fe169c5', 'Yolanda Marissa S,Pg', 'Tuban', '1999-09-20', 'Perempuan', '08124389220', 'Perumahan Cindramata B/11', 'default.jpg'),
+(3, '1741720053', '9ff7b68a010aeb99d9c909b581cdbdac', 'Sasmita Citra S,Pd', 'Surabaya', '1999-02-11', 'Perempuan', '08122521321', 'Perumahan Permata Permai D/11', 'default.jpg'),
+(4, '1741720054', 'a87d4d4978f44d7bf297f1541cc87a5c', 'Yoga Herlambang S,Tm', 'Pamekasan', '1997-04-21', 'Laki-laki', '0812435331', 'Perumahan Garuda B/4', 'default.jpg'),
+(5, '1741720055', '08c86177eb70554ef91ad75e302d7e47', 'Ninda Puspita Sari S,Pd', 'Probolinggo', '1995-01-19', 'Perempuan', '0816635216', 'Perumahan Aksara Permai G/10', 'default.jpg'),
+(6, '1741720056', '46f83ae627b911b9421c9afbde45d4a0', 'Laras Pandhita S,Pd', 'Malang', '1998-10-15', 'Perempuan', '08124895564', 'Perumahan Green Jason D/2', 'default.jpg'),
+(7, '1741720057', '306430fbe473d57e11a5ec85b3569b47', 'Ahmad Heriyawan S,Ag', 'Malang', '1998-09-08', 'Laki-laki', '0812451312', 'Perumahan Permata Permai C/16', 'default.jpg'),
+(8, '1741720058', 'b0209bec36c07adedd4d7051650d1aad', 'Putra Bagus Permana S,Og', 'Bojonegoro', '1998-11-09', 'Laki-laki', '0811352342', 'Perumahan Cindramata B/4', 'default.jpg'),
+(9, '1741720059', '761e69f6052a8e2ae9cdb81aeff976ab', 'Ghea Nandita Fitri S,Pd', 'Surabaya', '1997-06-02', 'Perempuan', '08124315358', 'Perumahan Garuda F/20', 'default.jpg'),
+(10, '1741720060', '9f23fc6306f21171a5dc874b93aa6212', 'Bagus Sandhika S,Pd', 'Surabaya', '1995-04-11', 'Laki-laki', '0816123122', 'Perumahan Aksara Permai B/20', 'default.jpg'),
+(11, '1741720070', 'e21ed367c60ecd5a55fad75fcfbcf3c0', 'Monika Gandha Rahayu S,Pd', 'Probolinggo', '1998-09-20', 'Perempuan', '08114851231', 'Perumahan Garuda C/11', 'default.jpg'),
+(12, '1741720080', '8bfe2ec31ca43e138e53a413ff49b109', 'Tito Sarapea S,Og', 'Malang', '1997-01-19', 'Laki-laki', '0812466312', 'Perumahan Garuda Jaya D/11', 'default.jpg'),
+(13, '1741720090', '247100a29b5d580b6739de0c3e28e755', 'Mahesa Yoga Andika S,Og', 'Jember', '1997-06-19', 'Laki-laki', '08113542123', 'Perumahan Majapahit B/4', 'default.jpg'),
+(14, '1741720100', 'd08bec01bcc3ad6a2115879f64cd3ae4', 'Niken Dewi Sasmita S,Pd', 'Jember', '1998-07-21', 'Perempuan', '08124992142', 'Perumahan Garuda Jaya F/20', 'default.jpg'),
+(15, '1741720110', '0f3490b994c5550049d1a876eef5ca47', 'Renaldo Kurniawan S,Ag', 'Sidoarjo', '1997-04-28', 'Laki-laki', '08123311233', 'Perumahan Cindra Perkasa C/22', 'default.jpg');
 
 -- --------------------------------------------------------
 
@@ -237,9 +236,16 @@ CREATE TABLE `pengumuman` (
   `id_pengumuman` int(11) NOT NULL,
   `judul` varchar(40) NOT NULL,
   `tanggal` date NOT NULL,
-  `foto_pengumuman` varchar(50) NOT NULL,
+  `foto` varchar(50) NOT NULL,
   `keterangan` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `pengumuman`
+--
+
+INSERT INTO `pengumuman` (`id_pengumuman`, `judul`, `tanggal`, `foto`, `keterangan`) VALUES
+(1, 'Ujian Nasional', '2019-04-08', 'Ujian_Nasional.png', 'Ujian nasional berbasis komputer SMAN 4 MACIPO');
 
 -- --------------------------------------------------------
 
@@ -288,7 +294,7 @@ CREATE TABLE `siswa` (
   `jenis_kelamin` enum('Laki-laki','Perempuan') NOT NULL,
   `no_telp` varchar(20) NOT NULL,
   `alamat` text NOT NULL,
-  `foto` varchar(20) NOT NULL DEFAULT 'default.png'
+  `foto` varchar(20) NOT NULL DEFAULT 'default.jpg'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -296,16 +302,16 @@ CREATE TABLE `siswa` (
 --
 
 INSERT INTO `siswa` (`id_siswa`, `id_kelas`, `nisn`, `password`, `nama_siswa`, `kota`, `tanggal_lahir`, `jenis_kelamin`, `no_telp`, `alamat`, `foto`) VALUES
-(1, 1, '1904501', '69cdd8217f4e2110942ac704d78ef066', 'Aldo Pratama', 'Malang', '2000-03-19', 'Laki-laki', '08312123123', 'Jl. Pattimura 20 C', ''),
-(2, 1, '1904502', 'c64eefc611f176ff764934b587f06b69', 'Andreas Prayoga', 'Tegal', '2000-03-19', 'Laki-laki', '0842131242', 'Jl. Soekarno Hatta 20/B-4', ''),
-(3, 1, '1904503', '69cdd8217f4e2110942ac704d78ef066', 'Bella Faradina', 'Solo', '2000-02-11', 'Perempuan', '0842198723', 'Jl. Pattimura 20/F-5', ''),
-(4, 1, '1904504', 'ca4678f0bb8e2e94210d546af812d739', 'Bagas Saputra', 'Sidoarjo', '2000-06-02', 'Laki-laki', '0842198767', 'Jl. Soekarno Hatta 20/B-11', ''),
-(5, 1, '1904505', 'fe84d1616aa9501ef9a947d508fa297b', 'Cantika Rahayu', 'Malang', '2000-08-25', 'Perempuan', '0842178972', 'Jl. Garuda 10/C', ''),
-(6, 10, '1904601', 'c0e30caf92743060dd3784a263a1cc4e', 'Angga Sandhika', 'Sidoarjo', '2000-11-19', 'Laki-laki', '0842199082', 'Jl. Soekarno Hatta 20/C-4', ''),
-(7, 10, '1904602', 'de973c39d8ed0a9f315abdc48daf3948', 'Bagas Tri Pitaka', 'Malang', '2000-01-10', 'Laki-laki', '0842154667', 'Jl. Pattimura 20/F-10', ''),
-(8, 10, '1904603', '628af5cf7093f24fd30e3711fd6773c6', 'Belinda Sasmita', 'Malang', '2000-02-02', 'Perempuan', '0842143343', 'Jl. Soekarno Hatta 20/D-11', ''),
-(9, 10, '1904604', 'a48cee1fe713242d341831b1387ad956', 'Bulqis Citra Mahayu', 'Probolinggo', '2000-04-21', 'Perempuan', '0842165553', 'Jl. Garuda 10/G', ''),
-(10, 10, '1904605', '4e73c8ed9e6f337dece2505b30a452d3', 'Bella Nadira Putri', 'Surabaya', '2000-08-25', 'Perempuan', '0842153221', 'Jl. Agus Salim 5/C', '');
+(1, 1, '1904501', '69cdd8217f4e2110942ac704d78ef066', 'Aldo Pratama', 'Malang', '2000-03-19', 'Laki-laki', '08312123123', 'Jl. Pattimura 20 C', 'default.jpg'),
+(2, 1, '1904502', 'c64eefc611f176ff764934b587f06b69', 'Andreas Prayoga', 'Tegal', '2000-03-19', 'Laki-laki', '0842131242', 'Jl. Soekarno Hatta 20/B-4', 'default.jpg'),
+(3, 1, '1904503', '69cdd8217f4e2110942ac704d78ef066', 'Bella Faradina', 'Solo', '2000-02-11', 'Perempuan', '0842198723', 'Jl. Pattimura 20/F-5', 'default.jpg'),
+(4, 1, '1904504', 'ca4678f0bb8e2e94210d546af812d739', 'Bagas Saputra', 'Sidoarjo', '2000-06-02', 'Laki-laki', '0842198767', 'Jl. Soekarno Hatta 20/B-11', 'default.jpg'),
+(5, 1, '1904505', 'fe84d1616aa9501ef9a947d508fa297b', 'Cantika Rahayu', 'Malang', '2000-08-25', 'Perempuan', '0842178972', 'Jl. Garuda 10/C', 'default.jpg'),
+(6, 10, '1904601', 'c0e30caf92743060dd3784a263a1cc4e', 'Angga Sandhika', 'Sidoarjo', '2000-11-19', 'Laki-laki', '0842199082', 'Jl. Soekarno Hatta 20/C-4', 'default.jpg'),
+(7, 10, '1904602', 'de973c39d8ed0a9f315abdc48daf3948', 'Bagas Tri Pitaka', 'Malang', '2000-01-10', 'Laki-laki', '0842154667', 'Jl. Pattimura 20/F-10', 'default.jpg'),
+(8, 10, '1904603', '628af5cf7093f24fd30e3711fd6773c6', 'Belinda Sasmita', 'Malang', '2000-02-02', 'Perempuan', '0842143343', 'Jl. Soekarno Hatta 20/D-11', 'default.jpg'),
+(9, 10, '1904604', 'a48cee1fe713242d341831b1387ad956', 'Bulqis Citra Mahayu', 'Probolinggo', '2000-04-21', 'Perempuan', '0842165553', 'Jl. Garuda 10/G', 'default.jpg'),
+(10, 10, '1904605', '4e73c8ed9e6f337dece2505b30a452d3', 'Bella Nadira Putri', 'Surabaya', '2000-08-25', 'Perempuan', '0842153221', 'Jl. Agus Salim 5/C', 'default.jpg');
 
 -- --------------------------------------------------------
 
@@ -487,7 +493,7 @@ ALTER TABLE `nilai`
 -- AUTO_INCREMENT for table `pengumuman`
 --
 ALTER TABLE `pengumuman`
-  MODIFY `id_pengumuman` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_pengumuman` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `semester`
