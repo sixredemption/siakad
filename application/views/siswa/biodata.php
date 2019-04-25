@@ -19,9 +19,9 @@
              </td>
 		</tr>
 
-<div class="panel-body">
-	<table id="mytable" class="table table-striped table-bordered table-hover table-full-width dataTable" cellspacing="0" width="100%">
-		<tr>
+<!-- <div class="panel-body">
+	<table id="mytable" class="table table-striped table-bordered table-hover table-full-width dataTable" cellspacing="0" width="100%"> -->
+		<tr> 
             <td><b>NIS</b></td>
             <td>:</td>
             <td>0973621</td>
