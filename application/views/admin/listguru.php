@@ -5,7 +5,7 @@
 					<em class="fa fa-home"></em>
 				</a></li>
 			<li class="active">List Guru</li>
-		</ol>	
+		</ol>
 	</div>
 
 	<div class=container>
@@ -13,7 +13,7 @@
 			<div class="col-lg-12">
 				<h1 class="page-header">Daftar Guru</h1>
 				<div class="panel-button-tab-left">
-					<form method="post"  action="<?php  echo base_url(). 'admin/addguru'; ?>">
+					<form method="post" action="<?php echo base_url() . 'admin/addguru'; ?>">
 						<button class="btn btn-primary" id="submit-buttons" type="submit" ​​​​​>Tambah Guru</button>
 					</form>
 				</div>
@@ -89,8 +89,8 @@
 								</td>
 
 								<td>
-									<?php echo anchor('admin/guruEdit/' . $dosen->id_guru, 'Edit'); ?>
-									<?php echo anchor('guru/guruDelete/' . $dosen->id_guru, 'Hapus'); ?>
+									<?php echo anchor('Admin/guruEdit/' . $dosen->id_guru, 'Edit'); ?>
+									<?php echo anchor('Admin/guruDelete/' . $dosen->id_guru, 'Hapus'); ?>
 								</td>
 							</tr>
 							<?php $nomor++; ?>
