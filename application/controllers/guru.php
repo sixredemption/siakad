@@ -14,7 +14,6 @@ class Guru extends CI_Controller
 
         if (!($this->session->userdata('nig_guru'))) {
             redirect(base_url('loginguru'));
-            // redirect($this->index());
         }
     }
 

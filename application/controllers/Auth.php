@@ -152,6 +152,8 @@ class Auth extends CI_Controller
 					redirect(base_url("siswa")); // localhost/controllerSiswa
 				}
 			} else {
+				$this->session->set_flashdata('message', '<div class="alert alert-danger">
+				Nomor Induk Siswa / Password salah</div>');
 				$this->siswa();
 			}
 		}
