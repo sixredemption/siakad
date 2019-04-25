@@ -1,130 +1,120 @@
 <div class="container">
 <section class="content">
 <div class="jumbotron text-center">
-  <h1 align="center">Selamat Datang Siswa</h1>
+<h2>Selamat Datang Siswa</h2>
 </div>
-    <div class="col-md-12">   
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <div class="col-lg-3 col-md-6">
-        <div class="card">
-            <div class="card-body">
-                <div class="stat-widget-one">
-                    <div class="stat-icon dib"><i class="ti-user text-primary border-primary"></i></div>
-                    <div class="stat-content dib">
-                        <div class="stat-text">Siswa Angkatan 2017</div>
-                        <div class="stat-digit">961</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="col-sm-6 col-lg-3">
+                <div class="card text-white bg-flat-color-1">
+                    <div class="card-body pb-0">
+                        <div class="dropdown float-right">
+                            <button class="btn bg-transparent dropdown-toggle theme-toggle text-light" type="button" id="dropdownMenuButton1" data-toggle="dropdown">
+                                <i class="fa fa-cog"></i>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <div class="dropdown-menu-content">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="mb-0">
+                            <span class="count">10468</span>
+                        </h4>
+                        <p class="text-light">Jumlah Siswa IPA</p>
 
-    <div class="col-lg-3 col-md-6">
-        <div class="card">
-            <div class="card-body">
-                <div class="stat-widget-one">
-                    <div class="stat-icon dib"><i class="ti-user text-primary border-primary"></i></div>
-                    <div class="stat-content dib">
-                        <div class="stat-text">Siswa Angkatan 2018</div>
-                        <div class="stat-digit">961</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                        <div class="chart-wrapper px-0" style="height:70px;" height="70">
+                            <canvas id="widgetChart1"></canvas>
+                        </div>
 
-    <div class="col-lg-3 col-md-6">
-        <div class="card">
-            <div class="card-body">
-                <div class="stat-widget-one">
-                    <div class="stat-icon dib"><i class="ti-user text-primary border-primary"></i></div>
-                    <div class="stat-content dib">
-                        <div class="stat-text">Siswa Angkatan 2019</div>
-                        <div class="stat-digit">961</div>
+                    </div>
+
+                </div>
+            </div>
+
+						<div class="col-sm-6 col-lg-3">
+                <div class="card text-white bg-flat-color-2">
+                    <div class="card-body pb-0">
+                        <div class="dropdown float-right">
+                            <button class="btn bg-transparent dropdown-toggle theme-toggle text-light" type="button" id="dropdownMenuButton2" data-toggle="dropdown">
+                                <i class="fa fa-cog"></i>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                <div class="dropdown-menu-content">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="mb-0">
+                            <span class="count">10468</span>
+                        </h4>
+                        <p class="text-light">Jumlah Siswa IPS</p>
+
+                        <div class="chart-wrapper px-0" style="height:70px;" height="70">
+                            <canvas id="widgetChart2"></canvas>
+                        </div>
+
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+            <!--/.col-->
+
+            <div class="col-sm-6 col-lg-3">
+                <div class="card text-white bg-flat-color-3">
+                    <div class="card-body pb-0">
+                        <div class="dropdown float-right">
+                            <button class="btn bg-transparent dropdown-toggle theme-toggle text-light" type="button" id="dropdownMenuButton3" data-toggle="dropdown">
+                                <i class="fa fa-cog"></i>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
+                                <div class="dropdown-menu-content">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="mb-0">
+                            <span class="count">10468</span>
+                        </h4>
+                        <p class="text-light">Jumlah Guru</p>
+
+                    </div>
+
+                    <div class="chart-wrapper px-0" style="height:70px;" height="70">
+                        <canvas id="widgetChart3"></canvas>
+                    </div>
+                </div>
+            </div>
+            <!--/.col-->
+
+            <div class="col-sm-6 col-lg-3">
+                <div class="card text-white bg-flat-color-4">
+                    <div class="card-body pb-0">
+                        <div class="dropdown float-right">
+                            <button class="btn bg-transparent dropdown-toggle theme-toggle text-light" type="button" id="dropdownMenuButton4" data-toggle="dropdown">
+                                <i class="fa fa-cog"></i>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton4">
+                                <div class="dropdown-menu-content">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="mb-0">
+                            <span class="count">10468</span>
+                        </h4>
+                        <p class="text-light">Lain Lain</p>
+
+                        <div class="chart-wrapper px-3" style="height:70px;" height="70">
+                            <canvas id="widgetChart4"></canvas>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
 </section>
-<!-- <div class="row">
-        <div class="col-sm-4">
-          <h3><p align=center><b>DATA SISWA</b></h3>
-              <p> <p align=center> blm isi.</p> 
-							<body>-->
-<html>
-  
-<table width="100%">
-				<br><h2 align="center">Biodata Siswa</h2>
-					<thead>
-					<tr align="center">
-		<img src="<?php echo base_url() ?>assets_siswa/CHA_0318.jpg" alt="foto" width="100" style="display: block; margin: auto;>
-    <br/> 
-		<br/>		
-
-			
-    <div class="panel-body">
-            <table id="mytable" class="table table-striped table-bordered table-hover table-full-width dataTable" cellspacing="0" width="100%">
-                <thead>
-                    <tr>
-										<tr>
-										<th>NIS</th>
-												<td>:</td>
-												<td>17671671</td></tr>
-        								<tr>
-												</tr>
-												<tr>
-                        <th>Nama</th>
-												<td>:</td>
-												<td>Jonathan liandi</td></tr>
-												</tr>
-												<tr>
-												<th>Jenis Kelamin</th>
-												<td>:</td>
-												<td>Laki Laki</td></tr>
-												</tr>
-												<tr>
-												<th>Telepon</th>
-												<td>:</td>
-												<td>09876544441234</td></tr>
-												</tr>
-												<tr>
-                        <th>Alamat</th>
-												<td>:</td>
-												<td>Jalan Jalan</td></tr>
-                        </tr>
-												<tr>
-												<th>Tanggal Lahir</th>
-												<td>:</td>
-												<td>90 April 1998</td></tr>
-                        </tr>
-                    </tr>
-                </thead>
-            </table>
-        </section>
-    </div>
-
-
-      <!--?php
-      if( ! empty($siswa)){
-        foreach($siswa as $data){
-          echo "<tr>
-          <td>".$data->nis."</td>
-          <td>".$data->nama."</td>
-          <td>".$data->jenis_kelamin."</td>
-          <td>".$data->telp."</td>
-					<td>".$data->alamat."</td>
-					<td>".$data->tanggal_lahir."</td>
-					<td>".$data->foto."</td>
-          <td><a href='".base_url("siswa/ubah/".$data->nis)."'>Ubah</a></td>
-          <td><a href='".base_url("siswa/hapus/".$data->nis)."'>Hapus</a></td>
-          </tr>";
-        }
-      }else{ 
-        echo "<tr><td align='center' colspan='7'>Data Tidak Ada</td></tr>";
-      }
-      ?>
-    </table>
-  </body>
-</html> -->
