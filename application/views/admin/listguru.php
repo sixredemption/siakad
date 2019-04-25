@@ -5,25 +5,17 @@
 					<em class="fa fa-home"></em>
 				</a></li>
 			<li class="active">List Guru</li>
-		</ol><br>
-		<div class="col-lg-10">
-			<form role="search">
-				<div class="form-group" method="get" action="">
-					<label>NIG:</label>
-					<input type="text" name="nig" />
-					<button class="btn btn-info fa fa-search" type="submit" name="cari" value="cari Guru"></button>
-				</div>
-		</div>
+		</ol>	
 	</div>
-	<!--/.row-->
 
 	<div class=container>
 		<div class="row">
 			<div class="col-lg-12">
 				<h1 class="page-header">Daftar Guru</h1>
 				<div class="panel-button-tab-left">
-
-					<button class="btn btn-primary fa fa-user-plus">Tambah Data</button>
+					<form method="post"  action="<?php  echo base_url(). 'admin/addguru'; ?>">
+						<button class="btn btn-primary" id="submit-buttons" type="submit" ​​​​​>Tambah Guru</button>
+					</form>
 				</div>
 
 				<table class="table table-striped">
@@ -110,8 +102,6 @@
 						<button class="btn btn-danger fa fa-trash"></button>
 						</td>
 						</tr>
-
-
 					</tbody>
 					</thead>
 				</table>
