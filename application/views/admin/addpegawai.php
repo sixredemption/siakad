@@ -4,7 +4,7 @@
 				<li><a href="#">
 					<em class="fa fa-home"></em>
 				</a></li>
-				<li class="active">Dashboard</li>
+				<li class="active">Add Pegaawai</li>
 			</ol>
 		</div><!--/.row-->
     <div class="container">
