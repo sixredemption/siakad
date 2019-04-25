@@ -23,30 +23,30 @@
                 </div>
 <div class="card-body">
 
-<form action="<?php echo base_url("C_pegawai/edit/$pegawai->id") ?>" method="post" enctype="multipart/form-data" >
+<form action="<?php echo base_url("Pegawai/edit/$pegawai->id_admin") ?>" method="post" enctype="multipart/form-data" >
 		
-<input type="hidden" name="id" value="<?php echo $pegawai->id?>"/>	
+<input type="hidden" name="id_admin" value="<?php echo $pegawai->id_admin?>"/>	
 
-		<div class="form-group">
+		<!-- <div class="form-group">
 			<label for="nip">NIP :</label>
-			<input type="text" class="form-control" name="nip" value="<?php echo $pegawai->nip ?>">
-		</div>
+			<input type="text" class="form-control" name="nip" value="">
+		</div> -->
         
 		<div class="form-group">
-			<label for="nama">Nama :</label>
-			<input type="text" class="form-control" name="nama" value="<?php echo $pegawai->nama ?>">
+			<label for="nama">Username :</label>
+			<input type="text" class="form-control" name="nama" value="<?php echo $pegawai->username ?>">
 		</div>
 		
 		<div class="form-group">
-            <label for="password">password:</label>
+            <label for="password">Password:</label>
             <input type="password" class="form-control" name="password" value = "<?php echo $pegawai->password ?>">
         </div>
 
-		<div class="form-group">
+		<!-- <div class="form-group">
         	<label for="jk">Jenis Kelamin:</label>
-        	<input type="radio" name="gender" value="L" <?php if($pegawai->gender == 'L'){ echo 'checked'; } ?>>Laki-Laki
-        	<input type="radio" name="gender" value="P" <?php if($pegawai->gender == 'P'){ echo 'checked'; } ?>>Perempuann
-        </div>
+        	<input type="radio" name="gender" value="L" >Laki-Laki
+        	<input type="radio" name="gender" value="P" >Perempuann
+        </div> -->
 
 		<div class="form-group">
             <label for="foto">Photo</label>

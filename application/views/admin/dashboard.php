@@ -58,43 +58,57 @@
 					</div>
 				</div>
 			</div>
+			<!--/.row-->
 		</div>
-		<!--/.row-->
-	</div>
-	<div class="col-md-12">
-		<div class="panel panel-primary ">
-			<div class="panel-heading">
-				Pengumuman
-				<span class="pull-right clickable panel-toggle panel-button-tab-left"><em class="fa fa-toggle-up"></em></span>
-			</div>
-			<div class="panel-body timeline-container">
 
-				<table class="table table-striped">
-					<tbody>
-						<?php
-						foreach ($pengumuman  as $umum) :
-							?>
-							<tr>
-								<td>
-									<p><?= $umum->tanggal ?></p>
-								</td>
-								<td>
-									<p><?= $umum->judul ?></p>
-								</td>
+		<?php
+		echo "<pre>";
+		print_r($this->session->userdata());
+		echo "</pre>"; ?>
+		<div class="col-md-12">
+			<div class="panel panel-primary ">
+				<div class="panel-heading">
+					Pengumuman
+					<span class="pull-right clickable panel-toggle panel-button-tab-left"><em class="fa fa-toggle-up"></em></span>
+				</div>
+				<div class="panel-body timeline-container">
 
+					<table class="table table-striped">
+						<tbody>
+							<?php
+							foreach ($pengumuman  as $umum) :
+								?>
+								<tr>
+									<td>
+										<p><?= $umum->tanggal ?></p>
+									</td>
+									<td>
+										<p><?= $umum->judul ?></p>
+									</td>
+
+									<<<<<<< HEAD <td>
+										<p><?= $umum->keterangan ?></p>
+										</td>
+										<td>
+											<?php echo anchor('C_pengumuman/edit/' . $umum->id, 'Edit'); ?>
+											<?php echo anchor('C_pengumuman/delete/' . $umum->id, 'Hapus'); ?>
+										</td>
+								</tr>
+								=======
 								<td>
 									<p><?= $umum->keterangan ?></p>
 								</td>
 								<td>
-									<?php echo anchor('C_pengumuman/edit/' . $umum->id, 'Edit'); ?>
-									<?php echo anchor('C_pengumuman/delete/' . $umum->id, 'Hapus'); ?>
+									<?php echo anchor('Pengumuman/edit/' . $umum->id, 'Edit'); ?>
+									<?php echo anchor('Pengumuman/delete/' . $umum->id, 'Hapus'); ?>
 								</td>
-							</tr>
-						<?php endforeach; ?>
-					</tbody>
-				</table>
-			</div>
+								</tr>
+								>>>>>>> 7a16e1984a808831b71e42e902df59944b57fb6c
+							<?php endforeach; ?>
+						</tbody>
+					</table>
+				</div>
 
+			</div>
 		</div>
-	</div>
-	<!--/.col-->
+		<!--/.col-->

@@ -16,27 +16,27 @@
                 </div>
 <div class="card-body">
 
-<form action="<?php echo base_url(). 'C_pegawai/add'; ?>" method="post" enctype="multipart/form-data" >
-        <div class="form-group-input-group">
+<form action="<?php echo base_url(). 'Pegawai/add'; ?>" method="post" enctype="multipart/form-data" >
+        <!-- <div class="form-group-input-group">
 			<label for="nip">NIP :</label>
 			<input type="text" class="form-control" name="nip">
-		</div>
+		</div> -->
         
 		<div class="form-group">
-			<label for="nama">Nama :</label>
-			<input type="text" class="form-control" name="nama">
+			<label for="username">Username :</label>
+			<input type="text" class="form-control" name="username">
 		</div>
 		
 		<div class="form-group">
-            <label for="password">password:</label>
-            <textarea type="text" class="form-control" name="password"></textarea>
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" name="password">
         </div>
 
-        <div class="form-group">
+        <!-- <div class="form-group">
         <label for="jk">Jenis Kelamin:</label>
         <input type="radio" name="gender" value="L">Laki-Laki
         <input type="radio" name="gender" value="P">Perempuann
-        </div>
+        </div> -->
 
 		<div class="form-group">
             <label for="foto">Foto</label>
