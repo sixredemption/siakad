@@ -6,8 +6,15 @@
                 <i class="fa fa-bars"></i>
             </button>
         <a class="navbar-brand" href="<?=base_url();?>siswa/index"><img src="<?php echo base_url() ?>foto/1.png" width="40px"><span style="color:blue">SMAN 4</span> MACIPO</a>
-        
         </div>
+
+		<div style="color:white">
+            <div class="mx-auto d-block">
+                <img class="rounded-circle mx-auto d-block" src="<?php echo base_url() ?>assets_siswa/images/leo.jpg" width="40px" alt="Card image cap">
+                <h5 class="text-sm-center mt-2 mb-1">Sukiman</h5>
+                <div class="location text-sm-center"><i class="fa fa-map-marker"></i> Malang, Indonesia</div>
+            </div>
+		</div>
 
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
@@ -22,22 +29,22 @@
             <li><a href="<?= base_url();?>siswa/statusspp"><i class="fa fa-money"></i> Status Pembayaran Spp</a></li>
           </ul>
         </menu>
+		</div>
 	</aside>	
 
-<header id="header" class="header">
-
-<div class="header-menu">
-
-    <div class="col-sm-8">
-        <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
-        <div class="header-left">
-            <button class="search-trigger"><i class="fa fa-search"></i></button>
-            <div class="form-inline">
-                <form class="search-form">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search ..." aria-label="Search">
-                    <button class="search-close" type="submit"><i class="fa fa-close"></i></button>
-                </form>
-            </div>
+	<div id="right-panel" class="right-panel">
+        <header id="header" class="header">
+            <div class="header-menu">
+            <div class="col-sm-6">
+                <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
+                <div class="header-left">
+                    <button class="search-trigger"><i class="fa fa-search"></i></button>
+                    <div class="form-inline">
+                        <form class="search-form">
+                            <input class="form-control mr-sm-2" type="text" placeholder="Search ..." aria-label="Search">
+                            <button class="search-close" type="submit"><i class="fa fa-close"></i></button>
+                        </form>
+					</div>
 
             <div class="dropdown for-notification">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="notification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -105,7 +112,7 @@
         </div>
     </div>
 
-    <div class="col-sm-4">
+    <div class="col-sm-6">
         <div class="user-area dropdown float-right">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <img class="user-avatar rounded-circle" src="<?php echo base_url() ?>assets_siswa/CHA_0318.jpg"  >
