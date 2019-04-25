@@ -4,7 +4,7 @@
 				<li><a href="#">
 					<em class="fa fa-home"></em>
 				</a></li>
-				<li class="active">List Guru</li>
+				<li class="active">List Pegawai</li>
 			</ol>
 		</div>
 		<!--/.row-->
