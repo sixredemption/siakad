@@ -12,14 +12,14 @@
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <h3 class="menu-title">Menu</h3><!-- /.menu-title -->    
-                <menu>
+        <menu>
           <ul class="menu-title">
 		  	<li><a href="<?= base_url();?>siswa/index"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= base_url();?>siswa/biodata"><i class="fa fa-user"></i> Biodata siswa</a></li>
             <li><a href="<?= base_url();?>siswa/nilai"><i class="fa fa-plus"></i> Nilai Siswa</a></li>
 			<li><a href="<?= base_url();?>siswa/jadwal"><i class="fa fa-bookmark-o"></i> Jadwal Siswa</a></li>
             <li><a href="<?= base_url();?>siswa/pengumuman"><i class="fa fa-bell"></i> Pengumuman</a></li>
-            <li><a href="<?= base_url();?>siswa/statusspp"><i class="fa fa-money"></i>Status Pembayaran Spp</a></li>
+            <li><a href="<?= base_url();?>siswa/statusspp"><i class="fa fa-money"></i> Status Pembayaran Spp</a></li>
           </ul>
         </menu>
 	</aside>	
