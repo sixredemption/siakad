@@ -4,7 +4,7 @@
 				<li><a href="#">
 					<em class="fa fa-home"></em>
 				</a></li>
-				<li class="active">Dashboard</li>
+				<li class="active">Tambah Data Siswa</li>
 			</ol>
         </div>      
         <h1>Tambah Data Siswa</h1>
@@ -81,10 +81,12 @@
                         <input class="form-control-file" type="file" class="form-control" name="foto">
                     </div>
                 </div>    
-                
-                    <button type="submit" class="btn btn-primary">Simpan</button>
-                    <button type="reset" class="btn btn-danger">Reset</button>
-                
+                <div class= "col-md-12">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                        <button type="reset" class="btn btn-danger">Reset</button>
+                    </div>                 
+                 </div>     
             </form>
         </div>
 </div>
