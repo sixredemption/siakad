@@ -86,27 +86,17 @@
 										<p><?= $umum->judul ?></p>
 									</td>
 
-									<<<<<<< HEAD <td>
-										<p><?= $umum->keterangan ?></p>
-										</td>
-										<td>
-											<?php echo anchor('C_pengumuman/edit/' . $umum->id, 'Edit'); ?>
-											<?php echo anchor('C_pengumuman/delete/' . $umum->id, 'Hapus'); ?>
-										</td>
-								</tr>
-								=======
-								<td>
-									<p><?= $umum->keterangan ?></p>
-								</td>
-								<td>
-									<?php echo anchor('Pengumuman/edit/' . $umum->id, 'Edit'); ?>
-									<?php echo anchor('Pengumuman/delete/' . $umum->id, 'Hapus'); ?>
-								</td>
-								</tr>
-								>>>>>>> 7a16e1984a808831b71e42e902df59944b57fb6c
-							<?php endforeach; ?>
-						</tbody>
-					</table>
+                            <td><p><?=  $umum->keterangan?></p></td>
+							<td>	
+							<?php echo anchor('Admin/pengumumanEdit/'.$umum->id_pengumuman,'Edit'); ?>
+                            <?php echo anchor('Admin/pengumumanDelete/'.$umum->id_pengumuman,'Hapus'); ?>
+							</td>																			
+						</tr>
+						<?php endforeach; ?>
+					</tbody>	
+								</table>
+					</div>
+								
 				</div>
 
 			</div>

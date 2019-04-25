@@ -25,7 +25,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
 */
 
 
+
+
 $config['base_url'] = 'http://localhost/siakad/';
+
 
 /*
 |--------------------------------------------------------------------------
@@ -38,7 +41,6 @@ $config['base_url'] = 'http://localhost/siakad/';
 |
 */
 $config['index_page'] = '';
-
 /*
 |--------------------------------------------------------------------------
 | URI PROTOCOL

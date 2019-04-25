@@ -3,7 +3,7 @@
 class Model_pengumuman extends CI_Model
 {
     private $_table = "pengumuman";
-    public $id;
+    public $id_pengumuman;
     public $judul;
     public $tanggal;
     public $keterangan;
@@ -31,9 +31,9 @@ class Model_pengumuman extends CI_Model
         return $this->db->get($this->_table)->result();
     }
 
-    public function getById($id)
+    public function getById($id_pengumuman)
     {
-        return $this->db->get_where($this->_table, ["id" => $id])->row();
+        return $this->db->get_where($this->_table, ["id_pengumuman" => $id_pengumuman])->row();
     }
 
     public function save()
@@ -52,7 +52,7 @@ class Model_pengumuman extends CI_Model
     {
         $post = $this->input->post();
         //  var_dump($post);
-        $this->id = $post["id"];
+        $this->id_pengumuman = $post["id_pengumuman"];
         $this->judul = $post["judul"];
         $this->tanggal = $post["tanggal"];
         $this->keterangan = $post["keterangan"];
@@ -63,13 +63,13 @@ class Model_pengumuman extends CI_Model
             $this->foto = $post["old_image"];
         }
 
-        $this->db->update($this->_table, $this, array("id" => $post["id"]));
+        $this->db->update($this->_table, $this, array("id_pengumuman" => $post["id_pengumuman"]));
     }
 
-    public function delete($id)
+    public function delete($id_pengumuman)
     {
-        $this->_deleteImage($id);
-        return $this->db->delete($this->_table, array("id" => $id));
+        $this->_deleteImage($id_pengumuman);
+        return $this->db->delete($this->_table, array("id_pengumuman" => $id_pengumuman));
     }
 
     private function _uploadImage()
@@ -91,9 +91,9 @@ class Model_pengumuman extends CI_Model
         return "default.jpg";
     }
 
-    private function _deleteImage($id)
+    private function _deleteImage($id_pengumuman)
     {
-        $img = $this->getById($id);
+        $img = $this->getById($id_pengumuman);
         if ($img->foto != "default.jpg") {
             $filename = explode(".", $img->foto)[0];
             return array_map('unlink', glob(FCPATH . "assets_home/img/blog/$filename.*"));
