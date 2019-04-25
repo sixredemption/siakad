@@ -6,16 +6,9 @@
 				</a></li>
 				<li class="active">List Pengumuman</li>
 			</ol><br>
-			<!-- <div class="col-lg-10">
-            <form role="search"> -->
-			<!-- <div class="form-group" method="get" action="">
-	        <label>NIS:</label> 
-			<input type="text" name="nis"/>
-	            <button class="btn btn-info fa fa-search" type="submit" name="cari" value="cari Siswa" ></button>
-            </div> -->
 			</div>
 		</div>
-    
+
 		<div class= container>
         <div class="row">
 			<div class="col-lg-12">
