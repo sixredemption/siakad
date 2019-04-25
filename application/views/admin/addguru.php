@@ -4,7 +4,7 @@
             <li><a href="#">
                     <em class="fa fa-home"></em>
                 </a></li>
-            <li class="active">Dashboard</li>
+            <li class="active">Tambah Data Guru</li>
         </ol>
     </div>
     <h1>Tambah Data Guru</h1>
