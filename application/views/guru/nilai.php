@@ -13,13 +13,6 @@
                     Upload Nilai
                 </div>
         
-                <div class="col col-md-4">
-                    <input class="search" type="text" placeholder="Cari..." required>	
-                    <input class="button" type="button" value="Cari">
-                </div>
-            </div>	
-        </div>
-        
         <div class="panel-body">
         <h2>Pilih nilai kelas yang akan diupload<h2>
         
