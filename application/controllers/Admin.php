@@ -480,7 +480,7 @@ public function dataSiswa()
         $data["mapel"] = $var->getById($id_mapel);
         if (!$data["mapel"]) show_404();
         $this->load->view("template_admin/header");
-        $this->load->view("admin/editpengumuman", $data);
+        $this->load->view("admin/editmapel", $data);
         $this->load->view("template_admin/sidebar");
          $this->load->view("template_admin/footer");
     }
@@ -519,7 +519,7 @@ public function dataSiswa()
 
     public function kelasAdd()
     {
-        $tambah = $this->Model_mapel;
+        $tambah = $this->Model_kelas;
         $validation = $this->form_validation;
         $validation->set_rules($tambah->rules());
 
@@ -545,7 +545,7 @@ public function dataSiswa()
         if (!isset($id_kelas)) redirect('Admin/dataPengumuman');
 
         
-        $var = $this->Model_mapel;
+        $var = $this->Model_kelas;
         $validation = $this->form_validation;
         $validation->set_rules($var->rules());
 
@@ -558,7 +558,7 @@ public function dataSiswa()
         $data["kelas"] = $var->getById($id_kelas);
         if (!$data["kelas"]) show_404();
         $this->load->view("template_admin/header");
-        $this->load->view("admin/editpengumuman", $data);
+        $this->load->view("admin/editkelas", $data);
         $this->load->view("template_admin/sidebar");
          $this->load->view("template_admin/footer");
     }
@@ -567,7 +567,7 @@ public function dataSiswa()
     {
         if (!isset($id_kelas)) show_404();
         
-        if ($this->Model_mapel->delete($id_kelas)) {
+        if ($this->Model_kelas->delete($id_kelas)) {
             $data["kelas"] = $this->Model_kelas->getAll();
             $data["jurusan"] = $this->Model_jurusan->getAll();
             $data["mapel"] = $this->Model_mapel->getAll();
@@ -635,7 +635,7 @@ public function dataSiswa()
         $data["jurusan"] = $var->getById($id_jurusan);
         if (!$data["jurusan"]) show_404();
         $this->load->view("template_admin/header");
-        $this->load->view("admin/editpengumuman", $data);
+        $this->load->view("admin/editjurusan", $data);
         $this->load->view("template_admin/sidebar");
          $this->load->view("template_admin/footer");
     }
@@ -712,7 +712,7 @@ public function dataSiswa()
         $data["tahun_ajaran"] = $var->getById($id_tahun_ajaran);
         if (!$data["tahun_ajaran"]) show_404();
         $this->load->view("template_admin/header");
-        $this->load->view("admin/editpengumuman", $data);
+        $this->load->view("admin/edittahun", $data);
         $this->load->view("template_admin/sidebar");
          $this->load->view("template_admin/footer");
     }
@@ -721,7 +721,7 @@ public function dataSiswa()
     {
         if (!isset($id_tahun_ajaran)) show_404();
         
-        if ($this->Model_jurusan->delete($id_tahun_ajaran)) {
+        if ($this->Model_thnAjar->delete($id_tahun_ajaran)) {
             $data["kelas"] = $this->Model_kelas->getAll();
             $data["jurusan"] = $this->Model_jurusan->getAll();
             $data["mapel"] = $this->Model_mapel->getAll();
