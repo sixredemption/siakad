@@ -4,7 +4,7 @@
 				<li><a href="#">
 					<em class="fa fa-home"></em>
 				</a></li>
-				<li class="active">Add Kurikulum</li>
+				<li class="active">Edit Kurikulum</li>
 			</ol><br>
 		</div>
     
