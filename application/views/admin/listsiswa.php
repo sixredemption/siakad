@@ -58,11 +58,7 @@
 						</tr>
 						<?php $nomor++; ?>
 						<?php endforeach; ?>
-<<<<<<< HEAD
-				</tbody>
-=======
 					</tbody>	
->>>>>>> 6ca65af592b57401389001b71a8e408d558a71c3
 			</table>
 			</div>
 			<div>

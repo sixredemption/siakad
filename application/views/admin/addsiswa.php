@@ -67,13 +67,13 @@
                                 </select>
                         </div>
                     </div>
-                </div>
+                
                 <div class="col-md-12">
-                        <div class="form-group">
-                            <label for="jenis_kelamin">Jenis Kelamin</label>
-                            <input type="radio" name="jenis_kelamin" value="Laki-laki">Laki-Laki
-                            <input type="radio" name="jenis_kelamin" value="Perempuan">Perempuann
-                        </div>
+                    <div class="form-group">
+                        <label for="jenis_kelamin">Jenis Kelamin</label>
+                        <input type="radio" name="jenis_kelamin" value="Laki-laki">Laki-Laki
+                        <input type="radio" name="jenis_kelamin" value="Perempuan">Perempuann
+                    </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
@@ -81,10 +81,10 @@
                         <input class="form-control-file" type="file" class="form-control" name="foto">
                     </div>
                 </div>    
-                <div class="col-md-12"> 
+                
                     <button type="submit" class="btn btn-primary">Simpan</button>
                     <button type="reset" class="btn btn-danger">Reset</button>
-                </div>
+                
             </form>
         </div>
 </div>

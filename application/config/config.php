@@ -27,6 +27,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 $config['base_url'] = 'http://localhost:8080/siakad/';
 
+
 /*
 |--------------------------------------------------------------------------
 | Index File
@@ -38,7 +39,6 @@ $config['base_url'] = 'http://localhost:8080/siakad/';
 |
 */
 $config['index_page'] = '';
-
 /*
 |--------------------------------------------------------------------------
 | URI PROTOCOL
