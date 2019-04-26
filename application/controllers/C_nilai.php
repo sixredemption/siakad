@@ -85,8 +85,10 @@ class C_nilai extends CI_Controller {
 				$idSiswa = filter_var(trim($allDataInSheet[$i][$idSiswa]) , FILTER_SANITIZE_STRING) ;
 				$idMapel = filter_var(trim($allDataInSheet[$i][$idMapel]) , FILTER_SANITIZE_STRING) ;
 				$nilaiSiswa = filter_var(trim($allDataInSheet[$i][$nilaiSiswa]) , FILTER_SANITIZE_STRING) ;
-				$fetchData[] = array('id_nilai' => $idNilai)
+				$fetchData[] = array('id_nilai' => $idNilai , 'id_guru' => $idGuru , 'id_kelas' => $idKelas ,
+				'id_siswa' => $idSiswa , 'id_mapel' => $idMapel , 'nilai_siswa' => $nilaiSiswa) ;
 			}
+			$data
 		}
 		
 	}
