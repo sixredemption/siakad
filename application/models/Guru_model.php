@@ -45,7 +45,7 @@ class Guru_model extends CI_Model {
 		
 		$this->nig_guru = $post["nig_guru"] ;
 		$this->nama_lengkap = $post["nama_lengkap"] ;
-		$this->tgl_lahir = $post["tgl_lahir"] ;
+		$this->tanggal_lahir = $post["tanggal_lahir"] ;
 		$this->asal_kota = $post["asal_kota"] ;
 		$this->alamat = $post["alamat"] ;
 		$this->no_telp = $post["no_telp"] ;
