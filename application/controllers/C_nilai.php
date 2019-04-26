@@ -88,11 +88,18 @@ class C_nilai extends CI_Controller {
 				$fetchData[] = array('id_nilai' => $idNilai , 'id_guru' => $idGuru , 'id_kelas' => $idKelas ,
 				'id_siswa' => $idSiswa , 'id_mapel' => $idMapel , 'nilai_siswa' => $nilaiSiswa) ;
 			}
-			$data
+			$data['employeeInfo'] = $fetchData ;
+			$this->import->setBatchImport($fetchData) ;
+			$this->import->importData() ;
+		} else {
+			echo "Please import correct file" ;
 		}
 		
 	}
-	{
+	$this->load->view('C_nilai/display' , $data) ;
+
 		
 	}
 }
+
+?>
