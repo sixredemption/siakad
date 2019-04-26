@@ -3,27 +3,26 @@
 class Guru_model extends CI_Model {
 	
 	private $_table = "guru" ;
-	public $id ;
-	public $nig ;
-	public $nama ;
-	public $tgl_lahir ;
-	public $kota_asl;
-	public $gender ;
-	public $alamat ;
-	public $no_telp ;
+	public $id_guru ;
+	public $nig_guru ;
 	public $password ;
-	public $id_pelajaran ;
+	public $nama_lengkap;
+	public $asal_kota ;
+	public $tanggal_lahir;
+	public $jenis_kelamin ;
+	public $no_telp ;
+	public $alamat ;
 	public $foto = "default.jpg";
 	
 
 	public function rules () {
 		return [
-			['field' => 'nig' ,
-			'label' => 'NIG' ,
+			['field' => 'nig_guru' ,
+			'label' => 'nig_guru' ,
 			'rules' => 'required'] ,
 
-			['field' => 'nama' ,
-			'label' => 'Nama' ,
+			['field' => 'nama_lengkap' ,
+			'label' => 'nama_lengkap' ,
 			'rules' => 'required'] ,
 
 			// ['field' => 'tgl_lahir' ,
@@ -36,24 +35,22 @@ class Guru_model extends CI_Model {
 		return $this->db->get($this->_table)->result() ;
 	}
 
-	public function getById($id) {
-		return $this->db->get_where($this->_table , ["id"])->row() ;
+	public function getById($id_guru) {
+		return $this->db->get_where($this->_table, ["id_guru" => $id_guru])->row();
 	}
 
 	public function save() {
 		$post = $this->input->post() ;
 		// var_dump($post);
 		
-		$this->nig = $post["nig"] ;
-		$this->nama = $post["nama"] ;
+		$this->nig_guru = $post["nig_guru"] ;
+		$this->nama_lengkap = $post["nama_lengkap"] ;
 		$this->tgl_lahir = $post["tgl_lahir"] ;
-		$this->kota_asl = $post["kota_asl"] ;
-		$this->gender = $post["gender"] ;
+		$this->asal_kota = $post["asal_kota"] ;
 		$this->alamat = $post["alamat"] ;
 		$this->no_telp = $post["no_telp"] ;
 		$this->password=md5($post["password"]) ;
-		// $this->password = $post["password"] ;
-		$this->id_pelajaran = $post["id_pelajaran"] ;
+		$this->jenis_kelamin = $post["jenis_kelamin"] ;
 		$this->foto = $this->_uploadImage();
 
 		$this->db->insert($this->_table , $this) ;
@@ -62,17 +59,15 @@ class Guru_model extends CI_Model {
 	public function update() {
 		$post = $this->input->post() ;
 		// var_dump($post);
-		$this->id = $post["id"] ;
-		$this->nig = $post["nig"] ;
-		$this->nama = $post["nama"] ;
-		$this->tgl_lahir = $post["tgl_lahir"] ;
-		$this->kota_asl = $post["kota_asl"] ;
-		$this->gender = $post["gender"] ;
+		$this->id_guru = $post["id_guru"] ;
+		$this->nig_guru = $post["nig_guru"] ;
+		$this->nama_lengkap = $post["nama_lengkap"] ;
+		$this->tanggal_lahir = $post["tanggal_lahir"] ;
+		$this->asal_kota = $post["asal_kota"] ;
 		$this->alamat = $post["alamat"] ;
 		$this->no_telp = $post["no_telp"] ;
 		$this->password=md5($post["password"]) ;
-		// $this->password = $post["password"] ;
-		$this->id_pelajaran = $post["id_pelajaran"] ;
+		$this->jenis_kelamin = $post["jenis_kelamin"] ;
 		
 		if (!empty($_FILES["foto"]["name"])) {
             $this->foto = $this->_uploadImage();
@@ -80,20 +75,20 @@ class Guru_model extends CI_Model {
             $this->foto = $post["old_image"];
         }
 
-        $this->db->update($this->_table, $this, array("id" => $post["id"]));
+        $this->db->update($this->_table, $this, array("id_guru" => $post["id_guru"]));
     }	
 
-    public function delete($id)
+    public function delete($id_guru)
     {
-		$this->_deleteImage($id);
-        return $this->db->delete($this->_table, array("id" => $id));
+		$this->_deleteImage($id_guru);
+        return $this->db->delete($this->_table, array("id_guru" => $id_guru));
 	}
 	
 	private function _uploadImage()
     {
         $config['upload_path']          = './foto/guru';
         $config['allowed_types']        = 'gif|jpg|png';
-        $config['file_name']            = $this->nama;
+        $config['file_name']            = $this->nama_lengkap;
         $config['overwrite']            = true;
         $config['max_size']             = 1024; // 1MB
         // $config['max_width']            = 1024;
@@ -108,9 +103,9 @@ class Guru_model extends CI_Model {
         return "default.jpg";
     }
 
-    private function _deleteImage($id)
+    private function _deleteImage($id_guru)
     {
-        $img = $this->getById($id);
+        $img = $this->getById($id_guru);
         if ($img->foto != "default.jpg") {
             $filename = explode(".", $img->foto)[0];
             return array_map('unlink', glob(FCPATH . "foto/guru/$filename.*"));

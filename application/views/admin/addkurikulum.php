@@ -27,7 +27,7 @@
                                                                         
                                     <div class="form-group">
                                         <label for="nama_kelas">Nama Kelas</label>
-                                        <input class="form-control <?php echo form_error('nama_kelas') ? 'is-invalid':'' ?>" type="text" name="nama_kelas" placeholder="Nama Siswa" />
+                                        <input class="form-control <?php echo form_error('nama_kelas') ? 'is-invalid':'' ?>" type="text" name="nama_kelas" placeholder="Nama Kelas" />
                                         <div class="invalid-feedback">
                                         <?php echo form_error('nama_kelas') ?>
                                         </div>

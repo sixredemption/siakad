@@ -21,6 +21,7 @@
 				<table class="table table-striped">
 					<thead>
 						<tr>
+						<th><font face ="Calibri"> NO </font></th>
 							<th>
 								<font face="Calibri">NIG</font>
 							</th>
@@ -45,9 +46,6 @@
 							<th>
 								<font face="Calibri">Password</font>
 							</th>
-							<!-- <th>
-								<font face="Calibri">Id Pelajaran</font>
-							</th> -->
 							<th>
 								<font face="Calibri"> FOTO </font>
 							</th>
@@ -56,11 +54,12 @@
 							</th>
 						</tr>
 					<tbody>
-
+					<?php  $nomor =1; ?>
 						<?php
 						foreach ($guru as $dosen) :
 							?>
 							<tr>
+							<td><?php echo $nomor; ?></td>
 								<td>
 									<p><?= $dosen->nig_guru ?></p>
 								</td>
@@ -85,19 +84,16 @@
 								<td>
 									<p><?= $dosen->password ?></p>
 								</td>
-								<!-- <td>
-													<p><?php
-														?></p>
-												</td> -->
 								<td>
 									<img src="<?php echo base_url('foto/guru/' . $dosen->foto) ?>" width="64" />
 								</td>
 
 								<td>
-									<?php echo anchor('guru/edit/' . $dosen->id_guru, 'Edit'); ?>
-									<?php echo anchor('guru/delete/' . $dosen->id_guru, 'Hapus'); ?>
+									<?php echo anchor('Admin/guruEdit/' . $dosen->id_guru, 'Edit'); ?>
+									<?php echo anchor('Admin/guruDelete/' . $dosen->id_guru, 'Hapus'); ?>
 								</td>
 							</tr>
+							<?php $nomor++; ?>
 						<?php endforeach; ?>
 						<button class="btn btn-success fa fa-edit"></button>
 						<button class="btn btn-danger fa fa-trash"></button>

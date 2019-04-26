@@ -88,10 +88,10 @@
         <input type="radio" name="jenis_kelamin" value="Perempuan" <?php if($siswa->jenis_kelamin == 'Perempuan'){ echo 'checked'; } ?>>Perempuann
         </div>
 
-        <!-- <div class="form-group">
+        <div class="form-group">
             <label for="password">password:</label>
             <input type="password" class="form-control" name="password" value="<?php echo $siswa->password ?>" >
-        </div> -->
+        </div>
 
         <!-- <div class="form-group">
             <label for="Kelas">Jurusan:</label>
@@ -109,6 +109,7 @@
             <input class="form-control-file" type="hidden" name="old_image" value="<?php echo $siswa->foto ?>" />
             <img src="<?php echo base_url('foto/siswa/'.$siswa ->foto) ?>" width="64" />
         </div>
+
 
 <button type="submit" class="btn btn-primary"  >Simpan</button>
 <button type="reset" class="btn btn-danger">Reset</button>
