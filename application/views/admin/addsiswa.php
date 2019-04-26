@@ -13,7 +13,7 @@
             <div class="col-md-8">
                     <div class="form-group-input-group">
                         <label for="nisn">Nisn </label>
-                        <input type="text" class="form-control" name="nis" placeholder="Nomor Induk Siswa">
+                        <input type="text" class="form-control" name="nisn" placeholder="Nomor Induk Siswa">
                     </div>
                 </div>
             <div class="col-md-8">
@@ -21,7 +21,7 @@
                         <label for="nama_siswa">Nama</label>
                         <input class="form-control <?php echo form_error('nama_siswa') ? 'is-invalid':'' ?>" type="text" name="nama_siswa" placeholder="Nama Siswa" />
                         <div class="invalid-feedback">
-                        <?php echo form_error('nama') ?>
+                        <?php echo form_error('nama_siswa') ?>
                         </div>
                     </div>
             </div>
@@ -45,25 +45,16 @@
                 </div>
                 <div class="col-md-6">            
                         <div class="form-group">
-                            <label for="Kelas">Kelas</label>
-                                <select class="form-control" name="kelas">
+                            <label for="id_kelas">Kelas</label>
+                                <select class="form-control" name="id_kelas">
                                     <option value="" disabled selected>pilih kelas</option>
-                                    <option value="1">10-Ipa-1</option>
-                                    <option value="2">10-Ipa-2</option>
-                                    <option value="3">11-Ipa-1</option>
-                                    <option value="4">11-Ipa-2</option>
-                                    <option value="5">12-Ipa-1</option>
-                                    <option value="6">12-Ipa-2</option>
-                                    <option value="7">10-Ips-1</option>
-                                    <option value="8">10-Ips-2</option>
-                                    <option value="9">11-Ips-1</option>
-                                    <option value="10">11-Ips-2</option>
-                                    <option value="11">12-Ips-1</option>
-                                    <option value="12">12-Ips-2</option>
-                                    <option value="13">12-Ips-2</option>
-                                    <option value="14">12-Ips-2</option>
-                                    <option value="15">12-Ips-2</option>
-                                    <option value="16">12-Ips-2</option>  
+                                    <option value="1">10 IPA 1</option>
+                                    <option value="2">10 IPA 2</option>
+                                    <option value="4">11 IPA 1</option>
+                                    <option value="5">11 IPA 21</option>
+                                    <option value="7">12 IPA 1</option>
+                                    <option value="8">12 IPA 2</option>
+                                      
                                 </select>
                         </div>
                     </div>
@@ -75,18 +66,35 @@
                         <input type="radio" name="jenis_kelamin" value="Perempuan">Perempuann
                     </div>
                 </div>
+
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="no_telp"> Nomor Telepon</label>
+                        <input type="text" class="form-control" name="no_telp" placeholder="No Telp">
+                    </div>
+                </div>
+
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="foto">Foto</label>
                         <input class="form-control-file" type="file" class="form-control" name="foto">
                     </div>
-                </div>    
+                </div>  
+                
+                <div class="col-md-6">
+                <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" name="password">
+                </div>
+                </div>  
+
                 <div class= "col-md-12">
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary">Simpan</button>
                         <button type="reset" class="btn btn-danger">Reset</button>
                     </div>                 
-                 </div>     
+                </div>
+
             </form>
         </div>
 </div>
