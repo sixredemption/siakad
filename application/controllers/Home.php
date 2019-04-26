@@ -26,22 +26,26 @@ class Home extends CI_Controller
 		$this->load->view('template_home/slider');
 		$this->load->view('template_home/index', $data);
 		$this->load->view('template_home/footer');
+<<<<<<< HEAD
 		{		
 		  $this->load->view('template_home/index');
 		}
 	}	
+=======
+	}
+>>>>>>> 7f72e2193c0fca4c2b1aa112519a09ffd4f3da2c
 
 	public function pengumuman()
 	{
 		redirect(base_url());
 	}
 
-	public function pengumuman_detail($id)
+	public function pengumuman_detail($id_pengumuman)
 	{
 		// $engkripsi = $this->encryption->decrypt($id);
 
 		$data['judul']	=	"Halaman Pengumuman";
-		$this->db->where('id', $id);
+		$this->db->where('id_pengumuman', $id_pengumuman);
 		$data['pengumuman'] =	$this->db->get($this->_tblpengumuman)->result();
 
 		$this->db->order_by('judul', 'ASC');

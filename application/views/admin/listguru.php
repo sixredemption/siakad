@@ -5,25 +5,17 @@
 					<em class="fa fa-home"></em>
 				</a></li>
 			<li class="active">List Guru</li>
-		</ol><br>
-		<div class="col-lg-10">
-			<form role="search">
-				<div class="form-group" method="get" action="">
-					<label>NIG:</label>
-					<input type="text" name="nig" />
-					<button class="btn btn-info fa fa-search" type="submit" name="cari" value="cari Guru"></button>
-				</div>
-		</div>
+		</ol>
 	</div>
-	<!--/.row-->
 
 	<div class=container>
 		<div class="row">
 			<div class="col-lg-12">
 				<h1 class="page-header">Daftar Guru</h1>
 				<div class="panel-button-tab-left">
-
-					<button class="btn btn-primary fa fa-user-plus">Tambah Data</button>
+					<form method="post" action="<?php echo base_url() . 'admin/addguru'; ?>">
+						<button class="btn btn-primary" id="submit-buttons" type="submit" ​​​​​>Tambah Guru</button>
+					</form>
 				</div>
 
 				<table class="table table-striped">
@@ -53,9 +45,9 @@
 							<th>
 								<font face="Calibri">Password</font>
 							</th>
-							<th>
+							<!-- <th>
 								<font face="Calibri">Id Pelajaran</font>
-							</th>
+							</th> -->
 							<th>
 								<font face="Calibri"> FOTO </font>
 							</th>
@@ -70,19 +62,19 @@
 							?>
 							<tr>
 								<td>
-									<p><?= $dosen->nig ?></p>
+									<p><?= $dosen->nig_guru ?></p>
 								</td>
 								<td>
-									<p><?= $dosen->nama ?></p>
+									<p><?= $dosen->nama_lengkap ?></p>
 								</td>
 								<td>
-									<p><?= $dosen->tgl_lahir ?></p>
+									<p><?= $dosen->tanggal_lahir ?></p>
 								</td>
 								<td>
-									<p><?= $dosen->kota_asl ?></p>
+									<p><?= $dosen->asal_kota ?></p>
 								</td>
 								<td>
-									<p><?= $dosen->gender ?></p>
+									<p><?= $dosen->jenis_kelamin ?></p>
 								</td>
 								<td>
 									<p><?= $dosen->alamat ?></p>
@@ -93,16 +85,17 @@
 								<td>
 									<p><?= $dosen->password ?></p>
 								</td>
-								<td>
-									<p><?= $dosen->id_pelajaran ?></p>
-								</td>
+								<!-- <td>
+													<p><?php
+														?></p>
+												</td> -->
 								<td>
 									<img src="<?php echo base_url('foto/guru/' . $dosen->foto) ?>" width="64" />
 								</td>
 
 								<td>
-									<?php echo anchor('guru/edit/' . $dosen->id, 'Edit'); ?>
-									<?php echo anchor('guru/delete/' . $dosen->id, 'Hapus'); ?>
+									<?php echo anchor('guru/edit/' . $dosen->id_guru, 'Edit'); ?>
+									<?php echo anchor('guru/delete/' . $dosen->id_guru, 'Hapus'); ?>
 								</td>
 							</tr>
 						<?php endforeach; ?>
@@ -110,8 +103,6 @@
 						<button class="btn btn-danger fa fa-trash"></button>
 						</td>
 						</tr>
-
-
 					</tbody>
 					</thead>
 				</table>

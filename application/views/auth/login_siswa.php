@@ -15,8 +15,8 @@
                                     <?= $this->session->flashdata('message'); ?>
                                     <form class="user" method="post" action="<?= base_url('authsiswa'); ?>">
                                         <div class="form-group">
-                                            <input type="text" class="form-control form-control-user" id="nisn" placeholder="Nomor Induk Siswa Nasional" name="nisn_siswa" value="<?= set_value('nisn_siswa'); ?>">
-                                            <?= form_error('nisn_siswa', '<small class="text-danger pl-3">', '</small>'); ?>
+                                            <input type="text" class="form-control form-control-user" id="nisn" placeholder="Nomor Induk Siswa Nasional" name="nisn" value="<?= set_value('nisn'); ?>">
+                                            <?= form_error('nisn', '<small class="text-danger pl-3">', '</small>'); ?>
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user" id="password" placeholder="*******" name="password">

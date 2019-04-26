@@ -7,12 +7,16 @@
 				<li class="active">Kurikulum</li>
 			</ol><br>
 		</div>
-    
+
 		<div class= container>
         <div class="row">
 			<div class="col-lg-12">
 				<h1 class="page-header">Kurikulum</h1>
-            
+                <div class="panel-button-tab-left">
+					<form method="post"  action="<?php  echo base_url(). 'admin/addkurikulum'; ?>">
+						<button class="btn btn-primary" id="submit-buttons" type="submit" ​​​​​>Tambah Kurikulum</button>
+					</form>
+				</div><br>
                 <div class="col-md-12">
 				<div class="panel panel-primary ">
 					<div class="panel-heading">
