@@ -8,13 +8,13 @@
         <a class="navbar-brand" href="<?=base_url();?>siswa/index"><img src="<?php echo base_url() ?>foto/1.png" width="40px"><span style="color:blue">SMAN 4</span> MACIPO</a>
         </div>
 
-		<div style="color:white">
+		<!-- <div style="color:white">
             <div class="mx-auto d-block">
                 <img class="rounded-circle mx-auto d-block" src="<?php echo base_url() ?>assets_siswa/images/leo.jpg" width="40px" alt="Card image cap">
-                <h5 class="text-sm-center mt-2 mb-1">Sukiman</h5>
+                <h5 class="text-sm-center mt-2 mb-1">Siswa</h5>
                 <div class="location text-sm-center"><i class="fa fa-map-marker"></i> Malang, Indonesia</div>
             </div>
-		</div>
+		</div> -->
 
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">

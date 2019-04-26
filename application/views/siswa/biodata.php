@@ -64,9 +64,9 @@
         </tr>
     </table>
 
-</fieldset>
+
 </form>
-</body>
-</section>
+    </body>
+        </section>
 </div>
 
