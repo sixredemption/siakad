@@ -1,9 +1,4 @@
-<div class="container">
-    <section class="content">
-        <div class="jumbotron text-center">
-            <h3> Biodata Guru </h3>
-    </section>
-</div>
+
 
 <div class="col-md-12">
     <section class="content">

@@ -1,8 +1,3 @@
-<div class="container">
-<section class="content">
-<div class="jumbotron text-center">
-  <h2>Nilai Siswa</h2>
-</div>
 
 <div class="col-sm-12">
     <div class="panel panel-default">
