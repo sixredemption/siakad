@@ -5,27 +5,21 @@ class Admin extends CI_Controller
     function __construct()
     {
         parent::__construct();
-        $this->load->model("Model_siswa");
         $this->load->helper(array('form', 'url'));
-        $this->load->model("Guru_model");
-        $this->load->model("Pegawai_model");
-        $this->load->model("Model_pengumuman");
         $this->load->model('login_model');
         $this->load->library('form_validation');
 
         //CRUD SISWA
         $this->load->model("Model_siswa");
-        // $this->load->library('form_validation');
 
         //CRUD PEGAWAI
         $this->load->model("Pegawai_model");
-        // $this->load->library('form_validation');
 
         //CRUD PENGUMUMAN
         $this->load->model("Model_pengumuman");
-        // $this->load->library('form_validation');
 
         //CRUD GURU
+        $this->load->model("Guru_model");
 
         //CRUD MAPEL
         $this->load->model("Model_mapel");
@@ -104,8 +98,6 @@ class Admin extends CI_Controller
     public function listsiswa()
     {
         $data['siswa'] = $this->Model_siswa->getAll();
-        $data["kelas"] = $this->Model_kelas->getAll();
-        // $data['sisw a'] = $this->Model_siswa->getAll();
         $this->load->view('template_admin/header');
         $this->load->view('admin/listsiswa', $data);
         $this->load->view('template_admin/sidebar');
@@ -267,7 +259,7 @@ public function dataSiswa()
             $data["siswa"] = $this->Model_siswa->getAll();
             $this->load->view("template_admin/header");
             $this->load->view("admin/listsiswa", $data);
-            // $this->load->view("template_admin/sidebar");
+            $this->load->view("template_admin/sidebar");
             $this->load->view("template_admin/footer");
         }
     }
