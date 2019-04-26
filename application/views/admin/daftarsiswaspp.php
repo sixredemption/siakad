@@ -64,8 +64,9 @@
 			<tbody>
 				<tr>
 					<?php
-					$this->db->select('nisn,nama_siswa,jenis_kelamin, nama_bulan, semester, tahun_ajaran, status');
+					$this->db->select('nisn,nama_kelas,nama_siswa,jenis_kelamin, nama_bulan, semester, tahun_ajaran, status');
 					// SELECT 
+					$this->db->join('kelas', 'kelas.id_kelas = spp.id_kelas');
 					$this->db->join('siswa', 'siswa.id_siswa = spp.id_siswa');
 					$this->db->join('bulan', 'bulan.id_bulan = spp.id_bulan');
 					$this->db->join('semester', 'semester.id_semester = spp.id_semester');
@@ -76,7 +77,7 @@
 						<td><?= $data['nisn']; ?></td>
 						<td><?= $data['nama_siswa']; ?></td>
 						<td><?= $data['jenis_kelamin']; ?></td>
-						<td>Kosong</td>
+						<td><?= $data['nama_kelas']; ?></td>
 						<td><?= $data['nama_bulan']; ?></td>
 						<td><?= $data['semester']; ?></td>
 						<td><?= $data['tahun_ajaran']; ?></td>
