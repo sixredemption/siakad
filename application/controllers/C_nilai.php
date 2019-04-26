@@ -72,8 +72,19 @@ class C_nilai extends CI_Controller {
 		if ($flag == 1) {
 			for ($i = 2; $i <= $arrayCount; $i++) {
 				$addresses = array() ;
-				$id_nilai = $SheetDataKey['id_nilai'] ;
-				$id_nilai = $SheetDataKey['id_nilai'] ;
+				$idNilai = $SheetDataKey['id_nilai'] ;
+				$idGuru = $SheetDataKey['id_guru'] ;
+				$idKelas = $SheetDataKey['id_kelas'] ;
+				$idSiswa = $SheetDataKey['id_siswa'] ;
+				$idMapel = $SheetDataKey['id_mapel'] ;
+				$nilaiSiswa = $SheetDataKey['nilai_siswa'] ;
+
+				$idNilai = filter_var(trim($allDataInSheet[$i][$idNilai]) , FILTER_SANITIZE_STRING) ;
+				$idNilai = filter_var(trim($allDataInSheet[$i][$idNilai]) , FILTER_SANITIZE_STRING) ;
+				$idNilai = filter_var(trim($allDataInSheet[$i][$idNilai]) , FILTER_SANITIZE_STRING) ;
+				$idNilai = filter_var(trim($allDataInSheet[$i][$idNilai]) , FILTER_SANITIZE_STRING) ;
+				$idNilai = filter_var(trim($allDataInSheet[$i][$idNilai]) , FILTER_SANITIZE_STRING) ;
+				$idNilai = filter_var(trim($allDataInSheet[$i][$idNilai]) , FILTER_SANITIZE_STRING) ;
 			}
 		}
 		
