@@ -1,0 +1,74 @@
+<?php
+
+if (!defined('BASEPATH'))
+	exit('No direct script access allowed') ;
+
+class C_nilai extends CI_Controller {
+	public function __construct() {
+		parent::__construct() ;
+		$this->load->model('nilai_model' , 'C_nilai') ;
+	}
+
+	public function index() {
+		$data['page'] = 'nilai' ;
+		$data['title'] = 'nilai XLSX | TechArise' ;
+		$this->load->view('nilai/index' , $data) ;
+	}
+
+	public function save() {
+		$this->load->library('nilai') ;
+
+		if ($this->input->post('importfile')) {
+			$path = ROOT_UPLOAD_IMPORT_PATH ;
+
+			$config['upload_path'] = $path ;
+			$config['allowed_types'] = 'xlsxlxls|jpg|png' ;
+			$config['remove_spaces'] = TRUE ;
+			$this->upload->initialize($config) ;
+			$this->load->library('upload' , $config) ;
+			if (!$this->upload->do_upload('userfile')) {
+				$error = array ('error' => $this->upload->display_errors()) ;
+			} else {
+				$data = array('upload_data' => $this->upload->data()) ;
+			}
+
+			if(!empty($data['upload_data']['file_name'])) {
+				$import_xls_file = $data['upload_data']['file_name'] ;
+			} else {
+				$import_xls_file - 0;
+			}
+			$inputFileName = $path . $import_xls_file ;
+			try {
+				$inputFileType = PHPExcel_IOFactory::identify($inputFileName) ;
+				$objReader = PHPExcel_IOFactory::createReader($inputFileType) ;
+				$objPHPExcel = $objReader->load($inputFileName) ;
+			} catch (Exception $e) {
+				die('Error loading file "' . pathinfo($inputFileName , PATHINFO_BASENAME)
+					'" : ' . $e->getMessage()) ;
+			}
+			$allDataInSheet = $objPHPExcel->getActiveSheet()->toArray(null , true , true , true) ;
+
+			$arrayCount = count($allDataInSheet) ;
+			$flag = 0 ;
+			$createArray = array('id_nilai' , 'id_guru' , 'id_kelas' , 'id_siswa' , 'id_mapel' , 'nilai_siswa'  ) ;
+			$makeArray = array('id_nilai' => 'id_nilai' , 'id_guru' => 'id_guru' , 'id_kelas' => 'id_kelas' 
+			, 'id_siswa' => 'id_siswa' , 'id_mapel' => 'id_mapel' , 'nilai_siswa' => 'nilai_siswa') ;
+			$SheetDataKey = array() ;
+			foreach ($allDataInSheet as $dataInSheet) {
+				if (in_array(trim($value), $createArray)) {
+					$value = preg_replace('/\s+/' , '' , $value) ;
+					$SheetDataKey[trim($value)] = $key ;
+				} else {
+
+				}
+			}
+
+		}
+		$data = array_diff_key($makeArray , $SheetDataKey) ;
+
+		
+	}
+	{
+		
+	}
+}

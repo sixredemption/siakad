@@ -4,7 +4,7 @@
 			<li><a href="#">
 					<em class="fa fa-home"></em>
 				</a></li>
-			<li class="active">Dashboard</li>
+			<li class="active">Edit Guru</li>
 		</ol>
 	</div>
 
@@ -25,7 +25,7 @@
 
 						<form action="<?php echo base_url("C_guru/edit/$guru->id") ?>" method="post" enctype="multipart/form-data">
 
-							<input type="hidden" name="id" value="<?php echo $guru->id ?>" />
+							<input type="hidden" name="id" value="<?php echo $guru->id_guru ?>" />
 
 							<div class="form-group">
 								<label for="nig_guru">NIG :</label>
@@ -58,13 +58,13 @@
 							</div>
 
 							<div class="form-group">
-								<label for="jenis_kelamin">Jenis Kelamin:</label>
-								<input type="radio" name="gender" value="L" <?php if ($guru->gender == 'L') {
-																				echo 'checked';
-																			} ?>>Laki-Laki
-								<input type="radio" name="gender" value="P" <?php if ($guru->gender == 'P') {
-																				echo 'checked';
-																			} ?>>Perempuann
+								<label for="jk">Jenis Kelamin:</label>
+								<input type="radio" name="jenis_kelamin" value="L" <?php if ($guru->jenis_kelamin == 'L') {
+																						echo 'checked';
+																					} ?>>Laki-Laki
+								<input type="radio" name="jenis_kelamin" value="P" <?php if ($guru->jenis_kelamin == 'P') {
+																						echo 'checked';
+																					} ?>>Perempuann
 							</div>
 
 							<div class="form-group">

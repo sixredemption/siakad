@@ -38,7 +38,6 @@ $config['base_url'] = 'http://localhost:100/siakad/';
 |
 */
 $config['index_page'] = '';
-
 /*
 |--------------------------------------------------------------------------
 | URI PROTOCOL

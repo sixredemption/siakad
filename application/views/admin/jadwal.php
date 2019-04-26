@@ -4,11 +4,11 @@
           <li><a href="#">
             <em class="fa fa-home"></em>
           </a></li>
-          <li class="active">Pengumuman</li>
+          <li class="active">Jadwal Mata Pelajaran</li>
         </ol>
       </div>
       <div class="container-fluid" style="margin-top:10px">
-     <h2 class="card-header">Pengumuman</h2>
+     <h2 class="card-header">Jadwal Pelajaran</h2>
         <div class="col-md-8">
           <div class="panel panel-success">
              <div class="panel-heading">

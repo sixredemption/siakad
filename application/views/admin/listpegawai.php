@@ -4,26 +4,20 @@
 				<li><a href="#">
 					<em class="fa fa-home"></em>
 				</a></li>
-				<li class="active">List Guru</li>
-			</ol><br>
-			<div class="col-lg-10">
-            <form role="search">
-			<div class="form-group" method="get" action="">
-	        <label> NIP :</label> 
-			<input type="text" name="nip"/>
-	            <button class="btn btn-info fa fa-search" type="submit" name="cari" value="cari Guru" ></button>
-            </div>
-			</div>
+				<li class="active">List Pegawai</li>
+			</ol>
 		</div>
 		<!--/.row-->
 		
-		<div class= container>
+		<div class= "container-fluid" >
         <div class="row">
 			<div class="col-lg-12">
 				<h1 class="page-header">Daftar Pegawai</h1>
 	        <div class="panel-button-tab-left">
 
-            <button class="btn btn-primary fa fa-user-plus" >Tambah Data</button>
+			<form method="post"  action="<?php  echo base_url(). 'admin/addpegawai'; ?>">
+			<button class="btn btn-primary" id="submit-buttons" type="submit" ​​​​​>Tambah Pegawai</button>
+			</form>
 			</div>
 			
 				<table class="table table-striped">
@@ -48,8 +42,8 @@
 							<img src="<?php echo base_url('foto/pegawai/'.$admin->foto) ?>" width="64" />
 							</td>
 						<td>
-					 	<?php echo anchor('Pegawai/edit/'.$admin->id_admin,'Edit'); ?>
-						<?php echo anchor('Pegawai/delete/'.$admin->id_admin,'Hapus'); ?> 
+					 	<?php echo anchor('Admin/pegawaiEdit/'.$admin->id_admin,'Edit'); ?>
+						<?php echo anchor('Admin/pegawaiDelete/'.$admin->id_admin,'Hapus'); ?> 
 					 </td>
 					</tr>
 							<?php $nomor++; ?>

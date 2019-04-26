@@ -5,25 +5,25 @@
       </section> 
     </div>
 
-    <div class="col-md-12">
-        <section class="content">
+<div class="col-md-12">
+    <section class="content">
         <div class="panel panel-default">
-        <div class="panel-heading">
-            <i class="fa fa-external-link-square"></i> Biodata
-        </div>        
-        <div class="card-body">
-         <table class="table">
-         <tr>
-            <td rowspan="15" width="250px">
-            <img src="<?php echo base_url() ?>3.jpg" width="300px" height="300px"/>
-            </td>
-        </tr>
+            <div class="panel-heading">
+                <i class="fa fa-external-link-square"></i> Biodata
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <tr>
+                        <td rowspan="15" width="250px">
+                            <img src="<?php echo base_url('foto/pengumuman/default.jpg') ?>" width="300px" height="300px" />
+                        </td>
+                    </tr>
 
-        <tr>
-            <td><b>NIG</b></td>
-            <td>:</td>
-            <td>0973621</td>
-        </tr>
+                    <tr>
+                        <td><b>NIG</b></td>
+                        <td>:</td>
+                        <td><?= $this->session->userdata("nig_guru"); ?></td>
+                    </tr>
 
         <tr>
             <td><b>Nama</b></td>

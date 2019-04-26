@@ -11,20 +11,12 @@
             <div class="card">        
                 <h1 class="card-header">Pengumuman</h1><br>
                 <div class="col-md-6">
-                    <!-- <div class="panel panel-success">
-                        <div class="panel-heading">
-                            Tanggal
-                            <span class="pull-right clickable panel-toggle panel-button-tab-left"><em class="fa fa-toggle-up"></em></span></div>
-                              <div class="panel-body">
-                                <div id="calendar"></div>
-                            </div>
-                        </div> -->
                         <div class="panel panel-default">
                             <div class="panel-heading">
                             Tulis Pengumuman
                             <span class="pull-right clickable panel-toggle panel-button-tab-left"><em class="fa fa-toggle-up"></em></span></div>
                                 <div class="panel-body">
-                                    <form action="<?php echo base_url(). 'Pengumuman/add'; ?>" method="post" enctype="multipart/form-data">
+                                    <form action="<?php echo base_url(). 'Admin/pengumumanAdd'; ?>" method="post" enctype="multipart/form-data">
                                             <fieldset>
                                                 <!-- Name input-->
                                                 <div class="form-group">
