@@ -80,11 +80,12 @@ class C_nilai extends CI_Controller {
 				$nilaiSiswa = $SheetDataKey['nilai_siswa'] ;
 
 				$idNilai = filter_var(trim($allDataInSheet[$i][$idNilai]) , FILTER_SANITIZE_STRING) ;
-				$idNilai = filter_var(trim($allDataInSheet[$i][$idNilai]) , FILTER_SANITIZE_STRING) ;
-				$idNilai = filter_var(trim($allDataInSheet[$i][$idNilai]) , FILTER_SANITIZE_STRING) ;
-				$idNilai = filter_var(trim($allDataInSheet[$i][$idNilai]) , FILTER_SANITIZE_STRING) ;
-				$idNilai = filter_var(trim($allDataInSheet[$i][$idNilai]) , FILTER_SANITIZE_STRING) ;
-				$idNilai = filter_var(trim($allDataInSheet[$i][$idNilai]) , FILTER_SANITIZE_STRING) ;
+				$idGuru = filter_var(trim($allDataInSheet[$i][$idGuru]) , FILTER_SANITIZE_STRING) ;
+				$idKelas = filter_var(trim($allDataInSheet[$i][$idKelas]) , FILTER_SANITIZE_STRING) ;
+				$idSiswa = filter_var(trim($allDataInSheet[$i][$idSiswa]) , FILTER_SANITIZE_STRING) ;
+				$idMapel = filter_var(trim($allDataInSheet[$i][$idMapel]) , FILTER_SANITIZE_STRING) ;
+				$nilaiSiswa = filter_var(trim($allDataInSheet[$i][$nilaiSiswa]) , FILTER_SANITIZE_STRING) ;
+				$fetchData[] = array('id_nilai' => $idNilai)
 			}
 		}
 		
