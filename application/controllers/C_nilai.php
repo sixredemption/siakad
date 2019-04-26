@@ -44,7 +44,7 @@ class C_nilai extends CI_Controller {
 				$objPHPExcel = $objReader->load($inputFileName) ;
 			} catch (Exception $e) {
 				die('Error loading file "' . pathinfo($inputFileName , PATHINFO_BASENAME)
-					'" : ' . $e->getMessage()) ;
+					 . '" : ' . $e->getMessage()) ;
 			}
 			$allDataInSheet = $objPHPExcel->getActiveSheet()->toArray(null , true , true , true) ;
 
@@ -66,6 +66,16 @@ class C_nilai extends CI_Controller {
 		}
 		$data = array_diff_key($makeArray , $SheetDataKey) ;
 
+		if (empty($data)) {
+			$flag = 1 ;
+		}
+		if ($flag == 1) {
+			for ($i = 2; $i <= $arrayCount; $i++) {
+				$addresses = array() ;
+				$id_nilai = $SheetDataKey['id_nilai'] ;
+				$id_nilai = $SheetDataKey['id_nilai'] ;
+			}
+		}
 		
 	}
 	{
