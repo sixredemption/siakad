@@ -3,15 +3,14 @@
 class Model_jurusan extends CI_Model
 {
     private $_table = "jurusan";
-    public $id_jurusan;
-    public $nama_jurusan;
+    public $id_jurusan, $nama_jurusan;
 
     public function rules()
     {
         return [
             [
                 'field' => 'nama_jurusan',
-                'label' => 'nama_jurusan',
+                'label' => 'Nama Jurusan',
                 'rules' => 'required'
             ]
         ];
@@ -32,7 +31,7 @@ class Model_jurusan extends CI_Model
         $post = $this->input->post();
         // $this->id_jurusan = $post["id_jurusan"];
         $this->nama_jurusan = $post["nama_jurusan"];
-        
+
         $this->db->insert($this->_table, $this);
     }
 
@@ -42,14 +41,13 @@ class Model_jurusan extends CI_Model
         //  var_dump($post);
         $this->id_jurusan = $post["id_jurusan"];
         $this->nama_jurusan = $post["nama_jurusan"];
-        
+
         $this->db->update($this->_table, $this, array("id_jurusan" => $post["id_jurusan"]));
     }
 
     public function delete($id_jurusan)
     {
-        
+
         return $this->db->delete($this->_table, array("id_jurusan" => $id_jurusan));
     }
-
 }
