@@ -3,8 +3,17 @@
 class Model_siswa extends CI_Model
 {
     private $_table = "siswa";
-    public  $id_siswa, $id_kelas, $nisn, $password, $nama_siswa, $kota,
-        $tanggal_lahir, $jenis_kelamin, $no_telp, $alamat, $foto = "default.jpg";
+    public $id_siswa;
+    public $id_kelas;
+    public $nisn;
+    public $password;
+    public $nama_siswa;
+    public $kota;
+    public $tanggal_lahir;
+    public $jenis_kelamin;
+    public $no_telp;
+    public $alamat;
+    public $foto = "default.jpg";
 
     public function rules()
     {
@@ -44,7 +53,7 @@ class Model_siswa extends CI_Model
         $this->jenis_kelamin = $post["jenis_kelamin"];
         $this->no_telp = $post["no_telp"];
         $this->alamat = $post["alamat"];
-        $this->password = md5($post["password"]);
+        $this->password=md5($post["password"]);
         $this->foto = $this->_uploadImage();
 
 
@@ -64,7 +73,7 @@ class Model_siswa extends CI_Model
         $this->jenis_kelamin = $post["jenis_kelamin"];
         $this->no_telp = $post["no_telp"];
         $this->alamat = $post["alamat"];
-        $this->password = md5($post["password"]);
+        $this->password=md5($post["password"]) ;
 
         if (!empty($_FILES["foto"]["name"])) {
             $this->foto = $this->_uploadImage();
