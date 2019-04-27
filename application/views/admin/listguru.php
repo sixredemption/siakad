@@ -95,8 +95,6 @@
 							</tr>
 							<?php $nomor++; ?>
 						<?php endforeach; ?>
-						<button class="btn btn-success fa fa-edit"></button>
-						<button class="btn btn-danger fa fa-trash"></button>
 						</td>
 						</tr>
 					</tbody>
