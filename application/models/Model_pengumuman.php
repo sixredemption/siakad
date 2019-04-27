@@ -3,8 +3,11 @@
 class Model_pengumuman extends CI_Model
 {
     private $_table = "pengumuman";
-    public  $id_pengumuman, $judul,
-        $tanggal, $keterangan, $foto = "default.jpg";
+    public $id_pengumuman;
+    public $judul;
+    public $tanggal;
+    public $keterangan;
+    public $foto = "default.jpg";
 
     public function rules()
     {
