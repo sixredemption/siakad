@@ -63,7 +63,4 @@ class Siswa extends CI_Controller
 		$this->load->view('siswa/jadwal');
 		$this->load->view('template_siswa/footer');
 	}
-	//   public function listsiswa(){
-	//   $data['siswa']=$this->SiswaModel->getAll();
-	// 		  // $dataEdit['siswa']=$this->M_siswa->getById();
 }
