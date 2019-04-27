@@ -3,14 +3,15 @@
 class Model_thnAjar extends CI_Model
 {
     private $_table = "tahun_ajaran";
-    public $id_tahun_ajaran, $tahun_ajaran;
+    public $id_tahun_ajaran;
+    public $tahun_ajaran;
 
     public function rules()
     {
         return [
             [
                 'field' => 'tahun_ajaran',
-                'label' => 'Tahun Ajaran',
+                'label' => 'tahun_ajaran',
                 'rules' => 'required'
             ]
         ];
@@ -31,7 +32,7 @@ class Model_thnAjar extends CI_Model
         $post = $this->input->post();
         // $this->id_tahun_ajaran = $post["id_tahun_ajaran"];
         $this->tahun_ajaran = $post["tahun_ajaran"];
-
+        
         $this->db->insert($this->_table, $this);
     }
 
@@ -41,7 +42,7 @@ class Model_thnAjar extends CI_Model
         //  var_dump($post);
         $this->id_tahun_ajaran = $post["id_tahun_ajaran"];
         $this->tahun_ajaran = $post["tahun_ajaran"];
-
+        
         $this->db->update($this->_table, $this, array("id_tahun_ajaran" => $post["id_tahun_ajaran"]));
     }
 
@@ -49,4 +50,5 @@ class Model_thnAjar extends CI_Model
     {
         return $this->db->delete($this->_table, array("id_tahun_ajaran" => $id_tahun_ajaran));
     }
+
 }
