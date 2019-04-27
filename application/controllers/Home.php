@@ -26,10 +26,12 @@ class Home extends CI_Controller
 		$this->load->view('template_home/slider');
 		$this->load->view('template_home/index', $data);
 		$this->load->view('template_home/footer');
+
 		{		
 		  $this->load->view('template_home/index');
 		}
 	}	
+
 	}
 
 	public function pengumuman()

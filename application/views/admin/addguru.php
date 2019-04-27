@@ -9,30 +9,30 @@
     </div>
     <h1>Tambah Data Guru</h1>
       <div class="container-fluid">
-        <form action="<?php echo base_url() . 'guru/add'; ?>" method="post" enctype="multipart/form-data">
+        <form action="<?php echo base_url() . 'Admin/guruAdd'; ?>" method="post" enctype="multipart/form-data">
             <div class="col-md-8">
                 <div class="form-group">
-                    <label for="nig">NIG :</label>
-                    <input type="text" class="form-control" name="nig">
+                    <label for="nig_guru">NIG :</label>
+                    <input type="text" class="form-control" name="nig_guru">
                 </div>    
             </div>
             <div class="col-md-8">
                 <div class="form-group">
-                    <label for="nama">Nama :</label>
-                    <input type="text" class="form-control" name="nama">
+                    <label for="nama_lengkap">Nama :</label>
+                    <input type="text" class="form-control" name="nama_lengkap">
                 </div>
             </div>                
             <div class="col-md-5">
                  <div class="form-group">
-                    <label for="tanggallahir">Tanggal lahir:</label>
-                    <input type="date" class="form-control" name="tgl_lahir">
+                    <label for="tanggal_lahir">Tanggal lahir:</label>
+                    <input type="date" class="form-control" name="tanggal_lahir">
                 </div>
             </div>    
 
             <div class="col-md-3">
                  <div class="form-group">
-                    <label for="kotaasal"> Kota Asal:</label>
-                    <input type="text" class="form-control" name="kota_asl">
+                    <label for="asal_kota"> Kota Asal:</label>
+                    <input type="text" class="form-control" name="asal_kota">
                  </div>
             </div>        
             <div class="col-md-8">
@@ -47,40 +47,12 @@
                     <input type="number" class="form-control" name="no_telp">
                 </div>
             </div>   
-            <div class="col-md-4">
-                <div class="form-group">
-                     <label for="status_user">Mengajar:</label>
-                         <select class="form-control">
-                            <option value="" disabled selected>Mata Pelajaran</option>
-                            <option value="">Agama Islam 1 </option>
-                            <option value="">Agama Islam 2</option>
-                            <option value="">Agama Islam 3</option>
-                            <option value="">Bahasa Indonesia 1</option>
-                            <option value="">Bahasa Indonesia 2</option>
-                            <option value="">Bahasa Indonesia 3</option>
-                            <option value="">Bahasa Inggris 1</option>
-                            <option value="">Bahasa Inggris 2</option>
-                            <option value="">Bahasa Inggris 3</option>
-                            <option value="">Sejarah Wajib</option>
-                            <option value="">Fisika</option>
-                            <option value="">Biologi</option> 
-                            <option value="">Kimia</option> 
-                            <option value="">Ekonomi</option>
-                            <option value="">Sosiologi</option>
-                            <option value="">Geografi</option>
-                            <option value="">Sejarah Peminatan</option>
-                            <option value="">Matematika Pemintana</option>
-                            <option value="">Olahraga 1 </option>
-                            <option value="">Olahraga 2</option>
-                            <option value="">Olahraga 3</option>
-                        </select>
-                </div>
-        </div>
+           
             <div class="col-md-12">
                 <div class="form-group">
-                    <label for="jk">Jenis Kelamin:</label>
-                    <input type="radio" name="gender" value="L">Laki-Laki
-                    <input type="radio" name="gender" value="P">Perempuann
+                    <label for="jenis_kelamin">Jenis Kelamin:</label>
+                    <input type="radio" name="jenis_kelamin" value="Laki-laki">Laki-Laki
+                    <input type="radio" name="jenis_kelamin" value="Perempuan">Perempuann
                 </div>
             </div>            
             <div class="col-md-4">

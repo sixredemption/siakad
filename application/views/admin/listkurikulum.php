@@ -45,8 +45,8 @@
                                     
                                     
                                     <td>
-                                    <?php echo anchor('Admin/siswaEdit/'.$ruang->id_kelas,'Edit'); ?>
-                                    <?php echo anchor('Admin/siswaDelete/'.$ruang->id_kelas,'Hapus'); ?>
+                                    <?php echo anchor('Admin/kelasEdit/'.$ruang->id_kelas,'Edit'); ?>
+                                    <?php echo anchor('Admin/kelasDelete/'.$ruang->id_kelas,'Hapus'); ?>
                                     </td>
                                 </tr>
                                 <?php $nomor++; ?>

@@ -5,27 +5,21 @@ class Admin extends CI_Controller
     function __construct()
     {
         parent::__construct();
-        $this->load->model("Model_siswa");
         $this->load->helper(array('form', 'url'));
-        $this->load->model("Guru_model");
-        $this->load->model("Pegawai_model");
-        $this->load->model("Model_pengumuman");
         $this->load->model('login_model');
         $this->load->library('form_validation');
 
         //CRUD SISWA
         $this->load->model("Model_siswa");
-        // $this->load->library('form_validation');
 
         //CRUD PEGAWAI
         $this->load->model("Pegawai_model");
-        // $this->load->library('form_validation');
 
         //CRUD PENGUMUMAN
         $this->load->model("Model_pengumuman");
-        // $this->load->library('form_validation');
 
         //CRUD GURU
+        $this->load->model("Guru_model");
 
         //CRUD MAPEL
         $this->load->model("Model_mapel");
@@ -54,78 +48,77 @@ class Admin extends CI_Controller
         $data['judul'] = "Wellcome To Administrator";
         $data["pengumuman"] = $this->Model_pengumuman->getAll();
         $this->load->view('template_admin/header', $data);
-        $this->load->view('admin/dashboard');
         $this->load->view('template_admin/sidebar');
+        $this->load->view('admin/dashboard');
+      
         $this->load->view('template_admin/footer');
     }
     public function pengumuman()
     {
         $this->load->view('template_admin/header');
-        $this->load->view('admin/pengumuman');
         $this->load->view('template_admin/sidebar');
+        $this->load->view('admin/pengumuman');
         $this->load->view('template_admin/footer');
     }
     public function nilaisiswaipa()
     {
         $this->load->view('template_admin/header');
-        $this->load->view('admin/nilaisiswaipa');
         $this->load->view('template_admin/sidebar');
+        $this->load->view('admin/nilaisiswaipa');
         $this->load->view('template_admin/footer');
     }
     public function daftarsiswaspp()
     {
         $this->load->view('template_admin/header');
-        $this->load->view('admin/daftarsiswaspp');
         $this->load->view('template_admin/sidebar');
+        $this->load->view('admin/daftarsiswaspp');
         $this->load->view('template_admin/footer');
     }
     public function nilaisiswaips()
     {
         $this->load->view('template_admin/header');
-        $this->load->view('admin/nilaisiswaips');
         $this->load->view('template_admin/sidebar');
+        $this->load->view('admin/nilaisiswaips');
         $this->load->view('template_admin/footer');
     }
     public function statusspp()
     {
         $this->load->view('template_admin/header');
-        $this->load->view('admin/statusspp');
         $this->load->view('template_admin/sidebar');
+        $this->load->view('admin/statusspp');
         $this->load->view('template_admin/footer');
     }
     public function listguru()
     {
         $data["guru"] = $this->Guru_model->getAll();
         $this->load->view('template_admin/header');
-        $this->load->view('admin/listguru', $data);
         $this->load->view('template_admin/sidebar');
+        $this->load->view('admin/listguru', $data);
         $this->load->view('template_admin/footer');
     }
     public function listsiswa()
     {
         $data['siswa'] = $this->Model_siswa->getAll();
-        $data["kelas"] = $this->Model_kelas->getAll();
-        // $data['sisw a'] = $this->Model_siswa->getAll();
         $this->load->view('template_admin/header');
-        $this->load->view('admin/listsiswa', $data);
         $this->load->view('template_admin/sidebar');
+        $this->load->view('admin/listsiswa', $data);
         $this->load->view('template_admin/footer');
     }
 
     public function listpegawai()
     {
-        $data["pegawai"] = $this->Pegawai_model->getAll();
+        $data["admin"] = $this->Pegawai_model->getAll();
         $this->load->view('template_admin/header');
-        $this->load->view('admin/listpegawai', $data);
         $this->load->view('template_admin/sidebar');
+        $this->load->view('admin/listpegawai', $data);
         $this->load->view('template_admin/footer');
     }
     public function listpengumuman()
     {
         $data["pengumuman"] = $this->Model_pengumuman->getAll();
         $this->load->view('template_admin/header');
-        $this->load->view('admin/listpengumuman', $data);
         $this->load->view('template_admin/sidebar');
+        $this->load->view('admin/listpengumuman', $data);
         $this->load->view('template_admin/footer');
     }
 
@@ -136,8 +129,8 @@ class Admin extends CI_Controller
         $data["mapel"] = $this->Model_mapel->getAll();
         $data["tahun_ajaran"] = $this->Model_thnAjar->getAll();
         $this->load->view('template_admin/header');
-        $this->load->view('admin/listkurikulum', $data);
         $this->load->view('template_admin/sidebar');
+        $this->load->view('admin/listkurikulum', $data);
         $this->load->view('template_admin/footer');
     }
 
@@ -145,8 +138,8 @@ class Admin extends CI_Controller
     {
         $data['judul'] = "Halaman Tambah Guru";
         $this->load->view('template_admin/header');
-        $this->load->view('admin/addguru');
         $this->load->view('template_admin/sidebar');
+        $this->load->view('admin/addguru');
         $this->load->view('template_admin/footer');
     }
 
@@ -154,36 +147,36 @@ class Admin extends CI_Controller
     {
         $data['judul'] = "Halaman Tambah Siswa";
         $this->load->view('template_admin/header', $data);
-        $this->load->view('admin/addsiswa');
         $this->load->view('template_admin/sidebar');
+        $this->load->view('admin/addsiswa');
         $this->load->view('template_admin/footer');
     }
     public function addpegawai(){
         $data['judul'] = "Halaman Tambah Pegawai";
         $this->load->view('template_admin/header',$data);
-        $this->load->view('admin/addpegawai');
         $this->load->view('template_admin/sidebar');
+        $this->load->view('admin/addpegawai');
         $this->load->view('template_admin/footer');
     }
     public function editguru()
     {
         $this->load->view('template_admin/header');
-        $this->load->view('admin/editguru');
         $this->load->view('template_admin/sidebar');
+        $this->load->view('admin/editguru');
         $this->load->view('template_admin/footer');
     }
     public function editpegawai()
     {
         $this->load->view('template_admin/header');
-        $this->load->view('admin/editpegawai');
         $this->load->view('template_admin/sidebar');
+        $this->load->view('admin/editpegawai');
         $this->load->view('template_admin/footer');
     }
     public function uploadjadwal()
     {
         $this->load->view('template_admin/header');
-        $this->load->view('admin/jadwal');
         $this->load->view('template_admin/sidebar');
+        $this->load->view('admin/jadwal');
         $this->load->view('template_admin/footer');
     }
 
@@ -191,8 +184,8 @@ class Admin extends CI_Controller
     {
         $data['judul'] = "Halaman Tambah Pegawai";
         $this->load->view('template_admin/header', $data);
-        $this->load->view('admin/addkurikulum');
         $this->load->view('template_admin/sidebar');
+        $this->load->view('admin/addkurikulum');
         $this->load->view('template_admin/footer');
     }
 
@@ -205,8 +198,8 @@ public function dataSiswa()
     {
         $data["siswa"] = $this->Model_siswa->getAll();
         $this->load->view("template_admin/header");
-        $this->load->view("admin/listsiswa", $data);
         $this->load->view("template_admin/sidebar");
+        $this->load->view("admin/listsiswa", $data);
         $this->load->view("template_admin/footer");
     }
 
@@ -225,8 +218,8 @@ public function dataSiswa()
 
         $data["siswa"] = $this->Model_siswa->getAll();
         $this->load->view("template_admin/header");
-        $this->load->view("admin/listsiswa", $data);
         $this->load->view("template_admin/sidebar");
+        $this->load->view("admin/listsiswa", $data);
         $this->load->view("template_admin/footer");
     }
 
@@ -254,8 +247,8 @@ public function dataSiswa()
         $data["siswa"] = $var->getById($id_siswa);
         if (!$data["siswa"]) show_404();
         $this->load->view("template_admin/header");
-        $this->load->view("admin/editsiswa", $data);
         $this->load->view("template_admin/sidebar");
+        $this->load->view("admin/editsiswa", $data);
         $this->load->view("template_admin/footer");
     }
 
@@ -266,8 +259,8 @@ public function dataSiswa()
         if ($this->Model_siswa->delete($id_siswa)) {
             $data["siswa"] = $this->Model_siswa->getAll();
             $this->load->view("template_admin/header");
+            $this->load->view("template_admin/sidebar");
             $this->load->view("admin/listsiswa", $data);
-            // $this->load->view("template_admin/sidebar");
             $this->load->view("template_admin/footer");
         }
     }
@@ -278,8 +271,8 @@ public function dataSiswa()
     {
         $data["pegawai"] = $this->Pegawai_model->getAll();
         $this->load->view("template_admin/header");
-        $this->load->view("admin/listpegawai", $data);
         $this->load->view("template_admin/sidebar");
+        $this->load->view("admin/listpegawai", $data);
         $this->load->view("template_admin/footer");
     }
 
@@ -296,17 +289,17 @@ public function dataSiswa()
             // $this->session->set_flashdata('success', 'Berhasil disimpan');
         }
 
-        $data["pegawai"] = $this->Pegawai_model->getAll();
+        $data["admin"] = $this->Pegawai_model->getAll();
         $this->load->view("template_admin/header");
-        $this->load->view("admin/listpegawai", $data);
         $this->load->view("template_admin/sidebar");
+        $this->load->view("admin/listpegawai", $data);
         $this->load->view("template_admin/footer");
     }
 
-    public function pegawaiEdit($id = null)
+    public function pegawaiEdit($id_admin = null)
     {
-        // var_dump($id);
-        if (!isset($id)) redirect('C_pegawai');
+        // var_dump($id_admin);
+        if (!isset($id_admin)) redirect('Admin/dataPegawai');
 
 
         $var = $this->Pegawai_model;
@@ -318,17 +311,11 @@ public function dataSiswa()
             $this->session->set_flashdata('success', 'Berhasil disimpan');
         }
 
-        // $data["pegawai"]=$this->Pegawai_model->getAll();
-        // $this->load->view("template/header");
-        // $this->load->view("admin/listpegawai", $data);
-        // $this->load->view("template/sidebar");
-        // $this->load->view("template/footer");
-
-        $data["pegawai"] = $var->getById($id);
-        if (!$data["pegawai"]) show_404();
+        $data["admin"] = $var->getById($id_admin);
+        if (!$data["admin"]) show_404();
         $this->load->view("template_admin/header");
-        $this->load->view("admin/editpegawai", $data);
         $this->load->view("template_admin/sidebar");
+        $this->load->view("admin/editpegawai", $data);
         $this->load->view("template_admin/footer");
     }
 
@@ -337,10 +324,10 @@ public function dataSiswa()
         if (!isset($id)) show_404();
 
         if ($this->Pegawai_model->delete($id)) {
-            $data["pegawai"] = $this->Pegawai_model->getAll();
+            $data["admin"] = $this->Pegawai_model->getAll();
             $this->load->view("template_admin/header");
-            $this->load->view("admin/listpegawai", $data);
             $this->load->view("template_admin/sidebar");
+            $this->load->view("admin/listpegawai", $data);
             $this->load->view("template_admin/footer");
         }
     }
@@ -352,8 +339,8 @@ public function dataSiswa()
     {
         $data["pengumuman"] = $this->M_pengumuman->getAll();
         $this->load->view("template_admin/header");
-        $this->load->view("admin/listpengumuman", $data);
         $this->load->view("template_admin/sidebar");
+        $this->load->view("admin/listpengumuman", $data);
         $this->load->view("template_admin/footer");
         
         
@@ -372,8 +359,8 @@ public function dataSiswa()
         
         $data["pengumuman"]=$this->Model_pengumuman->getAll();
         $this->load->view("template_admin/header");
-        $this->load->view("admin/dashboard", $data);
         $this->load->view("template_admin/sidebar");
+        $this->load->view("admin/dashboard", $data);
         $this->load->view("template_admin/footer");
         
     }
@@ -402,8 +389,8 @@ public function dataSiswa()
         $data["pengumuman"] = $var->getById($id);
         if (!$data["pengumuman"]) show_404();
         $this->load->view("template_admin/header");
-        $this->load->view("admin/editpengumuman", $data);
         $this->load->view("template_admin/sidebar");
+        $this->load->view("admin/editpengumuman", $data);
          $this->load->view("template_admin/footer");
     }
 
@@ -414,14 +401,85 @@ public function dataSiswa()
         if ($this->Model_pengumuman->delete($id)) {
         $data["pengumuman"]=$this->Model_pengumuman->getAll();
         $this->load->view("template_admin/header");
-        $this->load->view("admin/dashboard", $data);
         $this->load->view("template_admin/sidebar");
+        $this->load->view("admin/dashboard", $data);
         $this->load->view("template_admin/footer");
         }
     }
     
     // ----------------------------BACK END--------------------------------------------------
     // ----------------------------CRUD GURU----------------------------------------------
+
+    public function dataGuru()
+    {
+        $data["guru"] = $this->Guru_model->getAll();
+        $this->load->view("template_admin/header");
+        $this->load->view("template_admin/sidebar");
+        $this->load->view("admin/listguru", $data);
+        $this->load->view("template_admin/footer");
+    }
+
+
+
+    public function guruAdd()
+    {
+        $tambah = $this->Guru_model;
+        $validation = $this->form_validation;
+        $validation->set_rules($tambah->rules());
+
+        if ($validation->run()) {
+            $tambah->save();
+            // $this->session->set_flashdata('success', 'Berhasil disimpan');
+        }
+
+        $data["guru"] = $this->Guru_model->getAll();
+        $this->load->view("template_admin/header");
+        $this->load->view("template_admin/sidebar");
+        $this->load->view("admin/listguru", $data);
+        $this->load->view("template_admin/footer");
+    }
+
+    public function guruEdit($id_guru = null)
+    {
+        // var_dump($id_guru);
+        if (!isset($id_guru)) redirect('c_siswa');
+
+
+        $var = $this->Guru_model;
+        $validation = $this->form_validation;
+        $validation->set_rules($var->rules());
+
+        if ($validation->run()) {
+            $var->update();
+            $this->session->set_flashdata('success', 'Berhasil disimpan');
+        }
+
+        // $data["siswa"]=$this->Guru_model->getAll();
+        // $this->load->view("template/header");
+        // $this->load->view("admin/listsiswa", $data);
+        // $this->load->view("template/sidebar");
+        // $this->load->view("template/footer");
+
+        $data["guru"] = $var->getById($id_guru);
+        if (!$data["guru"]) show_404();
+        $this->load->view("template_admin/header");
+        $this->load->view("template_admin/sidebar");
+        $this->load->view("admin/editguru", $data);
+        $this->load->view("template_admin/footer");
+    }
+
+    public function guruDelete($id_guru = null)
+    {
+        if (!isset($id_guru)) show_404();
+
+        if ($this->Guru_model->delete($id_guru)) {
+            $data["guru"] = $this->Guru_model->getAll();
+            $this->load->view("template_admin/header");
+            $this->load->view("template_admin/sidebar");
+            $this->load->view("admin/listguru", $data);
+            $this->load->view("template_admin/footer");
+        }
+    }
 
     // ----------------------------BACK END--------------------------------------------------
     // ----------------------------CRUD MAPEL----------------------------------------------
@@ -432,8 +490,8 @@ public function dataSiswa()
             $data["mapel"] = $this->Model_mapel->getAll();
             $data["tahun_ajaran"] = $this->Model_thnAjar->getAll();
             $this->load->view('template_admin/header');
-            $this->load->view('admin/listkurikulum', $data);
             $this->load->view('template_admin/sidebar');
+            $this->load->view('admin/listkurikulum', $data);
             $this->load->view('template_admin/footer');
         
         
@@ -455,8 +513,8 @@ public function dataSiswa()
             $data["mapel"] = $this->Model_mapel->getAll();
             $data["tahun_ajaran"] = $this->Model_thnAjar->getAll();
             $this->load->view('template_admin/header');
-            $this->load->view('admin/listkurikulum', $data);
             $this->load->view('template_admin/sidebar');
+            $this->load->view('admin/listkurikulum', $data);
             $this->load->view('template_admin/footer');;
         
     }
@@ -480,8 +538,8 @@ public function dataSiswa()
         $data["mapel"] = $var->getById($id_mapel);
         if (!$data["mapel"]) show_404();
         $this->load->view("template_admin/header");
-        $this->load->view("admin/editpengumuman", $data);
         $this->load->view("template_admin/sidebar");
+        $this->load->view("admin/editmapel", $data);
          $this->load->view("template_admin/footer");
     }
 
@@ -495,8 +553,8 @@ public function dataSiswa()
             $data["mapel"] = $this->Model_mapel->getAll();
             $data["tahun_ajaran"] = $this->Model_thnAjar->getAll();
             $this->load->view('template_admin/header');
-            $this->load->view('admin/listkurikulum', $data);
             $this->load->view('template_admin/sidebar');
+            $this->load->view('admin/listkurikulum', $data);
             $this->load->view('template_admin/footer');
         }
     }
@@ -510,8 +568,8 @@ public function dataSiswa()
             $data["mapel"] = $this->Model_mapel->getAll();
             $data["tahun_ajaran"] = $this->Model_thnAjar->getAll();
             $this->load->view('template_admin/header');
-            $this->load->view('admin/listkurikulum', $data);
             $this->load->view('template_admin/sidebar');
+            $this->load->view('admin/listkurikulum', $data);
             $this->load->view('template_admin/footer');
         
         
@@ -519,7 +577,7 @@ public function dataSiswa()
 
     public function kelasAdd()
     {
-        $tambah = $this->Model_mapel;
+        $tambah = $this->Model_kelas;
         $validation = $this->form_validation;
         $validation->set_rules($tambah->rules());
 
@@ -533,8 +591,8 @@ public function dataSiswa()
         $data["mapel"] = $this->Model_mapel->getAll();
         $data["tahun_ajaran"] = $this->Model_thnAjar->getAll();
         $this->load->view('template_admin/header');
-        $this->load->view('admin/listkurikulum', $data);
         $this->load->view('template_admin/sidebar');
+        $this->load->view('admin/listkurikulum', $data);
         $this->load->view('template_admin/footer');
         
     }
@@ -545,7 +603,7 @@ public function dataSiswa()
         if (!isset($id_kelas)) redirect('Admin/dataPengumuman');
 
         
-        $var = $this->Model_mapel;
+        $var = $this->Model_kelas;
         $validation = $this->form_validation;
         $validation->set_rules($var->rules());
 
@@ -558,23 +616,23 @@ public function dataSiswa()
         $data["kelas"] = $var->getById($id_kelas);
         if (!$data["kelas"]) show_404();
         $this->load->view("template_admin/header");
-        $this->load->view("admin/editpengumuman", $data);
         $this->load->view("template_admin/sidebar");
-         $this->load->view("template_admin/footer");
+        $this->load->view("admin/editkelas", $data);
+        $this->load->view("template_admin/footer");
     }
 
     public function kelasDelete($id_kelas=null)
     {
         if (!isset($id_kelas)) show_404();
         
-        if ($this->Model_mapel->delete($id_kelas)) {
+        if ($this->Model_kelas->delete($id_kelas)) {
             $data["kelas"] = $this->Model_kelas->getAll();
             $data["jurusan"] = $this->Model_jurusan->getAll();
             $data["mapel"] = $this->Model_mapel->getAll();
             $data["tahun_ajaran"] = $this->Model_thnAjar->getAll();
             $this->load->view('template_admin/header');
-            $this->load->view('admin/listkurikulum', $data);
             $this->load->view('template_admin/sidebar');
+            $this->load->view('admin/listkurikulum', $data);
             $this->load->view('template_admin/footer');
         }
     }
@@ -587,8 +645,8 @@ public function dataSiswa()
         $data["mapel"] = $this->Model_mapel->getAll();
         $data["tahun_ajaran"] = $this->Model_thnAjar->getAll();
         $this->load->view('template_admin/header');
-        $this->load->view('admin/listkurikulum', $data);
         $this->load->view('template_admin/sidebar');
+        $this->load->view('admin/listkurikulum', $data);
         $this->load->view('template_admin/footer');
         
         
@@ -610,8 +668,8 @@ public function dataSiswa()
         $data["mapel"] = $this->Model_mapel->getAll();
         $data["tahun_ajaran"] = $this->Model_thnAjar->getAll();
         $this->load->view('template_admin/header');
-        $this->load->view('admin/listkurikulum', $data);
         $this->load->view('template_admin/sidebar');
+        $this->load->view('admin/listkurikulum', $data);
         $this->load->view('template_admin/footer');
         
     }
@@ -635,8 +693,8 @@ public function dataSiswa()
         $data["jurusan"] = $var->getById($id_jurusan);
         if (!$data["jurusan"]) show_404();
         $this->load->view("template_admin/header");
-        $this->load->view("admin/editpengumuman", $data);
         $this->load->view("template_admin/sidebar");
+        $this->load->view("admin/editjurusan", $data); 
          $this->load->view("template_admin/footer");
     }
 
@@ -650,8 +708,8 @@ public function dataSiswa()
             $data["mapel"] = $this->Model_mapel->getAll();
             $data["tahun_ajaran"] = $this->Model_thnAjar->getAll();
             $this->load->view('template_admin/header');
-            $this->load->view('admin/listkurikulum', $data);
             $this->load->view('template_admin/sidebar');
+            $this->load->view('admin/listkurikulum', $data);
             $this->load->view('template_admin/footer');
         }
     }
@@ -664,8 +722,8 @@ public function dataSiswa()
         $data["mapel"] = $this->Model_mapel->getAll();
         $data["tahun_ajaran"] = $this->Model_thnAjar->getAll();
         $this->load->view('template_admin/header');
-        $this->load->view('admin/listkurikulum', $data);
         $this->load->view('template_admin/sidebar');
+        $this->load->view('admin/listkurikulum', $data);
         $this->load->view('template_admin/footer');
         
         
@@ -687,8 +745,8 @@ public function dataSiswa()
         $data["mapel"] = $this->Model_mapel->getAll();
         $data["tahun_ajaran"] = $this->Model_thnAjar->getAll();
         $this->load->view('template_admin/header');
-        $this->load->view('admin/listkurikulum', $data);
         $this->load->view('template_admin/sidebar');
+        $this->load->view('admin/listkurikulum', $data);
         $this->load->view('template_admin/footer');
         
     }
@@ -712,8 +770,8 @@ public function dataSiswa()
         $data["tahun_ajaran"] = $var->getById($id_tahun_ajaran);
         if (!$data["tahun_ajaran"]) show_404();
         $this->load->view("template_admin/header");
-        $this->load->view("admin/editpengumuman", $data);
         $this->load->view("template_admin/sidebar");
+        $this->load->view("admin/edittahun", $data);
          $this->load->view("template_admin/footer");
     }
 
@@ -721,14 +779,14 @@ public function dataSiswa()
     {
         if (!isset($id_tahun_ajaran)) show_404();
         
-        if ($this->Model_jurusan->delete($id_tahun_ajaran)) {
+        if ($this->Model_thnAjar->delete($id_tahun_ajaran)) {
             $data["kelas"] = $this->Model_kelas->getAll();
             $data["jurusan"] = $this->Model_jurusan->getAll();
             $data["mapel"] = $this->Model_mapel->getAll();
             $data["tahun_ajaran"] = $this->Model_thnAjar->getAll();
             $this->load->view('template_admin/header');
-            $this->load->view('admin/listkurikulum', $data);
             $this->load->view('template_admin/sidebar');
+            $this->load->view('admin/listkurikulum', $data);
             $this->load->view('template_admin/footer');;
         }
     }
