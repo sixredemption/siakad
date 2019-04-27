@@ -10,13 +10,16 @@
             
         <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
+				<li>
+                    <a href="index.html"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
+                </li>
                  
         <h3 class="menu-title">MENU</h3><!-- /.menu-title -->            
             
           
 		  	<li><a href="<?= base_url();?>siswa/index"><i class="fa fa-home"></i> Home</a></li>
 			<li><a href="<?= base_url();?>siswa/biodata"><i class="fa fa-user"></i> Biodata siswa</a></li>
-            <li><a href="<?= base_url();?>siswa/nilai"><i class="fa fa-plus"></i> Nilai Siswa</a></li>
+            <li><a href="<?= base_url();?>siswa/nilai"><i class="fa fa-book"></i> Nilai Siswa</a></li>
 			<li><a href="<?= base_url();?>siswa/jadwal"><i class="fa fa-bookmark-o"></i> Jadwal Siswa</a></li>
             <li><a href="<?= base_url();?>siswa/pengumuman"><i class="fa fa-bell"></i> Pengumuman</a></li>
             <li><a href="<?= base_url();?>siswa/statusspp"><i class="fa fa-money"></i> Status Pembayaran Spp</a></li>
@@ -120,4 +123,26 @@
 </div>
 
 
-</header>	
+</header>
+
+		<div class="breadcrumbs">
+            <div class="col-sm-4">
+                <div class="page-header float-left">
+                    <div class="page-title">
+                        <h1>Dashboard</h1>
+                    </div>
+                </div>
+            </div>
+			<div class="col-sm-8">
+                <div class="page-header float-right">
+                    <div class="page-title">
+                        <ol class="breadcrumb text-right">
+                            <li><a href="#">Dashboard</a></li>
+                          
+                            <li class="active">Home</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
