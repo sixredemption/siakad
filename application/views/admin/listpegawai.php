@@ -18,7 +18,7 @@
 			<form method="post"  action="<?php  echo base_url(). 'admin/addpegawai'; ?>">
 			<button class="btn btn-primary" id="submit-buttons" type="submit" ​​​​​>Tambah Pegawai</button>
 			</form>
-			</div>
+			</div><br>
 			
 				<table class="table table-striped">
 				<thead>
