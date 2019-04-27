@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <title><?= $judul; ?></title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="keywords">
-  <meta content="" name="description">
+  <meta content="Siakad, Sistem Informasi Akademik, Sistem Akademik" name="keywords">
+  <meta content="Sistem Informasi Akademik SMAN4 MACIPO" name="description">
 
   <!-- Favicons -->
   <link href="<?= base_url('assets_home/') ?>img/favicon.png" rel="icon">

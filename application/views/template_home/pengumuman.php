@@ -22,8 +22,6 @@
                                 <!-- Brand -->
                                 <a class="navbar-brand page-scroll sticky-logo" href="<?= base_url() ?>">
                                     <h1>SMAN 4 MACIPO</h1>
-                                    <!-- Uncomment below if you prefer to use an image logo -->
-                                    <!-- <img src="img/logo.png" alt="" title=""> -->
                                 </a>
                             </div>
                             <!-- Collect the nav links, forms, and other content for toggling -->

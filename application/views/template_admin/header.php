@@ -22,14 +22,6 @@
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<a class="navbar-brand" href="<?= base_url() ?>"><span>SMAN 4</span> MACIPO</a>
-				<ul class="nav navbar-top-links navbar-right">
-					<li class="dropdown"><a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
-							<em class="fa fa-envelope"></em><span class="label label-danger">14</span>
-						</a>
-					<li class="dropdown"><a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
-							<em class="fa fa-bell"></em><span class="label label-info">4</span>
-					</li>
-				</ul>
 			</div>
 		</div><!-- /.container-fluid -->
 	</nav>
