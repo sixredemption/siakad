@@ -25,7 +25,7 @@ class Pegawai_model extends CI_Model {
 	}
 
 	public function getById($id_admin) {
-		return $this->db->get_where($this->_table , ["id_admin"])->row() ;
+		return $this->db->get_where($this->_table, ["id_admin" => $id_admin])->row();
 	}
 
 	public function save() {
@@ -43,7 +43,7 @@ class Pegawai_model extends CI_Model {
 
 	public function update() {
 		$post = $this->input->post() ;
-		// var_dump($post);
+		//  var_dump($post);
 		$this->id_admin = $post["id_admin"] ;
 		$this->username = $post["username"] ;
 		$this->password=md5($post["password"]) ;

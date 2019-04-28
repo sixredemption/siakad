@@ -29,6 +29,7 @@
 						<th><font face ="Calibri"> kota </font></th>
 						<th><font face ="Calibri"> alamat</font></th>
 						<th><font face ="Calibri"> no_telp </font></th>
+						<th><font face ="Calibri"> password </font></th>
 						<th><font face ="Calibri"> foto </font></th>
 						<th><font face ="Calibri"> menu </font></th>
                     </tr>
@@ -47,6 +48,7 @@
 								<td><p><?=  $murid->kota?></p></td>
 								<td><p><?=  $murid->alamat?></p></td>
 								<td><p><?=  $murid->no_telp?></p></td>
+								<td><p><?=  $murid->password?></p></td>
 								<td>
 								<img src="<?php echo base_url('foto/siswa/'.$murid->foto) ?>" width="64" />
 								</td>

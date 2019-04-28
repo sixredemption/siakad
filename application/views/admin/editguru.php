@@ -23,17 +23,17 @@
 					</div>
 					<div class="card-body">
 
-						<form action="<?php echo base_url("C_guru/edit/$guru->id") ?>" method="post" enctype="multipart/form-data">
+						<form action="<?php echo base_url("Admin/guruEdit/$guru->id_guru") ?>" method="post" enctype="multipart/form-data">
 
-							<input type="hidden" name="id" value="<?php echo $guru->id_guru ?>" />
+							<input type="hidden" name="id_guru" value="<?php echo $guru->id_guru ?>" />
 
 							<div class="form-group">
-								<label for="nig_guru">NIG :</label>
+								<label for="nig">NIG :</label>
 								<input type="text" class="form-control" name="nig_guru" value="<?php echo $guru->nig_guru ?>">
 							</div>
 
 							<div class="form-group">
-								<label for="nama_lengkap">Nama :</label>
+								<label for="nama">Nama :</label>
 								<input type="text" class="form-control" name="nama_lengkap" value="<?php echo $guru->nama_lengkap ?>">
 							</div>
 
@@ -58,19 +58,24 @@
 							</div>
 
 							<div class="form-group">
-								<label for="jk">Jenis Kelamin:</label>
-								<input type="radio" name="jenis_kelamin" value="L" <?php if ($guru->jenis_kelamin == 'L') {
-																						echo 'checked';
-																					} ?>>Laki-Laki
-								<input type="radio" name="jenis_kelamin" value="P" <?php if ($guru->jenis_kelamin == 'P') {
-																						echo 'checked';
-																					} ?>>Perempuann
+								<label for="jenis_kelamin">Jenis Kelamin:</label>
+								<input type="radio" name="jenis_kelamin" value="Laki-laki" <?php if ($guru->jenis_kelamin == 'Laki-laki') {
+																				echo 'checked';
+																			} ?>>Laki-Laki
+								<input type="radio" name="jenis_kelamin" value="Perempuan" <?php if ($guru->jenis_kelamin == 'Perempuan') {
+																				echo 'checked';
+																			} ?>>Perempuann
 							</div>
 
 							<div class="form-group">
-								<label for="foto_profil">Photo</label>
+								<label for="password">password:</label>
+								<input type="password" class="form-control" name="password" value="<?php echo $guru->password ?>">
+							</div>
+
+							<div class="form-group">
+								<label for="foto">Photo</label>
 								<input class="form-control-file" type="file" name="foto" />
-								<input class="form-control-file" type="hidden" name="old_image" value="<?php echo $guru->foto_profil ?>" />
+								<input class="form-control-file" type="hidden" name="old_image" value="<?php echo $guru->foto ?>" />
 								<img src="<?php echo base_url('foto/guru/' . $guru->foto) ?>" width="64" />
 							</div>
 
