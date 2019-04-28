@@ -16,6 +16,7 @@ class C_nilai extends CI_Controller {
         $data['title'] = 'Import XLSX | TechArise';
         $this->load->view('import/index', $data);
     }
+    
     // import excel data
     public function save() {
         $this->load->library('excel');
