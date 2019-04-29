@@ -49,9 +49,9 @@
 							<th>
 								<font face="Calibri"> FOTO </font>
 							</th>
-							<th>
+							<!-- <th>
 								<font face="Calibri"> MENU </font>
-							</th>
+							</th> -->
 						</tr>
 					<tbody>
 					<?php  $nomor =1; ?>
