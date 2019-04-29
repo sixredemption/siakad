@@ -14,7 +14,7 @@
 				<h1 class="page-header">Daftar Siswa</h1>
 			<div class="panel-button-tab-left">				
 			<form method="post"  action="<?php  echo base_url(). 'admin/addsiswa'; ?>">
-				<button class="btn btn-primary" id="submit-buttons" type="submit" ​​​​​>Tambah Pegawai</button>
+				<button class="btn btn-primary" id="submit-buttons" type="submit" ​​​​​>Tambah Siswa</button>
 			</form>
 			</div>	<br>
 			<table class="table table-striped">

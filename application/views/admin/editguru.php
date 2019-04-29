@@ -7,19 +7,24 @@
 			<li class="active">Edit Guru</li>
 		</ol>
 	</div>
-
 	<?php if ($this->session->flashdata('success')) : ?>
 		<div class="alert alert-success" role="alert">
 			<?php echo $this->session->flashdata('success'); ?>
 		</div>
 	<?php endif; ?>
-
-	<div class="container">
-		<div class="row mt-3">
-			<div class="col-md-6">
-				<div class="card">
-					<div class="card-header">
-						<h1>Edit Guru</h1>
+		<h1>Edit Guru</h1>
+	<div class="container-fluid">
+		<div class="panel-button-tab-left">				
+			<form method="post"  action="<?php  echo base_url(). 'admin/listguru'; ?>">
+				<button class="btn btn-primary" id="submit-buttons" type="submit" ​​​​​>List Guru</button>
+			</form>
+		</div><br>
+		<form action="<?php echo base_url("Admin/guruEdit/$guru->id_guru") ?>" method="post" enctype="multipart/form-data">
+			<input type="hidden" name="id_guru" value="<?php echo $guru->id_guru ?>" />
+				<div class="col-md-8">
+					<div class="form-group">
+						<label for="nig">NIG :</label>
+						<input type="text" class="form-control" name="nig_guru" value="<?php echo $guru->nig_guru ?>">
 					</div>
 					<div class="card-body">
 
@@ -66,7 +71,7 @@
 																				echo 'checked';
 																			} ?>>Perempuann
 							</div>
-
+							
 							<div class="form-group">
 								<label for="password">password:</label>
 								<input type="password" class="form-control" name="password" value="<?php echo $guru->password ?>">
@@ -79,13 +84,9 @@
 								<img src="<?php echo base_url('foto/guru/' . $guru->foto) ?>" width="64" />
 							</div>
 
-
-							<button type="submit" class="btn btn-primary">Simpan</button>
-							<button type="reset" class="btn btn-danger">Reset</button>
 						</form>
 					</div>
 				</div>
-			</div>
-		</div>
 	</div>
 </div>
+

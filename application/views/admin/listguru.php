@@ -16,7 +16,7 @@
 					<form method="post" action="<?php echo base_url() . 'admin/addguru'; ?>">
 						<button class="btn btn-primary" id="submit-buttons" type="submit" ​​​​​>Tambah Guru</button>
 					</form>
-				</div>
+				</div><br>
 
 				<table class="table table-striped">
 					<thead>
@@ -95,8 +95,6 @@
 							</tr>
 							<?php $nomor++; ?>
 						<?php endforeach; ?>
-						<button class="btn btn-success fa fa-edit"></button>
-						<button class="btn btn-danger fa fa-trash"></button>
 						</td>
 						</tr>
 					</tbody>
