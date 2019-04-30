@@ -97,8 +97,8 @@
                 <div class="col-md-3">
                     <div class="form-group">
                         <label for="password">password:</label>
-                        <input type="password" class="form-control" name="password" value="<?php echo $siswa->password ?>" >
-                        <input type="checkbox">show password
+                        <input type="password" class="form-control" id="password" >
+                        <input type="checkbox" onclick="myFunction()">Show Password
                     </div>  
                 </div>
 
@@ -110,6 +110,7 @@
                         <img src="<?php echo base_url('foto/siswa/'.$siswa ->foto) ?>" width="64" />
                     </div>
                 </div>   
+
                 <div class=col-md-12>      
                 <button type="submit" class="btn btn-primary"  >Simpan</button>
                 <button type="reset" class="btn btn-danger">Reset</button>
@@ -117,3 +118,13 @@
          </form>
         </div>     
   </div>      
+<script>
+    function myFunction() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
