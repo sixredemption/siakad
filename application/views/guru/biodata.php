@@ -4,13 +4,6 @@
       <h3> Biodata Guru </h3>
       </section> 
     </div>
-
-    <div class="col-md-12">
-        <section class="content">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                <i class="fa fa-external-link-square"></i> Biodata
-            </div>
             
             <div class="card-body">
                 <table class="table">
