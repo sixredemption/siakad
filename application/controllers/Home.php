@@ -31,9 +31,6 @@ class Home extends CI_Controller
 		  $this->load->view('template_home/index');
 		}
 	}	
-
-	}
-
 	public function pengumuman()
 	{
 		redirect(base_url());
@@ -55,3 +52,7 @@ class Home extends CI_Controller
 		$this->load->view('template_home/footer');
 	}
 }
+
+	
+
+	
