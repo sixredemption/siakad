@@ -34,8 +34,8 @@
                     <div class="col col-md-2"><label for="select" class=" form-control-label">Tingkat</label></div>
                     <div class="col-12 col-md-9">
                         <select name="select" id="select" class="form-control">
-                            <option value="0">A</option>
-                            <option value="1">B</option>
+                            <option value="0">1</option>
+                            <option value="1">2</option>
                         </select>
                     </div>      
                     </form>
