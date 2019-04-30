@@ -1,14 +1,9 @@
-<<<<<<< HEAD
-
-=======
-<!-- <div class="container">
+ <div class="container">
  <section class="content">
     <div class="jumbotron text-center"> 
       <h3> Biodata Guru </h3>
       </section> 
     </div>
->>>>>>> eaf64a401cf60670b50949f83ca293ea037a0341
-
 <div class="col-md-12">
     <section class="content">
         <div class="panel panel-default">
@@ -76,4 +71,4 @@
 </form>
 </body>
 </section>
-</div> -->
+</div> 

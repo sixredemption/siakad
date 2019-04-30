@@ -23,15 +23,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-
-
-<<<<<<< HEAD
 $config['base_url'] = 'http://localhost/siakad/';
-
-=======
-$config['base_url'] = 'http://localhost:100/siakad/';
->>>>>>> eaf64a401cf60670b50949f83ca293ea037a0341
-
 /*
 |--------------------------------------------------------------------------
 | Index File
