@@ -1,23 +1,16 @@
 <div class="content mt-3">
 <div class="animated fadeIn">
-
-
 <div class="row">
-
-    
-
-
     <div class="col-lg-6">
             <div class="card">
                 <div class="card-header">
-                    <strong>Basic Form</strong> Elements
+                    <strong>Pilih Jurusan</strong> Nilai yang akan diupload
                 </div>
                 <div class="card-body card-block">
                     <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
                     <div class="col col-md-2"><label for="select" class=" form-control-label">Jurusan</label></div>
                     <div class="col-12 col-md-9">
                         <select name="select" id="select" class="form-control">
-                            <option value="0">Jurusan</option>
                             <option value="1">IPA</option>
                             <option value="2">IPS</option>
                         </select>
@@ -26,35 +19,29 @@
 
                 <div class="card-body card-block">
                     <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
-                    <div class="col col-md-2"><label for="select" class=" form-control-label">Jurusan</label></div>
+                    <div class="col col-md-2"><label for="select" class=" form-control-label">Kelas</label></div>
                     <div class="col-12 col-md-9">
                         <select name="select" id="select" class="form-control">
-                            <option value="0">Jurusan</option>
-                            <option value="1">IPA</option>
-                            <option value="2">IPS</option>
+                            <option value="0">10</option>
+                            <option value="1">11</option>
+                            <option value="2">12</option>
                         </select>
                     </div>
                 </div>
 
                 <div class="card-body card-block">
                     <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
-                    <div class="col col-md-2"><label for="select" class=" form-control-label">Jurusan</label></div>
+                    <div class="col col-md-2"><label for="select" class=" form-control-label">Tingkat</label></div>
                     <div class="col-12 col-md-9">
                         <select name="select" id="select" class="form-control">
-                            <option value="0">Jurusan</option>
-                            <option value="1">IPA</option>
-                            <option value="2">IPS</option>
+                            <option value="0">A</option>
+                            <option value="1">B</option>
                         </select>
                     </div>      
                     </form>
                 </div>
                 <div class="card-footer">
-                    <button type="submit" class="btn btn-primary btn-sm">
-                        <i class="fa fa-dot-circle-o"></i> Submit
-                    </button>
-                    <button type="reset" class="btn btn-danger btn-sm">
-                        <i class="fa fa-ban"></i> Reset
-                    </button>
+                    <a <button type="button" class="btn btn-primary" href="<?= base_url();?>guru/isinilai">Tambah</a></button>                
                 </div>      
                 </div>      
 </div>
