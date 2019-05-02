@@ -29,7 +29,6 @@
 								<tr>
 									<th><font face ="Calibri">No </font></th>
 									<th><font face ="Calibri">Username</font></th>
-									<th><font face ="Calibri">Password</font></th>
 									<th><font face ="Calibri">Foto</font></th>
 									<th><font face ="Calibri">Menu</font></th>
 								</tr>
@@ -42,7 +41,6 @@
 								<tr>
 									<td><?php echo $nomor; ?></td>
 									<td><p><?= $pegawai->username?></p></td>
-									<td><p><?= $pegawai->password?></p></td>
 									<td>
 										<img src="<?php echo base_url('foto/pegawai/'.$pegawai->foto) ?>" width="64" />
 										</td>
