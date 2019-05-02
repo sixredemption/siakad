@@ -8,7 +8,7 @@
 		</ol>
 	</div>
 
-	<div class=container>
+	<div class=container-fluid>
 		<div class="row">
 			<div class="col-lg-12">
 				<h1 class="page-header">Daftar Guru</h1>
@@ -17,43 +17,28 @@
 						<button class="btn btn-primary" id="submit-buttons" type="submit" ​​​​​>Tambah Guru</button>
 					</form>
 				</div><br>
-
-				<table class="table table-striped">
-					<thead>
-						<tr>
-						<th><font face ="Calibri"> NO </font></th>
-							<th>
-								<font face="Calibri">NIG</font>
-							</th>
-							<th>
-								<font face="Calibri">Nama</font>
-							</th>
-							<th>
-								<font face="Calibri">Tanggal Lahir</font>
-							</th>
-							<th>
-								<font face="Calibri">Kota Asal</font>
-							</th>
-							<th>
-								<font face="Calibri">Jenis Kelamin</font>
-							</th>
-							<th>
-								<font face="Calibri">Alamat</font>
-							</th>
-							<th>
-								<font face="Calibri">No Telepon</font>
-							</th>
-							<th>
-								<font face="Calibri">Password</font>
-							</th>
-							<th>
-								<font face="Calibri"> FOTO </font>
-							</th>
-							<!-- <th>
-								<font face="Calibri"> MENU </font>
-							</th> -->
-						</tr>
-					<tbody>
+				<div class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">Data Guru</div>
+						<div class="panel-body">
+							<table data-toggle="table" data-url="<?base_url('assets_admin')?>/tables/data1.json"  data-show-refresh="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name" data-sort-order="desc">
+								<thead>
+								    <tr>
+									<th><font face ="Calibri"> No </font></th>
+									<th data-sortable="true"><font face="Calibri">Nig</font></th>
+									<th data-sortable="true"><font face="Calibri">Nama</font></th>
+									<th><font face="Calibri">Tanggal Lahir</font></th>
+									<th><font face="Calibri">Kota Asal</font></th>
+									<th><font face="Calibri">Jenis Kelamin</font></th>
+									<th><font face="Calibri">Alamat</font></th>
+									<th><font face="Calibri">No Telepon</font></th>
+								
+									<th><font face="Calibri"> Foro </font></th>
+									<th><font face="Calibri"> Menu </font></th>
+									</tr>
+						    	</thead>
+								<tbody>
 					<?php  $nomor =1; ?>
 						<?php
 						foreach ($guru as $dosen) :
@@ -82,15 +67,11 @@
 									<p><?= $dosen->no_telp ?></p>
 								</td>
 								<td>
-									<p><?= $dosen->password ?></p>
-								</td>
-								<td>
 									<img src="<?php echo base_url('foto/guru/' . $dosen->foto) ?>" width="64" />
 								</td>
-
 								<td>
-									<?php echo anchor('Admin/guruEdit/' . $dosen->id_guru, 'Edit'); ?>
-									<?php echo anchor('Admin/guruDelete/' . $dosen->id_guru, 'Hapus'); ?>
+								<?php echo anchor('Admin/guruEdit/' . $dosen->id_guru, '<span class="glyphicon glyphicon-pencil"></span>'); ?>
+								<?php echo anchor('Admin/guruDelete/' . $dosen->id_guru, '<span class="glyphicon glyphicon-trash"></span>'); ?>
 								</td>
 							</tr>
 							<?php $nomor++; ?>
@@ -98,8 +79,8 @@
 						</td>
 						</tr>
 					</tbody>
-					</thead>
 				</table>
 			</div>
 		</div>
 	</div>
+</div>
