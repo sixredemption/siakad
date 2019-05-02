@@ -20,7 +20,7 @@
                         </ul>
             </div>
 
-            <footer class="aside-footer">
+            <!-- <footer class="aside-footer">
                 <div class="container">
                     <div style="color:white">Ikuti juga :</div>
                     <a href="https://www.facebook.com/?ref=tn_tnmn"><i class="fa fa-facebook-square fa-2x"></i></a>
@@ -29,7 +29,7 @@
                     <a href="https://www.youtube.com/watch?v=JbQlX6Px1Qg"><i class="fa  fa-youtube-play fa-2x"></i></a>
                     <a href="https://github.com/sixredemption/siakad"><i class="fa  fa-github fa-2x"></i></a>
                 </div>
-            </footer>
+            </footer> -->
     </aside>
 
     <div id="right-panel" class="right-panel">
