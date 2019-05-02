@@ -16,7 +16,7 @@
                             <li class="active"><a href="<?= base_url(); ?>guru/nilai"><i class="menu-icon ti-plus"></i>  Upload Nilai</a></li>
                             <li class="active"><a href="<?= base_url(); ?>guru/biodata"><i class="menu-icon ti-user"></i>  Biodata Guru</a></li>
                             <li class="active"><a href="<?= base_url(); ?>guru/jadwal"><i class="menu-icon ti-money"></i>  Melihat Jadwal </a></li>
-                            <li class="active"><a href="<?= base_url(); ?>guru/loginguru"><i class="menu-icon ti-power-off"></i> Logout </a></li>
+                            <li class="active"><a href="<?= base_url(); ?>Home"><i class="menu-icon ti-power-off"></i> Logout </a></li>
                         </ul>
             </div>
 
