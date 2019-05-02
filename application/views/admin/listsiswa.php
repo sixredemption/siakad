@@ -63,4 +63,51 @@
 				</table>
 			</div>
 			<div>
+			
+			<div class="container col-md-12">
+		<table class="table table-striped clickable">
+			<thead>
+				<tr>
+				<th><font face ="Calibri"> NO </font></th>
+						<th><font face ="Calibri"> nisn </font></th>
+						<th><font face ="Calibri"> nama_siswa </font></th>
+						<th><font face ="Calibri"> tanggal_lahir </font></th>
+						<th><font face ="Calibri"> jenis_kelamin </font></th>
+						<th><font face ="Calibri"> id_kelas </font></th>
+						<th><font face ="Calibri"> kota </font></th>
+						<th><font face ="Calibri"> alamat</font></th>
+						<th><font face ="Calibri"> no_telp </font></th>
+						<!-- <th><font face ="Calibri"> password </font></th> -->
+						<th><font face ="Calibri"> foto </font></th>
+						<th><font face ="Calibri"> menu </font></th>
+				</tr>
+			<tbody>
+				<tr>
+					<?php
+					$this->db->select('nisn,nama_kelas,nama_siswa, tanggal_lahir,jenis_kelamin, kota, alamat, no_telp, foto');
+					// SELECT 
+					 $q = $this->db->join('kelas', 'kelas.id_kelas = siswa.id_kelas')->get('siswa') ;
+					// $q = $this->db->join('tahun_ajaran', 'tahun_ajaran.id_tahun_ajaran = spp.id_tahun_ajaran')->get('spp');
+					$no = 1;
+					foreach ($q->result_array() as $data) : ?>
+						<td><?= $no++; ?></td>
+						<td><?= $data['nisn']; ?></td>
+						<td><?= $data['nama_siswa']; ?></td>
+						<td><?= $data['jenis_kelamin']; ?></td>
+						<td><?= $data['nama_kelas']; ?></td>
+						
+						
+						<td><?= $data['tanggal_lahir']; ?></td>
+						<td><?= $data['kota']; ?></td>
+						<td><?= $data['alamat']; ?></td>
+						
+						<td><?= $data['foto']; ?></td>
+						<td><?= $data['no_telp']; ?></td>
+					</tr>
+				<?php endforeach; ?>
+			</tbody>
+			</thead>
+		</table>
+	</div>
+			
 </div>

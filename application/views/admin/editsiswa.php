@@ -30,11 +30,12 @@
                             type="text" name="nama_siswa" value="<?php echo $siswa->nama_siswa ?>" />								
                         </div>
                     </div>
+
                     <div class="col-md-8">
                         <div class="form-group">
                             <label for="nisn">Nisn</label>
                             <input class="form-control"
-                            type="text" name="nisn" placeholder="Product name" value="<?php echo $siswa->nisn ?>" />								
+                            type="text" name="nisn"  value="<?php echo $siswa->nisn ?>" />								
                         </div>
                     </div>
                    <div class="col-md-5">    
@@ -94,13 +95,13 @@
                     </div>
                 </div>
 
-                <div class="col-md-3">
+                <!-- <div class="col-md-3">
                     <div class="form-group">
-                        <label for="password">password:</label>
+                        <label for="password">Password:</label>
                         <input type="password" class="form-control" id="password" >
                         <input type="checkbox" onclick="myFunction()">Show Password
                     </div>  
-                </div>
+                </div> -->
 
                 <div class="col-md-12">
                     <div class="form-group">
@@ -116,8 +117,26 @@
                 <button type="reset" class="btn btn-danger">Reset</button>
                 </div>
          </form>
+
+         <form action="<?php echo base_url(). 'Admin/siswaEdit'; ?>" method="post" enctype="multipart/form-data">
+            <div class="col-md-6">
+                <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" name="password">
+                </div>
+            </div> 
+
+            <div class= "col-md-12">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Ganti Password</button>
+                        <button type="reset" class="btn btn-danger">Reset</button>
+                    </div>                 
+                </div>
+            </form>
         </div>     
   </div>      
+
+
 <script>
     function myFunction() {
   var x = document.getElementById("password");

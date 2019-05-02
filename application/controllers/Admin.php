@@ -247,7 +247,7 @@ public function dataSiswa()
         $data["siswa"] = $var->getById($id_siswa);
         if (!$data["siswa"]) show_404();
         $this->load->view("template_admin/header");
-        $this->load->view("template_admin/sidebar");
+        // $this->load->view("template_admin/sidebar");
         $this->load->view("admin/editsiswa", $data);
         $this->load->view("template_admin/footer");
     }
