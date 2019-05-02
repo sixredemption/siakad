@@ -32,7 +32,7 @@ class Home extends CI_Controller
 		}
 	}	
 
-	}
+	
 
 	public function pengumuman()
 	{
@@ -55,3 +55,4 @@ class Home extends CI_Controller
 		$this->load->view('template_home/footer');
 	}
 }
+
