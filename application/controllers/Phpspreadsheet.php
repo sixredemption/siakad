@@ -10,7 +10,7 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 //PhpSpreadsheet
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use phpOffice\phpspreadsheet\Spreadsheet;
 
 class Phpspreadsheet extends CI_Controller {
 
@@ -47,11 +47,11 @@ class Phpspreadsheet extends CI_Controller {
             	$extension = pathinfo($_FILES['fileURL']['name'], PATHINFO_EXTENSION);
 
             	if($extension == 'csv'){
-					$reader = new \PhpOffice\PhpSpreadsheet\Reader\Csv();
+					$reader = new \phpoffice\phpspreadsheet\src\PhpSpreadsheet\Reader\Csv();
 				} elseif($extension == 'xlsx') {
-					$reader = new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
+					$reader = new \phpoffice\phpspreadsheet\src\PhpSpreadsheet\Reader\Xlsx();
 				} else {
-					$reader = new \PhpOffice\PhpSpreadsheet\Reader\Xls();
+					$reader = new \phpoffice\phpspreadsheet\src\PhpSpreadsheet\Reader\Xls();
 				}
 				// file path
 				$spreadsheet = $reader->load($_FILES['fileURL']['tmp_name']);
