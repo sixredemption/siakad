@@ -19,43 +19,41 @@
 			<button class="btn btn-primary" id="submit-buttons" type="submit" ​​​​​>Tambah Pegawai</button>
 			</form>
 			</div><br>
-			
-				<table class="table table-striped">
-				<thead>
-					<tr>
-						<th><font face ="Calibri">No </font></th>
-						<th><font face ="Calibri">Username</font></th>
-						<th><font face ="Calibri">Password</font></th>
-						<th><font face ="Calibri">Foto</font></th>
-						<th><font face ="Calibri">Menu</font></th>
-					</tr>
-					<tbody>
+			<div class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">Data Pegawai</div>
+						<div class="panel-body">
+							<table data-toggle="table" data-url="<?base_url('assets_admin')?>/tables/data1.json"  data-show-refresh="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name" data-sort-order="desc">
+								<thead>
+								<tr>
+									<th><font face ="Calibri">No </font></th>
+									<th><font face ="Calibri">Username</font></th>
+									<th><font face ="Calibri">Foto</font></th>
+									<th><font face ="Calibri">Menu</font></th>
+								</tr>
+						    	</thead>
+								<tbody>
 							<?php  $nomor =1; ?>
 							<?php
 							foreach($admin as $pegawai) :
 							?>
-					<tr>
-						<td><?php echo $nomor; ?></td>
-						<td><p><?= $pegawai->username?></p></td>
-						<td><p><?= $pegawai->password?></p></td>
-						<td>
-							<img src="<?php echo base_url('foto/pegawai/'.$pegawai->foto) ?>" width="64" />
-							</td>
-						<td>
-					 	<?php echo anchor('Admin/pegawaiEdit/'.$pegawai->id_admin,'Edit'); ?>
-						<?php echo anchor('Admin/pegawaiDelete/'.$pegawai->id_admin,'Hapus'); ?> 
-					 </td>
-					</tr>
-							<?php $nomor++; ?>
-							<?php endforeach; ?>
-					</tbody>
-				</thead>
-				</table>
-			</div>
-		</div>
-		</div>
+								<tr>
+									<td><?php echo $nomor; ?></td>
+									<td><p><?= $pegawai->username?></p></td>
+									<td>
+										<img src="<?php echo base_url('foto/pegawai/'.$pegawai->foto) ?>" width="64" />
+										</td>
+									<td>
+									<?php echo anchor('Admin/pegawaiEdit/'.$pegawai->id_admin,'<span class="glyphicon glyphicon-pencil"></span>'); ?>
+									<?php echo anchor('Admin/pegawaiDelete/'.$pegawai->id_admin,'<span class="glyphicon glyphicon-trash"></span>'); ?> 
+								</td>
+								</tr>
+										<?php $nomor++; ?>
+										<?php endforeach; ?>
+								</tbody>
+								</table>
+						</div>
+					</div>
+				</div>					
 </div>
-
-	
-        
-       

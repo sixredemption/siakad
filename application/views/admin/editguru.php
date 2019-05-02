@@ -21,21 +21,11 @@
 		</div><br>
 		<form action="<?php echo base_url("Admin/guruEdit/$guru->id_guru") ?>" method="post" enctype="multipart/form-data">
 			<input type="hidden" name="id_guru" value="<?php echo $guru->id_guru ?>" />
-				<div class="col-md-8">
+				
 					<div class="form-group">
 						<label for="nig">NIG :</label>
 						<input type="text" class="form-control" name="nig_guru" value="<?php echo $guru->nig_guru ?>">
 					</div>
-					<div class="card-body">
-
-						<form action="<?php echo base_url("Admin/guruEdit/$guru->id_guru") ?>" method="post" enctype="multipart/form-data">
-
-							<input type="hidden" name="id_guru" value="<?php echo $guru->id_guru ?>" />
-
-							<div class="form-group">
-								<label for="nig">NIG :</label>
-								<input type="text" class="form-control" name="nig_guru" value="<?php echo $guru->nig_guru ?>">
-							</div>
 
 							<div class="form-group">
 								<label for="nama">Nama :</label>
