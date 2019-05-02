@@ -84,6 +84,16 @@ class Model_siswa extends CI_Model
         $this->db->update($this->_table, $this, array("id_siswa" => $post["id_siswa"]));
     }
 
+    // public function pass()
+    // {
+    //     $post = $this->input->post();
+    //    // var_dump($post);
+       
+    //     $this->password=md5($post["password"]) ;
+
+    //     $this->db->update($this->_table, $this, array("id_siswa" => $post["id_siswa"]));
+    // }
+
     public function delete($id_siswa)
     {
         $this->_deleteImage($id_siswa);
