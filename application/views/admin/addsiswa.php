@@ -74,7 +74,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <div class="form-group">
                         <label for="foto">Foto</label>
                         <input class="form-control-file" type="file" class="form-control" name="foto">
