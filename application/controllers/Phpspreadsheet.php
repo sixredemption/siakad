@@ -1,12 +1,5 @@
 <?php
-/**
- * @package Phpspreadsheet :  Phpspreadsheet
- * @author TechArise Team
- *
- * @idKelas  info@techarise.com
- *   
- * Description of Phpspreadsheet Controller
- */
+
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 //PhpSpreadsheet
