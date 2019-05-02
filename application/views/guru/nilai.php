@@ -40,8 +40,9 @@
                     </div>      
                     </form>
                 </div>
+
                 <div class="card-footer">
-                    <a <button type="button" class="btn btn-primary" href="<?= base_url();?>guru/isinilai">Tambah</a></button>                
+                    <a <button type="button" class="btn btn-primary" href="<?= base_url();?>guru/uploadnilai">Tambah</a></button>                
                 </div>      
                 </div>      
 </div>
