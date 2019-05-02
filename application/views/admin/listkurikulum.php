@@ -34,19 +34,21 @@
                                 <th><font face ="Calibri"> Menu </font></th>
                             </tr>
                             <tbody>
-                                        <?php  $nomor =1; ?>
-                                        <?php 
-                                        foreach($kelas  as $ruang):
-                                        ?>
+                            <?php
+									$this->db->select('nama_jurusan, nama_kelas, id_kelas');
+									// SELECT 
+									$q = $this->db->join('jurusan', 'jurusan.id_jurusan = kelas.id_kelas')->get('kelas');
+									$nomor = 1;
+									foreach ($q->result_array() as $ruang) : ?>
                                 <tr>
                                     <td><?php echo $nomor; ?></td>
-                                    <td><p><?=  $ruang->id_jurusan?></p></td>
-                                    <td><p><?=  $ruang->nama_kelas?></p></td>
+                                    <td><p><?=  $ruang['nama_jurusan']?></p></td>
+                                    <td><p><?=  $ruang['nama_kelas']?></p></td>
                                     
                                     
                                     <td>
-                                    <?php echo anchor('Admin/kelasEdit/'.$ruang->id_kelas,'<span class="glyphicon glyphicon-pencil"></span>'); ?>
-                                    <?php echo anchor('Admin/kelasDelete/'.$ruang->id_kelas,'<span class="glyphicon glyphicon-trash"></span>'); ?>
+                                    <?php echo anchor('Admin/kelasEdit/'.$ruang['id_kelas'],'<span class="glyphicon glyphicon-pencil"></span>'); ?>
+                                    <?php echo anchor('Admin/kelasDelete/'.$ruang['id_kelas'],'<span class="glyphicon glyphicon-trash"></span>'); ?>
                                     </td>
                                 </tr>
                                 <?php $nomor++; ?>

@@ -39,28 +39,30 @@
 									</tr>
 						    	</thead>
 							<tbody>
-									<?php  $nomor =1; ?>
-										<?php 
-											foreach($siswa  as $murid):
-											?>
+							<?php
+									$this->db->select('nisn,nama_siswa,tanggal_lahir,jenis_kelamin, nama_kelas, kota, alamat, no_telp, foto, id_siswa');
+									// SELECT 
+									$q = $this->db->join('kelas', 'kelas.id_kelas = siswa.id_kelas')->get('siswa');
+									$nomor = 1;
+									foreach ($q->result_array() as $murid) : ?>
 									<tr>
 										<td><?php echo $nomor; ?></td>
-										<td><p><?=  $murid->nisn?></p></td>
-										<td><p><?=  $murid->nama_siswa?></p></td>
-										<td><p><?=  $murid->tanggal_lahir?></p></td>
-										<td><p><?=  $murid->jenis_kelamin?></p></td>
-										<td><p><?=  $murid->id_kelas?></p></td>
-										<td><p><?=  $murid->kota?></p></td>
-										<td><p><?=  $murid->alamat?></p></td>
-										<td><p><?=  $murid->no_telp?></p></td>
+										<td><p><?=  $murid['nisn']?></p></td>
+										<td><p><?=  $murid['nama_siswa']?></p></td>
+										<td><p><?=  $murid['tanggal_lahir']?></p></td>
+										<td><p><?=  $murid['jenis_kelamin']?></p></td>
+										<td><p><?=  $murid['nama_kelas']?></p></td>
+										<td><p><?=  $murid['kota']?></p></td>
+										<td><p><?=  $murid['alamat']?></p></td>
+										<td><p><?=  $murid['no_telp']?></p></td>
 									
 										<td>
-										<img src="<?php echo base_url('foto/siswa/'.$murid->foto) ?>" width="64" />
+										<img src="<?php echo base_url('foto/siswa/'.$murid['foto']) ?>" width="64" />
 										</td>
 										<td>
-										<?php echo anchor('Admin/siswaEdit/'.$murid->id_siswa,'<span class="glyphicon glyphicon-pencil">'); ?>
+										<?php echo anchor('Admin/siswaEdit/'.$murid['id_siswa'],'<span class="glyphicon glyphicon-pencil">'); ?>
 						
-										<?php  echo anchor('Admin/siswaDelete/'.$murid->id_siswa, '<span class="glyphicon glyphicon-trash">'); ?>
+										<?php  echo anchor('Admin/siswaDelete/'.$murid['id_siswa'], '<span class="glyphicon glyphicon-trash">'); ?>
 						
 										</i>
 										</td>
@@ -73,4 +75,3 @@
 				</div>
 			</div>
 		</div>
-	
