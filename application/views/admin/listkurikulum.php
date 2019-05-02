@@ -8,7 +8,7 @@
 			</ol><br>
 		</div>
 
-		<div class= container>
+		<div class= container-fluid>
         <div class="row">
 			<div class="col-lg-12">
 				<h1 class="page-header">Kurikulum</h1>
@@ -25,13 +25,13 @@
 					</div>
 					 <div class="panel-body timeline-container">
 						
-                     <table class="table table-striped">
+                     <table data-toggle="table"  data-url="<?base_url('assets_admin')?>/tables/data1.json"  data-show-refresh="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name" data-sort-order="desc">
                         <thead>
                             <tr>
-                                <th><font face ="Calibri"> NO </font></th>
-                                <th><font face ="Calibri"> id_jurusan </font></th>
-                                <th><font face ="Calibri"> nama_kelas </font></th>
-                                <th><font face ="Calibri"> menu </font></th>
+                                <th><font face ="Calibri"> No </font></th>
+                                <th><font face ="Calibri"> Jurusan </font></th>
+                                <th><font face ="Calibri"> Nama Kelas </font></th>
+                                <th><font face ="Calibri"> Menu </font></th>
                             </tr>
                             <tbody>
                                         <?php  $nomor =1; ?>
@@ -45,8 +45,8 @@
                                     
                                     
                                     <td>
-                                    <?php echo anchor('Admin/kelasEdit/'.$ruang->id_kelas,'Edit'); ?>
-                                    <?php echo anchor('Admin/kelasDelete/'.$ruang->id_kelas,'Hapus'); ?>
+                                    <?php echo anchor('Admin/kelasEdit/'.$ruang->id_kelas,'<span class="glyphicon glyphicon-pencil"></span>'); ?>
+                                    <?php echo anchor('Admin/kelasDelete/'.$ruang->id_kelas,'<span class="glyphicon glyphicon-trash"></span>'); ?>
                                     </td>
                                 </tr>
                                 <?php $nomor++; ?>
@@ -63,12 +63,12 @@
 					</div>
 					 <div class="panel-body timeline-container">
 						
-                     <table class="table table-striped">
+                     <table data-toggle="table"  data-url="<?base_url('assets_admin')?>/tables/data1.json"  data-show-refresh="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name" data-sort-order="desc">
                         <thead>
                             <tr>
-                                <th><font face ="Calibri"> NO </font></th>
-                                <th><font face ="Calibri"> nama_jurusan </font></th>
-                                <th><font face ="Calibri"> menu </font></th>
+                                <th><font face ="Calibri"> No </font></th>
+                                <th><font face ="Calibri"> Nama Jurusan </font></th>
+                                <th><font face ="Calibri"> Menu </font></th>
                             </tr>
                             <tbody>
                                         <?php  $nomor =1; ?>
@@ -81,8 +81,8 @@
                                     
                                     
                                     <td>
-                                    <?php echo anchor('Admin/jurusanEdit/'.$jur->id_jurusan,'Edit'); ?>
-                                    <?php echo anchor('Admin/jurusanDelete/'.$jur->id_jurusan,'Hapus'); ?>
+                                    <?php echo anchor('Admin/jurusanEdit/'.$jur->id_jurusan,'<span class="glyphicon glyphicon-pencil"></span>'); ?>
+                                    <?php echo anchor('Admin/jurusanDelete/'.$jur->id_jurusan,'<span class="glyphicon glyphicon-trash"></span>'); ?>
                                     </td>
                                 </tr>
                                 <?php $nomor++; ?>
@@ -99,12 +99,12 @@
 					</div>
 					 <div class="panel-body timeline-container">
 						
-                     <table class="table table-striped">
+                     <table data-toggle="table"  data-url="<?base_url('assets_admin')?>/tables/data1.json"  data-show-refresh="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name" data-sort-order="desc">
                         <thead>
                             <tr>
-                                <th><font face ="Calibri"> NO </font></th>
-                                <th><font face ="Calibri"> nama_mapel </font></th>
-                                <th><font face ="Calibri"> menu </font></th>
+                                <th><font face ="Calibri"> No</font></th>
+                                <th><font face ="Calibri"> Nama Mapel </font></th>
+                                <th><font face ="Calibri"> Menu </font></th>
                             </tr>
                             <tbody>
                                         <?php  $nomor =1; ?>
@@ -117,8 +117,8 @@
                                     
                                     
                                     <td>
-                                    <?php echo anchor('Admin/mapelEdit/'.$mpl->id_mapel,'Edit'); ?>
-                                    <?php echo anchor('Admin/mapelDelete/'.$mpl->id_mapel,'Hapus'); ?>
+                                    <?php echo anchor('Admin/mapelEdit/'.$mpl->id_mapel,'<span class="glyphicon glyphicon-pencil"></span>'); ?>
+                                    <?php echo anchor('Admin/mapelDelete/'.$mpl->id_mapel,'<span class="glyphicon glyphicon-trash"></span>'); ?>
                                     </td>
                                 </tr>
                                 <?php $nomor++; ?>
@@ -135,12 +135,12 @@
 					</div>
 					 <div class="panel-body timeline-container">
 						
-                     <table class="table table-striped">
+                     <table data-toggle="table"  data-url="<?base_url('assets_admin')?>/tables/data1.json"  data-show-refresh="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name" data-sort-order="desc">
                         <thead>
                             <tr>
-                                <th><font face ="Calibri"> NO </font></th>
-                                <th><font face ="Calibri"> tahun_ajaran </font></th>
-                                <th><font face ="Calibri"> menu </font></th>
+                                <th><font face ="Calibri"> No </font></th>
+                                <th><font face ="Calibri"> Tahun Ajaran </font></th>
+                                <th><font face ="Calibri"> Menu </font></th>
                             </tr>
                             <tbody>
                                         <?php  $nomor =1; ?>
@@ -153,8 +153,8 @@
                                     
                                     
                                     <td>
-                                    <?php echo anchor('Admin/tahunEdit/'.$tahun->id_tahun_ajaran,'Edit'); ?>
-                                    <?php echo anchor('Admin/tahunDelete/'.$tahun->id_tahun_ajaran,'Hapus'); ?>
+                                    <?php echo anchor('Admin/tahunEdit/'.$tahun->id_tahun_ajaran,'<span class="glyphicon glyphicon-pencil"></span>'); ?>
+                                    <?php echo anchor('Admin/tahunDelete/'.$tahun->id_tahun_ajaran,'<span class="glyphicon glyphicon-trash"></span>'); ?>
                                     </td>
                                 </tr>
                                 <?php $nomor++; ?>
