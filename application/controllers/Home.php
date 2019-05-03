@@ -1,8 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Home extends CI_Controller
-{
+class Home extends CI_Controller {
 	private $_tblpengumuman	= "pengumuman";
 
 	public function __construct()
@@ -10,8 +9,8 @@ class Home extends CI_Controller
 		parent::__construct();
 	}
 
-	public function index()
-	{
+
+	public function index() {
 
 
 		$data['judul'] = 'SMAN 4 MACIPO';
@@ -27,20 +26,19 @@ class Home extends CI_Controller
 		$this->load->view('template_home/index', $data);
 		$this->load->view('template_home/footer');
 
-		{		
+			
 		  $this->load->view('template_home/index');
 		}
-	}	
+	
 
 	
 
-	public function pengumuman()
-	{
+
+	public function pengumuman() {
 		redirect(base_url());
 	}
 
-	public function pengumuman_detail($id_pengumuman)
-	{
+	public function pengumuman_detail($id_pengumuman) {
 		// $engkripsi = $this->encryption->decrypt($id);
 
 		$data['judul']	=	"Halaman Pengumuman";
@@ -55,3 +53,4 @@ class Home extends CI_Controller
 		$this->load->view('template_home/footer');
 	}
 }
+
