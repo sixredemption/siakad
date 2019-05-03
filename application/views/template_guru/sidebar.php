@@ -15,8 +15,8 @@
                             <li class="active"><a href="<?= base_url(); ?>guru/index"><i class="menu-icon ti-home"></i>  Home</a></li>
                             <li class="active"><a href="<?= base_url(); ?>guru/nilai"><i class="menu-icon ti-plus"></i>  Upload Nilai</a></li>
                             <li class="active"><a href="<?= base_url(); ?>guru/biodata"><i class="menu-icon ti-user"></i>  Biodata Guru</a></li>
-                            <li class="active"><a href="<?= base_url(); ?>guru/jadwal"><i class="menu-icon ti-money"></i>  Melihat Jadwal </a></li>
-                            <li class="active"><a href="<?= base_url(); ?>Home"><i class="menu-icon ti-power-off"></i> Logout </a></li>
+                            <li class="active"><a href="<?= base_url(); ?>guru/jadwal"><i class="menu-icon ti-file"></i>  Download Jadwal </a></li>
+                            <li class="active"><a href="<?= base_url(); ?>Auth/logout"><i class="menu-icon ti-power-off"></i> Logout </a></li>
                         </ul>
             </div>
 
@@ -37,19 +37,7 @@
             <div class="header-menu">
                 <div class="col-sm-6">
                     <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
-                    <div class="header-left">
-                    
-
-                       
-                    
-
-                <div class="col-sm-6">
-                    <div class="user-area dropdown float-right">
-                        
-                    </div>
-                </div>
-            </div>
-            </header>
+        </header>
 
             <div class="breadcrumbs">
             <div class="col-sm-4">
