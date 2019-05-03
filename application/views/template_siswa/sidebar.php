@@ -10,20 +10,18 @@
             
         <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-				<li>
-                    <a href="index.html"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
-                </li>
+				
                  
         <h3 class="menu-title">MENU</h3><!-- /.menu-title -->            
             
-          
-		  	<li><a href="<?= base_url();?>siswa/index"><i class="fa fa-home"></i> Home</a></li>
-			<li><a href="<?= base_url();?>siswa/biodata"><i class="fa fa-user"></i> Biodata siswa</a></li>
-            <li><a href="<?= base_url();?>siswa/nilai"><i class="fa fa-book"></i> Nilai Siswa</a></li>
-			<li><a href="<?= base_url();?>siswa/jadwal"><i class="fa fa-bookmark-o"></i> Jadwal Siswa</a></li>
-            <li><a href="<?= base_url();?>siswa/pengumuman"><i class="fa fa-bell"></i> Pengumuman</a></li>
-            <li><a href="<?= base_url();?>siswa/statusspp"><i class="fa fa-money"></i> Status Pembayaran Spp</a></li>
-          
+		
+		  	<li class="active"><a href="<?= base_url(); ?>siswa/index"><i class="menu-icon ti-home"></i>	Home</a></li>
+			<li class="active"><a href="<?= base_url(); ?>siswa/biodata"><i class="menu-icon ti-user"></i>	Biodata siswa</a></li>
+            <li class="active"><a href="<?= base_url(); ?>siswa/nilai"><i class="menu-icon ti-book"></i>	Nilai Siswa</a></li>
+			<li class="active"><a href="<?= base_url(); ?>siswa/jadwal"><i class="menu-icon ti-map"></i>	Jadwal Siswa</a></li>
+            <li class="active"><a href="<?= base_url(); ?>siswa/pengumuman"><i class="menu-icon ti-bell"></i>	Pengumuman</a></li>
+            <li class="active"><a href="<?= base_url(); ?>siswa/statusspp"><i class="menu-icon ti-money"></i>	Status Pembayaran Spp</a></li>
+			<li class="active"><a href="<?= base_url(); ?>Home"><i class="menu-icon ti-power-off"></i>	Logout</a></li>
         
 		</div>
 	</aside>	
@@ -108,7 +106,7 @@
         </div>
     </div>
 
-    <div class="col-sm-6">
+    <!-- <div class="col-sm-6">
         <div class="user-area dropdown float-right">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <img class="user-avatar rounded-circle" src="<?php echo base_url() ?>assets_siswa/CHA_0318.jpg"  >
@@ -120,7 +118,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 
 </header>
@@ -129,7 +127,7 @@
             <div class="col-sm-4">
                 <div class="page-header float-left">
                     <div class="page-title">
-                        <h1>Dashboard</h1>
+                        <h1>Menu</h1>
                     </div>
                 </div>
             </div>
