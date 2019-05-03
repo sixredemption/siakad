@@ -37,7 +37,7 @@
                             <?php
 									$this->db->select('nama_jurusan, nama_kelas, id_kelas');
 									// SELECT 
-									$q = $this->db->join('jurusan', 'jurusan.id_jurusan = kelas.id_kelas')->get('kelas');
+									$q = $this->db->join('jurusan', 'jurusan.id_jurusan = kelas.id_jurusan')->get('kelas');
 									$nomor = 1;
 									foreach ($q->result_array() as $ruang) : ?>
                                 <tr>
