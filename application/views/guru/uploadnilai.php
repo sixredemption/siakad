@@ -11,6 +11,10 @@
                 <div class="col-12 col-md-9"><input type="file" id="file-input" name="file-input" class="form-control-file"></div>
             </div>
 
+            <div class="card-body card-block">
+                <div class="col col-md-3"><label for="textarea-input" class=" form-control-label">Keterangan</label></div>
+                <div class="col-12 col-md-9"><textarea name="textarea-input" id="textarea-input" rows="5" placeholder="Content..." class="form-control"></textarea></div>
+            </div>
             <div class="card-footer">
                 <a <button type="button" class="btn btn-primary" href="<?= base_url();?>guru/isinilai">Upload</a></button>                
             </div>      
