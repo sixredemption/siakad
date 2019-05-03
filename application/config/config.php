@@ -24,7 +24,7 @@ $config['composer_autoload'] = 'vendor/autoload.php' ;
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost:100/siakad/';
+$config['base_url'] = 'http://localhost/siakad/';
 /*
 |--------------------------------------------------------------------------
 | Index File
