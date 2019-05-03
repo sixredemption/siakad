@@ -34,7 +34,7 @@
 									<th><font face="Calibri">Alamat</font></th>
 									<th><font face="Calibri">No Telepon</font></th>
 								
-									<th><font face="Calibri"> Foro </font></th>
+									<th><font face="Calibri"> Foto </font></th>
 									<th><font face="Calibri"> Menu </font></th>
 									</tr>
 						    	</thead>

@@ -26,45 +26,45 @@
                     <h1>Form Edit Guru</h1>
 				</div>
 
-				<form action = "<?php echo base_url("C_guru/edit/$guru->id_guru") ?>" method = "post" enctype = "multipart/form-data">
+				<form action = "<?php echo base_url("guru/editbiodata") ?>" method = "post" enctype = "multipart/form-data">
 
 
 				<div class="form-group">
 					<label for="nig_guru">NIG :</label>
-					<input type="text" class="form-control" name="nig_guru" value="<?php echo $guru->nig_guru ?>">
+					<input type="text" class="form-control" name="nig_guru" value="">
 				</div>
 
 				<div class="form-group">
 					<label for="nama_lengkap">Nama :</label>
-					<input type="text" class="form-control" name="nama_lengkap" value="<?php echo $guru->nama_lengkap ?>">
+					<input type="text" class="form-control" name="nama_lengkap" value="">
 				</div>
 
 				<div class="form-group">
 					<label for="tanggal_lahir">Tanggal Lahir :</label>
-					<input type="text" class="form-control" name="tanggal_lahir" value="<?php echo $guru->tanggal_lahir ?>">
+					<input type="text" class="form-control" name="tanggal_lahir" value="">
 				</div>
 
 				<div class="form-group">
 					<label for="asal_kota">Kota Asal :</label>
-					<input type="text" class="form-control" name="asal_kota" value="<?php echo $guru->asal_kota ?>">
+					<input type="text" class="form-control" name="asal_kota" value="">
 				</div>
 
 				<div class="form-group">
 					<label for="alamat">Alamat anda :</label>
-					<input type="text" class="form-control" name="alamat" value="<?php echo $guru->alamat ?>">
+					<input type="text" class="form-control" name="alamat" value="">
 				</div>
 
 				<div class="form-group">
 					<label for="no_telp"> Nomer Hp:</label>
-					<input type="number" class="form-control" name="no_telp" value="<?php echo $guru->no_telp ?>">
+					<input type="number" class="form-control" name="no_telp" value="">
 				</div>
 
 				<div class="form-group">
 					<label for="jenis_kelamin">Jenis Kelamin:</label>
-					<input type="radio" name="jenis_kelamin" value="L" <?php if ($guru->jenis_kelamin == 'L') {
+					<input type="radio" name="jenis_kelamin" value="L" <?php if ('L') {
 																	echo 'checked';
 																	} ?>>Laki-Laki
-					<input type="radio" name="jenis_kelamin" value="P" <?php if ($guru->jenis_kelamin == 'P') {
+					<input type="radio" name="jenis_kelamin" value="P" <?php if ('P') {
 																	echo 'checked';
 																	} ?>>Perempuann
 				</div>
@@ -72,8 +72,8 @@
 				<div class="form-group">
 					<label for="foto_profil">Photo</label>
 					<input class="form-control-file" type="file" name="foto" />
-					<input class="form-control-file" type="hidden" name="old_image" value="<?php echo $guru->foto_profil ?>" />
-					<img src="<?php echo base_url('foto/guru/' . $guru->foto) ?>" width="64" />
+					<input class="form-control-file" type="hidden" name="old_image" value="" />
+					<img src="<?php echo base_url('foto/guru/') ?>" width="64" />
 				</div>
 
 				<button type="submit" class="btn btn-primary" href="<?= base_url();?>guru/biodata">Simpan</a></button>
