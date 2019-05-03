@@ -21,21 +21,11 @@
 		</div><br>
 		<form action="<?php echo base_url("Admin/guruEdit/$guru->id_guru") ?>" method="post" enctype="multipart/form-data">
 			<input type="hidden" name="id_guru" value="<?php echo $guru->id_guru ?>" />
-				<div class="col-md-8">
+				
 					<div class="form-group">
 						<label for="nig">NIG :</label>
 						<input type="text" class="form-control" name="nig_guru" value="<?php echo $guru->nig_guru ?>">
 					</div>
-					<div class="card-body">
-
-						<form action="<?php echo base_url("Admin/guruEdit/$guru->id_guru") ?>" method="post" enctype="multipart/form-data">
-
-							<input type="hidden" name="id_guru" value="<?php echo $guru->id_guru ?>" />
-
-							<div class="form-group">
-								<label for="nig">NIG :</label>
-								<input type="text" class="form-control" name="nig_guru" value="<?php echo $guru->nig_guru ?>">
-							</div>
 
 							<div class="form-group">
 								<label for="nama">Nama :</label>
@@ -82,11 +72,13 @@
 								<input class="form-control-file" type="file" name="foto" />
 								<input class="form-control-file" type="hidden" name="old_image" value="<?php echo $guru->foto ?>" />
 								<img src="<?php echo base_url('foto/guru/' . $guru->foto) ?>" width="64" />
-							</div>
-
-						</form>
-					</div>
-				</div>
-	</div>
-</div>
+								</div>
+                </div>   
+                <div class=col-md-12>      
+                <button type="submit" class="btn btn-primary"  >Simpan</button>
+                <button type="reset" class="btn btn-danger">Reset</button>
+                </div>
+         </form>
+        </div>     
+  </div>      
 
