@@ -4,8 +4,8 @@
 			<img src="<?= base_url('foto') ?>/admin.png" class="img-responsive" alt="">
 		</div>
 		<div class="profile-usertitle">
-			<div class="profile-usertitle-name">Username </div>
-			<div class="profile-usertitle-status"><span class="indicator label-success"></span><?= $this->session->userdata("username"); ?></div>
+			<div class="profile-usertitle-name" align="center">Username </div>
+			<div class="profile-usertitle-status" align="center"><span class="indicator label-success"></span><?= $this->session->userdata("username"); ?></div>
 		</div>
 		<div class="clear"></div>
 	</div>
