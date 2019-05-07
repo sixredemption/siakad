@@ -31,6 +31,7 @@
 											<th><font face ="Calibri"> Tanggal Lahir </font></th>
 											<th><font face ="Calibri"> Jenis Kelamin </font></th>
 											<th><font face ="Calibri"> Kelas </font></th>
+											<th><font face ="Calibri"> Jurusan </font></th>
 											<th data-sortable="true"><font face ="Calibri"> Kota </font></th>
 											<th><font face ="Calibri"> Alamat</font></th>
 											<th><font face ="Calibri"> No Telepon </font></th>
@@ -40,8 +41,9 @@
 						    	</thead>
 							<tbody>
 							<?php
-									$this->db->select('nisn,nama_siswa,tanggal_lahir,jenis_kelamin, nama_kelas, kota, alamat, no_telp, foto, id_siswa');
+									$this->db->select('nisn,nama_siswa,tanggal_lahir,jenis_kelamin, nama_kelas, nama_jurusan, kota, alamat, no_telp, foto, id_siswa');
 									// SELECT 
+										 $this->db->join('jurusan', 'jurusan.id_jurusan = siswa.id_jurusan');
 									$q = $this->db->join('kelas', 'kelas.id_kelas = siswa.id_kelas')->get('siswa');
 									$nomor = 1;
 									foreach ($q->result_array() as $murid) : ?>
@@ -52,6 +54,7 @@
 										<td><p><?=  $murid['tanggal_lahir']?></p></td>
 										<td><p><?=  $murid['jenis_kelamin']?></p></td>
 										<td><p><?=  $murid['nama_kelas']?></p></td>
+										<td><p><?=  $murid['nama_jurusan']?></p></td>
 										<td><p><?=  $murid['kota']?></p></td>
 										<td><p><?=  $murid['alamat']?></p></td>
 										<td><p><?=  $murid['no_telp']?></p></td>
