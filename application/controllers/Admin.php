@@ -146,9 +146,11 @@ class Admin extends CI_Controller
     public function addsiswa()
     {
         $data['judul'] = "Halaman Tambah Siswa";
+        $data["kelas"] = $this->Model_kelas->getAll();
+        $data["jurusan"] = $this->Model_jurusan->getAll();
         $this->load->view('template_admin/header', $data);
         $this->load->view('template_admin/sidebar');
-        $this->load->view('admin/addsiswa');
+        $this->load->view('admin/addsiswa', $data);
         $this->load->view('template_admin/footer');
     }
     public function addpegawai(){
@@ -174,18 +176,21 @@ class Admin extends CI_Controller
     }
     public function uploadjadwal()
     {
+        $data["kelas"] = $this->Model_kelas->getAll();
+        $data["jurusan"] = $this->Model_jurusan->getAll();
         $this->load->view('template_admin/header');
         $this->load->view('template_admin/sidebar');
-        $this->load->view('admin/jadwal');
+        $this->load->view('admin/jadwal', $data);
         $this->load->view('template_admin/footer');
     }
 
     public function addkurikulum()
     {
         $data['judul'] = "Halaman Tambah Pegawai";
+        $data["jurusan"] = $this->Model_jurusan->getAll();
         $this->load->view('template_admin/header', $data);
         $this->load->view('template_admin/sidebar');
-        $this->load->view('admin/addkurikulum');
+        $this->load->view('admin/addkurikulum', $data);
         $this->load->view('template_admin/footer');
     }
 
@@ -610,7 +615,7 @@ public function dataSiswa()
             $this->session->set_flashdata('success', 'Berhasil disimpan');
         }
 
-
+        $data["jurusan"] = $this->Model_jurusan->getAll();
         $data["kelas"] = $var->getById($id_kelas);
         if (!$data["kelas"]) show_404();
         $this->load->view("template_admin/header");
