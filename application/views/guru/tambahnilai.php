@@ -1,10 +1,4 @@
-<div class="container">
-<section class="content">
-<div class="jumbotron text-center"> 
-      <h3> Nilai Siswa Jurusan IPA</h3>
-      </section> 
-</div>
-
+<!-- TERBENGKALAI -->
 <div class="col-md-12">
 <section class="content">
        <div class="panel panel-default">

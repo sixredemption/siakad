@@ -1,9 +1,4 @@
-<div class="container">
-    <section class="content">
-    <div class="jumbotron text-center"> 
-      <h3> Ganti Password </h3>
-      </section> 
-    </div>
+
 
     <div class="col-md-12">
         <section class="content">
@@ -19,24 +14,27 @@
                     <h1>Ganti Password</h1>
                 </div>
                 <div class="card-body">
+
+		<form action = "<?php echo base_url("C_guru/edit/$guru->id_guru") ?>" method = "post" enctype = "multipart/form-data">
+				
         <div class="form-group-input-group">
-			<label for="nis">Password Lama </label>
-			<input type="text" class="form-control" id="nis">
+			<label for="password">Password Lama </label>
+			<input type="text" class="form-control" id="password">
 		</div>
 		<div class="form-group">
-			<label for="nama">Password Baru</label>
-			<input type="text" class="form-control" id="nama">
+			<label for="password">Password Baru</label>
+			<input type="text" class="form-control" id="password">
         </div>
         <div class="form-group">
-			<label for="nama">Konfirmasi Password Baru</label>
-			<input type="text" class="form-control" id="nama">
+			<label for="password">Konfirmasi Password Baru</label>
+			<input type="text" class="form-control" id="password">
         </div>
             
-    <a <button type="submit" class="btn btn-primary" href="<?= base_url();?>guru/index">Simpan</a></button>
-    <a <button type="reset" class="btn btn-danger" href="<?= base_url();?>guru/index">Kembali</a></button>
-        </div>
-                </div>
-			</div>
+    	<a <button type="submit" class="btn btn-primary" href="<?= base_url();?>guru/index">Simpan</a></button>
+    	<a <button type="reset" class="btn btn-danger" href="<?= base_url();?>guru/index">Kembali</a></button>
+        		</div>
+            </div>
+		</div>
 </fieldset>
 </form>
 </body>

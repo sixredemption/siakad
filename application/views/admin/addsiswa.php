@@ -2,7 +2,7 @@
 		<div class="row">
 			<ol class="breadcrumb">
 				<li><a href="#">
-					<em class="fa fa-home"></em>
+					<em class="glyphicon glyphicon-home"></em>
 				</a></li>
 				<li class="active">Tambah Data Siswa</li>
 			</ol>
@@ -74,7 +74,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <div class="form-group">
                         <label for="foto">Foto</label>
                         <input class="form-control-file" type="file" class="form-control" name="foto">

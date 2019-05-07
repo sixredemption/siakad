@@ -24,10 +24,10 @@ class Guru_model extends CI_Model
 				'rules' => 'required'
 			],
 
-			// ['field' => 'tgl_lahir' ,
-			// 'label' => 'Tanggal Lahir' ,
-			// 'rules' => 'required']
-		];
+			['field' => 'tanggal_lahir' ,
+			'label' => 'Tanggal Lahir' ,
+			'rules' => 'required']
+			] ;
 	}
 
 	public function getAll()
@@ -115,3 +115,4 @@ class Guru_model extends CI_Model
 		}
 	}
 }
+

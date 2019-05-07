@@ -2,7 +2,7 @@
     <div class="row">
         <ol class="breadcrumb">
             <li><a href="#">
-                    <em class="fa fa-home"></em>
+                    <em class="glyphicon glyphicon-home"></em>
                 </a></li>
             <li class="active">Tambah Data Guru</li>
         </ol>
@@ -67,14 +67,12 @@
                     <label for="foto">Foto</label>
                     <input class="form-control-file" type="file" class="form-control" name="foto">
                 </div>
-            </div>
-            <div class="col-md-12">                
-                <div class="form-group">
-                    <button type="submit" class="btn btn-primary">Simpan</button>
+			</div>
+			<button type="submit" class="btn btn-primary">Simpan</button>
                     <button type="reset" class="btn btn-danger">Reset</button>
-                </div>
             </div>
-        </form>
-       </div>
+    </form>
 </div>
+</div>
+
 
