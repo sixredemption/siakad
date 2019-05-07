@@ -11,7 +11,7 @@
             <div class="card">        
                 <h1 class="card-header">Pengumuman</h1><br>
                 <div class="col-md-6">
-                        <div class="panel panel-default">
+                        <div class="panel panel-primary">
                             <div class="panel-heading">
                             Tulis Pengumuman
                             <span class="pull-right clickable panel-toggle panel-button-tab-left"><em class="fa fa-toggle-up"></em></span></div>

@@ -2,7 +2,7 @@
 	<div class="row">
 		<ol class="breadcrumb">
 			<li><a href="#">
-					<em class="fa fa-home"></em>
+					<em class="glyphicon glyphicon-home"></em>
 				</a></li>
 			<li class="active">Dashboard</li>
 		</ol>
@@ -15,14 +15,11 @@
 		</div>
 	</div>
 	<!--/.row-->
+	<div class="panel panel-container">
 		<div class="row">
-			<div class="col-xs-12 col-md-6 col-lg-3 ">
-				<div class="panel panel-blue panel-widget">
-					<div class="row no-padding">
-					<div class="col-sm-3 col-lg-5 widget-left">
-						<em class="glyphicon glyphicon-user glyphicon-l"></em>
-					</div>	
-					<div class="col-sm-9 col-lg-7 widget-right">
+			<div class="col-xs-6 col-md-3 col-lg-3 no-padding">
+				<div class="panel panel-teal panel-widget border-right">
+					<div class="row no-padding"><em class="fa fa-xl fa-graduation-cap color-blue"></em>
 						<?php
 						$this->db->from('siswa');
 						$this->db->where('id_kelas', 1);
@@ -31,52 +28,36 @@
 						?>
 						<div class="text-muted">Siswa Ipa</div>
 					</div>
-					</div>
 				</div>
 			</div>
-			
-			<div class="col-xs-12 col-md-6 col-lg-3 ">
-				<div class="panel panel-red  border-right">
-					<div class="row no-padding">
-						<div class="col-sm-3 col-lg-5 widget-left">
-							<em class="glyphicon glyphicon-user glyphicon-l"></em>
-						</div>	
-						<div class="col-sm-9 col-lg-7 widget-right">
-							<?php
-							$this->db->from('siswa');
-							$this->db->where('id_kelas', 10);
-							$q = $this->db->count_all_results();
-							echo '<div class="large">' . $q . '</div>';
-							?>
+			<div class="col-xs-6 col-md-3 col-lg-3 no-padding">
+				<div class="panel panel-blue panel-widget border-right">
+					<div class="row no-padding"><em class="fa fa-xl fa-graduation-cap color-orange"></em>
+						<?php
+						$this->db->from('siswa');
+						$this->db->where('id_kelas', 10);
+						$q = $this->db->count_all_results();
+						echo '<div class="large">' . $q . '</div>';
+						?>
 						<div class="text-muted">Siswa Ips</div>
-				</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-xs-12 col-md-6 col-lg-3 ">
-				<div class="panel panel-orange  border-right">
-					<div class="row no-padding">
-						<div class="col-sm-3 col-lg-5 widget-left">
-							<em class="glyphicon glyphicon-user glyphicon-l"></em>
-						</div>
-						<div class="col-sm-9 col-lg-7 widget-right">
+			<div class="col-xs-6 col-md-3 col-lg-3 no-padding">
+				<div class="panel panel-orange panel-widget border-right">
+					<div class="row no-padding"><em class="fa fa-xl fa-users color-teal"></em>
 						<?php
 						$data = $this->db->count_all('guru');
 						echo '
 						<div class="large">' . $data . '</div>';
 						?>
 						<div class="text-muted">Guru</div>
-				</div>	
 					</div>
 				</div>
 			</div>
-			<div class="col-xs-12 col-md-6 col-lg-3 ">
-				<div class="panel panel-teal  ">
-					<div class="row no-padding">
-					<div class="col-sm-3 col-lg-5 widget-left">
-						<em class="glyphicon glyphicon-user glyphicon-l "></em>
-					</div>	
-					<div class="col-sm-9 col-lg-7 widget-right">
+			<div class="col-xs-6 col-md-3 col-lg-3 no-padding">
+				<div class="panel panel-red panel-widget ">
+					<div class="row no-padding"><em class="fa fa-xl fa-users color-red"></em>
 						<?php
 						$data = $this->db->count_all('admin');
 						echo '
@@ -85,12 +66,10 @@
 						<div class="text-muted">Administrator</div>
 					</div>
 				</div>
-				</div>
 			</div>
 			<!--/.row-->
-	
+		</div>
 	</div>
-
 	<div class="row">
 		<div class="col-md-12">
 			<div class="panel panel-primary ">
