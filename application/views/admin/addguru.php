@@ -2,7 +2,7 @@
     <div class="row">
         <ol class="breadcrumb">
             <li><a href="#">
-                    <em class="fa fa-home"></em>
+                    <em class="glyphicon glyphicon-home"></em>
                 </a></li>
             <li class="active">Tambah Data Guru</li>
         </ol>
