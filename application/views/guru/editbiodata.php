@@ -23,7 +23,6 @@
 				<div class="col-md-6">
             		<div class="card">
                 	<div class="card-header">
-                    <h1>Form Edit Guru</h1>
 				</div>
 
 				<form action = "<?php echo base_url("guru/editbiodata") ?>" method = "post" enctype = "multipart/form-data">
