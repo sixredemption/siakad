@@ -33,35 +33,19 @@
                                         </div>
                                     </div>
 
+                                    
                                     <div class="form-group">
-                                        <label for="id_jurusan">Jurusan</label>
-                                        <input class="form-control <?php echo form_error('id_jurusan') ? 'is-invalid':'' ?>" type="text" placeholder="JURUSAN NANTI JOIN" name="id_jurusan" placeholder="Nama Siswa" />
-                                        <div class="invalid-feedback">
-                                        <?php echo form_error('id_jurusan') ?>
-                                        </div>
-                                    </div>
-                                    <!-- <div class="form-group">
                                         <label for="id_jurusan">Jurusan</label>
                                             <select class="form-control" name="id_jurusan">
                                                 <option value="" disabled selected>pilih kelas</option>
-                                                <option value="1">10-Ipa-1</option>
-                                                <option value="2">10-Ipa-2</option>
-                                                <option value="3">11-Ipa-1</option>
-                                                <option value="4">11-Ipa-2</option>
-                                                <option value="5">12-Ipa-1</option>
-                                                <option value="6">12-Ipa-2</option>
-                                                <option value="7">10-Ips-1</option>
-                                                <option value="8">10-Ips-2</option>
-                                                <option value="9">11-Ips-1</option>
-                                                <option value="10">11-Ips-2</option>
-                                                <option value="11">12-Ips-1</option>
-                                                <option value="12">12-Ips-2</option>
-                                                <option value="13">12-Ips-2</option>
-                                                <option value="14">12-Ips-2</option>
-                                                <option value="15">12-Ips-2</option>
-                                                <option value="16">12-Ips-2</option>  
+                                                
+                                            
+                                            <?php foreach($jurusan as $jur):?>
+                                                <option value="<?= $jur->id_jurusan?>"><?= $jur->nama_jurusan?></option>}
+                                            <?php  endforeach;?>
+
                                             </select>
-                                    </div> -->
+                                    </div>
 
                                     
                                         <button type="submit" class="btn btn-primary">Simpan</button>
