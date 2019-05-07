@@ -15,25 +15,34 @@
                       Upload Jadwal
                       <span class="pull-right clickable panel-toggle panel-button-tab-left"><em class="fa fa-toggle-up"></em></span></div>
                 <div class="panel-body">
-                      <div class="form-group col-md-6">
-                              <label for="jurusan">Jurusan</label>
-                                <select class="form-control" id="jurusan">
-                                      <option>Ipa</option>
-                                      <option>Ips</option>
-                                </select><br> 				
-                                <input type="file"name="fileupload" value="fileupload" id="fileupload">
-                      </div>
-                    <div class="form-group col-md-6">
-                      <label for="kelas">Kelas</label>
-                            <select class="form-control" id="kelas">
-                              <option>10-1</option>
-                              <option>10-2</option>
-                              <option>11-1</option>
-                              <option>11-2</option>
-                              <option>12-1</option>
-                              <option>12-2</option> 
-                          </select><br>
-                    </div>         
+               
+                      <div class="form-group">
+                                        <label for="id_jurusan">Jurusan</label>
+                                            <select class="form-control" name="id_jurusan">
+                                            <option disabled selected >Pilih Jurusan</option>
+                                            <?php 
+                                                foreach($jurusan  as $jur):
+                                            ?>
+                                                var_dump($jur);
+                                                <option value="<?= $jur->id_jurusan?>"><?= $jur->nama_jurusan?></option>
+                                            <?php endforeach; ?>
+
+                                            </select>
+                                    </div>  
+                                    
+                     <div class="col-md-6">            
+                        <div class="form-group">
+                            <label for="id_kelas">Kelas</label>
+                                <select class="form-control" name="id_kelas">
+                                    <option value="" disabled selected>pilih kelas</option>
+
+                                    <?php foreach($kelas as $kel):?>
+                                                <option value="<?= $kel->id_kelas?>"><?= $kel->nama_kelas?></option>
+                                            <?php  endforeach;?>
+                                      
+                                </select>
+                        </div>
+                    </div>
                     <div class="col-sm-10 widget-right">
                         <button type="submit" class="btn btn-md btn-primary pull-right">Posting</button>
                     </div> 
