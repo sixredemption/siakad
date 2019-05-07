@@ -2,7 +2,7 @@
 	<div class="row">
 		<ol class="breadcrumb">
 			<li><a href="#">
-					<em class="fa fa-home"></em>
+					<em class="glyphicon glyphicon-home"></em>
 				</a></li>
 			<li class="active">Dashboard</li>
 		</ol>
@@ -15,7 +15,6 @@
 		</div>
 	</div>
 	<!--/.row-->
-
 	<div class="panel panel-container">
 		<div class="row">
 			<div class="col-xs-6 col-md-3 col-lg-3 no-padding">
@@ -71,7 +70,6 @@
 			<!--/.row-->
 		</div>
 	</div>
-
 	<div class="row">
 		<div class="col-md-12">
 			<div class="panel panel-primary ">
