@@ -33,19 +33,20 @@
                                         </div>
                                     </div>
 
-                                    
                                     <div class="form-group">
                                         <label for="id_jurusan">Jurusan</label>
                                             <select class="form-control" name="id_jurusan">
-                                                <option value="" disabled selected>pilih kelas</option>
-                                                
-                                            
-                                            <?php foreach($jurusan as $jur):?>
-                                                <option value="<?= $jur->id_jurusan?>"><?= $jur->nama_jurusan?></option>}
-                                            <?php  endforeach;?>
+                                            <option disabled selected >Pilih Jurusan</option>
+                                            <?php 
+                                                foreach($jurusan  as $jur):
+                                            ?>
+                                                var_dump($jur);
+                                                <option value="<?= $jur->id_jurusan?>"><?= $jur->nama_jurusan?></option>
+                                            <?php endforeach; ?>
 
                                             </select>
                                     </div>
+                                    
 
                                     
                                         <button type="submit" class="btn btn-primary">Simpan</button>

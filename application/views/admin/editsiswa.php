@@ -62,21 +62,10 @@
                             <select class="form-control" name="id_kelas">
                                 <option value="" disabled selected >pilih kelas</option>
                                 <option value="1" <?php if($siswa->id_kelas == 1){ echo 'selected'; } ?>>10-Ipa-1</option>
-                                <option value="2" <?php if($siswa->id_kelas == 2){ echo 'selected'; } ?>>10-Ipa-2</option>
-                                <option value="3" <?php if($siswa->id_kelas == 3){ echo 'selected'; } ?>>11-Ipa-1</option>
-                                <option value="4" <?php if($siswa->id_kelas == 4){ echo 'selected'; } ?>>11-Ipa-2</option>
-                                <option value="5" <?php if($siswa->id_kelas == 5){ echo 'selected'; } ?>>12-Ipa-1</option>
-                                <option value="6" <?php if($siswa->id_kelas == 6){ echo 'selected'; } ?>>12-Ipa-2</option>
-                                <option value="7" <?php if($siswa->id_kelas == 7){ echo 'selected'; } ?>>10-Ips-1</option>
-                                <option value="8" <?php if($siswa->id_kelas == 8){ echo 'selected'; } ?>>10-Ips-2</option>
-                                <option value="9" <?php if($siswa->id_kelas == 9){ echo 'selected'; } ?>>11-Ips-1</option>
-                                <option value="10" <?php if($siswa->id_kelas == 10){ echo 'selected'; } ?>>11-Ips-2</option>
-                                <option value="11" <?php if($siswa->id_kelas == 11){ echo 'selected'; } ?>>12-Ips-1</option>
-                                <option value="12" <?php if($siswa->id_kelas == 12){ echo 'selected'; } ?>>12-Ips-2</option> 
-                                <option value="13" <?php if($siswa->id_kelas == 12){ echo 'selected'; } ?>>12-Ips-2</option>
-                                <option value="14" <?php if($siswa->id_kelas == 12){ echo 'selected'; } ?>>12-Ips-2</option>
-                                <option value="15" <?php if($siswa->id_kelas == 12){ echo 'selected'; } ?>>12-Ips-2</option>
-                                <option value="16" <?php if($siswa->id_kelas == 12){ echo 'selected'; } ?>>12-Ips-2</option> 
+                                <?php foreach($kelas as $kel):?>
+                                                <option value="<?= $kel->id_kelas?>" <?php if($kel->id_kelas == 1 ){ echo 'selected'; } ?> ><?= $kel->nama_kelas?></option>
+                                <?php  endforeach;?>
+                                
                             </select>
                         </div>
                     </div>
