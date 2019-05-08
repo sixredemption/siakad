@@ -61,10 +61,10 @@
                             <label for="id_kelas">Kelas:</label>
                             <select class="form-control" name="id_kelas">
                                 <option value="" disabled selected >pilih kelas</option>
-                                <option value="1" <?php if($siswa->id_kelas == 1){ echo 'selected'; } ?>>10-Ipa-1</option>
+                               
                                 <?php foreach($kelas as $kel):?>
-                                                <option value="<?= $kel->id_kelas?>" <?php if($kel->id_kelas == 1 ){ echo 'selected'; } ?> ><?= $kel->nama_kelas?></option>
-                                <?php  endforeach;?>
+                                    <option value="<?= $kel->id_kelas?>" <?php if($kel->id_kelas == $siswa->id_kelas ){ echo 'selected'; } ?> > <?= $kel->nama_kelas?> </option>
+                                <?php endforeach;?>
                                 
                             </select>
                         </div>

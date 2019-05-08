@@ -14,6 +14,8 @@ class Model_siswa extends CI_Model
     public $no_telp;
     public $alamat;
     public $foto = "default.jpg";
+    public $id_jurusan;
+
 
     public function rules()
     {
@@ -46,6 +48,7 @@ class Model_siswa extends CI_Model
     {
         $post = $this->input->post();
         $this->id_kelas = $post["id_kelas"];
+        $this->id_jurusan = $post["id_jurusan"];
         $this->nisn = $post["nisn"];
         $this->nama_siswa = $post["nama_siswa"];
         $this->kota = $post["kota"];

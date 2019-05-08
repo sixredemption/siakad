@@ -146,7 +146,7 @@ class Admin extends CI_Controller
     public function addsiswa()
     {
         $data['judul'] = "Halaman Tambah Siswa";
-        $data["kelas"] = $this->Model_kelas->getAll();
+        $data['kelas'] = $this->Model_kelas->getAll();
         $data["jurusan"] = $this->Model_jurusan->getAll();
         $this->load->view('template_admin/header', $data);
         $this->load->view('template_admin/sidebar');
@@ -242,7 +242,7 @@ public function dataSiswa()
             $var->update();
             $this->session->set_flashdata('success', 'Berhasil disimpan');
         }
-
+        $data["kelas"] = $this->Model_kelas->getAll();
         $data["siswa"] = $var->getById($id_siswa);
         if (!$data["siswa"]) show_404();
         $this->load->view("template_admin/header");
