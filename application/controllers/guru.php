@@ -5,16 +5,16 @@ class Guru extends CI_Controller
 {
     public function __construct()
     {
-        parent::__construct();
+		parent::__construct();
+		$this->load->helper(array('form' , 'url')) ;
         $this->load->model("Model_siswa");
         $this->load->model("Guru_model");
-        $this->load->model("Pegawai_model");
-        $this->load->model("Model_pengumuman");
-        $this->load->model('login_model');
+		$this->load->model('login_model');
 
         if (!($this->session->userdata('nig_guru'))) {
             redirect(base_url('loginguru'));
-        }
+		}
+		
     }
 
     public function index()
@@ -26,9 +26,10 @@ class Guru extends CI_Controller
     }
     public function biodata()
     {
+		$data["guru"] = $this->Guru_model->getAll();
         $this->load->view('template_guru/header');
         $this->load->view('template_guru/sidebar');
-        $this->load->view('guru/biodata');
+        $this->load->view('guru/biodata' , $data);
         $this->load->view('template_guru/footer');
     }
     public function isinilai()
@@ -61,9 +62,10 @@ class Guru extends CI_Controller
     }
     public function editbiodata()
     {
+		$data["guru"] = $this->Guru_model->getAll() ;
         $this->load->view('template_guru/header');
         $this->load->view('template_guru/sidebar');
-        $this->load->view('guru/editbiodata');
+        $this->load->view('guru/editbiodata' , $data ) ;
         $this->load->view('template_guru/footer');
     }
     public function password()
