@@ -55,7 +55,7 @@
 					</tr>
 					
                 </table>
-				<?php echo anchor('guru/editbiodata/' , 'Edit'); ?>
+				<?php echo anchor('guru/editbiodata/'.$this->session->userdata("id_guru") , 'Edit'); ?>
 </fieldset>
 </form>
 </body>
