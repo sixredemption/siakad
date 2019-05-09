@@ -1,55 +1,24 @@
-<!-- <div class="content mt-3">
-<div class="animated fadeIn">
-<div class="row">
-    <div class="col-lg-6">
-            <div class="card">
-                <div class="card-header">
-                    <strong>Pilih Jurusan</strong> Nilai yang akan diupload
-                </div>
-                <div class="card-body card-block">
-                    <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
-                    <div class="col col-md-2"><label for="select" class=" form-control-label">Jurusan</label></div>
-                    <div class="col-12 col-md-9">
-                        <select name="select" id="select" class="form-control">
-                            <option value="1">IPA</option>
-                            <option value="2">IPS</option>
-                        </select>
+<section class="showcase">
+
+<div class="breadcrumbs">
+            <div class="col-sm-4">
+                <div class="page-header float-left">
+                    <div class="page-title">
+                        <h1>Menu</h1>
                     </div>
                 </div>
-
-                <div class="card-body card-block">
-                    <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
-                    <div class="col col-md-2"><label for="select" class=" form-control-label">Kelas</label></div>
-                    <div class="col-12 col-md-9">
-                        <select name="select" id="select" class="form-control">
-                            <option value="0">10</option>
-                            <option value="1">11</option>
-                            <option value="2">12</option>
-                        </select>
+            </div>
+            <div class="col-sm-8">
+                <div class="page-header float-right">
+                    <div class="page-title">
+                        <ol class="breadcrumb text-right">
+                            <li><a href="#">Menu</a></li>
+                            <li class="active">Upload Nilai<li>
+                        </ol>
                     </div>
                 </div>
-
-                <div class="card-body card-block">
-                    <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
-                    <div class="col col-md-2"><label for="select" class=" form-control-label">Tingkat</label></div>
-                    <div class="col-12 col-md-9">
-                        <select name="select" id="select" class="form-control">
-                            <option value="0">1</option>
-                            <option value="1">2</option>
-                        </select>
-                    </div>      
-                    </form>
-                </div>
-
-                <div class="card-footer">
-                    <a <button type="button" class="btn btn-primary" href="<?= base_url();?>guru/uploadnilai">Tambah</a></button>                
-                </div>      
-                </div>      
-</div> -->
-
-
- <!-- container --> 
-  <section class="showcase">
+            </div>
+        </div>
     <div class="container">
       <div class="pb-2 mt-4 mb-2 border-bottom">
         <h2>Silahkan Upload Nilai</h2>
