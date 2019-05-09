@@ -13,12 +13,13 @@
                     <div class="page-title">
                         <ol class="breadcrumb text-right">
                             <li><a href="#">Menu</a></li>
-                            <li class="active">Upload Nilai<li>
+                            <li class="active">Upload Nilai</li>
                         </ol>
                     </div>
                 </div>
             </div>
         </div>
+
     <div class="container">
       <div class="pb-2 mt-4 mb-2 border-bottom">
         <h2>Silahkan Upload Nilai</h2>
