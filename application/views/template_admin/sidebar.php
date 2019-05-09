@@ -23,20 +23,35 @@
 		<li><a href="<?= base_url('admin/uploadjadwal') ?>"><em class="fa fa-upload">&nbsp;</em> Upload Jadwal</a></li>
 		<li><a href="<?= base_url('admin/pengumuman') ?>"><em class="fa fa-exclamation">&nbsp;</em>Pengumuman</a></li>
 		<li class="parent "><a data-toggle="collapse" href="#sub-item-2">
-				<em class="fa fa-user-plus">&nbsp;</em> Tambah data <span data-toggle="collapse" href="#sub-item-2" class="icon pull-right"><em class="fa fa-plus"></em></span>
+				<em class="fa fa-user-plus">&nbsp;</em> List Data <span data-toggle="collapse" href="#sub-item-2" class="icon pull-right"><em class="fa fa-plus"></em></span>
 			</a>
 			<ul class="children collapse" id="sub-item-2">
 				<li><a class="" href="<?= base_url('admin/listguru') ?>">
-						<span class="fa fa-arrow-right">&nbsp;</span>Tambah Data Guru
+						<span class="fa fa-arrow-right">&nbsp;</span>List Data Guru
 					</a></li>
 				<li><a class="" href="<?= base_url('admin/listsiswa') ?>">
-						<span class="fa fa-arrow-right">&nbsp;</span> Tambah Data Siswa
+						<span class="fa fa-arrow-right">&nbsp;</span> List Data Siswa
 					</a></li>
 				<li><a class="" href="<?= base_url('admin/listpegawai') ?>">
-						<span class="fa fa-arrow-right">&nbsp;</span> Tambah Data Pegawai
+						<span class="fa fa-arrow-right">&nbsp;</span> List Data Pegawai
 					</a></li>
-				<li><a class="" href="<?= base_url('admin/listkurikulum') ?>">
-						<span class="fa fa-arrow-right">&nbsp;</span> Tambah Data Kurikulum
+			</ul>
+		</li>
+		<li class="parent "><a data-toggle="collapse" href="#sub-item-3">
+				<em class="fa fa-user-plus">&nbsp;</em> List Kurikulum <span data-toggle="collapse" href="#sub-item-2" class="icon pull-right"><em class="fa fa-plus"></em></span>
+			</a>
+			<ul class="children collapse" id="sub-item-3">
+				<li><a class="" href="<?= base_url('admin/listkelas') ?>">
+						<span class="fa fa-arrow-right">&nbsp;</span>List Kelas
+					</a></li>
+				<li><a class="" href="<?= base_url('admin/listjurusan') ?>">
+						<span class="fa fa-arrow-right">&nbsp;</span> List Jurusan
+					</a></li>
+				<li><a class="" href="<?= base_url('admin/listmapel') ?>">
+						<span class="fa fa-arrow-right">&nbsp;</span> List Mapel
+					</a></li>
+				<li><a class="" href="<?= base_url('admin/listtahun') ?>">
+						<span class="fa fa-arrow-right">&nbsp;</span> List Tahun 
 					</a></li>
 			</ul>
 		</li>
