@@ -20,7 +20,7 @@
                     <button class="btn btn-primary" id="submit-buttons" type="submit" ​​​​​>List Siswa</button>
                 </form>
             </div>	<br>
-                  <form action="<?php echo base_url("Admin/SiswaEdit/$siswa->id_siswa")?>" method="post" enctype="multipart/form-data" >
+                  <form action="<?php echo base_url("Admin/SiswaEdit/$siswa->id_siswa")?>" id="data"method="post" enctype="multipart/form-data" >
                   <input type="hidden" name="id_siswa" value="<?php echo $siswa->id_siswa?>" />                    
 
                     <div class="col-md-8">
@@ -69,6 +69,22 @@
                             </select>
                         </div>
                     </div>
+
+                    <div class="col-md-6">            
+                        <div class="form-group">
+                            <label for="id_jurusan">Jurusan</label>
+                                <select class="form-control" name="id_jurusan">
+                                    <option value="" disabled selected>pilih jurusan</option>
+
+                                    <?php foreach($jurusan as $jur):?>
+                                        <option value="<?= $jur->id_jurusan?>" <?php if($jur->id_jurusan == $siswa->id_jurusan ){ echo 'selected'; } ?> > <?= $jur->nama_jurusan?> </option>
+                                    <?php  endforeach;?>
+                                      
+                                </select>
+                        </div>
+                    </div>
+
+
                     <div class="col-md-3">
                         <div class="form-group">
                             <label for="nohp"> Nomer Hp:</label>
@@ -84,13 +100,13 @@
                     </div>
                 </div>
 
-                <!-- <div class="col-md-3">
-                    <div class="form-group">
+                <div class="col-md-3">
+                        <div class="form-group">
                         <label for="password">Password:</label>
-                        <input type="password" class="form-control" name="password" >
+                        <input type="password" class="form-control" id="password"name="password" >
                         <input type="checkbox" onclick="myFunction()">Show Password
-                    </div>  
-                </div> -->
+                        </div>
+                </div>
 
                 <div class="col-md-12">
                     <div class="form-group">
@@ -110,17 +126,21 @@
          </form>
 
          
+
+
+         
         </div>     
   </div>      
 
 
 <script>
     function myFunction() {
-  var x = document.getElementByName("password");
-  if (x.type === "password") {
-    x.type = "text";
-  } else {
-    x.type = "password";
-  }
-}
+        var x = document.getElementById("password");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
 </script>
+
