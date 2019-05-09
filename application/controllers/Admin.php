@@ -122,15 +122,39 @@ class Admin extends CI_Controller
         $this->load->view('template_admin/footer');
     }
 
-    public function listkurikulum()
+    public function listkelas()
     {
         $data["kelas"] = $this->Model_kelas->getAll();
+        $this->load->view('template_admin/header');
+        $this->load->view('template_admin/sidebar');
+        $this->load->view('admin/listkelas', $data);
+        $this->load->view('template_admin/footer');
+    }
+
+    public function listjurusan()
+    {
         $data["jurusan"] = $this->Model_jurusan->getAll();
+        $this->load->view('template_admin/header');
+        $this->load->view('template_admin/sidebar');
+        $this->load->view('admin/listjurusan', $data);
+        $this->load->view('template_admin/footer');
+    }
+
+    public function listmapel()
+    {
         $data["mapel"] = $this->Model_mapel->getAll();
+        $this->load->view('template_admin/header');
+        $this->load->view('template_admin/sidebar');
+        $this->load->view('admin/listmapel', $data);
+        $this->load->view('template_admin/footer');
+    }
+
+    public function listtahun()
+    {
         $data["tahun_ajaran"] = $this->Model_thnAjar->getAll();
         $this->load->view('template_admin/header');
         $this->load->view('template_admin/sidebar');
-        $this->load->view('admin/listkurikulum', $data);
+        $this->load->view('admin/listtahun', $data);
         $this->load->view('template_admin/footer');
     }
 
@@ -184,13 +208,36 @@ class Admin extends CI_Controller
         $this->load->view('template_admin/footer');
     }
 
-    public function addkurikulum()
+    public function addjurusan()
     {
-        $data['judul'] = "Halaman Tambah Pegawai";
+        $this->load->view('template_admin/header');
+        $this->load->view('template_admin/sidebar');
+        $this->load->view('admin/addjurusan');
+        $this->load->view('template_admin/footer');
+    }
+
+    public function addmapel()
+    {
+        $this->load->view('template_admin/header');
+        $this->load->view('template_admin/sidebar');
+        $this->load->view('admin/addmapel');
+        $this->load->view('template_admin/footer');
+    }
+
+    public function addtahun()
+    {
+        $this->load->view('template_admin/header');
+        $this->load->view('template_admin/sidebar');
+        $this->load->view('admin/addtahun');
+        $this->load->view('template_admin/footer');
+    }
+
+    public function addkelas()
+    {
         $data["jurusan"] = $this->Model_jurusan->getAll();
         $this->load->view('template_admin/header', $data);
         $this->load->view('template_admin/sidebar');
-        $this->load->view('admin/addkurikulum', $data);
+        $this->load->view('admin/addkelas', $data);
         $this->load->view('template_admin/footer');
     }
 
@@ -243,6 +290,31 @@ public function dataSiswa()
             $this->session->set_flashdata('success', 'Berhasil disimpan');
         }
         $data["kelas"] = $this->Model_kelas->getAll();
+        $data["jurusan"] = $this->Model_jurusan->getAll();
+        $data["siswa"] = $var->getById($id_siswa);
+        if (!$data["siswa"]) show_404();
+        $this->load->view("template_admin/header");
+        $this->load->view("template_admin/sidebar");
+        $this->load->view("admin/editsiswa", $data);
+        $this->load->view("template_admin/footer");
+    }
+
+    public function siswaPass($id_siswa = null)
+    {
+         var_dump($id_siswa);
+        if (!isset($id_siswa)) redirect('admin/dataSiswa');
+
+
+        $var = $this->Model_siswa;
+        $validation = $this->form_validation;
+        $validation->set_rules($var->rules());
+
+        if ($validation->run()) {
+            $var->pass();
+            $this->session->set_flashdata('success', 'Berhasil disimpan');
+        }
+        $data["kelas"] = $this->Model_kelas->getAll();
+        $data["jurusan"] = $this->Model_jurusan->getAll();
         $data["siswa"] = $var->getById($id_siswa);
         if (!$data["siswa"]) show_404();
         $this->load->view("template_admin/header");
@@ -494,7 +566,7 @@ public function dataSiswa()
             $data["tahun_ajaran"] = $this->Model_thnAjar->getAll();
             $this->load->view('template_admin/header');
             $this->load->view('template_admin/sidebar');
-            $this->load->view('admin/listkurikulum', $data);
+            $this->load->view('admin/listkelas', $data);
             $this->load->view('template_admin/footer');
         
         
@@ -517,7 +589,7 @@ public function dataSiswa()
             $data["tahun_ajaran"] = $this->Model_thnAjar->getAll();
             $this->load->view('template_admin/header');
             $this->load->view('template_admin/sidebar');
-            $this->load->view('admin/listkurikulum', $data);
+            $this->load->view('admin/listkelas', $data);
             $this->load->view('template_admin/footer');;
         
     }
@@ -557,7 +629,7 @@ public function dataSiswa()
             $data["tahun_ajaran"] = $this->Model_thnAjar->getAll();
             $this->load->view('template_admin/header');
             $this->load->view('template_admin/sidebar');
-            $this->load->view('admin/listkurikulum', $data);
+            $this->load->view('admin/listkelas', $data);
             $this->load->view('template_admin/footer');
         }
     }
@@ -572,7 +644,7 @@ public function dataSiswa()
             $data["tahun_ajaran"] = $this->Model_thnAjar->getAll();
             $this->load->view('template_admin/header');
             $this->load->view('template_admin/sidebar');
-            $this->load->view('admin/listkurikulum', $data);
+            $this->load->view('admin/listkelas', $data);
             $this->load->view('template_admin/footer');
         
         
@@ -595,7 +667,7 @@ public function dataSiswa()
         $data["tahun_ajaran"] = $this->Model_thnAjar->getAll();
         $this->load->view('template_admin/header');
         $this->load->view('template_admin/sidebar');
-        $this->load->view('admin/listkurikulum', $data);
+        $this->load->view('admin/listkelas', $data);
         $this->load->view('template_admin/footer');
         
     }
@@ -635,7 +707,7 @@ public function dataSiswa()
             $data["tahun_ajaran"] = $this->Model_thnAjar->getAll();
             $this->load->view('template_admin/header');
             $this->load->view('template_admin/sidebar');
-            $this->load->view('admin/listkurikulum', $data);
+            $this->load->view('admin/listkelas', $data);
             $this->load->view('template_admin/footer');
         }
     }
@@ -649,7 +721,7 @@ public function dataSiswa()
         $data["tahun_ajaran"] = $this->Model_thnAjar->getAll();
         $this->load->view('template_admin/header');
         $this->load->view('template_admin/sidebar');
-        $this->load->view('admin/listkurikulum', $data);
+        $this->load->view('admin/listkelas', $data);
         $this->load->view('template_admin/footer');
         
         
@@ -672,7 +744,7 @@ public function dataSiswa()
         $data["tahun_ajaran"] = $this->Model_thnAjar->getAll();
         $this->load->view('template_admin/header');
         $this->load->view('template_admin/sidebar');
-        $this->load->view('admin/listkurikulum', $data);
+        $this->load->view('admin/listkelas', $data);
         $this->load->view('template_admin/footer');
         
     }
@@ -712,7 +784,7 @@ public function dataSiswa()
             $data["tahun_ajaran"] = $this->Model_thnAjar->getAll();
             $this->load->view('template_admin/header');
             $this->load->view('template_admin/sidebar');
-            $this->load->view('admin/listkurikulum', $data);
+            $this->load->view('admin/listkelas', $data);
             $this->load->view('template_admin/footer');
         }
     }
@@ -726,7 +798,7 @@ public function dataSiswa()
         $data["tahun_ajaran"] = $this->Model_thnAjar->getAll();
         $this->load->view('template_admin/header');
         $this->load->view('template_admin/sidebar');
-        $this->load->view('admin/listkurikulum', $data);
+        $this->load->view('admin/listkelas', $data);
         $this->load->view('template_admin/footer');
         
         
@@ -749,7 +821,7 @@ public function dataSiswa()
         $data["tahun_ajaran"] = $this->Model_thnAjar->getAll();
         $this->load->view('template_admin/header');
         $this->load->view('template_admin/sidebar');
-        $this->load->view('admin/listkurikulum', $data);
+        $this->load->view('admin/listkelas', $data);
         $this->load->view('template_admin/footer');
         
     }
@@ -789,7 +861,7 @@ public function dataSiswa()
             $data["tahun_ajaran"] = $this->Model_thnAjar->getAll();
             $this->load->view('template_admin/header');
             $this->load->view('template_admin/sidebar');
-            $this->load->view('admin/listkurikulum', $data);
+            $this->load->view('admin/listkelas', $data);
             $this->load->view('template_admin/footer');;
         }
     }
