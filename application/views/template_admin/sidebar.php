@@ -1,10 +1,10 @@
 <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
 	<div class="profile-sidebar">
 		<div class="profile-userpic">
-			<img src="<?= base_url('foto') ?>/admin.png" class="img-responsive" alt="">
+			<img src="<?= base_url('foto') ?>/admin.png" class="img-responsive"  alt="">
 		</div>
 		<div class="profile-usertitle">
-			<div class="profile-usertitle-name">Username </div>
+			<div class="profile-usertitle-name" >Username </div>
 			<div class="profile-usertitle-status"><span class="indicator label-success"></span><?= $this->session->userdata("username"); ?></div>
 		</div>
 		<div class="clear"></div>
