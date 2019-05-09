@@ -30,22 +30,22 @@
 
 				<div class="form-group">
 					<label for="nig_guru">NIG :</label>
-					<input type="text" class="form-control" name="nig_guru" value="">
+					<input type="text" class="form-control" name="nig_guru" value="<?= $this->session->userdata("nig_guru");?>">
 				</div>
 
 				<div class="form-group">
 					<label for="nama_lengkap">Nama :</label>
-					<input type="text" class="form-control" name="nama_lengkap" value="">
+					<input type="text" class="form-control" name="nama_lengkap" value="<?= $this->session->userdata("nig_guru");?>">
 				</div>
 
 				<div class="form-group">
 					<label for="tanggal_lahir">Tanggal Lahir :</label>
-					<input type="text" class="form-control" name="tanggal_lahir" value="">
+					<input type="text" class="form-control" name="tanggal_lahir" value="<?= $this->session->userdata("nig_guru");?>">
 				</div>
 
 				<div class="form-group">
 					<label for="asal_kota">Kota Asal :</label>
-					<input type="text" class="form-control" name="asal_kota" value="">
+					<input type="text" class="form-control" name="asal_kota" value="<?= $this->session->userdata("nig_guru");?>">
 				</div>
 
 				<div class="form-group">
