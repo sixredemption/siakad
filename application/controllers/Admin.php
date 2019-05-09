@@ -33,6 +33,9 @@ class Admin extends CI_Controller
         //CRUD TAHUN AJARAN
         $this->load->model("Model_thnAjar");
 
+        //CRUD SPP
+        $this->load->model("Model_spp");
+
 
         if (!($this->session->userdata('username'))) {
             redirect(base_url('loginadmin'));
@@ -69,9 +72,10 @@ class Admin extends CI_Controller
     }
     public function daftarsiswaspp()
     {
+        $data['sp'] = $this->Model_spp->getAll();
         $this->load->view('template_admin/header');
         $this->load->view('template_admin/sidebar');
-        $this->load->view('admin/daftarsiswaspp');
+        $this->load->view('admin/daftarsiswaspp', $data);
         $this->load->view('template_admin/footer');
     }
     public function nilaisiswaips()
@@ -865,4 +869,31 @@ public function dataSiswa()
             $this->load->view('template_admin/footer');;
         }
     }
+
+    // ----------------------------BACK END--------------------------------------------------
+    // ----------------------------CRUD SPP-------------------------------------------
+    public function sppEdit($id_spp = null)
+    {
+        var_dump($id_spp);
+        if (!isset($id_spp)) redirect('Admin/dataPengumuman');
+
+        
+        $var = $this->Model_spp;
+        $validation = $this->form_validation;
+        $validation->set_rules($var->rules());
+
+        if ($validation->run()) {
+            $var->update();
+            $this->session->set_flashdata('success', 'Berhasil disimpan');
+        }
+
+
+        $data["spp"] = $var->getById($id_spp);
+        if (!$data["spp"]) show_404();
+        $this->load->view("template_admin/header");
+        // $this->load->view("template_admin/sidebar");
+        $this->load->view("admin/daftarsiswaspp", $data);
+         $this->load->view("template_admin/footer");
+    }
+
 }
