@@ -69,6 +69,7 @@ class Model_siswa extends CI_Model
         // var_dump($post);
         $this->id_siswa = $post["id_siswa"];
         $this->id_kelas = $post["id_kelas"];
+        $this->id_jurusan = $post["id_jurusan"];
         $this->nisn = $post["nisn"];
         $this->nama_siswa = $post["nama_siswa"];
         $this->kota = $post["kota"];
@@ -76,7 +77,13 @@ class Model_siswa extends CI_Model
         $this->jenis_kelamin = $post["jenis_kelamin"];
         $this->no_telp = $post["no_telp"];
         $this->alamat = $post["alamat"];
-        // $this->password=md5($post["password"]) ;
+        
+
+        if (empty($post["password"])){
+            $this->password =md5($post["nisn"]);
+        } else {
+            $this->password=md5($post["password"]) ;
+        }
 
         if (!empty($_FILES["foto"]["name"])) {
             $this->foto = $this->_uploadImage();
@@ -86,16 +93,6 @@ class Model_siswa extends CI_Model
 
         $this->db->update($this->_table, $this, array("id_siswa" => $post["id_siswa"]));
     }
-
-    // public function pass()
-    // {
-    //     $post = $this->input->post();
-    //    // var_dump($post);
-       
-    //     $this->password=md5($post["password"]) ;
-
-    //     $this->db->update($this->_table, $this, array("id_siswa" => $post["id_siswa"]));
-    // }
 
     public function delete($id_siswa)
     {
