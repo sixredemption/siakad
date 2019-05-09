@@ -8,44 +8,7 @@
 		</ol>
 	</div>
 	<div class="container-fluid" style="margin-top:10px;">
-		<div class="card">
-			<h2 class="card-header">Daftar Siswa Spp</h2>
-			<div class="card-body">
-				<form method="get" action="">NIS: <input type="text" name="nis" />
-					<input type="submit" name="cari" value="Cari Siswa" />
-				</form>
-			</div>
-		</div><br>
-		<div class=col-sm-2>
-			<div class="form-group">
-				<label for="">Tampilkan:</label>
-				<select class="form-control" name="" id="">
-					<option>Semua Siswa</option>
-					<option>Jurusan Ipa</option>
-					<option>Jurusan Ips</option>
-				</select>
-			</div>
-		</div>
-		<div class=col-sm-2>
-			<div class="form-group">
-				<label for="">Kelas: </label>
-				<select class="form-control" name="" id="">
-					<option>Semua Kelas</option>
-					<option>10-Ipa-1</option>
-					<option>10-Ipa-2</option>
-					<option>11-Ipa-1</option>
-					<option>11-Ipa-2</option>
-					<option>12-Ipa-1</option>
-					<option>12-Ipa-2</option>
-					<option>10-Ips-1</option>
-					<option>10-Ips-2</option>
-					<option>11-Ips-1</option>
-					<option>11-Ips-2</option>
-					<option>12-Ips-1</option>
-					<option>12-Ips-2</option>
-				</select>
-			</div>
-		</div>
+		
 	</div><br>
 	<div class="container col-md-12">
 		<table class="table table-striped clickable">
@@ -60,11 +23,12 @@
 					<th>Semester</th>
 					<th>Tahun Ajaran</th>
 					<th>Status Spp</th>
+					<th>Edit</th>
 				</tr>
 			<tbody>
 				<tr>
 					<?php
-					$this->db->select('nisn,nama_kelas,nama_siswa,jenis_kelamin, nama_bulan, semester, tahun_ajaran, status');
+					$this->db->select('nisn,nama_kelas,nama_siswa,jenis_kelamin, nama_bulan, semester, tahun_ajaran, status, id_spp');
 					// SELECT 
 					$this->db->join('kelas', 'kelas.id_kelas = spp.id_kelas');
 					$this->db->join('siswa', 'siswa.id_siswa = spp.id_siswa');
@@ -72,16 +36,27 @@
 					$this->db->join('semester', 'semester.id_semester = spp.id_semester');
 					$q = $this->db->join('tahun_ajaran', 'tahun_ajaran.id_tahun_ajaran = spp.id_tahun_ajaran')->get('spp');
 					$no = 1;
-					foreach ($q->result_array() as $data) : ?>
+					foreach ($q->result_array() as $sp) : ?>
 						<td><?= $no++; ?></td>
-						<td><?= $data['nisn']; ?></td>
-						<td><?= $data['nama_siswa']; ?></td>
-						<td><?= $data['jenis_kelamin']; ?></td>
-						<td><?= $data['nama_kelas']; ?></td>
-						<td><?= $data['nama_bulan']; ?></td>
-						<td><?= $data['semester']; ?></td>
-						<td><?= $data['tahun_ajaran']; ?></td>
-						<td><?= $data['status']; ?></td>
+						<td><?= $sp['nisn']; ?></td>
+						<td><?= $sp['nama_siswa']; ?></td>
+						<td><?= $sp['jenis_kelamin']; ?></td>
+						<td><?= $sp['nama_kelas']; ?></td>
+						<td><?= $sp['nama_bulan']; ?></td>
+						<td><?= $sp['semester']; ?></td>
+						<td><?= $sp['tahun_ajaran']; ?></td>
+						<td><?= $sp['status']; ?></td>
+						<td>
+						<form action="<?php echo base_url("Admin/sppEdit/$sp[id_spp]")?>" method="post" enctype="multipart/form-data" >
+							<div class=col-md-8 >
+						<select class="form-control" name="status">
+								<option value="" disabled selected >pilih status</option>
+								<option value="Lunas" >Lunas</option>
+								<option value="Belum Lunas" >Belum Lunas</option>
+                               
+                            </select></div><?php echo anchor('Admin/sppEdit/'.$sp['id_spp'],'<span class="glyphicon glyphicon-pencil">'); ?>
+						</td>
+						</form>
 					</tr>
 				<?php endforeach; ?>
 			</tbody>
