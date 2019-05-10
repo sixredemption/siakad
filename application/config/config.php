@@ -24,7 +24,7 @@ $config['composer_autoload'] = 'vendor/autoload.php' ;
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost:100/siakad/';
+$config['base_url'] = 'http://localhost:8080/siakad/';
 /*
 |--------------------------------------------------------------------------
 | Index File
@@ -135,7 +135,7 @@ $config['subclass_prefix'] = 'MY_';
 | Note: This will NOT disable or override the CodeIgniter-specific
 |	autoloading (application/config/autoload.php)
 */
-$config['composer_autoload'] = FALSE;
+$config['composer_autoload'] = '/vendor/autoload.php';
 
 /*
 |--------------------------------------------------------------------------
