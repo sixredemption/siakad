@@ -76,8 +76,10 @@
 				</tr>
 				
 			</table>
-			<?php echo anchor('guru/editbiodata/' , 'Edit'); ?>
-		</div>
+			
+			<div class="icon-container">
+				<?php echo anchor('guru/editbiodata/' , '<span class="ti-trash"></span><span class="icon-name"> ti-trash</span>'); ?>
+			</div>
 
 	</section>
 </div> 
