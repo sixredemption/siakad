@@ -167,13 +167,16 @@
 		<div class="alert alert-success" role="alert">
 			<?php echo $this->session->flashdata('success'); ?>
 		</div>
+		
 	<?php endif; ?>
 		<h1>Edit Guru</h1>
 	<div class="container-fluid">
 		<div class="panel-button-tab-left">				
-			<form method="post"  action="<?php  echo base_url(). 'guru/biodata'; ?>">
+			<form method="post"  action="<?= $this->session->userdata("id_guru"); ?>">
 			</form>
-		</div><br>
+		</div>
+		<br>
+
 		<form action="" method="post" enctype="multipart/form-data">
 			<input type="hidden" name="id_guru" value="" />
 						<div class="col-md-8">
