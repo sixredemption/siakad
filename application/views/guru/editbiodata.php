@@ -91,7 +91,7 @@
 		</div>
 		 
 
-        <!-- <div class="card-body">
+        <div class="card-body">
         <div class="form-group-input-group">
 			<label for="nis">NIP :</label>
 			<input type="text" class="form-control" id="nis">
