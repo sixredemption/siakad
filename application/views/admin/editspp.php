@@ -23,12 +23,13 @@
 					<th>Semester</th>
 					<th>Tahun Ajaran</th>
 					<th>Status Spp</th>
-					<th>Edit</th>
+                    <th>Edit</th>
+                    <th>Aksi</th>
 				</tr>
 			<tbody>
 				<tr>
 					<?php
-					$this->db->select('nisn,nama_kelas,nama_siswa,jenis_kelamin, nama_bulan, semester, tahun_ajaran, status, id_spp');
+					$this->db->select('nisn,nama_kelas,nama_siswa,jenis_kelamin, nama_bulan, semester, tahun_ajaran, status, id_spp, ');
 					// SELECT 
 					$this->db->join('kelas', 'kelas.id_kelas = spp.id_kelas');
 					$this->db->join('siswa', 'siswa.id_siswa = spp.id_siswa');
@@ -46,7 +47,20 @@
 						<td><?= $sp['semester']; ?></td>
 						<td><?= $sp['tahun_ajaran']; ?></td>
 						<td><?= $sp['status']; ?></td>
-						<td><?php echo anchor('Admin/editspp/'.$sp['id_spp'],'<span class="glyphicon glyphicon-pencil">'); ?></td>
+						<td>
+						<form action="<?php echo base_url("Admin/sppEdit/$sp[id_spp]")?>" method="post" enctype="multipart/form-data" >
+							<div class=col-md-8 >
+                            <input type="hidden" name="id_spp" value="<?php echo $sp['id_spp']?>" />
+                            <label class="status">Lunas
+                            <input type="checkbox" value="Lunas" name="status">
+                            </label>
+                            </div>
+                        
+                        </td>
+                        <td>    <button type="submit" class="btn btn-primary"  >Simpan</button>
+                                <button type="reset" class="btn btn-danger">Reset</button> 
+                        </td>
+						</form>
 					</tr>
 				<?php endforeach; ?>
 			</tbody>
