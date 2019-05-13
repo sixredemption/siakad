@@ -36,6 +36,9 @@ class Admin extends CI_Controller
         //CRUD SPP
         $this->load->model("Model_spp");
 
+        //CRUD JADWAL
+        $this->load->model("Model_jadwal");
+
 
         if (!($this->session->userdata('username'))) {
             redirect(base_url('loginadmin'));
@@ -206,9 +209,21 @@ class Admin extends CI_Controller
     {
         $data["kelas"] = $this->Model_kelas->getAll();
         $data["jurusan"] = $this->Model_jurusan->getAll();
+        $data["jadwal"] = $this->Model_jadwal->getAll();
         $this->load->view('template_admin/header');
         $this->load->view('template_admin/sidebar');
         $this->load->view('admin/jadwal', $data);
+        $this->load->view('template_admin/footer');
+    }
+
+    public function editjadwal()
+    {
+        $data["kelas"] = $this->Model_kelas->getAll();
+        $data["jurusan"] = $this->Model_jurusan->getAll();
+        $data["jadwal"] = $this->Model_jadwal->getAll();
+        $this->load->view('template_admin/header');
+        $this->load->view('template_admin/sidebar');
+        $this->load->view('admin/editjadwal', $data);
         $this->load->view('template_admin/footer');
     }
 
@@ -242,6 +257,15 @@ class Admin extends CI_Controller
         $this->load->view('template_admin/header', $data);
         $this->load->view('template_admin/sidebar');
         $this->load->view('admin/addkelas', $data);
+        $this->load->view('template_admin/footer');
+    }
+
+    public function editspp()
+    {
+        $data["spp"] = $this->Model_spp->getAll();
+        $this->load->view('template_admin/header', $data);
+        $this->load->view('template_admin/sidebar');
+        $this->load->view('admin/editspp', $data);
         $this->load->view('template_admin/footer');
     }
 
@@ -817,6 +841,9 @@ public function dataSiswa()
         if ($validation->run()) {
             $tambah->save();
             $this->session->set_flashdata('success', 'Berhasil disimpan');
+        } elseif (empty($_FILES['jadwal']['name']))
+        {
+            $this->form_validation->set_rules('jadwal', 'Document', 'required');
         }
         
         $data["kelas"] = $this->Model_kelas->getAll();
@@ -875,7 +902,7 @@ public function dataSiswa()
     public function sppEdit($id_spp = null)
     {
         var_dump($id_spp);
-        if (!isset($id_spp)) redirect('Admin/dataPengumuman');
+        if (!isset($id_spp)) redirect('Admin');
 
         
         $var = $this->Model_spp;
@@ -892,8 +919,83 @@ public function dataSiswa()
         if (!$data["spp"]) show_404();
         $this->load->view("template_admin/header");
         // $this->load->view("template_admin/sidebar");
-        $this->load->view("admin/daftarsiswaspp", $data);
+        $this->load->view("admin/editspp", $data);
          $this->load->view("template_admin/footer");
     }
+
+    // ----------------------------BACK END--------------------------------------------------
+    // ----------------------------CRUD JADWAL--------------------------------------------------
+
+    public function dataJadwal()
+    {
+        $data["jadwal"] = $this->Model_jadwal->getAll();
+        $this->load->view('template_admin/header');
+        $this->load->view('template_admin/sidebar');
+        $this->load->view('admin/jadwal', $data);
+        $this->load->view('template_admin/footer');
+        
+        
+    }
+
+    public function jadwalAdd()
+    {
+        $tambah = $this->Model_jadwal;
+        $validation = $this->form_validation;
+        $validation->set_rules($tambah->rules());
+
+        if ($validation->run()) {
+            $tambah->save();
+            $this->session->set_flashdata('success', 'Berhasil disimpan');
+        } else {
+            $this->session->set_flashdata('Gagal', 'Tidak Berhasil disimpan');
+        }
+        $data["kelas"] = $this->Model_kelas->getAll();
+        $data["jurusan"] = $this->Model_jurusan->getAll();
+        $data["jadwal"] = $this->Model_jadwal->getAll();
+        $this->load->view('template_admin/header');
+        $this->load->view('template_admin/sidebar');
+        $this->load->view('admin/jadwal', $data);
+        $this->load->view('template_admin/footer');
+        
+    }
+
+    public function jadwalEdit($id_jadwal=null)
+    {
+        // var_dump($id);
+        if (!isset($id_jadwal)) redirect('Admin/jadwal');
+
+        
+        $var = $this->Model_jadwal;
+        $validation = $this->form_validation;
+        $validation->set_rules($var->rules());
+
+        if ($validation->run()) {
+            $var->update();
+            $this->session->set_flashdata('success', 'Berhasil disimpan');
+        }
+
+        $data["kelas"] = $this->Model_kelas->getAll();
+        $data["jurusan"] = $this->Model_jurusan->getAll();
+        $data["jadwal"] = $var->getById($id_jadwal);
+        if (!$data["jadwal"]) show_404();
+        $this->load->view("template_admin/header");
+        $this->load->view("template_admin/sidebar");
+        $this->load->view("admin/editjadwal", $data);
+         $this->load->view("template_admin/footer");
+    }
+
+    public function jadwalDelete($id_jadwal=null)
+    {
+        if (!isset($id_jadwal)) show_404();
+        
+        if ($this->Model_jadwal->delete($id_jadwal)) {
+            $data["jadwal"] = $this->Model_jadwal->getAll();
+            $this->load->view('template_admin/header');
+            $this->load->view('template_admin/sidebar');
+            $this->load->view('admin/jadwal', $data);
+            $this->load->view('template_admin/footer');;
+        }
+    }
+
 
 }
