@@ -24,7 +24,8 @@
 					<th>Tahun Ajaran</th>
 					<th>Status Spp</th>
                     <th>Edit</th>
-                    <th>Aksi</th>
+					<th>Aksi</th>
+					
 				</tr>
 			<tbody>
 				<tr>
@@ -50,7 +51,13 @@
 						<td>
 						<form action="<?php echo base_url("Admin/sppEdit/$sp[id_spp]")?>" method="post" enctype="multipart/form-data" >
 							<div class=col-md-8 >
-                            <input type="hidden" name="id_spp" value="<?php echo $sp['id_spp']?>" />
+							<input type="hidden" name="id_spp" value="<?php echo $sp['id_spp']?>" />
+							
+							<input type="hidden" name="id_siswa" value="" />
+							<input type="hidden" name="id_kelas" value="" />
+							<input type="hidden" name="id_bulan" value="" />
+							<input type="hidden" name="id_semester" value="" />
+							<input type="hidden" name="id_tahun_ajaran" value="" />
                             <label class="status">Lunas
                             <input type="checkbox" value="Lunas" name="status">
                             </label>

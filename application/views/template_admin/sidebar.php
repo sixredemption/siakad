@@ -10,12 +10,7 @@
 		<div class="clear"></div>
 	</div>
 	<div class="divider"></div>
-	<form role="search">
-		<div class="form-group">
-			<input type="text" class="form-control" placeholder="Search">
-		</div>
-	</form>
-	<ul class="nav menu">
+		<ul class="nav menu">
 		<div class="sidebar-heading">
 		</div>
 		<li class="parent"><a href="<?= base_url('admin') ?>"><em class="fa fa-dashboard">&nbsp;</em> Dashboard</a></li>
