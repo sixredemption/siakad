@@ -69,8 +69,14 @@ class Guru_model extends CI_Model
 		$this->asal_kota = $post["asal_kota"];
 		$this->alamat = $post["alamat"];
 		$this->no_telp = $post["no_telp"];
-		$this->password = md5($post["password"]);
 		$this->jenis_kelamin = $post["jenis_kelamin"];
+
+		if (empty($post["password"])){
+            $this->password =md5($post["nig_guru"]);
+        } else {
+            $this->password=md5($post["password"]) ;
+        }
+
 
 		if (!empty($_FILES["foto"]["name"])) {
 			$this->foto = $this->_uploadImage();
