@@ -70,14 +70,16 @@
 																			} ?>>Perempuann
 							</div>
 						</div>	
-						<div class= col-md-8>
-							<div class="form-group">
-								<label for="password">password:</label>
-								<input type="password" class="form-control" name="password" value="<?php echo $guru->password ?>">
+
+							<div class="col-md-3">
+									<div class="form-group">
+									<label for="password">Password:</label>
+									<input type="password" class="form-control" id="password"name="password" >
+									<input type="checkbox" onclick="myFunction()">Show Password
+									</div>
 							</div>
-						</div>	
-					<div class="col-md-12">																
-							<div class="form-group">
+
+							<div class="col-md-12">
 								<label for="foto">Photo</label>
 								<input class="form-control-file" type="file" name="foto" />
 								<input class="form-control-file" type="hidden" name="old_image" value="<?php echo $guru->foto ?>" />
@@ -91,4 +93,15 @@
          </form>
         </div>     
   </div>      
+
+  <script>
+    function myFunction() {
+        var x = document.getElementById("password");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+</script>
 
