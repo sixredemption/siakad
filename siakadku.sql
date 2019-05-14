@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 25, 2019 at 05:26 PM
--- Server version: 10.1.36-MariaDB
--- PHP Version: 7.2.11
+-- Generation Time: May 14, 2019 at 08:17 AM
+-- Server version: 10.1.38-MariaDB
+-- PHP Version: 7.3.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -45,7 +45,8 @@ INSERT INTO `admin` (`id_admin`, `username`, `password`, `foto`) VALUES
 (3, 'deby@siakad.com', '9bcc02b4703c28a756dbdf1e16b7aa6c', 'default.jpg'),
 (4, 'falah@siakad.com', '2d0567b23f9bab484baca7e279139c0c', 'default.jpg'),
 (5, 'dhandy@siakad.com', 'c4a8db4a597a9b03f1ce60fe5d5dcbc4', 'default.jpg'),
-(6, 'firman@siakad.com', '9dfbbc92d99104d364bf36e07753c461', 'default.jpg');
+(6, 'firman@siakad.com', '9dfbbc92d99104d364bf36e07753c461', 'default.jpg'),
+(7, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin.PNG');
 
 -- --------------------------------------------------------
 
@@ -100,7 +101,7 @@ CREATE TABLE `guru` (
 --
 
 INSERT INTO `guru` (`id_guru`, `nig_guru`, `password`, `nama_lengkap`, `asal_kota`, `tanggal_lahir`, `jenis_kelamin`, `no_telp`, `alamat`, `foto`) VALUES
-(1, '1741720052', 'ac9d3c581fc1660004e8c2838f77cb23', 'Dzikri Alif Abdillah S,Ag', 'Jombang', '1999-07-19', 'Laki-laki', '081234762703', 'Perumahan Indah C/5', 'default.jpg'),
+(1, '1741720051', '202cb962ac59075b964b07152d234b70', 'Dzikri Alif Abdillah S,Ag', 'Jombang', '1999-07-19', 'Laki-laki', '081234762703', 'Perumahan Indah C/5', 'default.jpg'),
 (2, '1741720051', 'f2b21ef4ec5c583e71a595a36fe169c5', 'Yolanda Marissa S,Pg', 'Tuban', '1999-09-20', 'Perempuan', '08124389220', 'Perumahan Cindramata B/11', 'default.jpg'),
 (3, '1741720053', '9ff7b68a010aeb99d9c909b581cdbdac', 'Sasmita Citra S,Pd', 'Surabaya', '1999-02-11', 'Perempuan', '08122521321', 'Perumahan Permata Permai D/11', 'default.jpg'),
 (4, '1741720054', 'a87d4d4978f44d7bf297f1541cc87a5c', 'Yoga Herlambang S,Tm', 'Pamekasan', '1997-04-21', 'Laki-laki', '0812435331', 'Perumahan Garuda B/4', 'default.jpg'),
@@ -115,6 +116,28 @@ INSERT INTO `guru` (`id_guru`, `nig_guru`, `password`, `nama_lengkap`, `asal_kot
 (13, '1741720090', '247100a29b5d580b6739de0c3e28e755', 'Mahesa Yoga Andika S,Og', 'Jember', '1997-06-19', 'Laki-laki', '08113542123', 'Perumahan Majapahit B/4', 'default.jpg'),
 (14, '1741720100', 'd08bec01bcc3ad6a2115879f64cd3ae4', 'Niken Dewi Sasmita S,Pd', 'Jember', '1998-07-21', 'Perempuan', '08124992142', 'Perumahan Garuda Jaya F/20', 'default.jpg'),
 (15, '1741720110', '0f3490b994c5550049d1a876eef5ca47', 'Renaldo Kurniawan S,Ag', 'Sidoarjo', '1997-04-28', 'Laki-laki', '08123311233', 'Perumahan Cindra Perkasa C/22', 'default.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `jadwal`
+--
+
+CREATE TABLE `jadwal` (
+  `id_jadwal` int(11) NOT NULL,
+  `id_jurusan` int(11) NOT NULL,
+  `jadwal` text NOT NULL,
+  `nama_jadwal` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `jadwal`
+--
+
+INSERT INTO `jadwal` (`id_jadwal`, `id_jurusan`, `jadwal`, `nama_jadwal`) VALUES
+(2, 1, 'Jadwal_IPA.pdf', 'Jadwal IPA'),
+(3, 2, 'Jadwal_IPS_.pdf', 'Jadwal IPS '),
+(6, 1, '<p>You did not select a file to upload.</p>', '--');
 
 -- --------------------------------------------------------
 
@@ -202,7 +225,8 @@ INSERT INTO `mapel` (`id_mapel`, `nama_mapel`) VALUES
 (19, 'Matematika Peminatan'),
 (20, 'Olahraga 1'),
 (21, 'Olahraga 2'),
-(22, 'Olahraga 3');
+(22, 'Olahraga 3'),
+(23, 'BHS');
 
 -- --------------------------------------------------------
 
@@ -218,13 +242,6 @@ CREATE TABLE `nilai` (
   `id_mapel` int(11) NOT NULL,
   `nilai_siswa` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `nilai`
---
-
-INSERT INTO `nilai` (`id_nilai`, `id_guru`, `id_kelas`, `id_siswa`, `id_mapel`, `nilai_siswa`) VALUES
-(1, 1, 1, 1, 1, 90);
 
 -- --------------------------------------------------------
 
@@ -294,24 +311,20 @@ CREATE TABLE `siswa` (
   `jenis_kelamin` enum('Laki-laki','Perempuan') NOT NULL,
   `no_telp` varchar(20) NOT NULL,
   `alamat` text NOT NULL,
-  `foto` varchar(20) NOT NULL DEFAULT 'default.jpg'
+  `foto` varchar(20) NOT NULL DEFAULT 'default.jpg',
+  `id_jurusan` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `siswa`
 --
 
-INSERT INTO `siswa` (`id_siswa`, `id_kelas`, `nisn`, `password`, `nama_siswa`, `kota`, `tanggal_lahir`, `jenis_kelamin`, `no_telp`, `alamat`, `foto`) VALUES
-(1, 1, '1904501', '69cdd8217f4e2110942ac704d78ef066', 'Aldo Pratama', 'Malang', '2000-03-19', 'Laki-laki', '08312123123', 'Jl. Pattimura 20 C', 'default.jpg'),
-(2, 1, '1904502', 'c64eefc611f176ff764934b587f06b69', 'Andreas Prayoga', 'Tegal', '2000-03-19', 'Laki-laki', '0842131242', 'Jl. Soekarno Hatta 20/B-4', 'default.jpg'),
-(3, 1, '1904503', '69cdd8217f4e2110942ac704d78ef066', 'Bella Faradina', 'Solo', '2000-02-11', 'Perempuan', '0842198723', 'Jl. Pattimura 20/F-5', 'default.jpg'),
-(4, 1, '1904504', 'ca4678f0bb8e2e94210d546af812d739', 'Bagas Saputra', 'Sidoarjo', '2000-06-02', 'Laki-laki', '0842198767', 'Jl. Soekarno Hatta 20/B-11', 'default.jpg'),
-(5, 1, '1904505', 'fe84d1616aa9501ef9a947d508fa297b', 'Cantika Rahayu', 'Malang', '2000-08-25', 'Perempuan', '0842178972', 'Jl. Garuda 10/C', 'default.jpg'),
-(6, 10, '1904601', 'c0e30caf92743060dd3784a263a1cc4e', 'Angga Sandhika', 'Sidoarjo', '2000-11-19', 'Laki-laki', '0842199082', 'Jl. Soekarno Hatta 20/C-4', 'default.jpg'),
-(7, 10, '1904602', 'de973c39d8ed0a9f315abdc48daf3948', 'Bagas Tri Pitaka', 'Malang', '2000-01-10', 'Laki-laki', '0842154667', 'Jl. Pattimura 20/F-10', 'default.jpg'),
-(8, 10, '1904603', '628af5cf7093f24fd30e3711fd6773c6', 'Belinda Sasmita', 'Malang', '2000-02-02', 'Perempuan', '0842143343', 'Jl. Soekarno Hatta 20/D-11', 'default.jpg'),
-(9, 10, '1904604', 'a48cee1fe713242d341831b1387ad956', 'Bulqis Citra Mahayu', 'Probolinggo', '2000-04-21', 'Perempuan', '0842165553', 'Jl. Garuda 10/G', 'default.jpg'),
-(10, 10, '1904605', '4e73c8ed9e6f337dece2505b30a452d3', 'Bella Nadira Putri', 'Surabaya', '2000-08-25', 'Perempuan', '0842153221', 'Jl. Agus Salim 5/C', 'default.jpg');
+INSERT INTO `siswa` (`id_siswa`, `id_kelas`, `nisn`, `password`, `nama_siswa`, `kota`, `tanggal_lahir`, `jenis_kelamin`, `no_telp`, `alamat`, `foto`, `id_jurusan`) VALUES
+(11, 2, '1904502121', '97931fbc061bf709bcf6c63744d3a656', 'Khosyy', 'Tegal', '2019-05-15', 'Laki-laki', '081212345678', 'Jl Saxofone', 'default.jpg', 1),
+(12, 14, '1904501', '69cdd8217f4e2110942ac704d78ef066', 'Akmal', 'Malang', '2019-05-21', 'Perempuan', '0842198767', 'Jl Cantik', 'default.jpg', 2),
+(13, 14, '1904500', 'c13e72c7609df131e92776cb03f7e187', 'Romadhan', 'Samarinda', '2019-05-10', 'Laki-laki', '081212345678', 'Jl Lambung', 'default.jpg', 2),
+(14, 16, '1904508', '2653fe23da7581bbf131abfd1e232350', 'Bagas Saputra', 'Malang', '2019-05-05', 'Laki-laki', '0842198767', 'Jl Selamat', 'default.jpg', 2),
+(17, 11, '123189732178', '276ff0b7f50378fffe9ddea1410fe6cc', 'Firman', 'Madura', '1999-05-16', 'Perempuan', '083673232', 'Jl Suhat', 'default.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -334,8 +347,7 @@ CREATE TABLE `spp` (
 --
 
 INSERT INTO `spp` (`id_spp`, `id_siswa`, `id_kelas`, `id_bulan`, `id_semester`, `id_tahun_ajaran`, `status`) VALUES
-(1, 1, 1, 4, 2, 1, 'Lunas'),
-(2, 2, 1, 4, 2, 1, 'Belum Lunas');
+(1, 13, 1, 8, 1, 1, 'Belum Lunas');
 
 -- --------------------------------------------------------
 
@@ -353,7 +365,7 @@ CREATE TABLE `tahun_ajaran` (
 --
 
 INSERT INTO `tahun_ajaran` (`id_tahun_ajaran`, `tahun_ajaran`) VALUES
-(1, '2019');
+(1, '2018');
 
 --
 -- Indexes for dumped tables
@@ -376,6 +388,13 @@ ALTER TABLE `bulan`
 --
 ALTER TABLE `guru`
   ADD PRIMARY KEY (`id_guru`);
+
+--
+-- Indexes for table `jadwal`
+--
+ALTER TABLE `jadwal`
+  ADD PRIMARY KEY (`id_jadwal`),
+  ADD KEY `FK_JADWAL` (`id_jurusan`);
 
 --
 -- Indexes for table `jurusan`
@@ -424,7 +443,8 @@ ALTER TABLE `semester`
 --
 ALTER TABLE `siswa`
   ADD PRIMARY KEY (`id_siswa`),
-  ADD KEY `FK_KELAS_SISWA` (`id_kelas`);
+  ADD KEY `FK_KELAS_SISWA` (`id_kelas`),
+  ADD KEY `FK_JURUSAN_SISWA` (`id_jurusan`);
 
 --
 -- Indexes for table `spp`
@@ -466,6 +486,12 @@ ALTER TABLE `guru`
   MODIFY `id_guru` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
+-- AUTO_INCREMENT for table `jadwal`
+--
+ALTER TABLE `jadwal`
+  MODIFY `id_jadwal` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
 -- AUTO_INCREMENT for table `jurusan`
 --
 ALTER TABLE `jurusan`
@@ -481,19 +507,19 @@ ALTER TABLE `kelas`
 -- AUTO_INCREMENT for table `mapel`
 --
 ALTER TABLE `mapel`
-  MODIFY `id_mapel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id_mapel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `nilai`
 --
 ALTER TABLE `nilai`
-  MODIFY `id_nilai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_nilai` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `pengumuman`
 --
 ALTER TABLE `pengumuman`
-  MODIFY `id_pengumuman` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_pengumuman` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `semester`
@@ -505,13 +531,13 @@ ALTER TABLE `semester`
 -- AUTO_INCREMENT for table `siswa`
 --
 ALTER TABLE `siswa`
-  MODIFY `id_siswa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_siswa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `spp`
 --
 ALTER TABLE `spp`
-  MODIFY `id_spp` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_spp` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tahun_ajaran`
@@ -524,10 +550,16 @@ ALTER TABLE `tahun_ajaran`
 --
 
 --
+-- Constraints for table `jadwal`
+--
+ALTER TABLE `jadwal`
+  ADD CONSTRAINT `FK_JADWAL` FOREIGN KEY (`id_jurusan`) REFERENCES `jurusan` (`id_jurusan`);
+
+--
 -- Constraints for table `kelas`
 --
 ALTER TABLE `kelas`
-  ADD CONSTRAINT `FK_KELAS_JURUSAN` FOREIGN KEY (`id_jurusan`) REFERENCES `jurusan` (`id_jurusan`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `kelas_ibfk_1` FOREIGN KEY (`id_jurusan`) REFERENCES `jurusan` (`id_jurusan`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `nilai`
@@ -548,6 +580,7 @@ ALTER TABLE `semester`
 -- Constraints for table `siswa`
 --
 ALTER TABLE `siswa`
+  ADD CONSTRAINT `FK_JURUSAN_SISWA` FOREIGN KEY (`id_jurusan`) REFERENCES `jurusan` (`id_jurusan`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `FK_KELAS_SISWA` FOREIGN KEY (`id_kelas`) REFERENCES `kelas` (`id_kelas`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
