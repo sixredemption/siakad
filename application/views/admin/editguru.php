@@ -70,22 +70,24 @@
 																			} ?>>Perempuann
 							</div>
 						</div>	
+						<div class= col-md-8>
 							<div class="form-group">
 								<label for="password">password:</label>
 								<input type="password" class="form-control" name="password" value="<?php echo $guru->password ?>">
 							</div>
-
+						</div>	
+					<div class="col-md-12">																
 							<div class="form-group">
 								<label for="foto">Photo</label>
 								<input class="form-control-file" type="file" name="foto" />
 								<input class="form-control-file" type="hidden" name="old_image" value="<?php echo $guru->foto ?>" />
 								<img src="<?php echo base_url('foto/guru/' . $guru->foto) ?>" width="64" />
-								</div>
-                </div>   
-                <div class=col-md-12>      
-                <button type="submit" class="btn btn-primary"  >Simpan</button>
-                <button type="reset" class="btn btn-danger">Reset</button>
-                </div>
+							</div>
+                	</div>   
+					<div class=col-md-12>      
+                		<button type="submit" class="btn btn-primary"  >Simpan</button>
+                		<button type="reset" class="btn btn-danger">Reset</button>
+               		</div>
          </form>
         </div>     
   </div>      
