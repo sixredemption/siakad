@@ -19,7 +19,7 @@
 			</div>	<br>
 			<div class="row">
 			<div class="col-lg-12">
-				<div class="panel panel-default">
+				<div class="panel panel-primary">
 					<div class="panel-heading">Data Siswa</div>
 						<div class="panel-body">
 							<table data-toggle="table" data-url="<?base_url('assets_admin')?>/tables/data1.json"  data-show-refresh="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name" data-sort-order="desc">
