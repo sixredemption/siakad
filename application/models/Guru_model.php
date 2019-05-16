@@ -69,34 +69,14 @@ class Guru_model extends CI_Model
 		$this->asal_kota = $post["asal_kota"];
 		$this->alamat = $post["alamat"];
 		$this->no_telp = $post["no_telp"];
-		$this->password = md5($post["password"]);
 		$this->jenis_kelamin = $post["jenis_kelamin"];
 
-	///////////////////////////////////// ALFALAH PUNYA //////////////////////////////////////////////
-	// public function update() {
-	// 	$data = $this->session->userdata('guru');
-	// 	$data['id_guru'] = $this->input->post('id_guru') ;
-	// 	$data['nig_guru'] = $this->input->post('nig_guru');
-	// 	$data['nama_lengkap'] = $this->input->post('nama_lengkap');
-	// 	$data['tanggal_lahir'] = $this->input->post('tanggal_lahir');
-	// 	$data['asal_kota'] = $this->input->post('asal_kota');
-	// 	$data['alamat'] = $this->input->post('alamat');
-	// 	$data['no_telp'] = $this->input->post('no_telp');
-	// 	$data['password'] = md5($this->input->post('password'));
-	// 	$data['jenis_kelamin'] = $this->input->post('jenis_kelamin');
-		
+		if (empty($post["password"])){
+            $this->password =md5($post["nig_guru"]);
+        } else {
+            $this->password=md5($post["password"]) ;
+        }
 
-	// 	$this->db->set('id_guru', $this->input->post('id_guru')) ;
-	// 	$this->db->set('nig_guru', $this->input->post('nig_guru')) ;
-	// 	$this->db->set('nama_lengkap', $this->input->post('nama_lengkap')) ;
-	// 	$this->db->set('tanggal_lahir' , $this->input->post('tanggal_lahir')) ;
-	// 	$this->db->set('asal_kota', $this->input->post('asal_kota')) ;
-	// 	$this->db->set('alamat', $this->input->post('alamat')) ;
-	// 	$this->db->set('no_telp', $this->input->post('no_telp')) ;
-	// 	$this->db->set('password', md5($this->input->post('password'))) ;
-	// 	$this->db->set('jenis_kelamin', $this->input->post('jenis_kelamin')) ;
-	// 	$this->session->set_userdata('guru', $data);
-	
 
 		if (!empty($_FILES["foto"]["name"])) {
 			$this->foto = $this->_uploadImage();
