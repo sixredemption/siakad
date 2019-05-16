@@ -31,7 +31,7 @@
             });
         })(jQuery);
     </script>
-
+	<div class="jqvmap-label" style="display: none;"></div>
 </body>
 
 </html>

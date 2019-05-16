@@ -22,7 +22,7 @@
 					<div class="row no-padding"><em class="fa fa-xl fa-graduation-cap color-blue"></em>
 						<?php
 						$this->db->from('siswa');
-						$this->db->where('id_kelas', 1);
+						$this->db->where('id_jurusan', 1);
 						$q = $this->db->count_all_results();
 						echo '<div class="large">' . $q . '</div>';
 						?>
@@ -35,7 +35,7 @@
 					<div class="row no-padding"><em class="fa fa-xl fa-graduation-cap color-orange"></em>
 						<?php
 						$this->db->from('siswa');
-						$this->db->where('id_kelas', 10);
+						$this->db->where('id_jurusan', 2);
 						$q = $this->db->count_all_results();
 						echo '<div class="large">' . $q . '</div>';
 						?>
