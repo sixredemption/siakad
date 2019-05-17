@@ -104,8 +104,8 @@
 										<p><?= $umum->keterangan ?></p>
 									</td>
 									<td>
-										<?php echo anchor('Admin/pengumumanEdit/' . $umum->id_pengumuman, '<span class="glyphicon glyphicon-pencil">'); ?>
-										<?php echo anchor('Admin/pengumumanDelete/' . $umum->id_pengumuman, '<span class="glyphicon glyphicon-trash">'); ?>
+										<?php echo anchor('Admin/pengumumanEdit/' . $umum->id_pengumuman, '<button class="btn btn-primary margin" type="button"><span class="fa fa-pencil"></span> </button>'); ?>
+										<?php echo anchor('Admin/pengumumanDelete/' . $umum->id_pengumuman, '<button class="btn btn-danger margin" type="button"><span class="fa fa-trash"></span> </button>'); ?>
 									</td>
 								</tr>
 							<?php endforeach; ?>
