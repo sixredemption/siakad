@@ -1,6 +1,6 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-class My_Profile extends CI_Controller {
+class My_Profile extends CI_Core {
 
 	public function updateProfile() {
 
