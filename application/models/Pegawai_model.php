@@ -34,7 +34,6 @@ class Pegawai_model extends CI_Model {
 		// $this->id_admin = $post["id_admin"] ;
 		$this->username = $post["username"] ;
 		$this->password=md5($post["password"]) ;
-		//$this->password = $post["password"] ;
 		// $this->gender = $post["gender"] ;
 		$this->foto = $this->_uploadImage();
 
@@ -47,8 +46,13 @@ class Pegawai_model extends CI_Model {
 		$this->id_admin = $post["id_admin"] ;
 		$this->username = $post["username"] ;
 		$this->password=md5($post["password"]) ;
-		//$this->password = $post["password"] ;
 		// $this->gender = $post["gender"] ;
+		if (empty($post["password"])){
+            $this->password =md5($post["username"]);
+        } else {
+            $this->password=md5($post["password"]) ;
+        }
+
 
 
 		if (!empty($_FILES["foto"]["name"])) {
@@ -71,6 +75,25 @@ class Pegawai_model extends CI_Model {
     {
         $config['upload_path']          = './foto/pegawai';
         $config['allowed_types']        = 'gif|jpg|png';
+        $config['file_name']            = $this->username;
+        $config['overwrite']            = true;
+        $config['max_size']             = 1024; // 1MB
+        // $config['max_width']            = 1024;
+        // $config['max_height']           = 768;
+
+        $this->load->library('upload', $config);
+
+        if ($this->upload->do_upload('foto')) {
+            return $this->upload->data("file_name");
+        }
+
+        return "default.jpg";
+	}
+	
+	private function uploadJadwal()
+    {
+        $config['upload_path']          = './jadwal';
+        $config['allowed_types']        = 'pdf';
         $config['file_name']            = $this->username;
         $config['overwrite']            = true;
         $config['max_size']             = 1024; // 1MB

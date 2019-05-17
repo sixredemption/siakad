@@ -1,46 +1,48 @@
 <body>
     <aside id="left-panel" class="left-panel">
         <nav class="navbar navbar-expand-sm navbar-default">
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="<?=base_url();?>siswa/index"><img src="<?php echo base_url() ?>foto/1.png" width="40px"><span style="color:whitegi">SMAN 4</span> MACIPO</a>
+
+            </div>
+
+
+			<div id="main-menu" class="main-menu collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <h3 class="menu-title">Menu</h3>
+							<li class="active"><a href="<?= base_url(); ?>siswa/index"><i class="menu-icon ti-home"></i>	Home</a></li>
+							<li class="active"><a href="<?= base_url(); ?>siswa/biodata"><i class="menu-icon ti-user"></i>	Biodata siswa</a></li>
+            				<li class="active"><a href="<?= base_url(); ?>siswa/nilai"><i class="menu-icon ti-book"></i>	Nilai Siswa</a></li>
+							<li class="active"><a href="<?= base_url(); ?>siswa/jadwal"><i class="menu-icon ti-map"></i>	Jadwal Siswa</a></li>
+            				<li class="active"><a href="<?= base_url(); ?>siswa/pengumuman"><i class="menu-icon ti-bell"></i>	Pengumuman</a></li>
+            				<li class="active"><a href="<?= base_url(); ?>siswa/statusspp"><i class="menu-icon ti-money"></i>	Status Pembayaran Spp</a></li>
+							<li><a href="<?= base_url('logout'); ?>"><i class="menu-icon ti-power-off"></i>	Logout</a></li>
+        		</ul>
+            </div>
+    
         <div class="navbar-header">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa fa-bars"></i>
             </button>
-        <a class="navbar-brand" href="<?=base_url();?>siswa/index"><img src="<?php echo base_url() ?>foto/1.png" width="40px"><span style="color:whitegi">SMAN 4</span> MACIPO</a>
         </div>
-            
-        <div id="main-menu" class="main-menu collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-				<li>
-                    <a href="index.html"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
-                </li>
-                 
-        <h3 class="menu-title">MENU</h3><!-- /.menu-title -->            
-            
-          
-		  	<li><a href="<?= base_url();?>siswa/index"><i class="fa fa-home"></i> Home</a></li>
-			<li><a href="<?= base_url();?>siswa/biodata"><i class="fa fa-user"></i> Biodata siswa</a></li>
-            <li><a href="<?= base_url();?>siswa/nilai"><i class="fa fa-book"></i> Nilai Siswa</a></li>
-			<li><a href="<?= base_url();?>siswa/jadwal"><i class="fa fa-bookmark-o"></i> Jadwal Siswa</a></li>
-            <li><a href="<?= base_url();?>siswa/pengumuman"><i class="fa fa-bell"></i> Pengumuman</a></li>
-            <li><a href="<?= base_url();?>siswa/statusspp"><i class="fa fa-money"></i> Status Pembayaran Spp</a></li>
-          
-        
-		</div>
-	</aside>	
+	</aside>        	
 
-	<div id="right-panel" class="right-panel">
+		<div id="right-panel" class="right-panel">
         <header id="header" class="header">
             <div class="header-menu">
-            <div class="col-sm-6">
-                <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
-                <div class="header-left">
-                    <button class="search-trigger"><i class="fa fa-search"></i></button>
-                    <div class="form-inline">
-                        <form class="search-form">
-                            <input class="form-control mr-sm-2" type="text" placeholder="Search ..." aria-label="Search">
-                            <button class="search-close" type="submit"><i class="fa fa-close"></i></button>
-                        </form>
-					</div>
+                <div class="col-sm-6">
+                    <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
+                    <div class="header-left">
+                        <button class="search-trigger"><i class="fa fa-search"></i></button>
+                        <div class="form-inline">
+                            <form class="search-form">
+                                <input class="form-control mr-sm-2" type="text" placeholder="Search ..." aria-label="Search">
+                                <button class="search-close" type="submit"><i class="fa fa-close"></i></button>
+                            </form>
+                        </div>
 
             <div class="dropdown for-notification">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="notification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -108,28 +110,14 @@
         </div>
     </div>
 
-    <div class="col-sm-6">
-        <div class="user-area dropdown float-right">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img class="user-avatar rounded-circle" src="<?php echo base_url() ?>assets_siswa/CHA_0318.jpg"  >
-            </a>
 
-            <div class="user-menu dropdown-menu">
-				<a class="nav-link" href="<?= base_url();?>siswa/password"><i class="fa fa-cog"></i> Ganti Password</a>
-				<a class="nav-link" href="<?= base_url();?>siswa/logout"><i class="fa fa-power-off"></i> Logout</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-</header>
+	
 
 		<div class="breadcrumbs">
             <div class="col-sm-4">
                 <div class="page-header float-left">
                     <div class="page-title">
-                        <h1>Dashboard</h1>
+                        <h1>Menu</h1>
                     </div>
                 </div>
             </div>
@@ -144,5 +132,5 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> 
 

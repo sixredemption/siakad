@@ -48,12 +48,24 @@
                             <label for="id_kelas">Kelas</label>
                                 <select class="form-control" name="id_kelas">
                                     <option value="" disabled selected>pilih kelas</option>
-                                    <option value="1">10 IPA 1</option>
-                                    <option value="2">10 IPA 2</option>
-                                    <option value="4">11 IPA 1</option>
-                                    <option value="5">11 IPA 21</option>
-                                    <option value="7">12 IPA 1</option>
-                                    <option value="8">12 IPA 2</option>
+
+                                    <?php foreach($kelas as $kel):?>
+                                                <option value="<?= $kel->id_kelas?>"><?= $kel->nama_kelas?></option>
+                                            <?php  endforeach;?>
+                                      
+                                </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">            
+                        <div class="form-group">
+                            <label for="id_jurusan">Jurusan</label>
+                                <select class="form-control" name="id_jurusan">
+                                    <option value="" disabled selected>pilih jurusan</option>
+
+                                    <?php foreach($jurusan as $jur):?>
+                                                <option value="<?= $jur->id_jurusan?>"><?= $jur->nama_jurusan?></option>
+                                            <?php  endforeach;?>
                                       
                                 </select>
                         </div>
@@ -96,6 +108,8 @@
                 </div>
 
             </form>
+
+            
         </div>
 </div>
 		

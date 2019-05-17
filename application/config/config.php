@@ -25,7 +25,12 @@ $config['composer_autoload'] = 'vendor/autoload.php' ;
 |
 */
 
+<<<<<<< HEAD
 $config['base_url'] = 'http://localhost:8080/siakad/';
+=======
+
+$config['base_url'] = 'http://localhost:/siakad/';
+>>>>>>> 1110e0f5efd5fa4d1174efd84e55e19e85af2985
 
 /*
 |--------------------------------------------------------------------------
@@ -137,7 +142,7 @@ $config['subclass_prefix'] = 'MY_';
 | Note: This will NOT disable or override the CodeIgniter-specific
 |	autoloading (application/config/autoload.php)
 */
-$config['composer_autoload'] = FALSE;
+$config['composer_autoload'] = '/vendor/autoload.php';
 
 /*
 |--------------------------------------------------------------------------
