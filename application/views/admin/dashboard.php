@@ -79,7 +79,15 @@
 				</div>
 				<div class="panel-body timeline-container">
 
-					<table class="table table-striped">
+				<table data-toggle="table"  data-url="<?base_url('assets_admin')?>/tables/data1.json"  data-show-refresh="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name" data-sort-order="desc">
+                        <thead>
+                            <tr>
+                                <th><font face ="Calibri"> Tanggal </font></th>
+                                <th><font face ="Calibri"> Judul </font></th>
+                                <th><font face ="Calibri"> Keterangan </font></th>
+                                
+                                <th><font face ="Calibri"> Menu </font></th>
+                            </tr>
 						<tbody>
 							<?php
 							foreach ($pengumuman  as $umum) :
@@ -96,8 +104,8 @@
 										<p><?= $umum->keterangan ?></p>
 									</td>
 									<td>
-										<?php echo anchor('Admin/pengumumanEdit/' . $umum->id_pengumuman, 'Edit'); ?>
-										<?php echo anchor('Admin/pengumumanDelete/' . $umum->id_pengumuman, 'Hapus'); ?>
+										<?php echo anchor('Admin/pengumumanEdit/' . $umum->id_pengumuman, '<span class="glyphicon glyphicon-pencil">'); ?>
+										<?php echo anchor('Admin/pengumumanDelete/' . $umum->id_pengumuman, '<span class="glyphicon glyphicon-trash">'); ?>
 									</td>
 								</tr>
 							<?php endforeach; ?>
