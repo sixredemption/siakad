@@ -59,54 +59,54 @@ public function profile()
         }
     }
 
-    public function updatePassword()
-    {
-        $this->form_validation->set_rules('passLama', 'Password Lama', 'trim|required|min_length[5]|max_length[25]');
-        $this->form_validation->set_rules('passBaru', 'Password Baru', 'trim|required|min_length[5]|max_length[25]');
-        $this->form_validation->set_rules('passKonf', 'Password Konfirmasi', 'trim|required|min_length[5]|max_length[25]');
+    // public function updatePassword()
+    // {
+    //     $this->form_validation->set_rules('passLama', 'Password Lama', 'trim|required|min_length[5]|max_length[25]');
+    //     $this->form_validation->set_rules('passBaru', 'Password Baru', 'trim|required|min_length[5]|max_length[25]');
+    //     $this->form_validation->set_rules('passKonf', 'Password Konfirmasi', 'trim|required|min_length[5]|max_length[25]');
 
-        $id = $this->session->userdata('id');
-        if ($this->form_validation->run() == true) {
-            if (password_verify($this->input->post('passLama'), $this->session->userdata('password'))) {
-                if ($this->input->post('passBaru') != $this->input->post('passKonf')) {
-                    $this->session->set_flashdata('msg', show_err_msg('Password Baru dan Konfirmasi Password harus sama'));
-                    redirect('auth/profile');
-                } else {
-                    $data = ['password' => get_hash($this->input->post('passBaru'))];
-                    $result = $this->Model_Profileguru->update($data, $id);
-                    if ($result > 0) {
-                        $this->updateProfil();
-                        $this->session->set_flashdata('msg', show_succ_msg('Password Berhasil diubah'));
-                        redirect('auth/profile');
-                    } else {
-                        $this->session->set_flashdata('msg', show_err_msg('Password Gagal diubah'));
-                        redirect('auth/profile');
-                    }
-                }
-            } else {
-                $this->session->set_flashdata('msg', show_err_msg('Password Salah'));
-                redirect('auth/profile');
-            }
-        } else {
-            $this->session->set_flashdata('msg', show_err_msg(validation_errors()));
-            redirect('auth/profile');
-        }
-    }
+    //     $id = $this->session->userdata('id');
+    //     if ($this->form_validation->run() == true) {
+    //         if (password_verify($this->input->post('passLama'), $this->session->userdata('password'))) {
+    //             if ($this->input->post('passBaru') != $this->input->post('passKonf')) {
+    //                 $this->session->set_flashdata('msg', show_err_msg('Password Baru dan Konfirmasi Password harus sama'));
+    //                 redirect('auth/profile');
+    //             } else {
+    //                 $data = ['password' => get_hash($this->input->post('passBaru'))];
+    //                 $result = $this->Model_Profileguru->update($data, $id);
+    //                 if ($result > 0) {
+    //                     $this->updateProfil();
+    //                     $this->session->set_flashdata('msg', show_succ_msg('Password Berhasil diubah'));
+    //                     redirect('auth/profile');
+    //                 } else {
+    //                     $this->session->set_flashdata('msg', show_err_msg('Password Gagal diubah'));
+    //                     redirect('auth/profile');
+    //                 }
+    //             }
+    //         } else {
+    //             $this->session->set_flashdata('msg', show_err_msg('Password Salah'));
+    //             redirect('auth/profile');
+    //         }
+    //     } else {
+    //         $this->session->set_flashdata('msg', show_err_msg(validation_errors()));
+    //         redirect('auth/profile');
+    //     }
+    // }
 
-    private function _do_upload()
-    {
-        $config['upload_path']          = 'assets_guru/avatar/';
-        $config['allowed_types']        = 'gif|jpg|png';
-        $config['max_size']             = 100; //set max size allowed in Kilobyte
-        $config['max_width']            = 1000; // set max width image allowed
-        $config['max_height']           = 1000; // set max height allowed
-        $config['file_name']            = round(microtime(true) * 1000);
-        $this->load->library('upload', $config);
+    // private function _do_upload()
+    // {
+    //     $config['upload_path']          = 'assets_guru/avatar/';
+    //     $config['allowed_types']        = 'gif|jpg|png';
+    //     $config['max_size']             = 100; //set max size allowed in Kilobyte
+    //     $config['max_width']            = 1000; // set max width image allowed
+    //     $config['max_height']           = 1000; // set max height allowed
+    //     $config['file_name']            = round(microtime(true) * 1000);
+    //     $this->load->library('upload', $config);
 
-        if (!$this->upload->do_upload('photo')) {
-            $this->session->set_flashdata('msg', $this->upload->display_errors('', ''));
-            redirect('auth/profile');
-        }
-        return $this->upload->data('file_name');
-    }
+    //     if (!$this->upload->do_upload('photo')) {
+    //         $this->session->set_flashdata('msg', $this->upload->display_errors('', ''));
+    //         redirect('auth/profile');
+    //     }
+    //     return $this->upload->data('file_name');
+    // }
 }
