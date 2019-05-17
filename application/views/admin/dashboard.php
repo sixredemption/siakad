@@ -75,7 +75,6 @@
 			<div class="panel panel-primary ">
 				<div class="panel-heading">
 					Pengumuman
-					<span class="pull-right clickable panel-toggle panel-button-tab-left"><em class="fa fa-toggle-up"></em></span>
 				</div>
 				<div class="panel-body timeline-container">
 
