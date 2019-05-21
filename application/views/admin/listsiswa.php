@@ -12,16 +12,14 @@
         <div class="row">
 			<div class="col-lg-12">
 				<h1 class="page-header">Daftar Siswa</h1>
-			<div class="panel-button-tab-left">				
-			<form method="post"  action="<?php  echo base_url(). 'admin/addsiswa'; ?>">
-				<button class="btn btn-primary" id="submit-buttons" type="submit" ​​​​​>Tambah Siswa</button>
-			</form>
-			</div>	<br>
 			<div class="row">
 			<div class="col-lg-12">
-				<div class="panel panel-default">
+				<div class="panel panel-primary">
 					<div class="panel-heading">Data Siswa</div>
-						<div class="panel-body">
+						<div class="panel-body timeline-container">
+						<form method="post"  action="<?php  echo base_url(). 'admin/addsiswa'; ?>">
+							<button class="btn btn-primary" id="submit-buttons" type="submit" ​​​​​>Tambah Siswa</button>
+						</form>
 							<table data-toggle="table" data-url="<?base_url('assets_admin')?>/tables/data1.json"  data-show-refresh="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name" data-sort-order="desc">
 								<thead>
 								    <tr>
@@ -63,9 +61,9 @@
 										<img src="<?php echo base_url('foto/siswa/'.$murid['foto']) ?>" width="64" />
 										</td>
 										<td>
-										<?php echo anchor('Admin/siswaEdit/'.$murid['id_siswa'],'<span class="glyphicon glyphicon-pencil">'); ?>
+										<?php echo anchor('Admin/siswaEdit/'.$murid['id_siswa'],'<button class="btn btn-primary margin" type="button"><span class="fa fa-pencil"></span> </button>'); ?>
 						
-										<?php  echo anchor('Admin/siswaDelete/'.$murid['id_siswa'], '<span class="glyphicon glyphicon-trash">'); ?>
+										<?php  echo anchor('Admin/siswaDelete/'.$murid['id_siswa'], '<button class="btn btn-danger margin" type="button"><span class="fa fa-trash"></span> </button>'); ?>
 						
 										</i>
 										</td>
