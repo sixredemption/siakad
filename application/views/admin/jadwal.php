@@ -58,55 +58,47 @@
                    <div class="col-sm-2 widget-right">
                        <button type="submit" class="btn btn-danger btn-md pull-right">Cancel</button>
                   </div>  
-          </form>
-
-
-                     <table data-toggle="table"  data-url="<?base_url('assets_admin')?>/tables/data1.json"  data-show-refresh="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name" data-sort-order="desc">
-                        <thead>
+          </form>                               
+                <table data-toggle="table"  data-url="<?base_url('assets_admin')?>/tables/data1.json"  data-show-refresh="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name" data-sort-order="desc">
+                <thead>
+                    <tr>
+                        <th><font face ="Calibri"> No </font></th>
+                        <th><font face ="Calibri"> Jurusan </font></th>
+                        <th><font face ="Calibri"> Judul </font></th>
+                        <th><font face ="Calibri"> Jadwal </font></th>
+                        <th><font face ="Calibri"> Menu </font></th>
+                    </tr>
+                    <tbody>
+                    <?php
+                            $this->db->select('nama_jurusan,nama_jadwal,jadwal,id_jadwal');
+                            // SELECT 
+                                    
+                            $q = $this->db->join('jurusan', 'jurusan.id_jurusan = jadwal.id_jurusan')->get('jadwal');
+                            $nomor = 1;
+                            foreach ($q->result_array() as $jad) : ?>
                             <tr>
-                                <th><font face ="Calibri"> No </font></th>
-                                <th><font face ="Calibri"> Jurusan </font></th>
-                                <th><font face ="Calibri"> Judul </font></th>
-                                <th><font face ="Calibri"> Jadwal </font></th>
-                                <th><font face ="Calibri"> Menu </font></th>
+                                <td><?php echo $nomor; ?></td>
+                                <td><p><?=  $jad['nama_jurusan']?></p></td>
+                                <td><p><?=  $jad['nama_jadwal']?></p></td>
+                                <td><p><?=  $jad['jadwal']?></p></td>
+                                
+                                <td>
+                                <?php echo anchor('Admin/jadwalEdit/'.$jad['id_jadwal'],'<button class="btn btn-primary margin" type="button"><span class="fa fa-pencil"></span> </button>'); ?>
+                
+                                <?php  echo anchor('Admin/jadwalDelete/'.$jad['id_jadwal'], '<button class="btn btn-danger margin" type="button"><span class="fa fa-trash"></span> </button>'); ?>
+                
+                                </i>
+                                </td>
                             </tr>
-                            <tbody>
-							<?php
-									$this->db->select('nama_jurusan,nama_jadwal,jadwal,id_jadwal');
-									// SELECT 
-										 
-									$q = $this->db->join('jurusan', 'jurusan.id_jurusan = jadwal.id_jurusan')->get('jadwal');
-									$nomor = 1;
-									foreach ($q->result_array() as $jad) : ?>
-									<tr>
-										<td><?php echo $nomor; ?></td>
-										<td><p><?=  $jad['nama_jurusan']?></p></td>
-										<td><p><?=  $jad['nama_jadwal']?></p></td>
-                                        <td><p><?=  $jad['jadwal']?></p></td>
-                                        
-										<td>
-										<?php echo anchor('Admin/jadwalEdit/'.$jad['id_jadwal'],'<span class="glyphicon glyphicon-pencil">'); ?>
-						
-										<?php  echo anchor('Admin/jadwalDelete/'.$jad['id_jadwal'], '<span class="glyphicon glyphicon-trash">'); ?>
-						
-										</i>
-										</td>
-									</tr>
-									<?php $nomor++; ?>
-									<?php endforeach; ?>
-							</tbody>
-                     </table>
-                    </div>	
-                    
-                    	
-
-
-          
-                  
+                            <?php $nomor++; ?>
+                            <?php endforeach; ?>
+                    </tbody>
+                </table>
+                    </div>	 
                 </div>  
-              </div>
-          </div>
+            </div>
         </div>
+    </div>
 </div>
 
 
