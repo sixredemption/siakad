@@ -14,6 +14,16 @@
 					<div class="panel panel-heading">
 					Daftar Spp Siswa	
 					</div>
+						<div class="col-md-2">
+								<form method="post"  action="<?php  echo base_url(). 'admin/editspp'; ?>">
+									<button class="btn btn-primary" id="submit-buttons" type="submit" ​​​​​>Tambah Data Spp</button>
+								</form>
+						</div>		
+						<div class="col-md-2">
+							<form method="post"  action="<?php  echo base_url(). 'admin/editspp'; ?>">
+								<button class="btn btn-success" id="submit-buttons" type="submit" ​​​​​>Edit Spp</button>
+							</form>
+						</div>
 					<div class="panel-body">
 						<table data-toggle="table"  data-url="<?base_url('assets_admin')?>/tables/data1.json"  data-show-refresh="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name" data-sort-order="desc">			<thead>
 							<tr>
@@ -26,7 +36,7 @@
 								<th>Semester</th>
 								<th>Tahun Ajaran</th>
 								<th>Status Spp</th>
-								<th>Edit</th>
+								<!-- <th>Edit</th> -->
 							</tr>
 							</thead>
 								<tbody>
@@ -50,7 +60,7 @@
 												<td><?= $sp['semester']; ?></td>
 												<td><?= $sp['tahun_ajaran']; ?></td>
 												<td><?= $sp['status']; ?></td>
-												<td><?php echo anchor('Admin/editspp/'.$sp['id_spp'],'<button class="btn btn-primary margin" type="button"><span class="fa fa-pencil"></span></button>'); ?></td>
+												<!-- <td><?php echo anchor('Admin/editspp/'.$sp['id_spp'],'<button class="btn btn-primary margin" type="button"><span class="fa fa-pencil"></span></button>'); ?></td> -->
 											</tr>
 										<?php endforeach; ?>
 									</tbody>
