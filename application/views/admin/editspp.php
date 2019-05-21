@@ -66,12 +66,12 @@
 							
 								$data["spp"] = $this->Model_spp->getById($sp['id_spp']);
 								foreach ($data as $tab):
-										echo $tab->id_spp;
-										echo $tab->id_siswa;
-										echo $tab->id_kelas;
-										echo $tab->id_bulan;
-										echo $tab->id_tahun_ajaran;
-										echo $tab->id_semester;
+										// echo $tab->id_spp;
+										// echo $tab->id_siswa;
+										// echo $tab->id_kelas;
+										// echo $tab->id_bulan;
+										// echo $tab->id_tahun_ajaran;
+										// echo $tab->id_semester;
 							?>
 							<form action="<?php echo base_url("Admin/sppEdit/$tab->id_spp")?>" method="post" enctype="multipart/form-data" >
 							<input type="hidden" name="id_spp" value="<?php echo $tab->id_spp?>" />
@@ -83,6 +83,9 @@
 							
 							<label class="status">Lunas
                             <input type="checkbox" value="Lunas" name="status">
+							</label>
+							<label class="status"> Belum Lunas
+                            <input type="checkbox" value="Belum Lunas" name="status">
                             </label>
                             </div>
                         
