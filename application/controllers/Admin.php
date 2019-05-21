@@ -901,7 +901,7 @@ public function dataSiswa()
     // ----------------------------CRUD SPP-------------------------------------------
     public function sppEdit($id_spp = null)
     {
-        var_dump($id_spp);
+        // var_dump($id_spp);
         if (!isset($id_spp)) redirect('Admin');
 
         
@@ -918,7 +918,7 @@ public function dataSiswa()
         $data["spp"] = $var->getById($id_spp);
         if (!$data["spp"]) show_404();
         $this->load->view("template_admin/header");
-        // $this->load->view("template_admin/sidebar");
+        $this->load->view("template_admin/sidebar");
         $this->load->view("admin/editspp", $data);
          $this->load->view("template_admin/footer");
     }
