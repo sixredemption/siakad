@@ -56,7 +56,12 @@ class Model_siswa extends CI_Model
         $this->jenis_kelamin = $post["jenis_kelamin"];
         $this->no_telp = $post["no_telp"];
         $this->alamat = $post["alamat"];
-        $this->password=md5($post["password"]);
+        
+        if (empty($post["password"])){
+            $this->password =md5($post["nisn"]);
+        } else {
+            $this->password=md5($post["password"]) ;
+        }
         $this->foto = $this->_uploadImage();
 
 
