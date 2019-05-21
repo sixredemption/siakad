@@ -15,7 +15,7 @@
 					Daftar Spp Siswa	
 					</div>
 						<div class="col-md-2">
-								<form method="post"  action="<?php  echo base_url(). 'admin/editspp'; ?>">
+								<form method="post"  action="<?php  echo base_url(). 'admin/addsppsiswa'; ?>">
 									<button class="btn btn-primary" id="submit-buttons" type="submit" ​​​​​>Tambah Data Spp</button>
 								</form>
 						</div>		
