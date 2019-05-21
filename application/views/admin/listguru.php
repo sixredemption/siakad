@@ -70,8 +70,8 @@
 									<img src="<?php echo base_url('foto/guru/' . $dosen->foto) ?>" width="64" />
 								</td>
 								<td>
-								<?php echo anchor('Admin/guruEdit/' . $dosen->id_guru, '<span class="glyphicon glyphicon-pencil"></span>'); ?>
-								<?php echo anchor('Admin/guruDelete/' . $dosen->id_guru, '<span class="glyphicon glyphicon-trash"></span>'); ?>
+								<?php echo anchor('Admin/guruEdit/' . $dosen->id_guru, '<button class="btn btn-primary margin" type="button"><span class="fa fa-pencil"></span> </button>'); ?>
+								<?php echo anchor('Admin/guruDelete/' . $dosen->id_guru, '<button class="btn btn-danger margin" type="button"><span class="fa fa-trash"></span> </button>'); ?>
 								</td>
 							</tr>
 							<?php $nomor++; ?>
