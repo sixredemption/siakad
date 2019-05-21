@@ -23,12 +23,11 @@
 					<th>Semester</th>
 					<th>Tahun Ajaran</th>
 					<th>Status Spp</th>
-					<th>Edit</th>
 				</tr>
 			<tbody>
 				<tr>
 					<?php
-					$this->db->select('nisn,nama_kelas,nama_siswa,jenis_kelamin, nama_bulan, semester, tahun_ajaran, status, id_spp');
+					$this->db->select('nisn,nama_kelas,nama_siswa,jenis_kelamin, nama_bulan, semester, tahun_ajaran, status');
 					// SELECT 
 					$this->db->join('kelas', 'kelas.id_kelas = spp.id_kelas');
 					$this->db->join('siswa', 'siswa.id_siswa = spp.id_siswa');
@@ -46,7 +45,6 @@
 						<td><?= $sp['semester']; ?></td>
 						<td><?= $sp['tahun_ajaran']; ?></td>
 						<td><?= $sp['status']; ?></td>
-						<td><?php echo anchor('Admin/editspp/'.$sp['id_spp'],'<span class="glyphicon glyphicon-pencil">'); ?></td>
 					</tr>
 				<?php endforeach; ?>
 			</tbody>
