@@ -81,6 +81,13 @@ class Admin extends CI_Controller
         $this->load->view('admin/daftarsiswaspp', $data);
         $this->load->view('template_admin/footer');
     }
+
+    public function addsppsiswa(){
+        $this->load->view('template_admin/header');
+        $this->load->view('template_admin/sidebar');
+        $this->load->view('admin/addsppsiswa');
+        $this->load->view('template_admin/footer');
+    }
     public function nilaisiswaips()
     {
         $this->load->view('template_admin/header');

@@ -84,12 +84,12 @@
 								<input class="form-control-file" type="file" name="foto" />
 								<input class="form-control-file" type="hidden" name="old_image" value="<?php echo $guru->foto ?>" />
 								<img src="<?php echo base_url('foto/guru/' . $guru->foto) ?>" width="64" />
-								</div>
-                </div>   
-                <div class=col-md-12>      
-                <button type="submit" class="btn btn-primary"  >Simpan</button>
-                <button type="reset" class="btn btn-danger">Reset</button>
-                </div>
+							</div>
+                	</div>   
+					<div class=col-md-12>      
+                		<button type="submit" class="btn btn-primary"  >Simpan</button>
+                		<button type="reset" class="btn btn-danger">Reset</button>
+               		</div>
          </form>
         </div>     
   </div>      
