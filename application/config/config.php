@@ -25,12 +25,8 @@ $config['composer_autoload'] = 'vendor/autoload.php' ;
 |
 */
 
-<<<<<<< HEAD
 $config['base_url'] = 'http://localhost:8080/siakad/';
-=======
 
-$config['base_url'] = 'http://localhost:/siakad/';
->>>>>>> 1110e0f5efd5fa4d1174efd84e55e19e85af2985
 
 /*
 |--------------------------------------------------------------------------
