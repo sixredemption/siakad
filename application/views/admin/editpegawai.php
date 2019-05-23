@@ -34,7 +34,8 @@
 		
 		<div class="form-group">
             <label for="password">Password:</label>
-            <input type="password" class="form-control" name="password" value= "<?php echo $admin->password ?>">
+						<input type="password" class="form-control" name="password"	id="password"				>
+						<input type="checkbox" onclick="myFunction()">Show Password
 		</div>
 		
 		<div class="form-group">
@@ -54,5 +55,14 @@
     </div>
 </div>
 
-
+<script>
+    function myFunction() {
+        var x = document.getElementById("password");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+</script>
 

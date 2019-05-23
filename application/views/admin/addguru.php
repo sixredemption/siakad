@@ -68,6 +68,7 @@
                     <input class="form-control-file" type="file" class="form-control" name="foto">
                 </div>
 			</div>
+            <div class="col-md-12">
 			<button type="submit" class="btn btn-primary">Simpan</button>
                     <button type="reset" class="btn btn-danger">Reset</button>
             </div>
