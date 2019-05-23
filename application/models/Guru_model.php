@@ -93,6 +93,12 @@ class Guru_model extends CI_Model
 		$this->db->update($this->_table, $this, array("id_guru" => $post["id_guru"]));
 	}
 
+	public function updateProfile() {
+		$this->db->where($this->id_guru, $id_guru);
+        $this->db->update($this->table, $data);
+        return $this->db->affected_rows();
+	}
+
 	public function delete($id_guru)
 	{
 		$this->_deleteImage($id_guru);

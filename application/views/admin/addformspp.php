@@ -9,8 +9,9 @@
         </div>      
         <h1>Tambah Data Spp</h1>
     <div class="container-fluid">
-    <form  <?php echo base_url(). 'Admin/sppAdd'; ?>" method="post" enctype="multipart/form-data">
-           
+    <form  action="<?php echo base_url(). 'Admin/sppAdd'; ?>" method="post" enctype="multipart/form-data">
+    <!-- <input type="hidden" name="id_spp" value="id_spp" />  -->
+
            <div class="col-md-4">            
                <div class="form-group">
                    <label for="id_siswa">Nama</label>
@@ -59,18 +60,18 @@
                    <label for="id_bulan">Bulan</label>
                    <select class="form-control" name="id_bulan" >
                        <option value="" disabled selected>pilih semester</option>
-                       <option value ="januari">1</option>
-                       <option value ="februari">2</option>
-                       <option value ="maret">3</option>  
-                       <option value ="april">4</option>  
-                       <option value ="mei">5</option>  
-                       <option value ="juni">6</option>
-                       <option value ="juli">7</option>
-                       <option value ="agustus">8</option>
-                       <option value ="september">9</option>        
-                       <option value ="oktober">10</option>
-                       <option value ="november">11</option>
-                       <option value ="desember">12</option>
+                       <option value ="1">januari</option>
+                       <option value ="2">februari</option>
+                       <option value ="3">maret</option>  
+                       <option value ="4">april</option>  
+                       <option value ="5">mei</option>  
+                       <option value ="6">mei</option>
+                       <option value ="7">juli</option>
+                       <option value ="8">agustus</option>
+                       <option value ="9">september</option>        
+                       <option value ="10">oktober</option>
+                       <option value ="11">november</option>
+                       <option value ="12">desember</option>
 
                    </select>    
                </div>

@@ -33,7 +33,6 @@
 						<img src="<?php echo base_url('foto/pengumuman/default.jpg') ?>" width="300px" height="300px" />
 					</td>
 				</tr>
-
 				<tr>
 					<td><b>NIG</b></td>
 					<td>:</td>
@@ -76,7 +75,6 @@
 				</tr>
 				
 			</table>
-			
 			<!-- <div class="icon-container">
 				<?php echo anchor('guru/editbiodata/' , '<span class="ti-pencil-alt"></span><span class="icon-name"> Edit</span>'); ?>
 			</div> -->
