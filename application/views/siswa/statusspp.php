@@ -9,8 +9,8 @@
         <div class="panel-heading">
             <i class="fa fa-external-link-square"></i> </div>
         <div class="panel-body">
-           <h1>Status Pembayarn SPP sudah lunas</h1>
-		   <h2>Apabila ada tidak kesesuaian data bisa menghubungi admin</h2>
+           <h2>Status Pembayaran SPP sudah lunas</h2>
+		   <h3>Apabila ada tidak kesesuaian data bisa menghubungi admin</h3>
     
         </div>
     </div>

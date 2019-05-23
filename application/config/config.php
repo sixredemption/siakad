@@ -1,7 +1,6 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-$config['composer_autoload'] = 'vendor/autoload.php' ;
 /*
 |--------------------------------------------------------------------------
 | Base Site URL
