@@ -90,7 +90,7 @@ class Admin extends CI_Controller
     }
     public function addformspp(){
         $data['judul'] = "Halaman Tambah Siswa";
-        // $data['semester'] = $this->Model_semester->getAll();
+        $data['spp'] = $this->Model_spp->getAll();
         $data['siswa'] = $this->Model_siswa->getAll();
         $data['tahun_ajaran'] = $this->Model_thnAjar->getAll();
         $data['kelas'] = $this->Model_kelas->getAll();
@@ -931,7 +931,7 @@ public function dataSiswa()
         
         $data['sp'] = $this->Model_spp->getAll();
         $this->load->view('template_admin/header');
-        // $this->load->view('template_admin/sidebar');
+        $this->load->view('template_admin/sidebar');
         $this->load->view('admin/daftarsiswaspp',$data);
         $this->load->view('template_admin/footer');
     }
