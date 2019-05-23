@@ -12,8 +12,14 @@ class Downloadjadwal extends CI_Controller {
 		$this->load->view('v_download');
 	}
 
-	public function lakukan_download(){				
-		force_download('assets_siswa/test.pdf',NULL);
-	}	
+	public function lakukan_downloadkls10(){				
+		force_download('jadwal/Jadwal_IPA_2010.pdf',NULL);
+	}
+	public function lakukan_downloadkls11() {
+		force_download('jadwal/Jadwal_IPA.pdf',NULL);
+	}
+	public function lakukan_downloadkls12() {
+		force_download('jadwal/Jadwal_IPA_.pdf',NULL);
 
+	}
 }
