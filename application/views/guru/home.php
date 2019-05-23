@@ -1,4 +1,4 @@
-<!-- <div class="container">
+<div class="container">
 	<section class="content">
 
 		<div class="breadcrumbs">
@@ -25,7 +25,7 @@
 			<h2>Selamat Datang Guru</h2>
 		</div>       
 
-		<div class="col-sm-6 col-lg-3">
+		<!-- <div class="col-sm-6 col-lg-3">
 			<div class="card text-white bg-flat-color-1">
 				<div class="card-body pb-0">
 					<div class="dropdown float-right">

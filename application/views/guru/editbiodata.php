@@ -127,7 +127,7 @@
 		</div>
 		<br>
 
-		<form action="" method="post" enctype="multipart/form-data">
+		<form action="<?php echo base_url("guru/updateProfile")?>" method="post" enctype="multipart/form-data">
 			<input type="hidden" name="id_guru" value="" />
 						<div class="col-md-8">
 							<div class="form-group">
