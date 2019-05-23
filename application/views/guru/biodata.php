@@ -77,9 +77,9 @@
 				
 			</table>
 			
-			<div class="icon-container">
+			<!-- <div class="icon-container">
 				<?php echo anchor('guru/editbiodata/' , '<span class="ti-pencil-alt"></span><span class="icon-name"> Edit</span>'); ?>
-			</div>
+			</div> -->
 
 	</section>
 </div> 
