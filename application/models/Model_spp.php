@@ -35,7 +35,7 @@ class Model_spp extends CI_Model
     public function update()
     {
         $post = $this->input->post();
-        var_dump($post);
+        // var_dump($post);
         $this->id_spp = $post["id_spp"];
         $this->id_siswa =$post["id_siswa"];
         $this->id_kelas =$post["id_kelas"];
