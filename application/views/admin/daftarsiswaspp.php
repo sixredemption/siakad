@@ -16,9 +16,15 @@
 					</div>
 						<div class="col-md-2">
 								<form method="post"  action="<?php  echo base_url(). 'admin/addsppsiswa'; ?>">
-									<button class="btn btn-primary" id="submit-buttons" type="submit" ​​​​​>Tambah Data Spp</button>
+									<button class="btn btn-primary" id="submit-buttons" type="submit" ​​​​​>Tambah Data Spp Via Excel</button>
 								</form>
-						</div>		
+						</div>	
+						<div class="col-md-2">
+								<form method="post"  action="<?php  echo base_url(). 'admin/addformspp'; ?>">
+									<button class="btn btn-primary" id="submit-buttons" type="submit" ​​​​​>Tambah Data Spp </button>
+								</form>
+						</div>	
+
 						<div class="col-md-2">
 							<form method="post"  action="<?php  echo base_url(). 'admin/editspp'; ?>">
 								<button class="btn btn-success" id="submit-buttons" type="submit" ​​​​​>Edit Spp</button>
