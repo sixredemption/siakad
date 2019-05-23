@@ -1,7 +1,6 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-$config['composer_autoload'] = 'vendor/autoload.php' ;
 /*
 |--------------------------------------------------------------------------
 | Base Site URL
@@ -25,7 +24,7 @@ $config['composer_autoload'] = 'vendor/autoload.php' ;
 |
 */
 
-$config['base_url'] = 'http://localhost:100/siakad/';
+$config['base_url'] = 'http://localhost:8080/siakad/';
 
 /*
 |--------------------------------------------------------------------------
