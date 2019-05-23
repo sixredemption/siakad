@@ -12,16 +12,15 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<h1 class="page-header">Daftar Guru</h1>
-				<div class="panel-button-tab-left">
-					<form method="post" action="<?php echo base_url() . 'admin/addguru'; ?>">
-						<button class="btn btn-primary" id="submit-buttons" type="submit" ​​​​​>Tambah Guru</button>
-					</form>
-				</div><br>
+				
 				<div class="row">
 			<div class="col-lg-12">
-				<div class="panel panel-default">
+				<div class="panel panel-success">
 					<div class="panel-heading">Data Guru</div>
-						<div class="panel-body">
+						<div class="panel-body timeline-container">
+						<form method="post" action="<?php echo base_url() . 'admin/addguru'; ?>">
+							<button class="btn btn-primary" id="submit-buttons" type="submit" ​​​​​>Tambah Guru</button>
+						</form>
 							<table data-toggle="table" data-url="<?base_url('assets_admin')?>/tables/data1.json"  data-show-refresh="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name" data-sort-order="desc">
 								<thead>
 								    <tr>
@@ -70,8 +69,8 @@
 									<img src="<?php echo base_url('foto/guru/' . $dosen->foto) ?>" width="64" />
 								</td>
 								<td>
-								<?php echo anchor('Admin/guruEdit/' . $dosen->id_guru, '<span class="glyphicon glyphicon-pencil"></span>'); ?>
-								<?php echo anchor('Admin/guruDelete/' . $dosen->id_guru, '<span class="glyphicon glyphicon-trash"></span>'); ?>
+								<?php echo anchor('Admin/guruEdit/' . $dosen->id_guru, '<button class="btn btn-primary margin" type="button"><span class="fa fa-pencil"></span> </button>'); ?>
+								<?php echo anchor('Admin/guruDelete/' . $dosen->id_guru, '<button class="btn btn-danger margin" type="button"><span class="fa fa-trash"></span> </button>'); ?>
 								</td>
 							</tr>
 							<?php $nomor++; ?>

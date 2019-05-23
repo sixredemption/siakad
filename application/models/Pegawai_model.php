@@ -29,12 +29,15 @@ class Pegawai_model extends CI_Model {
 	}
 
 	public function save() {
-		$post = $this->input->post() ;
-		// var_dump($post);
-		// $this->id_admin = $post["id_admin"] ;
-		$this->username = $post["username"] ;
-		$this->password=md5($post["password"]) ;
-		// $this->gender = $post["gender"] ;
+        $post = $this->input->post() ;
+        
+        $this->username = $post["username"] ;
+        
+        if (empty($post["password"])){
+            $this->password =md5($post["username"]);
+        } else {
+            $this->password=md5($post["password"]) ;
+        }
 		$this->foto = $this->_uploadImage();
 
 		$this->db->insert($this->_table , $this) ;
@@ -45,8 +48,8 @@ class Pegawai_model extends CI_Model {
 		//  var_dump($post);
 		$this->id_admin = $post["id_admin"] ;
 		$this->username = $post["username"] ;
-		$this->password=md5($post["password"]) ;
-		// $this->gender = $post["gender"] ;
+        $this->password=md5($post["password"]) ;
+        
 		if (empty($post["password"])){
             $this->password =md5($post["username"]);
         } else {

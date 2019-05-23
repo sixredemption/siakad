@@ -4,7 +4,7 @@
 <h2>Selamat Datang Siswa</h2>
 </div>
 <div class="col-sm-6 col-lg-3">
-                <div class="card text-white bg-flat-color-1">
+                <!-- <div class="card text-white bg-flat-color-1">
                     <div class="card-body pb-0">
                         <div class="dropdown float-right">
                             <button class="btn bg-transparent dropdown-toggle theme-toggle text-light" type="button" id="dropdownMenuButton1" data-toggle="dropdown">
@@ -59,7 +59,7 @@
                     </div>
                 </div>
             </div>
-            <!--/.col-->
+        
 
             <div class="col-sm-6 col-lg-3">
                 <div class="card text-white bg-flat-color-3">
@@ -88,7 +88,7 @@
                     </div>
                 </div>
             </div>
-            <!--/.col-->
+   
 
             <div class="col-sm-6 col-lg-3">
                 <div class="card text-white bg-flat-color-4">
@@ -112,7 +112,7 @@
 
                         <div class="chart-wrapper px-3" style="height:70px;" height="70">
                             <canvas id="widgetChart4"></canvas>
-                        </div>
+                        </div> -->
 
                     </div>
                 </div>

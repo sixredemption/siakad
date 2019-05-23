@@ -13,9 +13,7 @@
 			<div class="col-lg-12">
 				<h1 class="page-header">Kurikulum</h1>
                 <div class="panel-button-tab-left">
-					<form method="post"  action="<?php  echo base_url(). 'admin/addkelas'; ?>">
-						<button class="btn btn-primary" id="submit-buttons" type="submit" ​​​​​>Tambah Kelas</button>
-					</form>
+				
 				</div><br>
                 <div class="col-md-12">
 				<div class="panel panel-primary ">
@@ -23,7 +21,9 @@
 						Daftar Kelas
 					</div>
 					 <div class="panel-body timeline-container">
-						
+					 <form method="post"  action="<?php  echo base_url(). 'admin/addkelas'; ?>">
+						<button class="btn btn-primary" id="submit-buttons" type="submit" ​​​​​>Tambah Kelas</button>
+					</form>			
                      <table data-toggle="table"  data-url="<?base_url('assets_admin')?>/tables/data1.json"  data-show-refresh="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name" data-sort-order="desc">
                         <thead>
                             <tr>
@@ -46,8 +46,8 @@
                                     
                                     
                                     <td>
-                                    <?php echo anchor('Admin/kelasEdit/'.$ruang['id_kelas'],'<span class="glyphicon glyphicon-pencil"></span>'); ?>
-                                    <?php echo anchor('Admin/kelasDelete/'.$ruang['id_kelas'],'<span class="glyphicon glyphicon-trash"></span>'); ?>
+                                    <?php echo anchor('Admin/kelasEdit/'.$ruang['id_kelas'],'<button class="btn btn-primary margin" type="button"><span class="fa fa-pencil"></span> </button>'); ?>
+                                    <?php echo anchor('Admin/kelasDelete/'.$ruang['id_kelas'],'<button class="btn btn-danger margin" type="button"><span class="fa fa-trash"></span> </button>'); ?>
                                     </td>
                                 </tr>
                                 <?php $nomor++; ?>

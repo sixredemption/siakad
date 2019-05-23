@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
 	<section class="content">
 
 		<div class="breadcrumbs">
@@ -135,4 +135,4 @@
 		</div>
 		
 	</section>
-</div>	
+</div>	 -->
