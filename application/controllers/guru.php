@@ -106,7 +106,34 @@ class Guru extends CI_Controller
 			// 	//$this->load->view('news/success');
 			// 	redirect( site_url('guru') );
 			// }
+
+
 		}
+	public function updateProfile() {
+
+		$id = $this->session->userdata('id_guru');
+        $data = array(
+            'nig_guru' => $this->input->post('nig_guru'),
+            'password' => $this->input->post('password'),
+            'nama_lengkap' => $this->input->post('nama_lengkap'),
+            'asal_kota' => $this->input->post('asal_kota'),
+			'tanggal_lahir' => $this->input->post('tanggal_lahir'),
+			'jenis_kelamin' => $this->input->post('jenis_kelamin'),
+			'no_telp' => $this->input->post('no_telp'),
+			'alamat' => $this->input->post('alamat'),
+		);
+
+		$result = $this->Guru_model->updateProfile($data, $id_guru);
+		if ($result > 0) {
+			$this->updateProfil();
+			$this->session->set_flashdata('msg', show_succ_msg('Data Profile Berhasil diubah, silakan lakukan login ulang!'));
+			redirect('guru/biodata');
+		} else {
+			$this->session->set_flashdata('msg', show_err_msg('Data Profile Gagal diubah'));
+			redirect('guru/biodata');
+	}
+
+	}
     public function password()
     {
         $this->load->view('template_guru/header');
