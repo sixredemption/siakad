@@ -88,6 +88,19 @@ class Admin extends CI_Controller
         $this->load->view('admin/addsppsiswa');
         $this->load->view('template_admin/footer');
     }
+    public function addformspp(){
+        $data['judul'] = "Halaman Tambah Siswa";
+        // $data['semester'] = $this->Model_semester->getAll();
+        $data['siswa'] = $this->Model_siswa->getAll();
+        $data['tahun_ajaran'] = $this->Model_thnAjar->getAll();
+        $data['kelas'] = $this->Model_kelas->getAll();
+        $data["jurusan"] = $this->Model_jurusan->getAll();
+        $this->load->view('template_admin/header');
+        $this->load->view('template_admin/sidebar');
+        $this->load->view('admin/addformspp',$data);
+        $this->load->view('template_admin/footer');
+    }
+
     public function nilaisiswaips()
     {
         $this->load->view('template_admin/header');
@@ -848,10 +861,8 @@ public function dataSiswa()
         if ($validation->run()) {
             $tambah->save();
             $this->session->set_flashdata('success', 'Berhasil disimpan');
-        } elseif (empty($_FILES['jadwal']['name']))
-        {
-            $this->form_validation->set_rules('jadwal', 'Document', 'required');
         }
+        
         
         $data["kelas"] = $this->Model_kelas->getAll();
         $data["jurusan"] = $this->Model_jurusan->getAll();
@@ -859,10 +870,11 @@ public function dataSiswa()
         $data["tahun_ajaran"] = $this->Model_thnAjar->getAll();
         $this->load->view('template_admin/header');
         $this->load->view('template_admin/sidebar');
-        $this->load->view('admin/listkelas', $data);
+        $this->load->view('admin/listtahun', $data);
         $this->load->view('template_admin/footer');
         
     }
+    
 
     public function tahunEdit($id_tahun_ajaran=null)
     {
@@ -906,6 +918,27 @@ public function dataSiswa()
 
     // ----------------------------BACK END--------------------------------------------------
     // ----------------------------CRUD SPP-------------------------------------------
+    public function sppAdd()
+    {
+        $tambah = $this->Model_spp;
+        // $validation = $this->form_validation;
+        // $validation->set_rules($tambah->rules());
+
+        // if ($validation->run()) {
+            $tambah->save();
+            // $this->session->set_flashdata('success', 'Berhasil disimpan');
+        
+        
+        $data['sp'] = $this->Model_spp->getAll();
+        $this->load->view('template_admin/header');
+        // $this->load->view('template_admin/sidebar');
+        $this->load->view('admin/daftarsiswaspp',$data);
+        $this->load->view('template_admin/footer');
+    }
+        
+    
+
+    
     public function sppEdit($id_spp = null)
     {
         // var_dump($id_spp);
