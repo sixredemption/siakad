@@ -10,7 +10,7 @@ class Guru extends CI_Controller
         $this->load->model("Model_siswa");
         $this->load->model("Guru_model");
 		$this->load->model('login_model');
-
+        $this->load->model('Model_pengumuman');
         // if (!($this->session->userdata('nig_guru'))) {
         //     redirect(base_url('loginguru'));
 		// }
@@ -19,10 +19,11 @@ class Guru extends CI_Controller
 
     public function index()
     {
-		$data['judul'] = 'Selamat Datang Guru' ;
+        $data['judul'] = 'Selamat Datang Guru' ;
+        $data["pengumuman"] = $this->Model_pengumuman->getAll();
         $this->load->view('template_guru/header');
         $this->load->view('template_guru/sidebar');
-        $this->load->view('guru/home');
+        $this->load->view('guru/home',$data);
         $this->load->view('template_guru/footer');
     }
     public function biodata()
