@@ -25,6 +25,53 @@
 			<h2>Selamat Datang Guru</h2>
 		</div>       
 
+		<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-primary ">
+            <div class="panel-heading">
+                Pengumuman
+            </div>
+
+			<div class="card">
+				<div class="card-header">
+					<strong class="card-title">Pengumuman</strong>
+				</div>
+				<div class="card-body">
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th scope="col">Tanggal</th>
+								<th scope="col">Judul</th>
+								<th scope="col">Keterangan</th>
+								<th scope="col">Action</th>
+							</tr>
+						</thead>
+						
+						<tbody>
+							<?php
+                    			foreach ($pengumuman  as $umum):?>
+                        <tr>
+                            <td>
+                                <p><?= $umum->tanggal ?></p>
+                            </td>
+                            <td>
+                                <p><?= $umum->judul ?></p>
+                            </td>
+
+                            <td>
+                                <p><?= $umum->keterangan ?></p>
+                            </td>
+                            <td>
+                                <?php echo anchor('pengumuman/' . $umum->id_pengumuman, '<button class="btn btn-primary margin" type="button"><span class="fa fa-list-alt"></span> </button>'); ?>
+                                </td>
+                        </tr>
+                    <?php endforeach; ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+        
 		<!-- <div class="col-sm-6 col-lg-3">
 			<div class="card text-white bg-flat-color-1">
 				<div class="card-body pb-0">
