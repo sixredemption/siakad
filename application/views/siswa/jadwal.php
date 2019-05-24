@@ -7,7 +7,7 @@
             <i class="fa fa-external-link-square">Download Jadwal</i> 
         </div> -->
         <div class="panel-body">
-				<a class="btn btn-primary" href="<?php echo base_url().'index.php/downloadjadwal/lakukan_download' ?>">Download Jadwal</a>
+				<a class="btn btn-primary" href="<?php echo base_url().'index.php/downloadjadwal/lakukan_downloadkls11' ?>">Download Jadwal </a>
         <!--<button type="edit" name="edit" class="btn btn-primary" >Download Jadwal</button>-->
 </section> 
 </div>
