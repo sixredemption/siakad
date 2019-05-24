@@ -24,11 +24,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 |
 */
 
-<<<<<<< HEAD
 $config['base_url'] = 'http://localhost:8080/siakad/';
-=======
-$config['base_url'] = 'http://localhost:/siakad/';
->>>>>>> d07326a9776d060a9f6147ffdded609c665baeb8
 
 /*
 |--------------------------------------------------------------------------
