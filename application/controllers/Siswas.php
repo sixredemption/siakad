@@ -13,8 +13,12 @@ class Siswas extends CI_Controller
 
     public function index()
     {
-        $data['siswa'] = $this->SiswaModel->view();
-        $this->load->view('view', $data);
+        // $data['siswa'] = $this->SiswaModel->view();
+        // $this->load->view('view', $data);
+        $this->load->view('template_guru/header');
+        $this->load->view('template_guru/sidebar');
+        $this->load->view('guru/nilai');
+        $this->load->view('template_guru/footer');
     }
 
     public function form()
@@ -79,6 +83,6 @@ class Siswas extends CI_Controller
         // Panggil fungsi insert_multiple yg telah kita buat sebelumnya di model
         $this->SiswaModel->insert_multiple($data);
 
-        redirect("siswas"); // Redirect ke halaman awal (ke controller siswa fungsi index)
+        redirect("guru"); // Redirect ke halaman awal (ke controller siswa fungsi index)
     }
 }
