@@ -946,13 +946,13 @@ public function dataSiswa()
 
         
         $var = $this->Model_spp;
-        $validation = $this->form_validation;
-        $validation->set_rules($var->rules());
+        // $validation = $this->form_validation;
+        // $validation->set_rules($var->rules());
 
-        if ($validation->run()) {
+        // if ($validation->run()) {
             $var->update();
-            $this->session->set_flashdata('success', 'Berhasil disimpan');
-        }
+            // $this->session->set_flashdata('success', 'Berhasil disimpan');
+        // }
 
 
         $data["spp"] = $var->getById($id_spp);
