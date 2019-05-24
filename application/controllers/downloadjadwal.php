@@ -13,13 +13,13 @@ class Downloadjadwal extends CI_Controller {
 	}
 
 	public function lakukan_downloadkls10(){				
-		force_download('jadwal/Jadwal_IPA_2010.pdf',NULL);
+		force_download('jadwal/Kelas10.pdf',NULL);
 	}
 	public function lakukan_downloadkls11() {
-		force_download('jadwal/Jadwal_IPA.pdf',NULL);
+		force_download('jadwal/Kelas11.pdf',NULL);
 	}
 	public function lakukan_downloadkls12() {
-		force_download('jadwal/Jadwal_IPA_.pdf',NULL);
+		force_download('jadwal/Kelas12.pdf',NULL);
 
 	}
 }

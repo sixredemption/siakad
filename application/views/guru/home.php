@@ -25,13 +25,6 @@
 			<h2>Selamat Datang Guru</h2>
 		</div>       
 
-		<div class="row">
-    <div class="col-md-12">
-        <div class="panel panel-primary ">
-            <div class="panel-heading">
-                Pengumuman
-            </div>
-
 			<div class="card">
 				<div class="card-header">
 					<strong class="card-title">Pengumuman</strong>
