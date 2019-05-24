@@ -61,7 +61,7 @@
 			<th>ID_siswa</th>
 			<th>ID_mapel</th>
 			<th>nilai_siswa</th>
-			<th>id_semester</th>
+			<th>id_semester</th> 
 		</tr>";
 
         $numrow = 1;
