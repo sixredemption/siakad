@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 23, 2019 at 06:15 PM
+-- Generation Time: May 24, 2019 at 04:28 AM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -242,23 +242,6 @@ CREATE TABLE `nilai` (
   `id_semester` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `nilai`
---
-
-INSERT INTO `nilai` (`id_nilai`, `id_guru`, `id_kelas`, `id_siswa`, `id_mapel`, `nilai_siswa`, `id_semester`) VALUES
-(1, 1, 1, 1, 1, 90, 1),
-(2, 2, 1, 1, 4, 80, 1),
-(3, 3, 1, 1, 7, 90, 1),
-(4, 4, 1, 1, 10, 100, 1),
-(5, 5, 1, 1, 11, 100, 1),
-(6, 6, 1, 1, 12, 80, 1),
-(7, 7, 1, 1, 13, 85, 1),
-(8, 8, 1, 1, 14, 90, 1),
-(9, 9, 1, 1, 15, 95, 1),
-(10, 10, 1, 1, 19, 90, 1),
-(11, 11, 1, 1, 20, 85, 1);
-
 -- --------------------------------------------------------
 
 --
@@ -278,8 +261,7 @@ CREATE TABLE `pengumuman` (
 --
 
 INSERT INTO `pengumuman` (`id_pengumuman`, `judul`, `tanggal`, `foto`, `keterangan`) VALUES
-(1, 'Ujian Nasional', '2019-04-08', 'Ujian_Nasional.png', 'Ujian nasional berbasis komputer SMAN 4 MACIPO'),
-(2, 'tes', '2019-05-01', 'tes.jpg', 'sad');
+(1, 'Ujian Nasional', '2019-04-08', 'Ujian_Nasional.png', 'Ujian nasional berbasis komputer SMAN 4 MACIPO');
 
 -- --------------------------------------------------------
 
@@ -638,13 +620,13 @@ ALTER TABLE `mapel`
 -- AUTO_INCREMENT for table `nilai`
 --
 ALTER TABLE `nilai`
-  MODIFY `id_nilai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id_nilai` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `pengumuman`
 --
 ALTER TABLE `pengumuman`
-  MODIFY `id_pengumuman` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_pengumuman` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `semester`
