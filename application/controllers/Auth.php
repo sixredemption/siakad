@@ -141,6 +141,7 @@ class Auth extends CI_Controller
 			if ($cek) {
 				// DATANYA ADA
 				foreach ($cek as $row) {
+					$this->session->set_userdata('id_siswa', $row->idsiswa);
 					$this->session->set_userdata('nisn', $row->nisn);
 					$this->session->set_userdata('nama_siswa', $row->nama_siswa);
 					$this->session->set_userdata('kota', $row->kota);
