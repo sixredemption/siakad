@@ -5,6 +5,7 @@ class Siswa extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->helper(array('form' , 'url')) ;
 		$this->load->model("Model_siswa");
 		$this->load->model("Guru_model");
 		$this->load->model("Pegawai_model");
@@ -19,9 +20,10 @@ class Siswa extends CI_Controller
 	public function index()
 	{
 		$data['judul'] = 'Selamat Datang Siswa';
+		$data["pengumuman"] = $this->Model_pengumuman->getAll();
 		$this->load->view('template_siswa/header');
 		$this->load->view('template_siswa/sidebar');
-		$this->load->view('siswa/home');
+		$this->load->view('siswa/home',$data);
 		$this->load->view('template_siswa/footer');
 	}
 	public function biodata()
